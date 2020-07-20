@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'antlr'
 }
 
 group 'nz.geek.nick'
@@ -10,5 +11,7 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.antlr:antlr4:4.8-1'
+    implementation 'org.antlr:antlr4-runtime:4.8-1'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
