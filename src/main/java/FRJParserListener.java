@@ -137,6 +137,106 @@ public interface FRJParserListener extends ParseTreeListener {
 	 */
 	void exitExpr(FRJParser.ExprContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FRJParser#instantiationExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterInstantiationExpr(FRJParser.InstantiationExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#instantiationExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitInstantiationExpr(FRJParser.InstantiationExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FRJParser#signalConstructionExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterSignalConstructionExpr(FRJParser.SignalConstructionExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#signalConstructionExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitSignalConstructionExpr(FRJParser.SignalConstructionExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FRJParser#emptySignalExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterEmptySignalExpr(FRJParser.EmptySignalExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#emptySignalExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitEmptySignalExpr(FRJParser.EmptySignalExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FRJParser#headExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterHeadExpr(FRJParser.HeadExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#headExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitHeadExpr(FRJParser.HeadExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FRJParser#tailExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterTailExpr(FRJParser.TailExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#tailExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitTailExpr(FRJParser.TailExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FRJParser#letExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterLetExpr(FRJParser.LetExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#letExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitLetExpr(FRJParser.LetExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FRJParser#liftedCallExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterLiftedCallExpr(FRJParser.LiftedCallExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#liftedCallExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitLiftedCallExpr(FRJParser.LiftedCallExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FRJParser#callExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterCallExpr(FRJParser.CallExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#callExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitCallExpr(FRJParser.CallExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FRJParser#fieldAssignExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterFieldAssignExpr(FRJParser.FieldAssignExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#fieldAssignExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitFieldAssignExpr(FRJParser.FieldAssignExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FRJParser#fieldAccessExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterFieldAccessExpr(FRJParser.FieldAccessExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#fieldAccessExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitFieldAccessExpr(FRJParser.FieldAccessExprContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FRJParser#argumentList}.
 	 * @param ctx the parse tree
 	 */

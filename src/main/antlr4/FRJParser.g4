@@ -37,16 +37,24 @@ methodDeclarationArgument : typeName Identifier;
 
 expr
 	: Identifier
-	| NEW Identifier typeNameGeneric? argumentList // new
-	| AT LBRACK expr SEMI expr RBRACK // signal constructor
-	| AT LBRACK RBRACK // empty signal
-	| HEAD LPAREN expr RPAREN // head
-	| TAIL LPAREN expr RPAREN // tail
-	| typeName Identifier ASSIGN expr SEMI expr
-	| expr DOT AT Identifier argumentList // lifted method call
-	| expr DOT Identifier argumentList // method call
-	| expr DOT Identifier ASSIGN expr // field assign
-	| expr DOT Identifier // field access
+	| instantiationExpr
+	| signalConstructionExpr
+	| emptySignalExpr
+	| headExpr
+	| tailExpr
+	| letExpr
+	| expr DOT (liftedCallExpr | callExpr | fieldAccessExpr | fieldAssignExpr)
 	;
+
+instantiationExpr : NEW Identifier typeNameGeneric? argumentList;
+signalConstructionExpr : AT LBRACK expr SEMI expr RBRACK;
+emptySignalExpr : AT LBRACK RBRACK;
+headExpr : HEAD LPAREN expr RPAREN;
+tailExpr : TAIL LPAREN expr RPAREN;
+letExpr : typeName Identifier ASSIGN expr COMMA expr;
+liftedCallExpr : expr DOT AT Identifier argumentList;
+callExpr : expr DOT Identifier argumentList;
+fieldAssignExpr : expr DOT Identifier ASSIGN expr;
+fieldAccessExpr : expr DOT Identifier;
 
 argumentList : LPAREN (expr (COMMA expr)*)? RPAREN;

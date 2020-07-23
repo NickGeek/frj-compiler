@@ -88,6 +88,66 @@ public interface FRJParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpr(FRJParser.ExprContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link FRJParser#instantiationExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInstantiationExpr(FRJParser.InstantiationExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FRJParser#signalConstructionExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSignalConstructionExpr(FRJParser.SignalConstructionExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FRJParser#emptySignalExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitEmptySignalExpr(FRJParser.EmptySignalExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FRJParser#headExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHeadExpr(FRJParser.HeadExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FRJParser#tailExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTailExpr(FRJParser.TailExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FRJParser#letExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLetExpr(FRJParser.LetExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FRJParser#liftedCallExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLiftedCallExpr(FRJParser.LiftedCallExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FRJParser#callExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCallExpr(FRJParser.CallExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FRJParser#fieldAssignExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFieldAssignExpr(FRJParser.FieldAssignExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FRJParser#fieldAccessExpr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFieldAccessExpr(FRJParser.FieldAccessExprContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link FRJParser#argumentList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
