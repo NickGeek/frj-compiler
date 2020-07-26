@@ -1,4 +1,5 @@
 lexer grammar FRJLexer;
+@header {package antlrGenerated;}
 import Java8Lexer;
 
 MDF

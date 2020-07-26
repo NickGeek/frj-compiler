@@ -37,6 +37,16 @@ public interface FRJParserListener extends ParseTreeListener {
 	 */
 	void exitClassDeclaration(FRJParser.ClassDeclarationContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FRJParser#declarationName}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclarationName(FRJParser.DeclarationNameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJParser#declarationName}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclarationName(FRJParser.DeclarationNameContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FRJParser#implementsDeclaration}.
 	 * @param ctx the parse tree
 	 */

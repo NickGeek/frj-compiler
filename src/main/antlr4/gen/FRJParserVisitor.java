@@ -28,6 +28,12 @@ public interface FRJParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitClassDeclaration(FRJParser.ClassDeclarationContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link FRJParser#declarationName}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeclarationName(FRJParser.DeclarationNameContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link FRJParser#implementsDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

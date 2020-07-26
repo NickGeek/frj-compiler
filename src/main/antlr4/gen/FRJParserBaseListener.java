@@ -51,6 +51,18 @@ public class FRJParserBaseListener implements FRJParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterDeclarationName(FRJParser.DeclarationNameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDeclarationName(FRJParser.DeclarationNameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterImplementsDeclaration(FRJParser.ImplementsDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}

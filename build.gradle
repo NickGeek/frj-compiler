@@ -10,6 +10,9 @@ repositories {
     mavenCentral()
 }
 
+java.sourceCompatibility = JavaVersion.VERSION_14
+java.targetCompatibility = JavaVersion.VERSION_14
+
 dependencies {
     implementation 'org.antlr:antlr4:4.8-1'
     implementation 'org.antlr:antlr4-runtime:4.8-1'

@@ -1,0 +1,27 @@
+package parser;
+import antlrGenerated.FRJLexer;
+import antlrGenerated.FRJSimpleParser;
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.ParseCancellationException;
+
+public class Parser {
+	/**
+	 * Lexes and generates a parse tree for the given source code.
+	 * @param source The source code of the program.
+	 * @return The context for the program node containing the whole program tree (CDs and a main expression).
+	 * @throws ParseCancellationException Throws if the syntax is invalid or it cannot parse the source code.
+	 */
+	public static FRJSimpleParser.ProgramContext fromString(String source) throws ParseCancellationException {
+		var lexer = new FRJLexer(CharStreams.fromString(source));
+		replaceErrorListeners(lexer);
+
+		var parser = new FRJSimpleParser(new CommonTokenStream(lexer));
+		replaceErrorListeners(parser);
+		return parser.program();
+	}
+
+	private static void replaceErrorListeners(Recognizer<?, ?> recognizer) {
+		recognizer.removeErrorListeners();
+		recognizer.addErrorListener(ErrorHandler.INSTANCE);
+	}
+}

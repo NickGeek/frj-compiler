@@ -1,181 +1,168 @@
-// Generated from /home/nick/Programming/uni/COMP489/compiler/src/main/antlr4/FRJParser.g4 by ANTLR 4.8
+// Generated from /home/nick/Programming/uni/COMP489/compiler/src/main/antlr4/FRJSimpleParser.g4 by ANTLR 4.8
+package antlrGenerated;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
- * This class provides an empty implementation of {@link FRJParserVisitor},
+ * This class provides an empty implementation of {@link FRJSimpleParserVisitor},
  * which can be extended to create a visitor which only needs to handle a subset
  * of the available methods.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
  * operations with no return type.
  */
-public class FRJParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements FRJParserVisitor<T> {
+public class FRJSimpleParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements FRJSimpleParserVisitor<T> {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProgram(FRJParser.ProgramContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProgram(FRJSimpleParser.ProgramContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMain(FRJParser.MainContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMain(FRJSimpleParser.MainContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitClassDeclaration(FRJParser.ClassDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitClassDeclaration(FRJSimpleParser.ClassDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitImplementsDeclaration(FRJParser.ImplementsDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitImplementsDeclaration(FRJSimpleParser.ImplementsDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExtendsDeclaration(FRJParser.ExtendsDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExtendsDeclaration(FRJSimpleParser.ExtendsDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitGenericDeclaration(FRJParser.GenericDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFieldDeclaration(FRJSimpleParser.FieldDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFieldDeclaration(FRJParser.FieldDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeName(FRJSimpleParser.TypeNameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeName(FRJParser.TypeNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMethodHeader(FRJSimpleParser.MethodHeaderContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeNameGeneric(FRJParser.TypeNameGenericContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMethodDeclaration(FRJSimpleParser.MethodDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMethodHeader(FRJParser.MethodHeaderContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMethodDeclarationArgument(FRJSimpleParser.MethodDeclarationArgumentContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMethodDeclaration(FRJParser.MethodDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpr(FRJSimpleParser.ExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMethodDeclarationArgument(FRJParser.MethodDeclarationArgumentContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInstantiationExpr(FRJSimpleParser.InstantiationExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpr(FRJParser.ExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSignalConstructionExpr(FRJSimpleParser.SignalConstructionExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInstantiationExpr(FRJParser.InstantiationExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEmptySignalExpr(FRJSimpleParser.EmptySignalExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSignalConstructionExpr(FRJParser.SignalConstructionExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitHeadExpr(FRJSimpleParser.HeadExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEmptySignalExpr(FRJParser.EmptySignalExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTailExpr(FRJSimpleParser.TailExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitHeadExpr(FRJParser.HeadExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLetExpr(FRJSimpleParser.LetExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTailExpr(FRJParser.TailExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLiftedCallExpr(FRJSimpleParser.LiftedCallExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLetExpr(FRJParser.LetExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCallExpr(FRJSimpleParser.CallExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLiftedCallExpr(FRJParser.LiftedCallExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFieldAssignExpr(FRJSimpleParser.FieldAssignExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCallExpr(FRJParser.CallExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFieldAccessExpr(FRJSimpleParser.FieldAccessExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFieldAssignExpr(FRJParser.FieldAssignExprContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitFieldAccessExpr(FRJParser.FieldAccessExprContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitArgumentList(FRJParser.ArgumentListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArgumentList(FRJSimpleParser.ArgumentListContext ctx) { return visitChildren(ctx); }
 }

@@ -1,4 +1,5 @@
 // Generated from /home/nick/Programming/uni/COMP489/compiler/src/main/antlr4/FRJLexer.g4 by ANTLR 4.8
+package antlrGenerated;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
