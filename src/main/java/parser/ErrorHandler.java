@@ -18,7 +18,7 @@ public class ErrorHandler extends BaseErrorListener {
 	@Override
 	public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e) {
 		throw new ParseCancellationException(String.format(
-				"Parser Error at: Line %d, col %d\n\t%s",
+				"Parser error at: Line %d, col %d\n\t%s",
 				line,
 				charPositionInLine,
 				msg

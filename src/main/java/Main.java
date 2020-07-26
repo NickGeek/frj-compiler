@@ -1,10 +1,11 @@
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 import parser.Program;
 import parser.Parser;
+import wellFormedness.NoDuplicateNames;
 
 public class Main {
 	public static void main(String[] args) {
-		var program = "interface Hello {\n" +
+		var source = "interface Hello {\n" +
 				"\tmethod String name();\n" +
 				"}\n" +
 				"\n" +
@@ -16,11 +17,14 @@ public class Main {
 				"main = new Foo().name();";
 
 		try {
-			// TODO: I need to do the duplicate naming check before making the AST
-			var ast = Program.fromCtx(Parser.fromString(program));
+			var programContext = Parser.fromString(source);
+			new NoDuplicateNames().visit(programContext);
+			var program = Program.fromCtx(programContext);
+			System.out.println(program);
 			System.out.println("Done!");
 		} catch (ParseCancellationException e) {
 			System.err.println(e.getLocalizedMessage());
+			System.exit(1);
 		}
 	}
 }

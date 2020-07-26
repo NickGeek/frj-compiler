@@ -1,12 +1,14 @@
 package parser;
 
 import antlrGenerated.FRJSimpleParser;
+import lombok.ToString;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
+@ToString
 public class Program {
 	public static Program fromCtx(FRJSimpleParser.ProgramContext ctx) {
 		var classDecs = ctx.classDeclaration()
@@ -14,9 +16,9 @@ public class Program {
 				.map(Program::ctxToClassDeclaration)
 				.collect(Collectors.toMap(cd -> cd.name, cd -> cd));
 
-		var mainExprCtx = ctx.main().expr();
+		var mainExpr = exprCtxToExpression(ctx.main().expr());
 
-		return new Program(classDecs, null);
+		return new Program(classDecs, mainExpr);
 	}
 
 	private static Program.ClassDeclaration ctxToClassDeclaration(FRJSimpleParser.ClassDeclarationContext ctx) {
@@ -48,7 +50,7 @@ public class Program {
 							typeNameCtxToType(header.typeName()),
 							header.Identifier().getText(),
 							new HashMap<>(),
-							null
+							exprCtxToExpression(methodCtx.expr())
 					);
 				})
 				.collect(Collectors.toMap(meth -> meth.name, meth -> meth));
@@ -73,6 +75,40 @@ public class Program {
 		return mdf != null ? Modifier.fromLiteral(mdf.getText()) : Modifier.IMM;
 	}
 
+	private static Expression exprCtxToExpression(FRJSimpleParser.ExprContext ctx) {
+		if (ctx.callExpr() != null) {
+			return new Expression.CallExpr(
+					exprCtxToExpression(ctx.expr()),
+					ctx.callExpr().Identifier().getText(),
+					ctx.callExpr()
+							.argumentList()
+							.expr()
+							.stream()
+							.map(Program::exprCtxToExpression)
+							.collect(Collectors.toList())
+			);
+		}
+		if (ctx.instantiationExpr() != null) {
+			return new Expression.InstantiationExpr(
+					ctx.instantiationExpr().Identifier().getText(),
+					ctx.instantiationExpr()
+							.argumentList()
+							.expr()
+							.stream()
+							.map(Program::exprCtxToExpression)
+							.collect(Collectors.toList())
+			);
+		}
+		if (ctx.fieldAccessExpr() != null) {
+			return new Expression.FieldAccessExpr(exprCtxToExpression(ctx.expr()), ctx.fieldAccessExpr().Identifier().getText());
+		}
+		if (ctx.THIS() != null) {
+			return new Expression.ThisExpr();
+		}
+
+		throw new IllegalStateException(String.format("Unexpected expression: %s", ctx.getText()));
+	}
+
 	final Map<String, ClassDeclaration> classDeclarations;
 	final Expression main;
 
@@ -92,6 +128,7 @@ public class Program {
 		}
 	}
 
+	@ToString
 	static class ClassDeclaration {
 		public final boolean isCapability;
 		public final boolean isInterface;
@@ -112,6 +149,7 @@ public class Program {
 		}
 	}
 
+	@ToString
 	static class Field {
 		public final Type type;
 		public final String name;
@@ -122,6 +160,7 @@ public class Program {
 		}
 	}
 
+	@ToString
 	static class Method {
 		public final Modifier mdf;
 		public final Type returnType;
@@ -138,6 +177,7 @@ public class Program {
 		}
 	}
 
+	@ToString
 	static class Type {
 		public final Modifier mdf;
 		public final String name;
@@ -146,9 +186,5 @@ public class Program {
 			this.mdf = mdf;
 			this.name = name;
 		}
-	}
-
-	interface Expression {
-
 	}
 }
