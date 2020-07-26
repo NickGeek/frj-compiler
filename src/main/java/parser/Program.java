@@ -1,6 +1,7 @@
 package parser;
 
 import antlrGenerated.FRJSimpleParser;
+import lombok.AllArgsConstructor;
 import lombok.ToString;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNode;
@@ -49,7 +50,6 @@ public class Program {
 							mdfTerminalToModifier(header.MDF()),
 							typeNameCtxToType(header.typeName()),
 							header.Identifier().getText(),
-							new HashMap<>(),
 							exprCtxToExpression(methodCtx.expr())
 					);
 				})
@@ -129,6 +129,7 @@ public class Program {
 	}
 
 	@ToString
+	@AllArgsConstructor
 	static class ClassDeclaration {
 		public final boolean isCapability;
 		public final boolean isInterface;
@@ -137,54 +138,28 @@ public class Program {
 		public final List<String> extend;
 		public final Map<String, Field> fields;
 		public final Map<String, Method> methods;
-
-		ClassDeclaration(boolean isCapability, boolean isInterface, String name, List<String> impl, List<String> extend, Map<String, Field> fields, Map<String, Method> methods) {
-			this.isCapability = isCapability;
-			this.isInterface = isInterface;
-			this.name = name;
-			this.impl = impl;
-			this.extend = extend;
-			this.fields = fields;
-			this.methods = methods;
-		}
 	}
 
 	@ToString
+	@AllArgsConstructor
 	static class Field {
 		public final Type type;
 		public final String name;
-
-		public Field(Type type, String name) {
-			this.type = type;
-			this.name = name;
-		}
 	}
 
 	@ToString
+	@AllArgsConstructor
 	static class Method {
 		public final Modifier mdf;
 		public final Type returnType;
 		public final String name;
-		public final HashMap<String, Expression> bindings;
 		public final Expression expression;
-
-		Method(Modifier mdf, Type returnType, String name, HashMap<String, Expression> bindings, Expression expression) {
-			this.mdf = mdf;
-			this.returnType = returnType;
-			this.name = name;
-			this.bindings = bindings;
-			this.expression = expression;
-		}
 	}
 
 	@ToString
+	@AllArgsConstructor
 	static class Type {
 		public final Modifier mdf;
 		public final String name;
-
-		Type(Modifier mdf, String name) {
-			this.mdf = mdf;
-			this.name = name;
-		}
 	}
 }
