@@ -9,7 +9,7 @@ program : classDeclaration* main;
 main : MAIN ASSIGN expr SEMI;
 
 classDeclaration
-	: CAP? CLASS Identifier implementsDeclaration LBRACE fieldDeclaration* methodDeclaration* RBRACE
+	: CAP? CLASS Identifier implementsDeclaration? LBRACE fieldDeclaration* methodDeclaration* RBRACE
 	| INTERFACE Identifier extendsDeclaration? LBRACE (methodHeader SEMI)* RBRACE
 	;
 
