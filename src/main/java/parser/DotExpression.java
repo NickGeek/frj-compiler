@@ -8,9 +8,18 @@ import java.util.List;
 
 public interface DotExpression extends Expression {
     static DotExpression ctxToBiExpression(FRJSimpleParser.ExprContext ctx) {
+        if (ctx.liftedCallExpr() != null) {
+            return new CallExpr(
+                    Expression.ctxToExpression(ctx.expr()),
+                    true,
+                    ctx.callExpr().Identifier().getText(),
+                    Expression.argListCtxToList(ctx.callExpr().argumentList())
+            );
+        }
         if (ctx.callExpr() != null) {
             return new CallExpr(
                     Expression.ctxToExpression(ctx.expr()),
+                    false,
                     ctx.callExpr().Identifier().getText(),
                     Expression.argListCtxToList(ctx.callExpr().argumentList())
             );
@@ -36,16 +45,12 @@ public interface DotExpression extends Expression {
     Expression receiver();
 
     @ToString
+    @AllArgsConstructor
     class CallExpr implements DotExpression {
         public final Expression receiver;
+        public final boolean isLifted;
         public final String methodName;
         public final List<Expression> arguments;
-
-        public CallExpr(Expression receiver, String methodName, List<Expression> arguments) {
-            this.receiver = receiver;
-            this.methodName = methodName;
-            this.arguments = arguments;
-        }
 
         @Override
         public Expression receiver() {

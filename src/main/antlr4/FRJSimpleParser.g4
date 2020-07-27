@@ -20,7 +20,10 @@ extendsDeclaration : EXTENDS Identifier (COMMA Identifier)*;
 
 fieldDeclaration : typeName Identifier SEMI;
 
-typeName : MDF? Identifier;
+typeName
+	: MDF? Identifier
+	| AT Identifier
+	;
 
 methodHeader : MDF? METHOD typeName Identifier LPAREN (methodDeclarationArgument (COMMA methodDeclarationArgument)*)? RPAREN;
 

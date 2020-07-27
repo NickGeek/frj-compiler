@@ -80,7 +80,9 @@ public class Program {
 
 	private static Program.Type typeNameCtxToType(FRJSimpleParser.TypeNameContext ctx) {
 		var mdf = mdfTerminalToModifier(ctx.MDF());
-		return new Type(mdf, ctx.Identifier().getText());
+		var isLifted = ctx.AT() != null;
+
+		return new Type(mdf, isLifted, ctx.Identifier().getText());
 	}
 
 	enum Modifier {
@@ -126,6 +128,7 @@ public class Program {
 	@AllArgsConstructor
 	static class Type {
 		public final Modifier mdf;
+		public final boolean isLifted;
 		public final String name;
 	}
 }
