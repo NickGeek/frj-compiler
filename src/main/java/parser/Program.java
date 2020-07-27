@@ -17,7 +17,7 @@ public class Program {
 				.map(Program::ctxToClassDeclaration)
 				.collect(Collectors.toMap(cd -> cd.name, cd -> cd));
 
-		var mainExpr = exprCtxToExpression(ctx.main().expr());
+		var mainExpr = Expression.ctxToExpression(ctx.main().expr());
 
 		return new Program(classDecs, mainExpr);
 	}
@@ -58,7 +58,7 @@ public class Program {
 							mdfTerminalToModifier(header.MDF()),
 							typeNameCtxToType(header.typeName()),
 							header.Identifier().getText(),
-							exprCtxToExpression(methodCtx.expr())
+							Expression.ctxToExpression(methodCtx.expr())
 					);
 				})
 				.collect(Collectors.toMap(meth -> meth.name, meth -> meth));
@@ -81,40 +81,6 @@ public class Program {
 
 	private static Program.Modifier mdfTerminalToModifier(TerminalNode mdf) {
 		return mdf != null ? Modifier.fromLiteral(mdf.getText()) : Modifier.IMM;
-	}
-
-	private static Expression exprCtxToExpression(FRJSimpleParser.ExprContext ctx) {
-		if (ctx.callExpr() != null) {
-			return new Expression.CallExpr(
-					exprCtxToExpression(ctx.expr()),
-					ctx.callExpr().Identifier().getText(),
-					ctx.callExpr()
-							.argumentList()
-							.expr()
-							.stream()
-							.map(Program::exprCtxToExpression)
-							.collect(Collectors.toList())
-			);
-		}
-		if (ctx.instantiationExpr() != null) {
-			return new Expression.InstantiationExpr(
-					ctx.instantiationExpr().Identifier().getText(),
-					ctx.instantiationExpr()
-							.argumentList()
-							.expr()
-							.stream()
-							.map(Program::exprCtxToExpression)
-							.collect(Collectors.toList())
-			);
-		}
-		if (ctx.fieldAccessExpr() != null) {
-			return new Expression.FieldAccessExpr(exprCtxToExpression(ctx.expr()), ctx.fieldAccessExpr().Identifier().getText());
-		}
-		if (ctx.THIS() != null) {
-			return new Expression.ThisExpr();
-		}
-
-		throw new IllegalStateException(String.format("Unexpected expression: %s", ctx.getText()));
 	}
 
 	enum Modifier {
