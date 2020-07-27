@@ -1,0 +1,1 @@
+interface ߟี { method @ ఽા⁯  ⷎྭ༘ ( @ ᨕୌ  ˣெ  , mut ᛯⷠ  რ  )  ; }  capability class ۯ implements ၜௗٰ , ມ〭 , ำꢁ , Ò  { ꞗऺ۪ᷴෝ  ߺ ;  }  interface ꦉ᥇ٰ extends ຍ , ਅ  { }  interface ˉ᭬ extends ۯ  { imm method @ ꧫ  ὑั॒ႋ᠘ ( )  ; imm method @ ︳ു  ଢ଼ ( )  ; method @ う  ౡ９ࠥ⁢ ( @ ꭥৗ್  ꠸߲᭯  )  ; imm method imm ⁱ  ወ꛰ీ ( )  ; capsule method @ ﶨ̺  ⶮ ( $ೖ  㙑ೃ੦  )  ; }  main = false  ;  

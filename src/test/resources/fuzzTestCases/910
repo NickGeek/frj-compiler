@@ -1,0 +1,1 @@
+interface ࡥꚞꚟୢ extends ﶤு , ە⳱ , ཁ  { }  interface ຍ፝ extends ঢ༹꘧ , ꬑ  { imm method ﭓ  ꪱᢩ꤄෭ ( )  ; mut method ꣽᝲ්꣒  ࠕ् ( @ ল  ᳶྺ  , Ῥ  ꘫ  , 〳  ꬉৢ᱁  , @ ල᜔  Ωꢁॄࠠ  )  ; capsule method read ᙻ  ꨕૉ ( ဿ  ᏼᤵ  )  ; capsule method ᥱၴ  ྉ૫ ( @ ລ  ꪭ  )  ; }  main = tail ( tail ( @ [ @ [ ]   ; tail ( new ⴭ ( tail ( tail ( ""  )   )   , ኌ᱉  . ꣻᬶ   )    )   ]   )   )   ;  

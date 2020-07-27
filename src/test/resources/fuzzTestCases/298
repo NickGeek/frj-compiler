@@ -1,0 +1,1 @@
+main = tail ( head ( ℤ  )   )   ;  

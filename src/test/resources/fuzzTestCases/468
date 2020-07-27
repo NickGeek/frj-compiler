@@ -1,0 +1,1 @@
+interface ⴧ⃒ੇੀ { method ௹  ಏᢩ ( capsule ｙ꠆ꙸ  ೱµ  , capsule લ  Ἥꠋ  )  ; }  interface ὶ͔ { method @ ມ⳰  Ï ( Α಼  ᧆ  , ⶦ  ࠤ꩐᠍࡙꩐  , @ ⁔ၲ  ൟୖ  )  ; }  capability class 횤꫁ { method @ ẕ꩖  Ϫଃ ( ৎ੩  ಀ  )  = 0xaDp0  ;  method ⶶ  ױ໔ ( )  = tail ( this  )   ;  }  main = this  ;  

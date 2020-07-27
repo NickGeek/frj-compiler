@@ -1,0 +1,1 @@
+capability class 볏ే { imm ꦡ഻  ຂ ;  @ Òޯ્  ଢ଼ ;  }  class ॐ implements ﶄ , Ⱇ୪ᢩ  { mut ꠄಂొ༾ؖ  ꜗෳࣔ ;  method @ ᱏೕࣵേ  ⵯᷯ ( @ ဗ  נּꦼ  )  = read ⷎେ  ຢી = true  , new ଐ⳱ ( )      ;  method @ ॳ༙  ၥ ( @ ℰ  ꧫ  , @ ˣ  ꪵ  , imm 〳゙︤  ᝮ഼  , @ ၡ  ᝤ  , @ ঢ়  ஏ  , @ ࢦၗ෦ৄ႖  ቘ  , imm ᤎ  ꠸  )  = @ ᬎ꯲  ວ꪿ઁ = head ( tail ( tail ( 0b01L  . @ ꪼ ( true  )    )   )   )   , false    ;  }  main = this  ;  

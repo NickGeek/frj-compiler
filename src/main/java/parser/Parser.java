@@ -4,6 +4,9 @@ import antlrGenerated.FRJSimpleParser;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 
+import java.io.IOException;
+import java.nio.file.Path;
+
 public class Parser {
 	/**
 	 * Lexes and generates a parse tree for the given source code.
@@ -13,6 +16,15 @@ public class Parser {
 	 */
 	public static FRJSimpleParser.ProgramContext fromString(String source) throws ParseCancellationException {
 		var lexer = new FRJLexer(CharStreams.fromString(source));
+		return makeParser(lexer);
+	}
+
+	public static FRJSimpleParser.ProgramContext fromPath(Path source) throws ParseCancellationException, IOException {
+		var lexer = new FRJLexer(CharStreams.fromPath(source));
+		return makeParser(lexer);
+	}
+
+	private static FRJSimpleParser.ProgramContext makeParser(FRJLexer lexer) {
 		replaceErrorListeners(lexer);
 
 		var parser = new FRJSimpleParser(new CommonTokenStream(lexer));

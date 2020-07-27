@@ -22,4 +22,5 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.12'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
     testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'com.google.guava', name: 'guava', version: '29.0-jre'
 }

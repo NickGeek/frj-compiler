@@ -1,0 +1,1 @@
+interface ᪧ { }  main = @ [ tail ( @ [ false  ; this  ]   )   ; head ( this  )   ]   ;  

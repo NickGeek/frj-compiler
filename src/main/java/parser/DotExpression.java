@@ -12,8 +12,8 @@ public interface DotExpression extends Expression {
             return new CallExpr(
                     Expression.ctxToExpression(ctx.expr()),
                     true,
-                    ctx.callExpr().Identifier().getText(),
-                    Expression.argListCtxToList(ctx.callExpr().argumentList())
+                    ctx.liftedCallExpr().Identifier().getText(),
+                    Expression.argListCtxToList(ctx.liftedCallExpr().argumentList())
             );
         }
         if (ctx.callExpr() != null) {

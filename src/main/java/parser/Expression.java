@@ -1,5 +1,6 @@
 package parser;
 
+import antlrGenerated.FRJLexer;
 import antlrGenerated.FRJSimpleParser;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -34,7 +35,7 @@ public interface Expression {
 			return new HeadExpr(ctxToExpression(ctx.headExpr().expr()));
 		}
 		if (ctx.tailExpr() != null) {
-			return new TailExpr(ctxToExpression(ctx.headExpr().expr()));
+			return new TailExpr(ctxToExpression(ctx.tailExpr().expr()));
 		}
 		if (ctx.letExpr() != null) {
 			return new LetExpr(
@@ -46,6 +47,31 @@ public interface Expression {
 		}
 		if (ctx.THIS() != null) {
 			return new ThisExpr();
+		}
+		if (ctx.IntegerLiteral() != null) {
+			var literal_value = ctx.IntegerLiteral().getText().toUpperCase();
+			literal_value = literal_value.replace("L", ""); // L is not allowed to appear for parseLong, think 0L
+			literal_value = literal_value.replaceAll("_", "");
+			var value = literal_value.startsWith("0B") ? Long.parseLong(literal_value.substring(2), 2) : Long.decode(literal_value);
+
+			return new Literal<>(value);
+		}
+		if (ctx.FloatingPointLiteral() != null) {
+			var literal_value = ctx.FloatingPointLiteral().getText().toUpperCase();
+			literal_value = literal_value.replaceAll("_", "");
+			if (literal_value.startsWith(".")) {
+				literal_value = "0" + literal_value;
+			}
+
+			return new Literal<>(Double.parseDouble(literal_value));
+		}
+		if (ctx.StringLiteral() != null) {
+			var text = ctx.StringLiteral().getText();
+			return new Literal<>(text.substring(1, text.length() - 1));
+		}
+		if (ctx.BooleanLiteral() != null) {
+			var value = ctx.BooleanLiteral().getText().equals("true");
+			return new Literal<>(value);
 		}
 		if (ctx.Identifier() != null) {
 			return new Identifier(ctx.Identifier().getText());
@@ -120,6 +146,17 @@ public interface Expression {
 		@Override
 		public String toString() {
 			return this.name;
+		}
+	}
+
+	@AllArgsConstructor
+	@EqualsAndHashCode
+	class Literal<T> implements Expression {
+		public final T value;
+
+		@Override
+		public String toString() {
+			return this.value.toString();
 		}
 	}
 }
