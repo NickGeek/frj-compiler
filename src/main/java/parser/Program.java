@@ -22,6 +22,10 @@ public class Program {
 		return new Program(classDecs, mainExpr);
 	}
 
+	public static Program.Modifier mdfTerminalToModifier(TerminalNode mdf) {
+		return mdf != null ? Modifier.fromLiteral(mdf.getText()) : Modifier.IMM;
+	}
+
 	final Map<String, ClassDeclaration> classDeclarations;
 	final Expression main;
 
@@ -77,10 +81,6 @@ public class Program {
 	private static Program.Type typeNameCtxToType(FRJSimpleParser.TypeNameContext ctx) {
 		var mdf = mdfTerminalToModifier(ctx.MDF());
 		return new Type(mdf, ctx.Identifier().getText());
-	}
-
-	private static Program.Modifier mdfTerminalToModifier(TerminalNode mdf) {
-		return mdf != null ? Modifier.fromLiteral(mdf.getText()) : Modifier.IMM;
 	}
 
 	enum Modifier {
