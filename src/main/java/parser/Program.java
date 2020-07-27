@@ -22,6 +22,14 @@ public class Program {
 		return new Program(classDecs, mainExpr);
 	}
 
+	final Map<String, ClassDeclaration> classDeclarations;
+	final Expression main;
+
+	public Program(Map<String, ClassDeclaration> classDeclarations, Expression main) {
+		this.classDeclarations = classDeclarations;
+		this.main = main;
+	}
+
 	private static Program.ClassDeclaration ctxToClassDeclaration(FRJSimpleParser.ClassDeclarationContext ctx) {
 		var implNode = ctx.implementsDeclaration();
 		List<String> impl = Collections.emptyList();
@@ -107,14 +115,6 @@ public class Program {
 		}
 
 		throw new IllegalStateException(String.format("Unexpected expression: %s", ctx.getText()));
-	}
-
-	final Map<String, ClassDeclaration> classDeclarations;
-	final Expression main;
-
-	public Program(Map<String, ClassDeclaration> classDeclarations, Expression main) {
-		this.classDeclarations = classDeclarations;
-		this.main = main;
 	}
 
 	enum Modifier {
