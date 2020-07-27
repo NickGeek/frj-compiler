@@ -1,7 +1,10 @@
 package parser;
+
 import antlrGenerated.FRJLexer;
 import antlrGenerated.FRJSimpleParser;
-import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 
 import java.io.IOException;

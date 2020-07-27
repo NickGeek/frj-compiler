@@ -1,6 +1,5 @@
 package parser;
 
-import antlrGenerated.FRJLexer;
 import antlrGenerated.FRJSimpleParser;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

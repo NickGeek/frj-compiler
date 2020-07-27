@@ -1,6 +1,6 @@
 import org.antlr.v4.runtime.misc.ParseCancellationException;
-import parser.Program;
 import parser.Parser;
+import parser.Program;
 import wellFormedness.NoDuplicateNames;
 
 public class Main {
