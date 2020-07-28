@@ -31,7 +31,12 @@ public class ParserFuzzTests {
 
 		var testFiles = Arrays.stream(testCases).filter(File::isFile);
 
-		var expectations = Arrays.stream(GenerateFuzzTestingAnswers.expectations.toFile().listFiles())
+		var expectationsDir = GenerateFuzzTestingAnswers.expectations.toFile().listFiles();
+		if (expectationsDir == null) {
+			throw new FileNotFoundException("Error reading expectation directory cases");
+		}
+
+		var expectations = Arrays.stream(expectationsDir)
 				.filter(File::isFile)
 				.sorted()
 				.map(file -> {
