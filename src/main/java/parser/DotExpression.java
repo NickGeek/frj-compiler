@@ -10,6 +10,7 @@ public interface DotExpression extends Expression {
     static DotExpression ctxToBiExpression(FRJSimpleParser.ExprContext ctx) {
         if (ctx.liftedCallExpr() != null) {
             return new CallExpr(
+                    new Position(ctx.liftedCallExpr().start),
                     Expression.ctxToExpression(ctx.expr()),
                     true,
                     ctx.liftedCallExpr().Identifier().getText(),
@@ -18,6 +19,7 @@ public interface DotExpression extends Expression {
         }
         if (ctx.callExpr() != null) {
             return new CallExpr(
+                    new Position(ctx.callExpr().start),
                     Expression.ctxToExpression(ctx.expr()),
                     false,
                     ctx.callExpr().Identifier().getText(),
@@ -25,10 +27,15 @@ public interface DotExpression extends Expression {
             );
         }
         if (ctx.fieldAccessExpr() != null) {
-            return new FieldAccessExpr(Expression.ctxToExpression(ctx.expr()), ctx.fieldAccessExpr().Identifier().getText());
+            return new FieldAccessExpr(
+                    new Position(ctx.fieldAccessExpr().start),
+                    Expression.ctxToExpression(ctx.expr()),
+                    ctx.fieldAccessExpr().Identifier().getText()
+            );
         }
         if (ctx.fieldAssignExpr() != null) {
             return new FieldAssignExpr(
+                    new Position(ctx.fieldAssignExpr().start),
                     Expression.ctxToExpression(ctx.expr()),
                     ctx.fieldAssignExpr().Identifier().getText(),
                     Expression.ctxToExpression(ctx.fieldAssignExpr().expr())
@@ -47,20 +54,27 @@ public interface DotExpression extends Expression {
     @ToString
     @AllArgsConstructor
     class CallExpr implements DotExpression {
+        public final Position pos;
         public final Expression receiver;
         public final boolean isLifted;
         public final String methodName;
-        public final List<Expression> arguments;
+        public final Expression[] arguments;
 
         @Override
         public Expression receiver() {
             return this.receiver;
+        }
+
+        @Override
+        public Position pos() {
+            return this.pos;
         }
     }
 
     @ToString
     @AllArgsConstructor
     class FieldAccessExpr implements DotExpression {
+        public final Position pos;
         public final Expression receiver;
         public final String fieldName;
 
@@ -68,11 +82,17 @@ public interface DotExpression extends Expression {
         public Expression receiver() {
             return this.receiver;
         }
+
+        @Override
+        public Position pos() {
+            return this.pos;
+        }
     }
 
     @ToString
     @AllArgsConstructor
     class FieldAssignExpr implements DotExpression {
+        public final Position pos;
         public final Expression receiver;
         public final String fieldName;
         public final Expression value;
@@ -80,6 +100,11 @@ public interface DotExpression extends Expression {
         @Override
         public Expression receiver() {
             return this.receiver;
+        }
+
+        @Override
+        public Position pos() {
+            return this.pos;
         }
     }
 }

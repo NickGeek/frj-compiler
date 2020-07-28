@@ -6,8 +6,13 @@ import antlrGenerated.FRJSimpleParserBaseVisitor;
 import java.util.HashSet;
 import java.util.Set;
 
-public class NoDuplicateNames extends FRJSimpleParserBaseVisitor<Void> {
+public class NoDuplicateNames extends FRJSimpleParserBaseVisitor<Void> implements WellFormednessRule<FRJSimpleParser.ProgramContext> {
 	private final Set<String> classAndInterfaceNames = new HashSet<>();
+
+	@Override
+	public void check(FRJSimpleParser.ProgramContext toCheck) throws MalformedException {
+		this.visit(toCheck);
+	}
 
 	@Override
 	public Void visitClassDeclaration(FRJSimpleParser.ClassDeclarationContext ctx) {
