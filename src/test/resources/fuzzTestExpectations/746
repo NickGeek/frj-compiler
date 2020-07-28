@@ -1,9 +1,9 @@
-main = ;
+main = "";
 
 interface ㅁᝲ  {
 mut method mut ῂ ℨോᳲ();
 
-imm method imm @ମ Ι();
+imm method @ମ Ι();
 
 mut method capsule ꩁ ꬣ྇໒(capsule ℂુᝓ᭑ ྌ);
 }

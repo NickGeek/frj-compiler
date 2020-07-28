@@ -5,7 +5,7 @@ imm ᙴ ຈ;
 }
 
 interface ໆ  {
-read method capsule ¢〇 ﱴੈᝲꢁ(read ࠤೖ ໂ, imm @ꫛ಼ ᤕ๎ꦸ, imm @֏ ῂ5);
+read method capsule ¢〇 ﱴੈᝲꢁ(read ࠤೖ ໂ, @ꫛ಼ ᤕ๎ꦸ, @֏ ῂ5);
 }
 
 class ˮ〬  {

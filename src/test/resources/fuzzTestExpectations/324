@@ -5,11 +5,11 @@ interface ⴒ꤂ྙ extends ଽ༙౭, ລ  {
 }
 
 interface ನ extends ங  {
-imm method imm @Ξ த();
+imm method @Ξ த();
 
 imm method imm ꞔ ຍၴ();
 
-imm method imm @ⅵ Ί();
+imm method @ⅵ Ί();
 }
 
 capability class ਪ  {
@@ -21,8 +21,8 @@ interface ͼ extends ΐ, ຊ  {
 }
 
 interface ଢ଼ extends ꩨ, ₪, ⁿ, ᳫஂంꯤೆ3, ௐோꩃꥈ๗, ೡ, ᣍ᪶࠙྇߇ೃ￺, ઍ, ꣻ  {
-imm method imm @ࠚ ড়ੌ();
+imm method @ࠚ ড়ੌ();
 
-imm method imm @ῢો ࠨ(imm ꮶ ഽ, imm @ໜ꠆ ᝈ);
+imm method @ῢો ࠨ(imm ꮶ ഽ, @ໜ꠆ ᝈ);
 }
 

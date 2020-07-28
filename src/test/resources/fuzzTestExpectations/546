@@ -1,7 +1,7 @@
-main = read ஆ Ὲ = @[@[0.013671875; 5.4E-50]; @[]],
-false;
+main = read ஆ Ὲ = @[@[0.013671875 ; 5.4E-50 ]; @[]],
+false ;
 
 interface ︴‏ୗ extends $, ㅋ, ੳୀୈ, ᚌ, ઽ፝, ண௯ૢ, ꣻ፞, Ⴧ︪  {
-imm method mut ᏼ᪓ั ꭚௗֲꧥ⁦(imm @தೊ ஃၴொྪৄ༹０ꠂ, imm @ꓠ ᳮ, imm ꪵ շ, imm ၮ ㄉꦃ);
+imm method mut ᏼ᪓ั ꭚௗֲꧥ⁦(@தೊ ஃၴொྪৄ༹０ꠂ, @ꓠ ᳮ, imm ꪵ շ, imm ၮ ㄉꦃ);
 }
 

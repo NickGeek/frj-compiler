@@ -1,4 +1,4 @@
-main = .@ୱ();
+main = "".@ୱ();
 
 interface ᝩ‮ᤡૂ઼ೊၳ  {
 
@@ -9,10 +9,10 @@ capability class ꛔ  {
 }
 
 capability class ꬪ  {
-read ଲ⁠ פּ;imm method imm @ͻ ၔᰭꩻ(imm ຄ‪ Ꭾﬞ) =
+read ଲ⁠ פּ;imm method @ͻ ၔᰭꩻ(imm ຄ‪ Ꭾﬞ) =
 this;
 
-imm method imm @ⶆ s() =
-.@ݳ();
+imm method @ⶆ s() =
+"".@ݳ();
 }
 

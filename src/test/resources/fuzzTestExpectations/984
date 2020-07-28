@@ -1,32 +1,32 @@
-main = ;
+main = "";
 
 class ᡦ  {
 read ಀ ጶᯪ꙯;
-imm @ꪩ ஊ;read method mut ۿ ထ() =
+@ꪩ ஊ;read method mut ۿ ထ() =
 @[];
 
-imm method imm @ൎ 充(imm @ᮮົۤੁ Ͳ, imm @ኋ᱘ෳ෪ ꩆ) =
-tail(head(true));
+imm method @ൎ 充(@ᮮົۤੁ Ͳ, @ኋ᱘ෳ෪ ꩆ) =
+tail(head(true ));
 
 capsule method imm ݾꦁু ˊ༘꣘ၣ() =
-@[ஓੂⷷ; 3];
+@[ஓੂⷷ; 3 ];
 
-imm method imm @ךּ ₮(imm @ଽ ߺೕꠋೇ) =
-false;
+imm method @ךּ ₮(@ଽ ߺೕꠋೇ) =
+false ;
 
-imm method capsule ѳ ৎ(imm @ᛰ ౡ᷽‎, read Ή៝ꣀ ፊꪾऻ) =
-0;
+imm method capsule ѳ ৎ(@ᛰ ౡ᷽‎, read Ή៝ꣀ ፊꪾऻ) =
+0 ;
 }
 
 interface ᬑো〮ୃ extends ფ, $ᢩꩍ۠  {
-imm method imm @ﹲ פּ꫁();
+imm method @ﹲ פּ꫁();
 
-capsule method imm @ᎍ੯ ￥ၝ();
+capsule method @ᎍ੯ ￥ၝ();
 }
 
 interface º  {
-imm method imm ඉ॔ ꩤ(imm @ओ ኸ, imm @ⅆ 䤍⳱︈);
+imm method imm ඉ॔ ꩤ(@ओ ኸ, @ⅆ 䤍⳱︈);
 
-imm method imm @ড়⳰ Ὗ();
+imm method @ড়⳰ Ὗ();
 }
 

@@ -1,35 +1,35 @@
-main = 1;
+main = 1 ;
 
 class ኇ  {
-read method imm ಸ ⁿܑ(imm @ꬪꫮ ৎꙺ, capsule ௹ Ίဳ, read ꠸᪖ ℇೖ૧) =
+read method imm ಸ ⁿܑ(@ꬪꫮ ৎꙺ, capsule ௹ Ίဳ, read ꠸᪖ ℇೖ૧) =
 new ףּ(new ﷵ());
 
-imm method capsule ೲꠥ ᨯఁ(imm @ꪶᮁ८༹ྯ᱔￺ৣ෮ ᱛꦀ૦⁣, imm ਲ਼ਂ꣣ ᝢ) =
+imm method capsule ೲꠥ ᨯఁ(@ꪶᮁ८༹ྯ᱔￺ৣ෮ ᱛꦀ૦⁣, imm ਲ਼ਂ꣣ ᝢ) =
 new ਚ();
 
-imm method imm ຄ྆ີ ⶋꩻ಼(imm @ￛૈ ױൣୈၭ, capsule ቋ਼ᷜ ￗۨ) =
+imm method imm ຄ྆ີ ⶋꩻ಼(@ￛૈ ױൣୈၭ, capsule ቋ਼ᷜ ￗۨ) =
 tail(@[]);
 
-mut method imm ලஂঁ ːꠂొ(imm @ￍ ᨀ, imm ーꢀ ꢓꦂ, imm @எೕೖ ￎ゚ৗ) =
+mut method imm ලஂঁ ːꠂొ(@ￍ ᨀ, imm ーꢀ ꢓꦂ, @எೕೖ ￎ゚ৗ) =
 ᢌ;
 
-imm method imm 〳 ℨ(imm @ႎ꯰⁨ࠩ ؋, imm @য়᮴߲ୂி ꫧ) =
-58;
+imm method imm 〳 ℨ(@ႎ꯰⁨ࠩ ؋, @য়᮴߲ୂி ꫧ) =
+58 ;
 
-imm method imm ࠨﬞ꯬ ﹩(imm @Ӎ Ζ᳞) =
+imm method imm ࠨﬞ꯬ ﹩(@Ӎ Ζ᳞) =
 this;
 
-imm method imm @ⲁ〫 פּை(imm @৲ ߖੑꪷ) =
-;
+imm method @ⲁ〫 פּை(@৲ ߖੑꪷ) =
+"";
 
 imm method imm ꧡຼ Ҫ() =
-false.ၡ = \uuuuB2de␧\016\r\uuuuue7FC\uu3C32;
+false .ၡ = "\uuuuB2de␧\016\r\uuuuue7FC\uu3C32";
 
-imm method imm @ヲ ᱞ(imm ಏ ஃֿ﻿, capsule ⶮꚟ ੳ᧐ੁોׂ) =
+imm method @ヲ ᱞ(imm ಏ ஃֿ﻿, capsule ⶮꚟ ੳ᧐ੁોׂ) =
 @[];
 }
 
 interface ᤏ  {
-imm method mut حೢ ხ൬(imm @Ὗං ഽ);
+imm method mut حೢ ხ൬(@Ὗං ഽ);
 }
 

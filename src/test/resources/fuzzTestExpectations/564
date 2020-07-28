@@ -1,15 +1,15 @@
-main = ;
+main = "";
 
 interface ۥോஂׂ  {
-imm method imm @ঊූ ⳳ();
+imm method @ঊූ ⳳ();
 
-mut method read K୮ᯭ ῐ້៤ొ(read ꚳ꧹ᤱ૧ె ߵ᳹, imm @ⴭ ℇ, imm ࡢᩱ ꫂౕેੑೊ);
+mut method read K୮ᯭ ῐ້៤ొ(read ꚳ꧹ᤱ૧ె ߵ᳹, @ⴭ ℇ, imm ࡢᩱ ꫂౕેੑೊ);
 }
 
 class ǣ implements $᱔᪳, ꣵ, ᥳ, ஜ༷︢  {
-imm @ຊ ࡓၨಁꙸ;
-imm @ኴ ꜙ;imm method read ଈٰႏ ῲ(imm @ꫴ ᨨ, capsule ᝧ꤈ ၚ, imm 祕์꘧፝ࠗᢆׇ ₧ᬀࠩං, imm ఴ ӫ) =
-2270;
+@ຊ ࡓၨಁꙸ;
+@ኴ ꜙ;imm method read ଈٰႏ ῲ(@ꫴ ᨨ, capsule ᝧ꤈ ၚ, imm 祕์꘧፝ࠗᢆׇ ₧ᬀࠩං, imm ఴ ӫ) =
+2270 ;
 }
 
 interface ந᳡ᬄ extends ଥ, ՙꫵꧥ￻, ພ  {
@@ -18,14 +18,14 @@ interface ந᳡ᬄ extends ଥ, ՙꫵꧥ￻, ພ  {
 
 capability class ᚖ implements ₒ  {
 capsule ⵯஂઃꩻ྇ ｉ⁣୪;
-imm @ঽୌ დ;
-imm @ࠨ꧴ૌ ഽ;
+@ঽୌ დ;
+@ࠨ꧴ૌ ഽ;
 capsule ಀ ල;imm method imm ꞕ ℿٰܑ໘ျ() =
 new ඞັ();
 
-imm method imm @ՙେᤴ दᳳ() =
-mut ᢍ ˡ = head(true),
-tail(ꩀ);
+imm method @ՙେᤴ दᳳ() =
+mut ᢍ ˡ = head(true ),
+tail("ꩀ");
 
 imm method imm ಽ༵ ۻ᮸() =
 this;
@@ -34,20 +34,20 @@ this;
 capability class Ἐ implements த, ℐ꩓༵  {
 mut ௐ᥎ ມ;
 imm ܩ ࠨ᳭;imm method imm ධᤣ ᨁ(imm ఏ ૡ႐) =
-11;
+11 ;
 
-imm method imm ڨࣧ ϙ᭭(imm @_ ଡ଼, imm Ⴭූ ˮ) =
+imm method imm ڨࣧ ϙ᭭(@_ ଡ଼, imm Ⴭූ ˮ) =
 imm ப ῐ࿆ = tail(mut ꟽໍ თ = @[new ⴭෲͅ(); @[]],
-@[this; tail(26)].ಽਂ၉),
-tail(tail(imm @Ὓ︆ ࡁ᪀ = false,
-imm @ኳ் ⳳၱ٦ = @[],
-@[head(@[]); true])).@ℙ፟߆();
+@[this; tail(26 )].ಽਂ၉),
+tail(tail(@Ὓ︆ ࡁ᪀ = false ,
+@ኳ் ⳳၱ٦ = @[],
+@[head(@[]); true ])).@ℙ፟߆();
 }
 
 interface হ꠆ extends ꭞ  {
-imm method imm @ﵕ ￥୯ᩫﬞ᳑ୂុ(imm @ዀ ଆꫵꪾ);
+imm method @ﵕ ￥୯ᩫﬞ᳑ୂុ(@ዀ ଆꫵꪾ);
 
-mut method imm @ໄ ⅉ();
+mut method @ໄ ⅉ();
 
 imm method imm ວ શᝒઁంٰ⁯‫(imm ტః ﾬ);
 }
@@ -57,6 +57,6 @@ interface ⰽ  {
 }
 
 class ਫ਼ implements ঐ  {
-imm @ࢧꠂຸ ⷞ;
+@ࢧꠂຸ ⷞ;
 }
 

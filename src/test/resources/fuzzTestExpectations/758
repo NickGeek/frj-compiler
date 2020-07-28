@@ -1,8 +1,8 @@
-main = head(true);
+main = head(true );
 
 capability class ຽ４  {
-imm method imm @ޱ७ྲྀ᳭ ୱ() =
-;
+imm method @ޱ७ྲྀ᳭ ୱ() =
+"";
 
 imm method imm ஆ ￔޯೣ() =
 new ឝ();
@@ -10,7 +10,7 @@ new ឝ();
 capsule method read ﶷੇॣ᳒߳ꩌె ܣ꙽() =
 @[];
 
-imm method imm @ວ ಭ() =
-new 懲⃡(96, );
+imm method @ວ ಭ() =
+new 懲⃡(96 , "");
 }
 

@@ -1,15 +1,15 @@
-main = @[ⷘ༢; 0];
+main = @[ⷘ༢; 0 ];
 
 class Ϳ꧀  {
 
 }
 
 interface ꠃ⁫᱄ൈ  {
-read method imm @ﬨ ๅ(imm @ଷׄ ඐﬞ̖, imm @ꧣ ꫣ⁣ॣം);
+read method @ﬨ ๅ(@ଷׄ ඐﬞ̖, @ꧣ ꫣ⁣ॣം);
 }
 
 class ࠁ implements ⷆ, Άᬃ᪑ᬂਃ‪ූੋ, ￕ͖, ﭣ  {
-imm method imm @ὖ ஈ꣒ೈ() =
+imm method @ὖ ஈ꣒ೈ() =
 this;
 
 read method imm ꣽໍෳ ᪧ༨(imm ꤵ ங) =
@@ -18,8 +18,8 @@ this;
 imm method imm ⁿꙷ ຫ༡() =
 head(this);
 
-imm method capsule ૹ ኌ(imm @ஒ ଢ଼ᬀ) =
-22.5;
+imm method capsule ૹ ኌ(@ஒ ଢ଼ᬀ) =
+22.5 ;
 }
 
 class ءઁꩃ  {

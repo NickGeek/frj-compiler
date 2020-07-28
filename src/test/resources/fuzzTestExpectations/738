@@ -1,7 +1,7 @@
 main = head(this);
 
 interface ၐ୍ຼ⃮྇ extends ꫀ႗  {
-mut method imm @ౘූ ￅ();
+mut method @ౘූ ￅ();
 
 read method capsule ՙᯯ ᳵ();
 }

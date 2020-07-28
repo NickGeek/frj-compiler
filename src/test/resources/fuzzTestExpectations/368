@@ -1,15 +1,15 @@
-main = tail(imm @ꫲ᭱ ම = 3.9631676720860365E17,
-0);
+main = tail(@ꫲ᭱ ම = 3.9631676720860365E17 ,
+0 );
 
 interface ὒ  {
-imm method imm @＄ ল(imm @Ⴭ Ʝꪷ, imm @ꠄ ὒ਼ো);
+imm method @＄ ল(@Ⴭ Ʝꪷ, @ꠄ ὒ਼ো);
 
 imm method read ꭡ ꪵ(imm ጒ ᛲାۨ࠙ୈ);
 }
 
 class Ｖ  {
-imm @ῂ҃໘ ଳ᪵;
-imm @ꪵ ￇଂึ༡;
+@ῂ҃໘ ଳ᪵;
+@ꪵ ￇଂึ༡;
 capsule ᭇ ᕫ̰ං;
 }
 

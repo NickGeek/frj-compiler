@@ -1,3 +1,4 @@
+import org.antlr.v4.runtime.misc.ParseCancellationException;
 import parser.Parser;
 import parser.Program;
 import wellFormedness.MalformedException;
@@ -21,23 +22,38 @@ public class GenerateFuzzTestingAnswers {
 		}
 
 		Arrays.stream(testCases)
+				.parallel()
 				.filter(File::isFile)
 				.forEach(file -> {
 					try {
 						var programContext = Parser.fromPath(file.toPath());
+						String expectation;
 
 						// The test case will be skipped if this well formedness check fails
 						try {
 							new NoDuplicateNames().visit(programContext);
-							var expectation = Program.fromCtx(programContext).toString();
-							Files.write(expectations.resolve(file.toPath().getFileName()), expectation.getBytes());
+							expectation = Program.fromCtx(programContext).toString();
 						} catch (MalformedException e) {
 							System.out.println("Skipping test: " + file);
+							return;
 						}
+
+						validateExpectation(file.getName(), expectation);
+						Files.write(expectations.resolve(file.getName()), expectation.getBytes());
 
 					} catch (IOException e) {
 						throw new RuntimeException(e);
 					}
 				});
+	}
+
+	private static void validateExpectation(String name, String expectation) throws MalformedException {
+		try {
+			Program.fromCtx(Parser.fromString(expectation));
+		} catch (ParseCancellationException e) {
+			System.err.println("On " + name);
+			System.err.println(e.getLocalizedMessage());
+//			System.exit(1);
+		}
 	}
 }

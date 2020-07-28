@@ -1,6 +1,6 @@
-main = tail(imm @אַ ℂ = this,
+main = tail(@אַ ℂ = this,
 read ᭋ ཆ = imm Þ ꙙைึ = @[],
-1,
+1 ,
 head(@[mut ᥳ੍ แ = imm ଢ଼ ଏ = new ኀ(),
 @[tail(@[]); tail(this)],
 this; @[]]));

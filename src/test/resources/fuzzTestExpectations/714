@@ -2,9 +2,9 @@ main = this;
 
 capability class ⷆ  {
 capsule method capsule ᝈꢀ ῑ() =
-𞹥;
+"𞹥";
 
-mut method imm @ޱ̾ ꟽ᱉() =
-tail();
+mut method @ޱ̾ ꟽ᱉() =
+tail("");
 }
 

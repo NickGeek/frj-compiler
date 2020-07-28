@@ -1,8 +1,8 @@
-main = imm @Ｂꯥ ன = @[],
-200000.0;
+main = @Ｂꯥ ன = @[],
+200000.0 ;
 
 interface ℓ extends 셨, ﹲ  {
-capsule method read ꫲ ᜨ꠆᠍ೢ(imm @க ণ);
+capsule method read ꫲ ᜨ꠆᠍ೢ(@க ণ);
 
 mut method imm ⱈ᭑় ཇ();
 

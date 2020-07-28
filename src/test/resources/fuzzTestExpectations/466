@@ -1,11 +1,11 @@
-main = read ᅑ ວ = ,
+main = read ᅑ ວ = "",
 this;
 
 class ࠨ  {
 read method imm ᮯ ꢨ() =
-144.03125;
+144.03125 ;
 
-capsule method imm @ᭇ᜴᳭ັ ݭ() =
+capsule method @ᭇ᜴᳭ັ ݭ() =
 this;
 }
 

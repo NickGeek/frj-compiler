@@ -1,20 +1,20 @@
 main = @[];
 
 interface ﾡ  {
-imm method imm @ܭ ㆫᢩ(mut ฿ 瘟);
+imm method @ܭ ㆫᢩ(mut ฿ 瘟);
 
-imm method imm @〦 ཐ೩۪྆ਾಂ(imm ஃ⃡ิ︄ ଢ଼);
+imm method @〦 ཐ೩۪྆ਾಂ(imm ஃ⃡ิ︄ ଢ଼);
 }
 
 class Ⳳ implements ნ, ഽ፞꤁  {
-read method imm @ႎ۹ꠣ ᬲ() =
-1;
+read method @ႎ۹ꠣ ᬲ() =
+1 ;
 
 imm method capsule ﹩ؚૻၟ⵿ັ᪕ ഽ഼() =
 @[];
 
 imm method imm ᏽ 〇ൢ() =
-@[this; true];
+@[this; true ];
 }
 
 interface ງ extends ꬉྪً༵, Ωੑ  {

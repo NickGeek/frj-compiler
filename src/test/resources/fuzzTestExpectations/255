@@ -1,32 +1,32 @@
 main = ꩈ;
 
 interface ᱲੵ  {
-imm method imm ᢪ ℭෲ៣(imm Ό ힿᯪ៑, imm @נּ꩙८ ᾆ, imm @ॳٰ ¤, imm @ட ﹴ, imm @ߴ ঈגּ);
+imm method imm ᢪ ℭෲ៣(imm Ό ힿᯪ៑, @נּ꩙८ ᾆ, @ॳٰ ¤, @ட ﹴ, @ߴ ঈגּ);
 
-mut method imm @ൡ ꣲ๒(capsule ֏ ㅕ, imm @րື྇ ﬔ႔);
+mut method @ൡ ꣲ๒(capsule ֏ ㅕ, @րື྇ ﬔ႔);
 
 imm method imm टී៝ꯣ ਖ਼();
 
-read method imm @ᳩ ຽ᳸();
+read method @ᳩ ຽ᳸();
 
-imm method imm @వ ୱਃᬼု꣥ી(imm ቝ᱆ॢֿ༷ ヽ, imm ᰟ 〱, capsule ᭇ ㆩ);
+imm method @వ ୱਃᬼု꣥ી(imm ቝ᱆ॢֿ༷ ヽ, imm ᰟ 〱, capsule ᭇ ㆩ);
 
-imm method imm @ᲆౄ ᜋ();
+imm method @ᲆౄ ᜋ();
 
-read method mut է ৱ੍(capsule ኖ Ⴆৌ, imm @ᝥ ߢ, imm @ථ ঐֲ, imm @Ὕ ට༘, imm @ৎ༙؜༹ଂ ഏ, imm ວ 〢ꢶ‬);
+read method mut է ৱ੍(capsule ኖ Ⴆৌ, @ᝥ ߢ, @ථ ঐֲ, @Ὕ ට༘, @ৎ༙؜༹ଂ ഏ, imm ວ 〢ꢶ‬);
 }
 
 class ቡ implements ஔ්႐  {
 imm method imm ܐ ੲૻᮥ() =
-new ℾ(this, true, @[new ͷᳲꥒ︧(); @[imm @ৠ၇් ᮈ = 0.3,
-tail(imm @Ꝑ ഏ = imm ΐ ಲ༹ = false,
-false,
-imm @ໃ ꩋꪷ꙯ = head(@[]),
-ӗ); ༀ὾]], false);
+new ℾ(this, true , @[new ͷᳲꥒ︧(); @[@ৠ၇් ᮈ = 0.3 ,
+tail(@Ꝑ ഏ = imm ΐ ಲ༹ = false ,
+false ,
+@ໃ ꩋꪷ꙯ = head(@[]),
+ӗ); "ༀ὾"]], false );
 }
 
 capability class ໟ  {
-imm ꢇྏﬞ᮱ᢩᝒ࿆ ၷᝒ⃗ు;read method imm @એ Ὑ(imm @ꪶ଼ ৻ᤸ, imm @ລ ਹॢ॑ꫵ, imm ஙั７ ரꧥᬵ, imm Ὓ᜔༿܏ꦸ꠆ ὕ) =
+imm ꢇྏﬞ᮱ᢩᝒ࿆ ၷᝒ⃗ు;read method @એ Ὑ(@ꪶ଼ ৻ᤸ, @ລ ਹॢ॑ꫵ, imm ஙั７ ரꧥᬵ, imm Ὓ᜔༿܏ꦸ꠆ ὕ) =
 new ອ();
 }
 

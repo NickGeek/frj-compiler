@@ -1,6 +1,6 @@
-main = head(960.0);
+main = head(960.0 );
 
 interface ꪽ  {
-imm method imm @ᱎ᱆ ྈั꯭ૣ(imm ￛ๒᳑ ߜೈ, imm @ၜ ؋, imm @ഊꠤ ਲ਼᳭);
+imm method @ᱎ᱆ ྈั꯭ૣ(imm ￛ๒᳑ ߜೈ, @ၜ ؋, @ഊꠤ ਲ਼᳭);
 }
 

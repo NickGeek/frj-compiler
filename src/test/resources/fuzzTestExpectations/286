@@ -1,20 +1,20 @@
-main = this.@Ό࠙០ෝઁ(this.ༀ༘ᤩ = 3);
+main = this.@Ό࠙០ෝઁ(this.ༀ༘ᤩ = 3 );
 
 interface 〩૯  {
 
 }
 
 capability class ᮅ implements ᝮੀၪ  {
-imm @ਚ༿ ﮐ;
+@ਚ༿ ﮐ;
 }
 
 class ꪺ  {
 imm ৻଼ ꫡ;
-imm @ꬅౕ၃੍ פּᮨ;
-imm @ࡢ ⅎ;mut method imm ῳ꣬ ࠤ(imm @ବ ᣚ) =
-true;
+@ꬅౕ၃੍ פּᮨ;
+@ࡢ ⅎ;mut method imm ῳ꣬ ࠤ(@ବ ᣚ) =
+true ;
 
-capsule method imm @ₒ ಎ() =
-@[; tail(true)].ℭ;
+capsule method @ₒ ಎ() =
+@[""; tail(true )].ℭ;
 }
 

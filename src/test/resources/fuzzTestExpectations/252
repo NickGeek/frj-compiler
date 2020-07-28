@@ -1,5 +1,5 @@
-main = @[@[@[head(head(true)); true]; ￍ౦]; this.檬ᯭ(@[this.ꦛ; 20.0], false, this.@ૡ༹൧ޯី(), new ຽ๐ꫫഁॕ(@[]).〵 = imm @ª ˮ٢ൊ᪈ = true,
-𞅊𐒞\u7C22)];
+main = @[@[@[head(head(true )); true ]; ￍ౦]; this.檬ᯭ(@[this.ꦛ; 20.0 ], false , this.@ૡ༹൧ޯី(), new ຽ๐ꫫഁॕ(@[]).〵 = @ª ˮ٢ൊ᪈ = true ,
+"𞅊𐒞\u7C22")];
 
 class ୡ implements ﷴ, ཁ  {
 
@@ -10,16 +10,16 @@ mut method imm ଡ଼ Ὰ();
 }
 
 class ஹ  {
-mut method imm @ଲ ௐൣ() =
-false;
+mut method @ଲ ௐൣ() =
+false ;
 
-imm method imm @ꣻౌꠣ ਗ(imm @ꠃ ℚ২) =
-head(ఎప);
+imm method @ꣻౌꠣ ਗ(@ꠃ ℚ২) =
+head("ఎప");
 
-imm method imm @ꤒ ꕱা() =
-false;
+imm method @ꤒ ꕱা() =
+false ;
 
-imm method imm ŧ Ⳮ(imm @တ ᛙূ⃭, imm ꬂ᪻ ਯ᭱, capsule Ὕ ੴ, imm @ϧ ￦ꩌꠧ) =
+imm method imm ŧ Ⳮ(@တ ᛙূ⃭, imm ꬂ᪻ ਯ᭱, capsule Ὕ ੴ, @ϧ ￦ꩌꠧ) =
 new ᝏ();
 }
 

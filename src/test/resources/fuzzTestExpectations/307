@@ -1,37 +1,37 @@
-main = imm @ꘫৌ ഐ = tail(@[true; @[]]),
-28;
+main = @ꘫৌ ഐ = tail(@[true ; @[]]),
+28 ;
 
 capability class ⳬஂ  {
-capsule ⶼ ਲ਼ꚟ;imm method imm @ￎᝳූಂ᭙ ⅆ(read ￡ ႎ༵, imm @ⱔ２ ꧽ) =
-head(ኲૹ🇦𞣇);
+capsule ⶼ ਲ਼ꚟ;imm method @ￎᝳූಂ᭙ ⅆ(read ￡ ႎ༵, @ⱔ２ ꧽ) =
+head("ኲૹ🇦𞣇");
 
-imm method imm @ღ￺ ˍ() =
+imm method @ღ￺ ˍ() =
 new ꣳ();
 }
 
 class ጔ  {
-imm @ꫝ૦ੵ ߺ௬;
+@ꫝ૦ੵ ߺ௬;
 read ဇ ω꯱;
 }
 
 capability class ￥ implements ᛶ  {
 imm method imm ཀۢഀ ⶻᝳᤳ꤀() =
-1168.0;
+1168.0 ;
 
 imm method imm ﬃꦂ ﹎(imm Έ ಀ) =
 শ᱄.@ͼۢ۝ั();
 }
 
 interface ￕ extends ꭥ  {
-read method imm @Ϳ ܓ();
+read method @Ϳ ܓ();
 
-read method imm @_ᤤ হ︧(imm స ഋܑ, imm Ⴧ ວ, capsule ແ໊ූ༷꙯ ၰ௯);
+read method @_ᤤ হ︧(imm స ഋܑ, imm Ⴧ ວ, capsule ແ໊ූ༷꙯ ၰ௯);
 }
 
 capability class 〵ꫭ꪿ഁᬹၭ implements ℕ꣦ꢀ݁ੑ, ヾ, ළঃ  {
 capsule ᮮ ⁱ;
-imm ᢪ ๅ;imm method imm @ປ ﺷ() =
-\u926c\043𑴺;
+imm ᢪ ๅ;imm method @ປ ﺷ() =
+"\u926c\043𑴺";
 
 imm method imm ச Ϳ() =
 new ꫲ৪ၙ⳯();

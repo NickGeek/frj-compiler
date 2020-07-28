@@ -5,8 +5,8 @@ interface ൎﬞۧુ extends ͺ  {
 }
 
 class ﻺ implements ᰆᮁ  {
-imm @ࢻ᠍ᳳ࿆ྟ໊ᳳ ℨၞࣵ;
-imm @Á᜴ v‏;
+@ࢻ᠍ᳳ࿆ྟ໊ᳳ ℨၞࣵ;
+@Á᜴ v‏;
 imm ᡳ ⁿ;
 }
 

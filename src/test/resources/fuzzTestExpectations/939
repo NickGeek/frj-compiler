@@ -1,30 +1,30 @@
-main = false;
+main = false ;
 
 interface ⁱ꧗ extends ૱  {
 
 }
 
 interface ແ༹  {
-imm method imm @ꩺ꣒ ꫳ();
+imm method @ꩺ꣒ ꫳ();
 
-mut method imm @Ⴭ਼ าͤ꫁￻ெ꯴();
+mut method @Ⴭ਼ าͤ꫁￻ெ꯴();
 
 imm method imm Ꙭ ଐ܏(imm ⶸ ꫴౕ, imm ꬿ଼ Ͱ);
 }
 
 interface ꧽ෬  {
-capsule method imm @ख़ᝒ ⷌ᱗ൈ();
+capsule method @ख़ᝒ ⷌ᱗ൈ();
 
 imm method read χ᭔ॖ؁ ﬔો();
 
-mut method imm @〻 પ(capsule ⁔ୖ ᢒ, mut ᳮ າ࡙);
+mut method @〻 પ(capsule ⁔ୖ ᢒ, mut ᳮ າ࡙);
 
-imm method imm @ૐ ꭤׇ᳭();
+imm method @ૐ ꭤׇ᳭();
 }
 
 capability class ຖ᭔  {
 capsule ಏꩌൣ ︳꛰;
-imm ਤࠢঁႋ Ὃ;mut method read ᝨືꠋ઼഻ঁ ସ૿(imm @ײ ऽો᱃଼) =
+imm ਤࠢঁႋ Ὃ;mut method read ᝨືꠋ઼഻ঁ ସ૿(@ײ ऽો᱃଼) =
 this;
 }
 

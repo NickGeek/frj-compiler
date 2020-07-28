@@ -1,4 +1,4 @@
-main = 0;
+main = 0 ;
 
 class Ｑ്ࠪ  {
 
@@ -13,7 +13,7 @@ capability class ᢞ implements ດ௮ઃ︍, 〳, ⳳ, ͱ, ࠨ۸ೋ೨ం੍ে
 }
 
 interface Ά꠆ extends ቘ  {
-read method read ਜ਼⵿ೢ ຮ(imm @ೡ ﶿ, imm @௹ ª꯭ੑ);
+read method read ਜ਼⵿ೢ ຮ(@ೡ ﶿ, @௹ ª꯭ੑ);
 }
 
 interface ဿ  {

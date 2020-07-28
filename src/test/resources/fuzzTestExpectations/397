@@ -1,15 +1,15 @@
 main = this;
 
 capability class 〵  {
-imm @ੳ༷ ꙁ;read method imm @︴ ଡ଼() =
-tail(tail());
+@ੳ༷ ꙁ;read method @︴ ଡ଼() =
+tail(tail(""));
 }
 
 class ຄ࿆꣦  {
-mut method imm @ಀ᠋ ꪱ() =
+mut method @ಀ᠋ ꪱ() =
 ཪ;
 
 imm method imm យ ପ؅᠋() =
-;
+"";
 }
 

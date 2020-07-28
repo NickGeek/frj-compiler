@@ -1,26 +1,26 @@
-main = @[false; ⅅ];
+main = @[false ; ⅅ];
 
 capability class ꣵࠡၘ implements ਮާ଼݇, ࠤ  {
 imm ৼ ჱ;
-imm @ퟜ ꢅ;
-imm @Ｇૈꠋ ℰଁ;
+@ퟜ ꢅ;
+@Ｇૈꠋ ℰଁ;
 imm ὔᩮꦶ ꣽꧥ;
 mut ༀୈ き;
-capsule ᢙ ꧽ;read method imm @ຄ ᚤ() =
-\\;
+capsule ᢙ ꧽ;read method @ຄ ᚤ() =
+"\\";
 
 imm method imm ઐ Ⅴ(read ພ ລꠦඃ) =
-62;
+62 ;
 }
 
 capability class ℨ implements ਗ਼, ︴  {
-capsule method imm @ட ﷲܑ() =
+capsule method @ட ﷲܑ() =
 ῖ;
 
 imm method imm ૐ ꧡ᷿ࠫ() =
 head(બ);
 
 imm method imm µ಼⳱ັᯩ় ꛭ() =
-9.0;
+9.0 ;
 }
 

@@ -6,15 +6,15 @@ capability class Ⳳ implements ꧬᤥ  {
 
 capability class º  {
 imm method imm ᳮ ＄() =
-Infinity;
+Infinity ;
 
 capsule method imm ꜳ꙯ Ύ() =
 this;
 }
 
 capability class ఎ  {
-imm @ध വ;
-imm J᠌ உ;imm method imm Ꞗ ꤜ(imm @ܟ߅୪៦ᨚᢩ ꩇ܏, imm ໃׇ۫ ᢿ) =
-12288.0;
+@ध വ;
+imm J᠌ உ;imm method imm Ꞗ ꤜ(@ܟ߅୪៦ᨚᢩ ꩇ܏, imm ໃׇ۫ ᢿ) =
+12288.0 ;
 }
 

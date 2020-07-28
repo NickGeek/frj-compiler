@@ -1,23 +1,23 @@
-main = head(new ۻ઼ࠖ࠙ྖٰٰ(@[false; true]));
+main = head(new ۻ઼ࠖ࠙ྖٰٰ(@[false ; true ]));
 
 interface ꠙ᳭  {
 
 }
 
 capability class ଲ〫፝ઃ  {
-imm ａ ヤົ꘡ੋે߰;imm method imm @ঞ ఽ༷(imm ۿ ᚄ߈, capsule µ‎ྎ᠑ ﰙꩽၲ, imm @ꔯ ጧൗ) =
-54272;
+imm ａ ヤົ꘡ੋે߰;imm method @ঞ ఽ༷(imm ۿ ᚄ߈, capsule µ‎ྎ᠑ ﰙꩽၲ, @ꔯ ጧൗ) =
+54272 ;
 }
 
 capability class ᰢ௨҆  {
-imm @ⴭ ῷ៝;
+@ⴭ ῷ៝;
 imm וּᝲ ꬃૢ߯ꚟ;
 imm ౙ᩼ ኻ;
-imm @૱ ៗී;imm method imm @க ᦝ(mut ˡ ޱꠦ૭, imm $ௌ⁢ נּꪳ) =
-400;
+@૱ ៗී;imm method @க ᦝ(mut ˡ ޱꠦ૭, imm $ௌ⁢ נּꪳ) =
+400 ;
 }
 
 interface ቝ extends ᜱ꫁, ª, ຍ༵, ὲ  {
-imm method imm @Ὓ ℬ꯬(imm @ᜬٰꪳ༩⳰ ᲅ);
+imm method @Ὓ ℬ꯬(@ᜬٰꪳ༩⳰ ᲅ);
 }
 

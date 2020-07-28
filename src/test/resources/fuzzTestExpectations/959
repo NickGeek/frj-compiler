@@ -1,6 +1,6 @@
-main = new டᰵ(this, \134, ෦);
+main = new டᰵ(this, "\134", "෦");
 
 interface ꫲ  {
-mut method imm ҥ ᜯ４(imm @ﷄ ၯ, imm @ল ড়ၘ, mut હ༘ ත۰);
+mut method imm ҥ ᜯ４(@ﷄ ၯ, @ল ড়ၘ, mut હ༘ ත۰);
 }
 

@@ -2,9 +2,9 @@ main = mut ৼਿ൧ ퟐૢ‍ೖ = this,
 new ꨛ();
 
 interface Ὅ߬ோ༨  {
-imm method imm @ຽ্ ᯍ꛰(imm ໆ᩷ൢ⳯༣ ꚏ, read Iꯧ ຊ়ۤ݃ံୖ഼);
+imm method @ຽ্ ᯍ꛰(imm ໆ᩷ൢ⳯༣ ꚏ, read Iꯧ ຊ়ۤ݃ံୖ഼);
 
-capsule method imm @ᬙ ꣽꦹ2();
+capsule method @ᬙ ꣽꦹ2();
 }
 
 capability class ª꧶  {

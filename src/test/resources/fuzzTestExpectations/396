@@ -1,4 +1,4 @@
-main = imm @ಽ ऄ = ꩺංꦻৣ,
+main = @ಽ ऄ = ꩺංꦻৣ,
 tail(ᜤ߰੮);
 
 capability class ౙ໌ᤣ implements ￃූஂꧥ, ඟ꣤, Ἔ៝ꩌ  {
@@ -6,12 +6,12 @@ capability class ౙ໌ᤣ implements ￃූஂꧥ, ඟ꣤, Ἔ៝ꩌ  {
 }
 
 capability class ວ  {
-capsule method imm @ଐ Ⳳ() =
+capsule method @ଐ Ⳳ() =
 tail(new ﹱ());
 }
 
 capability class ꩯ implements Ꞙ, ౘৌ  {
 capsule method imm $ ͻۜ() =
-head(@[head(this); head(\157).Ὑꫬၧ༹꯷ = new ಀ਼ꨩᨛ()]);
+head(@[head(this); head("\157").Ὑꫬၧ༹꯷ = new ಀ਼ꨩᨛ()]);
 }
 

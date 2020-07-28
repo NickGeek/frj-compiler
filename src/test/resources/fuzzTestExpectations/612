@@ -2,24 +2,24 @@ main = @[];
 
 class ˆࠗ  {
 imm 땴 ᡲஂ;
-imm @ௐ᧒ òᯱ್;imm method imm @Ό ᠦᨙ(imm @ὒ ＿꙼ᨚꥊ, mut ⸯੁׇ ጝ᭲ၣੁ) =
+@ௐ᧒ òᯱ್;imm method @Ό ᠦᨙ(@ὒ ＿꙼ᨚꥊ, mut ⸯੁׇ ጝ᭲ၣੁ) =
 new ຄ൫ூଃׁ();
 
-mut method imm @ⷔ၃ ৠꠥꫫູ() =
-imm @ຽঃꠋ᠍ᤤ߭ᬄ ၐੇ = @[],
-⶷;
+mut method @ⷔ၃ ৠꠥꫫູ() =
+@ຽঃꠋ᠍ᤤ߭ᬄ ၐੇ = @[],
+"⶷";
 
 capsule method imm Ͷ9 ਫ() =
-49;
+49 ;
 
-read method imm @ᠳ ኵৣ꯭ᳳ(imm @ਸꤨ᭐ׂ३ꣁ ࡓ, imm @ঔꢁׇ ఽ࠭େ) =
-head(tail(@[@[tail(imm @⁀ ᾟ = this,
-1).ຊ = false.@Ϳ૫(@[], this, , @[], imm Ὶেೖ ၷׁ꪿ = @[@[@[]; @[head(head(tail(@[]))); imm @૱ ﹏ = head(tail(ㄪූ)),
-0.5]]; 0.308],
-@[]); mut ͽౖؗၱ ῄ = \f,
+read method @ᠳ ኵৣ꯭ᳳ(@ਸꤨ᭐ׂ३ꣁ ࡓ, @ঔꢁׇ ఽ࠭େ) =
+head(tail(@[@[tail(@⁀ ᾟ = this,
+1 ).ຊ = false .@Ϳ૫(@[], this, "", @[], imm Ὶেೖ ၷׁ꪿ = @[@[@[]; @[head(head(tail(@[]))); @૱ ﹏ = head(tail(ㄪූ)),
+0.5 ]]; 0.308 ],
+@[]); mut ͽౖؗၱ ῄ = "\f",
 @[imm ꟷ ໝ = head(this),
-head(true); head(false)]]; imm @ఽ Ⰵ༦ၫ = tail(false),
-tail(imm ৎ ኔ᧓ = 888.0,
+head(true ); head(false )]]; @ఽ Ⰵ༦ၫ = tail(false ),
+tail(imm ৎ ኔ᧓ = 888.0 ,
 head(@[]))]));
 }
 
@@ -28,7 +28,7 @@ interface ಐ႔  {
 }
 
 interface সೌິ᠋ׂۢꪰૈ  {
-imm method imm ױꠂು ጔ(imm @ꬔ ଶ);
+imm method imm ױꠂು ጔ(@ꬔ ଶ);
 }
 
 interface ኖ࡚  {
@@ -41,7 +41,7 @@ interface ౘ extends 攔ை  {
 
 capability class ￍ්ૻ༤ implements ଲᢆ, ଚ, ꚕ, ֏  {
 imm method read ⲋ ៛ၠ১ۧ() =
-;
+"";
 }
 
 interface ﬧૌꩃు extends ྈ  {

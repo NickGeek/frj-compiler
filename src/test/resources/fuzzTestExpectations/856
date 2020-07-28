@@ -1,40 +1,40 @@
-main = capsule ᮯ಼꛱ᩧ ᝮ = 3,
+main = capsule ᮯ಼꛱ᩧ ᝮ = 3 ,
 @[];
 
 interface 〣ᩘ  {
-imm method imm @લ ꫀ﻿ꢀ(imm @ᰢ હ);
+imm method @લ ꫀ﻿ꢀ(@ᰢ હ);
 
-imm method mut ၝꩼ ᦱ(imm @Ⴐ ຂ);
+imm method mut ၝꩼ ᦱ(@Ⴐ ຂ);
 
-capsule method read ᢝᜳ ቕ(imm @ꢄꢷୄ ங᳷);
+capsule method read ᢝᜳ ቕ(@ꢄꢷୄ ங᳷);
 
-imm method imm @Ꞙ꩗ ᢪ᳐();
+imm method @Ꞙ꩗ ᢪ᳐();
 
 imm method imm ៛꣥᠎ ܠꩼ();
 
-mut method capsule ະৗ ऽ(imm @Ꝁ꫁ᰬ߆ ㄳ, imm ￎ ঌ, imm @ਵฺﬞͩ ﱩ);
+mut method capsule ະৗ ऽ(@Ꝁ꫁ᰬ߆ ㄳ, imm ￎ ঌ, @ਵฺﬞͩ ﱩ);
 }
 
 capability class ग़ஂ꤬ꨵ  {
-imm method imm @৲ो゙៣ ￜ() =
-true;
+imm method @৲ो゙៣ ￜ() =
+true ;
 }
 
 capability class ힲ  {
-imm method imm @םަ ఽົ() =
+imm method @םަ ఽົ() =
 ᲄ.ꟼ();
 }
 
 class Ñूⷸ  {
 imm method imm ՙ ಎ଼() =
-true.ࢫุꙴ = ὖ၆;
+true .ࢫุꙴ = ὖ၆;
 }
 
 class ꤖ࠙ం  {
 imm method read ၡ‌ 爛ࠝ() =
-\156;
+"\156";
 
-capsule method imm @ܐ ⴭ­() =
+capsule method @ܐ ⴭ­() =
 @[];
 
 imm method imm ᡅ ⷌᩮׄ(imm ஃଂௗᷕଁୀٰ ℕ, imm ޱ Ʇੵ) =
@@ -45,31 +45,31 @@ this;
 }
 
 interface נּᤦ  {
-imm method imm @ਇ ˮ(imm @ほූ ㄧ, imm @ñ ֏­);
+imm method @ਇ ˮ(@ほූ ㄧ, @ñ ֏­);
 }
 
 class ᙺ  {
-imm method read ꣲ഻ ಐ(imm @ˬ᭕ᝲ µ, imm @څ꯸ σੁୌꢀ, imm ୱ഻ ℨℽಃ) =
-30;
+imm method read ꣲ഻ ಐ(@ˬ᭕ᝲ µ, @څ꯸ σੁୌꢀ, imm ୱ഻ ℨℽಃ) =
+30 ;
 
-imm method imm @ꭠꪰ ۄ() =
-imm @ℇࠣෳ⵿ ⁿ = @[],
+imm method @ꭠꪰ ۄ() =
+@ℇࠣෳ⵿ ⁿ = @[],
 @[];
 
-read method imm @ⷊ ᚅ(mut Ꚙᮀ ງె) =
-0.008;
+read method @ⷊ ᚅ(mut Ꚙᮀ ງె) =
+0.008 ;
 
 read method read ቘ Ὺ᭯᳑() =
-@[; @[]];
+@[""; @[]];
 
-imm method imm @Ⴧ ౙ(imm @ˬ ఏۨᳲ) =
-2400.0;
+imm method @Ⴧ ౙ(@ˬ ఏۨᳲ) =
+2400.0 ;
 
-mut method imm @ຳ Ὃ᳢੍᭲꧘() =
+mut method @ຳ Ὃ᳢੍᭲꧘() =
 @[ꮞ༘; ˋ];
 
-imm method imm ܐ ಶ᳤⁪(imm ແ ச២, imm @ℌ יּ߁᳭) =
-0.08203125;
+imm method imm ܐ ಶ᳤⁪(imm ແ ச២, @ℌ יּ߁᳭) =
+0.08203125 ;
 }
 
 capability class יִ implements ఽꩌ  {
@@ -78,18 +78,18 @@ read ᜡ﻿ᝳ꛱ౣ ྉ;
 
 class K໕  {
 imm method imm ૐ ߴੵ() =
-new ᪧ꠆(imm @ଧ ῂꨩ = imm ᛖ ࡑ꯴ᢅ۟ஂ᧗ = @[],
-tail(𞄰𖼀\u1Ef3\22\61\f𞹌\"),
+new ᪧ꠆(@ଧ ῂꨩ = imm ᛖ ࡑ꯴ᢅ۟ஂ᧗ = @[],
+tail("𞄰𖼀\u1Ef3\22\61\f𞹌\""),
 head(@[]));
 
 imm method imm ၚ ⅇ༷() =
 @[imm טּ ￖ = new ₒ(),
-true; false];
+true ; false ];
 
-imm method imm ኵ ઽၪ⁪ൊ᷼(imm @ஐੵ꘦ ቜ, imm @ݱ Ὤৈ, imm @ⴭᮂ ख꛱, imm @ఱ ꇈު) =
-true;
+imm method imm ኵ ઽၪ⁪ൊ᷼(@ஐੵ꘦ ቜ, @ݱ Ὤৈ, @ⴭᮂ ख꛱, @ఱ ꇈު) =
+true ;
 
 imm method imm Ꭵ ㆯ(read ၵ⃧ ৱ੩) =
-0;
+0 ;
 }
 

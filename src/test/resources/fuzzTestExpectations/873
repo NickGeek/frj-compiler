@@ -1,10 +1,10 @@
-main = 42.ꁇꙶࠗ(true);
+main = 42 .ꁇꙶࠗ(true );
 
 capability class Ὕ⃭҄ implements Է꫶  {
 imm Ϳ ꫂ;imm method imm ｆܳ סּ(imm ꠄ શෲ॒ೋ߳) =
-15.125;
+15.125 ;
 
-capsule method imm @ɷ Ⴧ(read ª Ꭓ, imm ꩵ ఒٰꦀ) =
+capsule method @ɷ Ⴧ(read ª Ꭓ, imm ꩵ ఒٰꦀ) =
 @[];
 }
 

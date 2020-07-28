@@ -9,19 +9,19 @@ interface ࢻ extends ໂᜓ  {
 }
 
 class ଢ଼ᮁᤵ implements ቋ, ຍ, ⳬ  {
-imm method imm @Ὓᮬ ꚹֿി꤬োો܏() =
-tail(tail(87.2));
+imm method @Ὓᮬ ꚹֿി꤬োો܏() =
+tail(tail(87.2 ));
 
-imm method mut ᛶ￻ׇ ꪨ྇(imm Ὺ ꤣ, imm @ᢚ ᤁⷷූ, capsule ᇘ ࠨ) =
-217.0;
+imm method mut ᛶ￻ׇ ꪨ྇(imm Ὺ ꤣ, @ᢚ ᤁⷷූ, capsule ᇘ ࠨ) =
+217.0 ;
 
-imm method read ퟲྗ ﬅ༘ಁ(imm @Ɠ ⷅ, imm _᧓ ኲ, imm @ຕ ꮜ) =
-true.ៜ〫ஂ‌߆();
+imm method read ퟲྗ ﬅ༘ಁ(@Ɠ ⷅ, imm _᧓ ኲ, @ຕ ꮜ) =
+true .ៜ〫ஂ‌߆();
 }
 
 interface ꧏ  {
 mut method imm ℤ⃡᳚ ॐ();
 
-imm method imm @ꭹ ᳮ़();
+imm method @ꭹ ᳮ़();
 }
 

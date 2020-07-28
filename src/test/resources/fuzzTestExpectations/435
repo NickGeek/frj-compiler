@@ -1,11 +1,11 @@
-main = 0;
+main = 0 ;
 
 interface ꪱꠋੀ  {
-imm method imm @ੳৈ᪇ ⴭ႘႙(imm @ႎ ˮ༙᱉์᜴);
+imm method @ੳৈ᪇ ⴭ႘႙(@ႎ ˮ༙᱉์᜴);
 }
 
 class ம implements ऽ  {
-imm @ﾆ Å꠆ܹୖ;imm method imm @ꠈꠂ ヽৗ() =
-true;
+@ﾆ Å꠆ܹୖ;imm method @ꠈꠂ ヽৗ() =
+true ;
 }
 

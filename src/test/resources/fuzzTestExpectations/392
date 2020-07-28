@@ -1,6 +1,6 @@
-main = imm @Ʝ 폙ꨫ᮹ = imm 〸 ꤴ = @[],
+main = @Ʝ 폙ꨫ᮹ = imm 〸 ꤴ = @[],
 @[],
-@[ˬ; @[false; @[]]];
+@[ˬ; @[false ; @[]]];
 
 interface ভ  {
 

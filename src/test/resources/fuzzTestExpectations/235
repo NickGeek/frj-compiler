@@ -1,15 +1,15 @@
-main = new ꠉ(ힶླྀ, ᯛࠜ᥋, true);
+main = new ꠉ(ힶླྀ, ᯛࠜ᥋, true );
 
 interface ꯓ  {
-imm method capsule ౙ᯦ ⴧ્(imm @ໆ೭්۲ୌ ₔऺ⃡, read ܤ ꞓٞܶ);
+imm method capsule ౙ᯦ ⴧ્(@ໆ೭්۲ୌ ₔऺ⃡, read ܤ ꞓٞܶ);
 
-imm method imm @ລ⵿ ઉো();
+imm method @ລ⵿ ઉো();
 
 capsule method mut 〢 ︳᭗ึ();
 }
 
 capability class כ᜴꯭ּးௌ implements ꡍාၙ, ᳯഁൣ, ୟ߂, ㇼ༷᳷  {
 capsule method imm 婢ੌ௪ۨ ℂ() =
-@[new ︳᭫ೃꩌ(@[]); false];
+@[new ︳᭫ೃꩌ(@[]); false ];
 }
 

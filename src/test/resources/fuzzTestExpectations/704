@@ -1,15 +1,15 @@
-main = ;
+main = "";
 
 capability class ￛ഼᪒ implements ቜ  {
-imm method imm ష ޱ(imm @ᥴ ꪼꦂ꛱, imm ꑩ 줴, imm @ᱏೌ４ ப, capsule ꠁ ꨖੑ, imm @ꬂ‍‏ႌ ꤵٙᤨ᠓ે, imm ಏ ｏ܏༵, imm @탡꘧௯ ޱၤ) =
-head(imm ଢ଼ ຮꪸ᱗ = @[ఀ; new ⶴ(14.0, @[ᢦ; imm Ϳ ֏ਁ҄ႜ⃦ = ᦰ୬⃩,
+imm method imm ష ޱ(@ᥴ ꪼꦂ꛱, imm ꑩ 줴, @ᱏೌ４ ப, capsule ꠁ ꨖੑ, @ꬂ‍‏ႌ ꤵٙᤨ᠓ે, imm ಏ ｏ܏༵, @탡꘧௯ ޱၤ) =
+head(imm ଢ଼ ຮꪸ᱗ = @["ఀ"; new ⶴ(14.0 , @[ᢦ; imm Ϳ ֏ਁ҄ႜ⃦ = ᦰ୬⃩,
 this])],
 new ᚱ᧙());
 }
 
 class ꦉᩛ implements אָ  {
-imm @ⸯऺ ؋ೢ;
-imm @ꣴ ᶐ༹ௗᬁঁ;mut method imm @ⷉೆ ꬡୃ༵᪽ൣ᱀༹২(capsule ఽ ࠚ, imm שׁ װ⵿, imm ዀ ൎଁ, capsule Ὅ૿ஂ႕܏ Ⴧੵ) =
-new ऱၭٰၤꦵ(false, head(@[@[]; true]).ð๔(@[this; new ዯ়(1).₮()]), 163.37890625);
+@ⸯऺ ؋ೢ;
+@ꣴ ᶐ༹ௗᬁঁ;mut method @ⷉೆ ꬡୃ༵᪽ൣ᱀༹২(capsule ఽ ࠚ, imm שׁ װ⵿, imm ዀ ൎଁ, capsule Ὅ૿ஂ႕܏ Ⴧੵ) =
+new ऱၭٰၤꦵ(false , head(@[@[]; true ]).ð๔(@[this; new ዯ়(1 ).₮()]), 163.37890625 );
 }
 

@@ -1,7 +1,7 @@
-main = @[0.0; 111];
+main = @[0.0 ; 111 ];
 
 interface ஐ⳯꧔ັ  {
-imm method imm @Ϳ ｘ();
+imm method @Ϳ ｘ();
 }
 
 capability class ｕꦂ  {
@@ -9,7 +9,7 @@ capability class ｕꦂ  {
 }
 
 class ꩿ҇  {
-imm @ఎꦃ Ꮭົഁ;imm method imm @ਸ ໆ(imm @ইె ꫀ) =
+@ఎꦃ Ꮭົഁ;imm method @ਸ ໆ(@ইె ꫀ) =
 ⶬ්;
 }
 

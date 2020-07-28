@@ -1,5 +1,5 @@
-main = @[imm @ⴍۚ ᘕ = 60.0,
-new ᥳ(); \"];
+main = @[@ⴍۚ ᘕ = 60.0 ,
+new ᥳ(); "\""];
 
 interface ಽၞၪ extends ᳪ  {
 

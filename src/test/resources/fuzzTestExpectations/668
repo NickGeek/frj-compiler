@@ -1,2 +1,2 @@
-main = @[tail(this); new ꩪ(\00)];
+main = @[tail(this); new ꩪ("\00")];
 

@@ -1,7 +1,7 @@
 main = Đਂৗ;
 
 capability class ףּ౪  {
-imm @Ӊ ꩺꦼ;read method read ೞ๐ ꪱ︦(imm @ସ ಜ) =
+@Ӊ ꩺꦼ;read method read ೞ๐ ꪱ︦(@ସ ಜ) =
 this;
 }
 

@@ -262,7 +262,11 @@ public interface Expression extends ProgramNode {
 
 		@Override
 		public String toString() {
-			return this.value.toString();
+			if (this.value instanceof String) {
+				return '"' + this.value.toString() + '"';
+			}
+
+			return this.value.toString() + ' ';
 		}
 
 		@Override

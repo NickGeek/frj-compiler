@@ -1,7 +1,7 @@
-main = ;
+main = "";
 
 interface ℂׂ  {
-imm method imm ॶ ළৢৢ(read ۻ º᭐, imm @ⶔྯྔ શ, imm @ꧩ ஐ);
+imm method imm ॶ ළৢৢ(read ۻ º᭐, @ⶔྯྔ શ, @ꧩ ஐ);
 }
 
 capability class ⸯ  {

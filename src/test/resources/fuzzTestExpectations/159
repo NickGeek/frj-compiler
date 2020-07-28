@@ -1,2 +1,2 @@
-main = tail(20);
+main = tail(20 );
 

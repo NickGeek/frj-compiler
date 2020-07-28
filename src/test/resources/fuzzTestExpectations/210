@@ -1,9 +1,9 @@
-main = false.ㆃ = @[];
+main = false .ㆃ = @[];
 
 interface ي  {
-capsule method imm @ભ ল়(imm ḏ ס്ּ࠘ੁ꣄);
+capsule method @ભ ল়(imm ḏ ס്ּ࠘ੁ꣄);
 
-imm method imm @ৼັᢆ ຍᢩ(imm @ꬂ ୟ꯭ா, imm @ö Ⳋၪ, read ͺ ꧠ, imm ଏ〯 ⴭ);
+imm method @ৼັᢆ ຍᢩ(@ꬂ ୟ꯭ா, @ö Ⳋၪ, read ͺ ꧠ, imm ଏ〯 ⴭ);
 }
 
 interface ⴭ  {

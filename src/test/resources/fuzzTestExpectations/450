@@ -1,8 +1,8 @@
-main = 3;
+main = 3 ;
 
 capability class ខ꯱ implements ຽ, ຣꧥ៝  {
-imm method imm @ຄ ⷍྎ᷾ื() =
-@[this; imm Ῑ ձླ = true,
+imm method @ຄ ⷍྎ᷾ื() =
+@[this; imm Ῑ ձླ = true ,
 @[]];
 }
 

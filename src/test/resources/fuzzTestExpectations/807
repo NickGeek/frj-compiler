@@ -1,12 +1,12 @@
-main = false;
+main = false ;
 
 interface Х  {
-read method imm @ቚ ΐ();
+read method @ቚ ΐ();
 }
 
 class ༀ೦  {
 read ꬋႍ⃜ µ;
-imm @ᱬ ᨊꚞ;read method capsule ꥢ ಎ() =
-@[new ꭢ(); true];
+@ᱬ ᨊꚞ;read method capsule ꥢ ಎ() =
+@[new ꭢ(); true ];
 }
 

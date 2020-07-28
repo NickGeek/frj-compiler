@@ -1,6 +1,6 @@
-main = 2176.0;
+main = 2176.0 ;
 
 interface ᢪ extends ᦓ  {
-capsule method imm @ⴻ ℕ();
+capsule method @ⴻ ℕ();
 }
 

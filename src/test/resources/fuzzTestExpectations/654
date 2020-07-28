@@ -1,15 +1,15 @@
-main = ;
+main = "";
 
 class ශ implements נּ, Ά, ༀۨ, ᝮܑ, ₚ  {
-imm @ൺ ஔౣ;
+@ൺ ஔౣ;
 }
 
 capability class ኬᤡꠤ꥓ৈ  {
-imm @ᥲ ઽꢀ;
+@ᥲ ઽꢀ;
 mut ૹ i۱;
-imm @Όᜲ3ꦿႚᝲ ꚧୈ්;
-imm @ੴܑ ﴲ༵;
-imm @ەึ ˮ;imm method imm ວ ן(imm @ᾼ ꣻ) =
+@Όᜲ3ꦿႚᝲ ꚧୈ්;
+@ੴܑ ﴲ༵;
+@ەึ ˮ;imm method imm ວ ן(@ᾼ ꣻ) =
 @[ᛱ꧑‏; new ܞ⳯()];
 }
 

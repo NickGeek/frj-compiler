@@ -1,9 +1,9 @@
-main = false.ଈ;
+main = false .ଈ;
 
 interface Έ­ extends Ⅰ  {
 imm method imm ⁀ ດ();
 
-imm method imm @લ ꠢஂ(imm @ॐ ⷕ, imm @ㄭೖ ࠏ, imm @ꛇ්ꪸ ꠃ);
+imm method @લ ꠢஂ(@ॐ ⷕ, @ㄭೖ ࠏ, @ꛇ්ꪸ ꠃ);
 }
 
 class رొ  {

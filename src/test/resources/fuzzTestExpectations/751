@@ -1,2 +1,2 @@
-main = tail(\uu02Fa);
+main = tail("\uu02Fa");
 

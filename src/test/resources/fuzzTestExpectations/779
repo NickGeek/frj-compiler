@@ -1,14 +1,14 @@
 main = ၽઁ;
 
 capability class Ⳬ‮ొ᳙  {
-imm @ꫛׂ เ;
-imm @ใ ᰔଁં;imm method imm @ເ ࠀ(read ؋ ܟⷮꦴ) =
+@ꫛׂ เ;
+@ใ ᰔଁં;imm method @ເ ࠀ(read ؋ ܟⷮꦴ) =
 head(this);
 
 imm method imm ꧺ ℙ() =
 ꠉை;
 
-imm method imm @M $಼॑(mut 〆ঁ៝ᮂ ኝ઼્ۧ, mut ⶴᷥ Ωꦴᮢ꫁, mut Ϳ ஃᰨ, imm ￄေ２ൈ ﶳ) =
+imm method @M $಼॑(mut 〆ঁ៝ᮂ ኝ઼્ۧ, mut ⶴᷥ Ωꦴᮢ꫁, mut Ϳ ஃᰨ, imm ￄေ２ൈ ﶳ) =
 new יּ(new ￠᷄­());
 }
 

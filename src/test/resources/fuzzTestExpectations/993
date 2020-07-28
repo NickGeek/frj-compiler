@@ -1,14 +1,14 @@
-main = @[14; @[3; false].@ጯ()];
+main = @[14 ; @[3 ; false ].@ጯ()];
 
 class ꧼୈ implements ₜ, ￠ज़ఁ, ԃ, 퍩ൣᰯ  {
-imm method read ꟿ ᨐ(imm @ℜ᥆￹ દ⃜, imm @ഽ︭ ຄ) =
+imm method read ꟿ ᨐ(@ℜ᥆￹ દ⃜, @ഽ︭ ຄ) =
 this.ౡᢆ᪒;
 
-imm method capsule ⴧ ଷ(imm ൎ เ, capsule ঐ ᶂ, imm ᾶ ᭊ᭰, imm @Ϳﬞୣ Ʇ, imm @ꘪꩃႋ ᨓ܏, imm @ꩈ מּ) =
-0.67.ܝᮩ਼().ῌꪸ();
+imm method capsule ⴧ ଷ(imm ൎ เ, capsule ঐ ᶂ, imm ᾶ ᭊ᭰, @Ϳﬞୣ Ʇ, @ꘪꩃႋ ᨓ܏, @ꩈ מּ) =
+0.67 .ܝᮩ਼().ῌꪸ();
 
 imm method imm ꧺꠂৣ ល() =
-this.ᥰ = 19;
+this.ᥰ = 19 ;
 }
 
 interface ૹ extends Ͷஂ, ᳮ  {

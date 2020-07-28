@@ -1,13 +1,13 @@
-main = tail(tail(@[@[]; tail(new ⴭ(tail(tail()), ኌ᱉.ꣻᬶ))]));
+main = tail(tail(@[@[]; tail(new ⴭ(tail(tail("")), ኌ᱉.ꣻᬶ))]));
 
 interface ຍ፝ extends ঢ༹꘧, ꬑ  {
 capsule method read ᙻ ꨕૉ(imm ဿ ᏼᤵ);
 
-capsule method imm ᥱၴ ྉ૫(imm @ລ ꪭ);
+capsule method imm ᥱၴ ྉ૫(@ລ ꪭ);
 
 imm method imm ﭓ ꪱᢩ꤄෭();
 
-mut method imm ꣽᝲ්꣒ ࠕ्(imm @ল ᳶྺ, imm Ῥ ꘫ, imm 〳 ꬉৢ᱁, imm @ල᜔ Ωꢁॄࠠ);
+mut method imm ꣽᝲ්꣒ ࠕ्(@ল ᳶྺ, imm Ῥ ꘫ, imm 〳 ꬉৢ᱁, @ල᜔ Ωꢁॄࠠ);
 }
 
 interface ࡥꚞꚟୢ extends ﶤு, ە⳱, ཁ  {

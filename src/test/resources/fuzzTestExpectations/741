@@ -1,4 +1,4 @@
-main = false;
+main = false ;
 
 class బꢀ implements ۿ൭߫ୣ, Ʞ಼꙯, Ⴈ֦  {
 
@@ -9,16 +9,16 @@ class Í  {
 }
 
 interface ㅗੂ extends ⶮ  {
-capsule method imm @¢්้ೌ᳭᭙ัि À゚ൗ଼ꩌﬞ();
+capsule method @¢්้ೌ᳭᭙ัि À゚ൗ଼ꩌﬞ();
 
-imm method imm @ወে⁧ ℇ(imm ߺം ߕ);
+imm method @ወে⁧ ℇ(imm ߺം ߕ);
 
-imm method imm @ℼ ਖ਼();
+imm method @ℼ ਖ਼();
 
-imm method imm @ιা ꟺ(imm @ￎ ₐ);
+imm method @ιা ꟺ(@ￎ ₐ);
 
 imm method imm טּ ⷚ꛰ৢৃ();
 
-mut method imm @ઐ ઽ(imm @ᪧ ﹩༙༿​);
+mut method @ઐ ઽ(@ᪧ ﹩༙༿​);
 }
 

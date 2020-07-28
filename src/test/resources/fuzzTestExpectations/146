@@ -1,18 +1,18 @@
-main = @[; tail(tail(new Åꤧ(head(imm @ፖ ਹꥒ꤆ႉ꣫۫ = 3413.0,
-mut ᚪం ⷑ = true,
-@[@[head(2); 203.8125]; 0]), Ꙓ, @[head(new ＄()); ])))];
+main = @[""; tail(tail(new Åꤧ(head(@ፖ ਹꥒ꤆ႉ꣫۫ = 3413.0 ,
+mut ᚪం ⷑ = true ,
+@[@[head(2 ); 203.8125 ]; 0 ]), Ꙓ, @[head(new ＄()); ""])))];
 
 class מּෛ implements Ⳮٰ, ￠, ᳯ, ૹꯨၖ, ᦲ଼  {
-imm method imm @￠ֹࠜ ᾣ() =
-.ꘪ;
+imm method @￠ֹࠜ ᾣ() =
+"".ꘪ;
 }
 
 class ੴ᭖ࠗ૿ꨬ implements ⵯ, ມ้ᬄ, ￡, ਆ઼ၭૌ͒  {
-imm ສ એ;imm method imm @ઽ ဿ() =
-;
+imm ສ એ;imm method @ઽ ဿ() =
+"";
 }
 
 interface ⷍ᠙  {
-imm method imm @οெ ﾞ꫶ಃ꩙્େ();
+imm method @οெ ﾞ꫶ಃ꩙્େ();
 }
 

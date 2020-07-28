@@ -1,6 +1,6 @@
-main = @[694.0; ゗.ៜܲ = @[@[]; @[this; tail(head(this))]]];
+main = @[694.0 ; "゗".ៜܲ = @[@[]; @[this; tail(head(this))]]];
 
 interface Բ҃ᤦᩞ࡚ਿ extends ࠤૻ  {
-imm method imm @ॐᩗऻ ۃ(imm ￦︪ࠧெ꣒ ᏺ);
+imm method @ॐᩗऻ ۃ(imm ￦︪ࠧெ꣒ ᏺ);
 }
 

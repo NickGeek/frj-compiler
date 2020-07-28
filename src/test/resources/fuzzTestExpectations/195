@@ -1,10 +1,10 @@
 main = this;
 
 capability class ଳ implements ៛ూ, ꨀ  {
-capsule method imm ೞ ቛ꠆(imm ළ ﲈ, imm @ଓෞ ᜂື᷾) =
-@[true; 0];
+capsule method imm ೞ ቛ꠆(imm ළ ﲈ, @ଓෞ ᜂື᷾) =
+@[true ; 0 ];
 
-imm method imm ⸯ ⷛ(imm @ᢪ᱁ႍۢ ⵅ, imm ഢੀ ະ, imm @〼֖ ໆ) =
-head(@[false; 12].ꜗ᭙⵿);
+imm method imm ⸯ ⷛ(@ᢪ᱁ႍۢ ⵅ, imm ഢੀ ະ, @〼֖ ໆ) =
+head(@[false ; 12 ].ꜗ᭙⵿);
 }
 

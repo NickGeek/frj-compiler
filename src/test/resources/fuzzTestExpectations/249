@@ -1,18 +1,18 @@
 main = @[];
 
 interface ດ  {
-mut method imm @ᲆ ＄();
+mut method @ᲆ ＄();
 
-imm method imm @ౚᬷ ᛰে0ொႛ(capsule ᜑꨭ؀᷽ࠜ၈ ສ, imm @ᾕ ⴧ);
+imm method @ౚᬷ ᛰে0ொႛ(capsule ᜑꨭ؀᷽ࠜ၈ ສ, @ᾕ ⴧ);
 
 imm method imm ࠍᜓꦁܼே᱀್ Ӗൣૌ(imm ኍܴ ॶ);
 
-imm method imm @ட Հ෭();
+imm method @ட Հ෭();
 
-imm method imm @৲ כּਾ();
+imm method @৲ כּਾ();
 }
 
 class ᳱꠋۢ implements ؋, ᢪ  {
-imm @ࡊ යꙹ;
+@ࡊ යꙹ;
 }
 

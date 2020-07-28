@@ -1,10 +1,10 @@
 main = @[];
 
 interface ྊ  {
-read method imm @ⶰ਼ࣺ ˮి();
+read method @ⶰ਼ࣺ ˮి();
 
-imm method imm @ￋ⳰໐༹᠍์⃡ ୡ᱆ோᢩ᷼(imm @ⶦ 襤, imm ⵯ ῄ);
+imm method @ￋ⳰໐༹᠍์⃡ ୡ᱆ோᢩ᷼(@ⶦ 襤, imm ⵯ ῄ);
 
-mut method imm @ڞ ᄠᢅ᳝᭕ೂࠩ();
+mut method @ڞ ᄠᢅ᳝᭕ೂࠩ();
 }
 

@@ -1,12 +1,12 @@
-main = 469;
+main = 469 ;
 
 capability class Ω  {
-imm @⁀ෙୣ៝ ⁱ;imm method imm @ᝮ ﬖ(imm @ಮꦺ Y) =
-@[.ꬁ = imm @చ᪃ Όූ፝ం᱓ = new Ⰶ(),
-0.0; @[]];
+@⁀ෙୣ៝ ⁱ;imm method @ᝮ ﬖ(@ಮꦺ Y) =
+@["".ꬁ = @చ᪃ Όූ፝ం᱓ = new Ⰶ(),
+0.0 ; @[]];
 
 imm method imm ﬃ ྉۧੀ() =
-tail(຦஥);
+tail("຦஥");
 
 imm method imm ᝬ ᢄূ() =
 this;

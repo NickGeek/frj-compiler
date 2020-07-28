@@ -1,16 +1,16 @@
 main = new ງ(imm ߺ᠐়⵿᭭ ߘ = ﮜ,
-imm @ￓ ι߉໑ಁ꙯ᜳಿॣ႘ = @[],
-tail(@[; 38]), head(@[]), imm @b්ૄᮂ ఉ = false,
-3.0).וั້⁫௬();
+@ￓ ι߉໑ಁ꙯ᜳಿॣ႘ = @[],
+tail(@[""; 38 ]), head(@[]), @b්ૄᮂ ఉ = false ,
+3.0 ).וั້⁫௬();
 
 class ჳ઼ᰩ઼ implements ⸯ  {
 
 }
 
 capability class ဿ implements கꪾ, ⷝꫂෲ, ਹ  {
-imm @褐 ၦ۵;
-imm @ⅎ ꩮࠗ;
-imm ¤‍ꧥ ߴֳ;imm method imm @ⳳ ė() =
-@[true; this];
+@褐 ၦ۵;
+@ⅎ ꩮࠗ;
+imm ¤‍ꧥ ߴֳ;imm method @ⳳ ė() =
+@[true ; this];
 }
 

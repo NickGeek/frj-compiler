@@ -1,7 +1,7 @@
-main = 1;
+main = 1 ;
 
 interface হั extends Ⴭ  {
-capsule method imm @ൎ ᨠ();
+capsule method @ൎ ᨠ();
 
 imm method read ᜢ︆ ᰔੑை꧔();
 }

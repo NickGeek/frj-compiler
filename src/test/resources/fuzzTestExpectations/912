@@ -1,7 +1,7 @@
 main = ৠ;
 
 capability class ྋ implements ﴼ๋, ꭢ  {
-imm @ꬢ ೱᰨ;
+@ꬢ ೱᰨ;
 }
 
 class ˬ implements ℜ, ዃࠩꩌ, ᚵ᜴࡛꧱  {
@@ -11,8 +11,8 @@ imm ৡஂ ᢪ;
 interface ල  {
 imm method imm ೡؕ ꮁ(imm ᤞ྇ᩥ ꪶ, read ᴹ႔‍ꢀೂ্ᢩ ՙೈ);
 
-read method imm ካႊ ꟹਁꙵ(imm @ហ᳐ ˤౕ, imm ው ວ়ொࠦ);
+read method imm ካႊ ꟹਁꙵ(@ហ᳐ ˤౕ, imm ው ວ়ொࠦ);
 
-read method imm @ℽੌ᳦۶ﬞٰ᪁ັ ۯ۬﻿(imm @ൎ ᝤ꩓, imm @ᄱ꘥៍ྖ mۤᩜ઼゚ೢ᳤, imm ೡ ꪱ️);
+read method @ℽੌ᳦۶ﬞٰ᪁ັ ۯ۬﻿(@ൎ ᝤ꩓, @ᄱ꘥៍ྖ mۤᩜ઼゚ೢ᳤, imm ೡ ꪱ️);
 }
 

@@ -1,11 +1,11 @@
-main = head(true);
+main = head(true );
 
 interface ￠ extends ታ̉, ℨ᱓꫁ૣ‌  {
-imm method imm ＄ଃ ￥ઃ꧱(imm @ᾠ ଋ, imm @ⷃꪰ ª);
+imm method imm ＄ଃ ￥ઃ꧱(@ᾠ ଋ, @ⷃꪰ ª);
 }
 
 capability class ｉ഻꣨꙯ implements Ͱ﻿  {
-read method imm @⁀꣕ৢ‫ෝᤧોা Ὀྎ() =
-1;
+read method @⁀꣕ৢ‫ෝᤧોা Ὀྎ() =
+1 ;
 }
 

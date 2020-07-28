@@ -1,12 +1,12 @@
-main = new ⴅꦁ࠙ଂృ(tail(imm @ઇ ˬ = 18,
-@[1.4609375; 0]), new হైે(), 209);
+main = new ⴅꦁ࠙ଂృ(tail(@ઇ ˬ = 18 ,
+@[1.4609375 ; 0 ]), new হైે(), 209 );
 
 interface ਐ  {
-imm method read ꘫ ῃ࡚(imm @ⶵᳳ ℭ);
+imm method read ꘫ ῃ࡚(@ⶵᳳ ℭ);
 }
 
 class ࠋ഻〫࠙ޯ  {
-imm @Ὢۛຼॖ‏ꠂ ₽;
+@Ὢۛຼॖ‏ꠂ ₽;
 }
 
 interface ൎ５ᝳം extends ఎௗ  {
@@ -14,7 +14,7 @@ interface ൎ５ᝳം extends ఎௗ  {
 }
 
 class ஞ  {
-imm @ঽ ഌ᱉;
-imm @‿ ຊౖ;
+@ঽ ഌ᱉;
+@‿ ຊౖ;
 }
 

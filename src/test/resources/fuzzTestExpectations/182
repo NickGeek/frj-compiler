@@ -1,22 +1,22 @@
-main = false;
+main = false ;
 
 class ℤ  {
-imm @㽗⁫ꙴ ষꪳᩕ;
+@㽗⁫ꙴ ষꪳᩕ;
 mut ೡ ῑ;
-imm @朗ଁୈꪰ ۯ᭔̴;
+@朗ଁୈꪰ ۯ᭔̴;
 imm ٯ ᳵ꙯ꢀܑ;
-imm @qꥊ๎ ᛶ;
-imm @ମั ວ;
+@qꥊ๎ ᛶ;
+@ମั ວ;
 capsule ቘ ヿ;
-imm @ය ℑੵ᪺େ៣;read method imm @ਖ᳭௮ை ॐ() =
-head(tail(head(imm @ꞧ ഽ = true,
-imm @ᢧꦂௗ ສೆ = 90.0,
+@ය ℑੵ᪺େ៣;read method @ਖ᳭௮ை ॐ() =
+head(tail(head(@ꞧ ഽ = true ,
+@ᢧꦂௗ ສೆ = 90.0 ,
 this)).ￂ);
 
-read method imm @ຈႆ ⴭੑ᳭() =
-tail(true);
+read method @ຈႆ ⴭੑ᳭() =
+tail(true );
 
 imm method read $​꛱ ۅ߉ൗ() =
-56028;
+56028 ;
 }
 

@@ -1,7 +1,7 @@
-main = ;
+main = "";
 
 capability class Ὀೇ  {
-imm method imm ˢ੮̃ ႁꠦཱུꪰ(imm @ℤ Ⳳ, imm @ၰ ᆿ) =
-head(tail(tail(true)));
+imm method imm ˢ੮̃ ႁꠦཱུꪰ(@ℤ Ⳳ, @ၰ ᆿ) =
+head(tail(tail(true )));
 }
 

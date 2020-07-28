@@ -1,27 +1,27 @@
-main = 4.5102810375396984E-17;
+main = 4.5102810375396984E-17 ;
 
 class ㇸໟ᳸  {
-imm @ㇴ າᤢ︉;
+@ㇴ າᤢ︉;
 }
 
 interface ল഼ొ໕ extends ສ, Ꙃ  {
-mut method imm @ᝆၳ⳯ ᎂ၀꤁ෲ();
+mut method @ᝆၳ⳯ ᎂ၀꤁ෲ();
 
-imm method imm @〣۵ੑ꠆‪᷾ັ ኲ(mut ៜ Ί, imm ឋ ᝯ);
+imm method @〣۵ੑ꠆‪᷾ັ ኲ(mut ៜ Ί, imm ឋ ᝯ);
 
-imm method imm @ℼﬞ⃡҆ৣ ᏺ(imm @ꤷ꧘ୀ ꡅ಼ि, imm @ᜥ Ꚗ⁪, mut ﬂ 累);
+imm method @ℼﬞ⃡҆ৣ ᏺ(@ꤷ꧘ୀ ꡅ಼ि, @ᜥ Ꚗ⁪, mut ﬂ 累);
 
-read method imm @ນ ῌ(imm ௹ ળ᱕, imm ﺂ ℨ, read ۻ ᢪ, imm @ࠚ૿ Ⴭੑੵ꩐, imm @ꘪ ͺ, imm f؁︄ ቘ〭, read ૱ Գ);
+read method @ນ ῌ(imm ௹ ળ᱕, imm ﺂ ℨ, read ۻ ᢪ, @ࠚ૿ Ⴭੑੵ꩐, @ꘪ ͺ, imm f؁︄ ቘ〭, read ૱ Գ);
 
 imm method imm ଲ꯱ ஜ(imm ௹ ﱽ);
 }
 
 capability class ᦰႌ implements ؼꠂ᷵ྲ⵿, ﬂ  {
 read ᜭ ຊꯤࣛ၃;
-imm @ኇ ৻ຸ̽;imm method mut ￖ୭ ኗ୍(imm @ף්ּ ⁔) =
-head(@[tail(9.0E-4); head(this)].ꀑꯣ௯؁);
+@ኇ ৻ຸ̽;imm method mut ￖ୭ ኗ୍(@ף්ּ ⁔) =
+head(@[tail(9.0E-4 ); head(this)].ꀑꯣ௯؁);
 
-imm method imm @〸ꚟ์ັ ﮬꪷ￻ᬻ(imm @﹩ η) =
+imm method @〸ꚟ์ັ ﮬꪷ￻ᬻ(@﹩ η) =
 new ᯋꩃᰪ();
 }
 

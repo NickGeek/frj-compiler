@@ -1,6 +1,6 @@
-main = tail(tail(tail(head(0.3017578125))));
+main = tail(tail(tail(head(0.3017578125 ))));
 
 interface ﶿ꙯ຼ extends ਵׇ  {
-mut method imm হౖ᪴ ﭡ꤫ஂ(imm @ⷘ ꘪ꛰, read ࡦᩘ໋ ಫꯦ);
+mut method imm হౖ᪴ ﭡ꤫ஂ(@ⷘ ꘪ꛰, read ࡦᩘ໋ ಫꯦ);
 }
 

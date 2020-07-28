@@ -1,6 +1,6 @@
-main = head(@[0.0; ௐꯣ]);
+main = head(@[0.0 ; ௐꯣ]);
 
 interface ଽ  {
-imm method capsule ውං অॊ(imm @ℼ ਏᬷ, imm @ﷳၭ 〴ൗ);
+imm method capsule ውං অॊ(@ℼ ਏᬷ, @ﷳၭ 〴ൗ);
 }
 

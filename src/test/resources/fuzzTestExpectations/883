@@ -1,10 +1,10 @@
 main = אַᢩ੮९ᬁ࡛;
 
 interface ดꢀ８  {
-read method imm @ꬎཷ಼ꚟ Å(mut ꬄꢼꯦ ﹎);
+read method @ꬎཷ಼ꚟ Å(mut ꬄꢼꯦ ﹎);
 
-mut method imm @ꬓ Ⳮை();
+mut method @ꬓ Ⳮை();
 
-imm method imm @ꪼ 𢡊();
+imm method @ꪼ 𢡊();
 }
 

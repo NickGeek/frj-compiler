@@ -1,52 +1,52 @@
-main = false;
+main = false ;
 
 interface ⷚ౬േ  {
 
 }
 
 class ﬗ᷐ັ  {
-imm method imm @ꝵ ᭅ() =
-imm @ۦ ண = ற៝,
-;
+imm method @ꝵ ᭅ() =
+@ۦ ண = ற៝,
+"";
 
-imm method imm @ય Ώ() =
-;
+imm method @ય Ώ() =
+"";
 }
 
 class ຍௗ implements ᾨၞั, ꧠࣛ꘧ᰧౖׅꥋ, ౡ  {
-mut method imm @Ⰰ় ၐᩛ() =
+mut method @Ⰰ় ၐᩛ() =
 new ⷓ();
 
-imm method imm @ဿ༵᪲ে ୱ্༵૨ౢ(imm ᖺླྀ᭫ૢః࿆ ວ, imm ⴭ דּ྇) =
-0.0;
+imm method @ဿ༵᪲ে ୱ্༵૨ౢ(imm ᖺླྀ᭫ૢః࿆ ວ, imm ⴭ דּ྇) =
+0.0 ;
 }
 
 class ℂੀ၄  {
 imm ꩮേ ࢶ;
-imm @ꪁ ⴝੇ;imm method imm ၜ܏ꠂ ℕꠋ(imm @ᨂ ϭ, imm ᎍ ͼ) =
-1.9327352832E11;
+@ꪁ ⴝੇ;imm method imm ၜ܏ꠂ ℕꠋ(@ᨂ ϭ, imm ᎍ ͼ) =
+1.9327352832E11 ;
 
-imm method imm @ఏੂ᳒ ଳ(imm @ࠤ ዖ༥ᢆꯩ, imm ப ໂ) =
-@[imm @ᦰො ꜗᤤ෫ = true,
-true; ກ࡚];
+imm method @ఏੂ᳒ ଳ(@ࠤ ዖ༥ᢆꯩ, imm ப ໂ) =
+@[@ᦰො ꜗᤤ෫ = true ,
+true ; ກ࡚];
 
-mut method imm ᤅໍ ધ(imm @ਆ꫁ ॱࠦ, imm Ⲻ Ἤ྆ਿ, imm @ὲ༿ ꦝֱ, imm @ⳳ゙ᨘং ߴ) =
-imm @Ή ￔ = @[false; read ခ০ၱꥈ Ὓ­ = new ＿(Ꮙౢ॑, ୖ.ￋ),
+mut method imm ᤅໍ ધ(@ਆ꫁ ॱࠦ, imm Ⲻ Ἤ྆ਿ, @ὲ༿ ꦝֱ, @ⳳ゙ᨘং ߴ) =
+@Ή ￔ = @[false ; read ခ০ၱꥈ Ὓ­ = new ＿(Ꮙౢ॑, "ୖ".ￋ),
 mut ꣻ⃖ྼ ꬖ = @[],
-@[this; \50]],
-9.57874176E8;
+@[this; "\50"]],
+9.57874176E8 ;
 
-capsule method imm @ලꩃୌٝৢ؜்ܑ ៜ(mut ౚ ᜭ௮) =
-head(imm @ὕ ଏꪾꩃ = @[imm ꤞ ৼ = @[],
-@[]; 0],
-0.002);
+capsule method @ලꩃୌٝৢ؜்ܑ ៜ(mut ౚ ᜭ௮) =
+head(@ὕ ଏꪾꩃ = @[imm ꤞ ৼ = @[],
+@[]; 0 ],
+0.002 );
 
-imm method imm @ႎꧥ ˬᮩ(imm ኌ﻿ﬞ ၡ, imm @ⶂ יּૢ) =
+imm method @ႎꧥ ˬᮩ(imm ኌ﻿ﬞ ၡ, @ⶂ יּૢ) =
 難;
 }
 
 capability class ㇽฺැ  {
 mut method imm Ώ u() =
-0.0;
+0.0 ;
 }
 

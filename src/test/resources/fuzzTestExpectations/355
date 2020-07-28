@@ -1,6 +1,6 @@
-main = head(false);
+main = head(false );
 
 interface Ζ۪ extends ଡ༹, ꕮ, એ  {
-read method imm ꜙၩ౪ுᢆ ቑ؜ං؄ၤ(imm @ㄛऻූꣅؔႌ ㇻ, imm ՙ ꧺᨛ᩵ᮁ);
+read method imm ꜙၩ౪ுᢆ ቑ؜ං؄ၤ(@ㄛऻූꣅؔႌ ㇻ, imm ՙ ꧺᨛ᩵ᮁ);
 }
 

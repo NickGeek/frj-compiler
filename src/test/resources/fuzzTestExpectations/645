@@ -1,10 +1,10 @@
-main = @[0.0; this];
+main = @[0.0 ; this];
 
 class ℂ  {
 capsule method read ༀ ￛ() =
 tail(tail(ꠖ));
 
-imm method imm @￦ ͷࣣ() =
+imm method @￦ ͷࣣ() =
 new ｯ();
 }
 
@@ -14,7 +14,7 @@ read ఘྲྀ ૡᝳୖ;
 }
 
 interface 々゚༵  {
-capsule method imm @ⸯ ᝰࠡ(imm @ጙං꧐ ꙝᩭົ़, imm ꪶ꤁ ᥴᬂ);
+capsule method @ⸯ ᝰࠡ(@ጙං꧐ ꙝᩭົ़, imm ꪶ꤁ ᥴᬂ);
 }
 
 class ᯟ҄ꠧ implements ⶲ  {

@@ -5,9 +5,9 @@ capsule Ʞᳲ᳸ ອ;
 }
 
 interface Ճ  {
-imm method imm @ඐೂ ཙ(imm @ὒி ߵಁ);
+imm method @ඐೂ ཙ(@ὒி ߵಁ);
 
-mut method imm @ᡊ ሒ꫁(imm Ⴧ ᨒ, imm @ૠ ᱹೕ꪿ޯࠩ);
+mut method @ᡊ ሒ꫁(imm Ⴧ ᨒ, @ૠ ᱹೕ꪿ޯࠩ);
 }
 
 interface ᛵ  {
@@ -16,6 +16,6 @@ interface ᛵ  {
 
 capability class ௹ୌ҆ᬶ〬 implements ⷞ, ꭋೖꧥ, ＿߃ੂﬞॢ, ਫ਼, ꫀັ࿆ৢ  {
 capsule ㆱ ࡐ;
-imm @ज़༹ಿ ⶫୈৗ;
+@ज़༹ಿ ⶫୈৗ;
 }
 

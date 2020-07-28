@@ -5,11 +5,11 @@ imm method mut Ⱙ໌ ㇶ();
 
 imm method read ꜰ ព();
 
-capsule method imm @ຫେ ې็(imm @＿ ῗ୯);
+capsule method @ຫେ ې็(@＿ ῗ୯);
 
-read method imm ⷙ ਸ(imm @ᜊ ℨ, imm @ྋ꣙ۧᩘ Ήີྗ);
+read method imm ⷙ ਸ(@ᜊ ℨ, @ྋ꣙ۧᩘ Ήີྗ);
 
-imm method capsule ᢊ ࢼ(imm @ꣲﬞ ⵯ, imm Ἶ၄ ᦡ);
+imm method capsule ᢊ ࢼ(@ꣲﬞ ⵯ, imm Ἶ၄ ᦡ);
 
 capsule method capsule වૈؓఁ‏ ⵉᳲ(imm 〆ౖ ꫛ, mut ၰ ᾷᢆෲ, read ︴￻꫁ 〇ൂ);
 }

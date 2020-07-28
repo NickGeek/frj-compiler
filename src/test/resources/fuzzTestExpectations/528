@@ -1,23 +1,23 @@
-main = imm @ꨨ ﹩ = this,
+main = @ꨨ ﹩ = this,
 લꯣ;
 
 capability class ￦⳱  {
-imm method imm @ಀ҅ࠖੋං ⶹ() =
-0.0;
+imm method @ಀ҅ࠖੋං ⶹ() =
+0.0 ;
 }
 
 capability class ﹍ࠦೇ⁯ implements ᱧ﻿ׇ߰܏ௗ, ⷑ, 〹ꣀᰲ৮ٰ, ە, ᥨ  {
 capsule method imm ι ᝐි() =
 tail(this);
 
-imm method imm @ꢎ ண(imm @ቖꧥ ꢏ) =
-7;
+imm method @ꢎ ண(@ቖꧥ ꢏ) =
+7 ;
 }
 
 capability class មᝒ  {
 imm ᎄ ກަ;
-imm @ຄ ଵ;
-imm @Ⰸ ￦;
+@ຄ ଵ;
+@Ⰸ ￦;
 }
 
 interface ல᮫ৌ extends Ì  {

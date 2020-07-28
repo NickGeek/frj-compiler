@@ -1,6 +1,6 @@
-main = false;
+main = false ;
 
 interface ࡦ‮ᯰ꩔েూۙྵ  {
-imm method imm @ק⁦ٰ ຍ᳸(imm @ფ ퟝۛ, imm @ᱍ༹ۗਁ౩ ฬᬄ, imm @லൗॉ3 Ⱙ়ٰ);
+imm method @ק⁦ٰ ຍ᳸(@ფ ퟝۛ, @ᱍ༹ۗਁ౩ ฬᬄ, @லൗॉ3 Ⱙ়ٰ);
 }
 

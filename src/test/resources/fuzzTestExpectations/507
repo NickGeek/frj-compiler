@@ -1,11 +1,11 @@
 main = new த();
 
 class ꡯಾ⁡ࠩ implements ষꠂ́ၤ, ኲ༾᳑, ຄۭᨚ഻༹  {
-imm method imm @ᝮ ꣵ() =
-head(tail());
+imm method @ᝮ ꣵ() =
+head(tail(""));
 
-imm method imm @ꜜꠋॢ᧑ ኽ᳤(read ଳ ৡ, imm @ｏ৯ ᚴ) =
-head(true);
+imm method @ꜜꠋॢ᧑ ኽ᳤(read ଳ ৡ, @ｏ৯ ᚴ) =
+head(true );
 }
 
 interface ö  {
@@ -18,12 +18,12 @@ interface ସ extends ఋ  {
 
 capability class ォ꣔ႍ implements ﬦீุ  {
 capsule method imm ಀ Ꮆ() =
-head(@[@[@[false; head(@[this; new ꩄ()]).ൎ = head(false).Ⅺᳳਿꧥᩫၬᝒ៦()]; false.〆︮]; this]);
+head(@[@[@[false ; head(@[this; new ꩄ()]).ൎ = head(false ).Ⅺᳳਿꧥᩫၬᝒ៦()]; false .〆︮]; this]);
 }
 
 class ᵘ۴  {
 mut method imm ૐ ࠉ() =
-imm ﵜᩢ ऽ = false,
-false;
+imm ﵜᩢ ऽ = false ,
+false ;
 }
 

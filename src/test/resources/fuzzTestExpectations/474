@@ -1,14 +1,14 @@
-main = 0.0;
+main = 0.0 ;
 
 interface ៜ  {
-imm method imm ꮿ Ꝣ(imm @Ή೯ ヿ);
+imm method imm ꮿ Ꝣ(@Ή೯ ヿ);
 }
 
 capability class ؋ౣ၆ٰ implements ꢈ, ῳ, ఆ, 〇  {
-imm @ٮ Ꭺ;imm method imm @ഈ ꣽ᮵ௌ༾() =
+@ٮ Ꭺ;imm method @ഈ ꣽ᮵ௌ༾() =
 tail(this);
 
 mut method imm ઽ ︴᧑() =
-40395;
+40395 ;
 }
 

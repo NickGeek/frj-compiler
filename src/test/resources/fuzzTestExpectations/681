@@ -1,33 +1,33 @@
-main = imm ધ᭑ ᥱᢅ‏ = tail(false),
-false;
+main = imm ધ᭑ ᥱᢅ‏ = tail(false ),
+false ;
 
 interface ዀ extends ௹꣱  {
-capsule method imm @ܐۚ ᙼ();
+capsule method @ܐۚ ᙼ();
 }
 
 capability class ﬕ᳑ implements ࢶ, ୱ  {
-imm ܐࠦ ⳬ;capsule method imm @ཀྵ۵ۧ ષ꪿ⷻ() =
+imm ܐࠦ ⳬ;capsule method @ཀྵ۵ۧ ષ꪿ⷻ() =
 new ⰼੂꪰ᪓();
 }
 
 capability class ଳ  {
-imm @ℶೀ Ῥ;read method mut અ꧳꣒ୖ꣮ ল(imm @ዅ꯸឴්᳗ ῼ᷿ꨵ︩ྂ, imm 〆྇ º, imm @ಇ ኞၩ, imm ଋ ޱၠ⁤ऻ, imm @ᜎ ꠡ) =
-new ᾯ૿(true);
+@ℶೀ Ῥ;read method mut અ꧳꣒ୖ꣮ ল(@ዅ꯸឴්᳗ ῼ᷿ꨵ︩ྂ, imm 〆྇ º, @ಇ ኞၩ, imm ଋ ޱၠ⁤ऻ, @ᜎ ꠡ) =
+new ᾯ૿(true );
 }
 
 capability class ࡨ൧꤇ implements ꠉ  {
-capsule method imm @ຍޯោ‌़഼ ꧠ(imm @ༀ⳱᧐­ ၐ) =
-true;
+capsule method @ຍޯោ‌़഼ ꧠ(@ༀ⳱᧐­ ၐ) =
+true ;
 
 imm method imm ੴ ꮞ꯬(imm ᦟ᪐꧸ ℨ᠗) =
 װ᳭፟৭;
 }
 
 interface ଋꪴ extends ⱀ  {
-imm method imm @ι ລ൬ੑ();
+imm method @ι ລ൬ੑ();
 
-imm method read ℨ ꇈ(imm @ꬒ ພ, imm ˉ ష, imm @ꩂ ꩂ);
+imm method read ℨ ꇈ(@ꬒ ພ, imm ˉ ష, @ꩂ ꩂ);
 
-imm method imm @ꩀ ꆄ্(imm @ꩺ ᢪૄꦼ᳥, read า ᛀ᱗);
+imm method @ꩀ ꆄ্(@ꩺ ᢪૄꦼ᳥, read า ᛀ᱗);
 }
 

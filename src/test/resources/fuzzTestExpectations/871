@@ -3,9 +3,9 @@ main = this;
 interface ￠  {
 imm method imm ر ￡꙯(imm ֏ ญെ಼);
 
-imm method imm ቘ ⶬ(read ࠨਃုੑᩘ ﻒ, imm @ྌँඃ લ, imm @ቘ ﱘ);
+imm method imm ቘ ⶬ(read ࠨਃုੑᩘ ﻒ, @ྌँඃ લ, @ቘ ﱘ);
 
-imm method imm @ຝ၂ ᮎ();
+imm method @ຝ၂ ᮎ();
 
 mut method imm ຂ̛ ટ(capsule わ ᥰ૬ిꥒ);
 }
@@ -17,10 +17,10 @@ read ท ዂ;
 
 class ኣꥏ  {
 imm Ⴭ ඓఁ;
-mut ᳮ ៗૄ;imm method imm @ߵ ዀ() =
+mut ᳮ ៗૄ;imm method @ߵ ዀ() =
 @[];
 
-read method read ຖ ಈ؜(imm @ྌৣ vႆ౮) =
-true;
+read method read ຖ ಈ؜(@ྌৣ vႆ౮) =
+true ;
 }
 

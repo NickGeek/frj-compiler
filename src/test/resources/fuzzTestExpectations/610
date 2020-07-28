@@ -1,31 +1,31 @@
-main = false;
+main = false ;
 
 class ῑ  {
-imm @ᳯ᥇ᳳ ͱ߅;
-imm @ﶧ ꨨ;mut method imm ੲ ໆ࿆ேົᩝᮂ() =
-4;
+@ᳯ᥇ᳳ ͱ߅;
+@ﶧ ꨨ;mut method imm ੲ ໆ࿆ேົᩝᮂ() =
+4 ;
 }
 
 class ᳰٗ  {
-mut method capsule ઐ ߊஂ(imm @ቧ ⴧ᭰, imm ⴧ᥆ ꠇ, mut ጓ ຍ) =
-@[false; imm ೞ￻๋ೕ︊ൄ Ἔ = new ἰ(),
-tail(1)].ષ១;
+mut method capsule ઐ ߊஂ(@ቧ ⴧ᭰, imm ⴧ᥆ ꠇ, mut ጓ ຍ) =
+@[false ; imm ೞ￻๋ೕ︊ൄ Ἔ = new ἰ(),
+tail(1 )].ષ១;
 }
 
 class ਵ implements ꏛୈ, ମ  {
-imm @ꫲཻި೧ Ù;imm method imm ઑꠂ‎ ﺞᩚൗ(imm לּ ｂꪳ, imm @Ὑ５᪕ ︳ۖ꣐) =
-imm @ඖ়゚ܑ༷ັෳ ቐ = ਯ੮ࣟ,
-;
+@ꫲཻި೧ Ù;imm method imm ઑꠂ‎ ﺞᩚൗ(imm לּ ｂꪳ, @Ὑ５᪕ ︳ۖ꣐) =
+@ඖ়゚ܑ༷ັෳ ቐ = ਯ੮ࣟ,
+"";
 
 imm method imm µ꫁ੵॗ ዅ() =
 this;
 }
 
 interface ଷꢀ༙ extends ၡ  {
-read method imm @ຢ Ⴠ(mut ಎ ᱏ);
+read method @ຢ Ⴠ(mut ಎ ᱏ);
 
-capsule method capsule த വ(imm @ｭ୍ ౠ);
+capsule method capsule த വ(@ｭ୍ ౠ);
 
-mut method imm @ᭅ഼ Ꮇ(imm @Ώ೧় 홀);
+mut method @ᭅ഼ Ꮇ(@Ώ೧় 홀);
 }
 

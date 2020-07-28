@@ -1,4 +1,4 @@
-main = 0;
+main = 0 ;
 
 interface ΉჍ extends ﬄ፞  {
 
@@ -9,26 +9,26 @@ read method mut ࠤ່࡙ ካ͘();
 }
 
 capability class ℴ implements ゟ  {
-imm ቜ ₘ;mut method imm @ꡲ ࢨꦂ(imm @ㄦୣ ዜ⃙︨ා༙۴, imm @ॿ᠕ᮭၞ 益꛱ෲ) =
-false;
+imm ቜ ₘ;mut method @ꡲ ࢨꦂ(@ㄦୣ ዜ⃙︨ා༙۴, @ॿ᠕ᮭၞ 益꛱ෲ) =
+false ;
 
-read method imm @ᛵ ꠉ᜔() =
-;
+read method @ᛵ ꠉ᜔() =
+"";
 }
 
 interface ℨ  {
-imm method imm @ৎ８ ⁿෲᰭ();
+imm method @ৎ８ ⁿෲᰭ();
 
-imm method imm @ーꥊࠪ៝꤆ എ();
+imm method @ーꥊࠪ៝꤆ എ();
 }
 
 class ʖ٣ᜳ implements ₐ  {
-imm method imm @ꪼ᷼ॆॢ 〇(imm や්ֿ᷻෦ ᥕൗٰ‪ꦹꦶֿ, imm @ὦ Ɥ) =
+imm method @ꪼ᷼ॆॢ 〇(imm や්ֿ᷻෦ ᥕൗٰ‪ꦹꦶֿ, @ὦ Ɥ) =
 new ວ();
 }
 
 capability class ℬ implements ᥳ᠋  {
-imm ﷰ ℂ;capsule method imm @ᏹෟۧੑ౦ ᮮౖ() =
-true;
+imm ﷰ ℂ;capsule method @ᏹෟۧੑ౦ ᮮౖ() =
+true ;
 }
 

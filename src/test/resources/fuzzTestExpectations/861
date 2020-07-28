@@ -6,13 +6,13 @@ this;
 }
 
 capability class ᪧ  {
-imm @ໞ ⁿ᠌ઃ;capsule method imm ࠅৈ ꟼ́() =
-;
+@ໞ ⁿ᠌ઃ;capsule method imm ࠅৈ ꟼ́() =
+"";
 
-mut method imm @Ἕ ㅕ() =
+mut method @Ἕ ㅕ() =
 this;
 
-mut method imm @ꧻ০ ဌ(imm ⁔ ᮒ, imm ኳۡ ౘꯦັ⵿, imm @ၡ ኦ꤉ꩍ, imm @Ᾱ ʅ) =
-\u02f0\uA5c5;
+mut method @ꧻ০ ဌ(imm ⁔ ᮒ, imm ኳۡ ౘꯦັ⵿, @ၡ ኦ꤉ꩍ, @Ᾱ ʅ) =
+"\u02f0\uA5c5";
 }
 

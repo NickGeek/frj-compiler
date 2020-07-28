@@ -1,11 +1,11 @@
-main = 6;
+main = 6 ;
 
 capability class ⶤ  {
 
 }
 
 interface ༀ᳭  {
-read method imm @ࠤৗෞ ਏෲ(imm Όꨯ Ὄ);
+read method @ࠤৗෞ ਏෲ(imm Όꨯ Ὄ);
 }
 
 interface ￍິૣ extends థᮁ‮۟  {
@@ -19,6 +19,6 @@ interface ᝏ extends ቒ, ଭ  {
 interface ͺ࡙  {
 mut method imm ℹ ℇ();
 
-imm method imm ꬂ ܨ(read ᝦ༹ ᳰୖૺ, imm @ꝲ ᲆ꧳);
+imm method imm ꬂ ܨ(read ᝦ༹ ᳰୖૺ, @ꝲ ᲆ꧳);
 }
 

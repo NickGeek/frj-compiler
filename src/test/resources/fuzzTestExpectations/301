@@ -4,10 +4,10 @@ capability class ₾  {
 imm method imm ꪱ᮵ꢵ ᚁၧ༹꛱() =
 new Æ();
 
-imm method mut ສ︃෨ᷔັ Ά(imm @יִംଁ ꪹ, read ؋ ㇼꧥ) =
+imm method mut ສ︃෨ᷔັ Ά(@יִംଁ ꪹ, read ؋ ㇼꧥ) =
 head(head(new ண())).¥();
 
-imm method imm @ಽ ഽ୧(imm ឃ α) =
+imm method @ಽ ഽ୧(imm ឃ α) =
 ⵯ.ℼ();
 }
 

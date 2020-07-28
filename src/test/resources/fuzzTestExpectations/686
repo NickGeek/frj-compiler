@@ -1,2 +1,2 @@
-main = @[\'\uuuuuB155\u2ace; ];
+main = @["\'\uuuuuB155\u2ace"; ""];
 

@@ -1,7 +1,7 @@
-main = \04἞\u6678\11඗\70ਲ;
+main = "\04἞\u6678\11඗\70ਲ";
 
 capability class ￦꛱ implements ⁿ, ῄ  {
-imm @ꭝං ૡ;imm method read ʅ ꫦ() =
+@ꭝං ૡ;imm method read ʅ ꫦ() =
 this;
 }
 

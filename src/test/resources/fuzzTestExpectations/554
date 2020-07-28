@@ -1,8 +1,8 @@
 main = @[];
 
 interface ຖ extends ௹  {
-read method mut ස ൠ(imm @ዖ꠆ཷ ৠ⃒઼);
+read method mut ස ൠ(@ዖ꠆ཷ ৠ⃒઼);
 
-imm method read ⅉ ªᢅ(imm @ᳯั ῐ);
+imm method read ⅉ ªᢅ(@ᳯั ῐ);
 }
 

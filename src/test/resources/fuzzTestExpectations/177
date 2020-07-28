@@ -1,4 +1,4 @@
-main = \5\f;
+main = "\5\f";
 
 class ꪢ  {
 mut method read ゃ ꬒ() =
@@ -11,7 +11,7 @@ capsule ૹ ￜ;mut method imm ￎ ඞ⵿() =
 }
 
 class Ꙛ  {
-imm @ᮯ だ;imm method imm @ጔ᥌२ ᚫ(imm @ঽᯮ Ꮑ) =
-9506.0;
+@ᮯ だ;imm method @ጔ᥌२ ᚫ(@ঽᯮ Ꮑ) =
+9506.0 ;
 }
 

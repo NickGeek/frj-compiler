@@ -1,21 +1,21 @@
-main = tail(imm @ဿ߫ ਖ਼ெ௭⁠ = @[@[imm ᦊᮂ꣐ ॳ؀ֿ = @[; @[]],
-340; Ήᬃ]; tail()],
-imm @ՙׁ ዀ = imm @ᨵ දۙ = 15,
+main = tail(@ဿ߫ ਖ਼ெ௭⁠ = @[@[imm ᦊᮂ꣐ ॳ؀ֿ = @[""; @[]],
+340 ; Ήᬃ]; tail("")],
+@ՙׁ ዀ = @ᨵ දۙ = 15 ,
 this,
 ৲ۧۙ.ퟄ());
 
 class ಀ  {
 imm ॠ ಀ;
-imm @ઑୈ ⰸ;capsule method imm @ໆೢॊ ꗙ്(imm @₨ꩌੌ ࢽ) =
+@ઑୈ ⰸ;capsule method @ໆೢॊ ꗙ്(@₨ꩌੌ ࢽ) =
 ᇵ;
 
-imm method imm @ꫝᰭ 卣᠑᳝() =
-0;
+imm method @ꫝᰭ 卣᠑᳝() =
+0 ;
 
-imm method imm @ⴧ ﰈৗꠋꤨ(imm @ꧩೣၢ ਜ਼꣮۱, imm @老҃ ㄇ, imm @ᦉ൦ ߵၨ, imm ᢝ ဿ) =
+imm method @ⴧ ﰈৗꠋꤨ(@ꧩೣၢ ਜ਼꣮۱, @老҃ ㄇ, @ᦉ൦ ߵၨ, imm ᢝ ဿ) =
 ଐຶ;
 
-imm method imm @ٮꠋ ﵼᬃٗ() =
+imm method @ٮꠋ ﵼᬃٗ() =
 tail(סּ);
 }
 

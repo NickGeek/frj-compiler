@@ -5,17 +5,17 @@ interface ຍׁൗ extends גּ෩, ף꫶ּ  {
 }
 
 class ៛ implements ܐ  {
-capsule Åඃ ᚂ;imm method capsule ꡣ꘥ࠪ ￍ⁬(imm @ⁱ ꫴ) =
-0.0;
+capsule Åඃ ᚂ;imm method capsule ꡣ꘥ࠪ ￍ⁬(@ⁱ ꫴ) =
+0.0 ;
 
 imm method capsule ແ 鼣() =
-true;
+true ;
 
-imm method read ૐ ഽ(imm @ϗ ꫝ᷄) =
-𞹝\b;
+imm method read ૐ ഽ(@ϗ ꫝ᷄) =
+"𞹝\b";
 }
 
 interface ർ extends ￃೀᝲ  {
-imm method imm @ᮇै ᠳਁᝲ();
+imm method @ᮇै ᠳਁᝲ();
 }
 

@@ -1,15 +1,15 @@
-main = imm @ᲀં ࠊེ᳷꠆᳗᳑⃡ￛ᭮ = @[],
-head(true).ῗ්꫁ై();
+main = @ᲀં ࠊེ᳷꠆᳗᳑⃡ￛ᭮ = @[],
+head(true ).ῗ්꫁ై();
 
 class 〆ၟ  {
-imm @ךּᮤ ᲂ;
+@ךּᮤ ᲂ;
 imm ៗྗ ᛸ;
 capsule ℑ꫶ ఉ;
-imm @ສ ᅾ᩸ૢ︀꣨;
-imm @ˤ႘ꪴু ֏;mut method imm @ᚋ ᳮ() =
-1;
+@ສ ᅾ᩸ૢ︀꣨;
+@ˤ႘ꪴু ֏;mut method @ᚋ ᳮ() =
+1 ;
 
-imm method imm @Ͷૢຼꠣ៣ᨗ⁦ ᏺᩗ઼਼࣠(imm @Ꚏ Ό) =
-0.0;
+imm method @Ͷૢຼꠣ៣ᨗ⁦ ᏺᩗ઼਼࣠(@Ꚏ Ό) =
+0.0 ;
 }
 

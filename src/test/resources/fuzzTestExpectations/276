@@ -1,11 +1,11 @@
-main = ;
+main = "";
 
 interface ﭘୌ extends ᶺᝳ  {
 imm method mut ㇷ ກ(imm ޱ ᾊ);
 
 capsule method imm ῌ ᦧ();
 
-imm method imm @ஒ ଐ᠍ு();
+imm method @ஒ ଐ᠍ு();
 
 imm method read ㆋ ප⳱ෲ();
 }

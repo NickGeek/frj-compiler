@@ -1,2 +1,2 @@
-main = new Լ(tail(this), 𑙠);
+main = new Լ(tail(this), "𑙠");
 

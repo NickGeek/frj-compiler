@@ -8,11 +8,11 @@ capability class 횤꫁  {
 imm method imm ⶶ ױ໔() =
 tail(this);
 
-imm method imm @ẕ꩖ Ϫଃ(imm ৎ੩ ಀ) =
-173.0;
+imm method @ẕ꩖ Ϫଃ(imm ৎ੩ ಀ) =
+173.0 ;
 }
 
 interface ὶ͔  {
-imm method imm @ມ⳰ Ï(imm Α಼ ᧆ, imm ⶦ ࠤ꩐᠍࡙꩐, imm @⁔ၲ ൟୖ);
+imm method @ມ⳰ Ï(imm Α಼ ᧆ, imm ⶦ ࠤ꩐᠍࡙꩐, @⁔ၲ ൟୖ);
 }
 

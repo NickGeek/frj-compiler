@@ -1,23 +1,23 @@
-main = @[this; tail(0)];
+main = @[this; tail(0 )];
 
 interface ೠ extends Ӿ᭘ྀ  {
 imm method mut Ⳮ៝ ܧ();
 }
 
 class ၰ꯭8 implements ಏ  {
-mut method capsule ච ᢣ(imm @Ʞ ಲో) =
-false;
+mut method capsule ච ᢣ(@Ʞ ಲో) =
+false ;
 
 imm method imm ℂ ୟᮤ(imm ߺࠩ Ꮎ༿) =
-imm @ⴧ ൕ = ,
-head(this).ιೇ(164, true, tail(imm @ꦱื‏ ʃ = false,
-tail(0.015625).ၡ), ꩚\u71D0, tail(new ༀ(new ᏺ(@[]))), this).@Ꞡꙻ();
+@ⴧ ൕ = "",
+head(this).ιೇ(164 , true , tail(@ꦱื‏ ʃ = false ,
+tail(0.015625 ).ၡ), "꩚\u71D0", tail(new ༀ(new ᏺ(@[]))), this).@Ꞡꙻ();
 
-read method imm @ဤ ᢥ() =
-2;
+read method @ဤ ᢥ() =
+2 ;
 
 imm method imm ゟᢆ ὒꦃ() =
-@[head(\41.ᱠ้(@[true; @[]])); imm @ꬃ᜴ؒ ι = 0.0,
+@[head("\41".ᱠ้(@[true ; @[]])); @ꬃ᜴ؒ ι = 0.0 ,
 this];
 }
 

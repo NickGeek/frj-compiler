@@ -1,16 +1,16 @@
-main = \b;
+main = "\b";
 
 class ᬆ implements Ᾱᮦ, ᥲ, ᦲ, ꬥ, ₖၞ  {
-read method imm @ℸ॔ⷠ⁢ັ ͱ() =
-5.0E80;
+read method @ℸ॔ⷠ⁢ັ ͱ() =
+5.0E80 ;
 
-imm method imm @$ ꫥ୩઼() =
-true;
+imm method @$ ꫥ୩઼() =
+true ;
 }
 
 class ቖ⃡  {
 imm ᾢ ऽෲׁ;
-imm @า꘨ു ㄼ;
+@า꘨ു ㄼ;
 }
 
 class ꜞ implements ꪱ  {

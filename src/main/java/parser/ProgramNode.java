@@ -250,8 +250,11 @@ public interface ProgramNode extends Visitable {
 		@Override
 		public String toString() {
 			var source = new StringBuilder();
-			source.append(this.mdf.toString().toLowerCase()).append(' ');
-			if (this.isLifted) source.append("@");
+			if (this.isLifted) {
+				source.append("@");
+			} else {
+				source.append(this.mdf.toString().toLowerCase()).append(' ');
+			}
 			source.append(this.name);
 
 			return source.toString();

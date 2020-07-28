@@ -1,12 +1,12 @@
-main = Infinity;
+main = Infinity ;
 
 capability class ඍ᜔꫁ꦃ implements Ⳬ꣑ꦀ, ي, ⅎ, Ŝ꩓, Ⴭ  {
 imm Ͷ ৼ౫ॖූ;
 read ㄣ༡ෙ࿆᮱ ꬆ;
 imm ᝌ ྊ႓;
-imm @Ά ۿᢩᩛ᥈;
+@Ά ۿᢩᩛ᥈;
 imm ၸ່ ˮ᮸;
-imm @Ὑ প;
+@Ὑ প;
 }
 
 interface ゟ  {

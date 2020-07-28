@@ -1,19 +1,19 @@
-main = 0;
+main = 0 ;
 
 interface ੳ߅ extends ೠ७, ᙸ  {
 imm method capsule ⅅ઼ ﹳ(mut ὑ ｏ);
 
-mut method imm @ஃᤥૣꪷၪ ˮ(imm @_ ກ, imm ዅ ἵ, mut ჩ ਲ, imm @ꧽഁၠࠢ ⴴ, imm ퟍ්᷎ బ);
+mut method @ஃᤥૣꪷၪ ˮ(@_ ກ, imm ዅ ἵ, mut ჩ ਲ, @ꧽഁၠࠢ ⴴ, imm ퟍ්᷎ బ);
 }
 
 interface Όై༠ၬ  {
-imm method imm @ﬤ ၮꢀ(read ι ଌ, imm ኊൣᝒ⃡ࠦ ⁱૢಁۙ);
+imm method @ﬤ ၮꢀ(read ι ଌ, imm ኊൣᝒ⃡ࠦ ⁱૢಁۙ);
 
-mut method imm @Ή ఱ();
+mut method @Ή ఱ();
 
 imm method imm ῃ꩐ ᥨ();
 
-imm method imm @ኌ ອো(read ᚴ ऽັᬃ᱉, imm @⁔ ಲ᱘, imm @ℤ Թ);
+imm method @ኌ ອো(read ᚴ ऽັᬃ᱉, @⁔ ಲ᱘, @ℤ Թ);
 }
 
 class ຊ  {
@@ -21,7 +21,7 @@ class ຊ  {
 }
 
 capability class ΰﬞ᱁ implements ၮ  {
-imm ዐ ꘪ᱄ုꦽ્;read method imm ℾৣ4꤃ ࠨ(imm @ꫝ ꫳ, imm @ᪧైᜒ໗ ஃ) =
-0;
+imm ዐ ꘪ᱄ုꦽ્;read method imm ℾৣ4꤃ ࠨ(@ꫝ ꫳ, @ᪧైᜒ໗ ஃ) =
+0 ;
 }
 

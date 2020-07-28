@@ -1,11 +1,11 @@
 main = ͳ፝;
 
 interface 調ᩱ๙  {
-imm method imm ޱ ࢲ(imm @ᜏ ߺ᱁ꪰꢸ);
+imm method imm ޱ ࢲ(@ᜏ ߺ᱁ꪰꢸ);
 }
 
 class ᴼ  {
-imm method imm @ઞ᳒ ﷵ() =
+imm method @ઞ᳒ ﷵ() =
 @[];
 }
 

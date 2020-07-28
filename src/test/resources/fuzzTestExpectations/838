@@ -1,6 +1,6 @@
 main = new Ａ();
 
 interface ꟻ  {
-mut method imm @〼 ສ໑ੑ();
+mut method @〼 ສ໑ੑ();
 }
 

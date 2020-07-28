@@ -1,9 +1,9 @@
 main = ඹ;
 
 interface ቘ๙ extends ꧬ  {
-imm method imm ꬎ᪂ ዀ೧(imm ퟩ ዑ᱔ၠ﻿, imm @Ί ᠳ, read ລ઼ﬞᝒؒ ਵ);
+imm method imm ꬎ᪂ ዀ೧(imm ퟩ ዑ᱔ၠ﻿, @Ί ᠳ, read ລ઼ﬞᝒؒ ਵ);
 
-capsule method imm @ዣ ௹();
+capsule method @ዣ ௹();
 }
 
 interface ᜤ extends ᾑ, ລ༹  {
@@ -15,7 +15,7 @@ imm method imm 〴ੵ܏ ٹᨚ(imm ꬎ ײ);
 }
 
 interface ਨꪰᩚ extends ະ, Ⳬ‎‭, ཇᨘ  {
-read method mut ￓ ዄ(imm @ቓ ᮓ);
+read method mut ￓ ዄ(@ቓ ᮓ);
 }
 
 interface ଽ  {

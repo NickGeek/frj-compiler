@@ -1,16 +1,16 @@
-main = @[this; \271\n];
+main = @[this; "\271\n"];
 
 interface ྈ᥈් extends ﳥ, ฿ၬ۵  {
-mut method imm @ছ އ꙯(read ヽ ﭴ, imm @ኹ ஜ, imm @ℕ‪ൢᩳஂ༵ ꬖܿޮ, imm ˬ ꞔ);
+mut method @ছ އ꙯(read ヽ ﭴ, @ኹ ஜ, @ℕ‪ൢᩳஂ༵ ꬖܿޮ, imm ˬ ꞔ);
 
 imm method imm ਊೈ וֹ();
 
-imm method imm @ﷺૺ ᵌ();
+imm method @ﷺૺ ᵌ();
 }
 
 capability class ՙ implements ᾎ, ড়ׅ, ퟄಂ, ᱸ, ףּ߫ꩃ  {
-imm method imm @ꩦ Ú؜(imm @ᝀ ℿ) =
-0;
+imm method @ꩦ Ú؜(@ᝀ ℿ) =
+0 ;
 }
 
 interface מּ  {

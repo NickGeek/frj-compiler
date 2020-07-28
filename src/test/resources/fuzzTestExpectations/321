@@ -1,11 +1,11 @@
 main = @[];
 
 class ؋߫  {
-imm @ஐ᷽ ᚧ﻿ஂ;mut method imm ܥ ઽຶੵ႔໌︌᪂ᳲ(imm ￥ ꪺ, imm @ৠ ຯ) =
-;
+@ஐ᷽ ᚧ﻿ஂ;mut method imm ܥ ઽຶੵ႔໌︌᪂ᳲ(imm ￥ ꪺ, @ৠ ຯ) =
+"";
 
-mut method imm @టୈ҇ ܐ଼() =
-0;
+mut method @టୈ҇ ܐ଼() =
+0 ;
 }
 
 capability class ヿ  {

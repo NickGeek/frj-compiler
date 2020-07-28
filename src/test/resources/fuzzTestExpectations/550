@@ -15,6 +15,6 @@ imm ኸꙶ็ కॢ;
 }
 
 interface ꭞ៥ࠦ extends ᳵৗ  {
-imm method imm @ꣽ ᱼၢꩻᨛ᷽݀ࠝ(imm @ᳬࠧୌ ༀ, capsule ꪺ⁣ ဦ);
+imm method @ꣽ ᱼၢꩻᨛ᷽݀ࠝ(@ᳬࠧୌ ༀ, capsule ꪺ⁣ ဦ);
 }
 

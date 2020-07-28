@@ -1,10 +1,10 @@
 main = ꩁ꙯;
 
 capability class ޢ implements ẏ꯭ꙹႂ  {
-imm ⴭ፝ઁಃ Ή༵ૢᢩ;imm method imm હ፝ Ἑା(imm 殺 ࡃ᳭, imm @ண꠆ ਲဴ) =
-256.0;
+imm ⴭ፝ઁಃ Ή༵ૢᢩ;imm method imm હ፝ Ἑା(imm 殺 ࡃ᳭, @ண꠆ ਲဴ) =
+256.0 ;
 
-imm method mut ꩢ Ｙ(imm @եꢁ ᱎꢁ, imm @⁀ ࢫಃ) =
+imm method mut ꩢ Ｙ(@եꢁ ᱎꢁ, @⁀ ࢫಃ) =
 this;
 }
 
@@ -13,6 +13,6 @@ class ︴ั implements ຽ൬, ۿ, অ༩, Ὰ  {
 }
 
 interface ꁷꧥ  {
-imm method imm @Ὕୣ៎ ꪵꢁ٩ࠪ();
+imm method @Ὕୣ៎ ꪵꢁ٩ࠪ();
 }
 

@@ -5,8 +5,8 @@ interface ֏ extends Ⰵౣ  {
 }
 
 class ၦ᭳ implements ꪱ, ﹴູ  {
-imm @ச᱑ᜳೖ ﹩;
-imm @ﶽ᪱ Έ᪄ꤩ;capsule method imm @ຫ ⷆ⃡ஂൂ꩙ꠦ(imm ۻ꯭ೄ​़ ꭈᮭ, imm @ૐ ଲ࡙᥌) =
-1;
+@ச᱑ᜳೖ ﹩;
+@ﶽ᪱ Έ᪄ꤩ;capsule method @ຫ ⷆ⃡ஂൂ꩙ꠦ(imm ۻ꯭ೄ​़ ꭈᮭ, @ૐ ଲ࡙᥌) =
+1 ;
 }
 

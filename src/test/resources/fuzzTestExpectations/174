@@ -9,7 +9,7 @@ imm method imm ￇ ﮩெ();
 }
 
 capability class ᙸ implements ۯ︇  {
-imm @ꗭ໓ Ⅾ‮੍່;
+@ꗭ໓ Ⅾ‮੍່;
 }
 
 interface ᚉౄ꯶३ॢ extends Ʝ꫁ꪲ  {
@@ -17,9 +17,9 @@ interface ᚉౄ꯶३ॢ extends Ʝ꫁ꪲ  {
 }
 
 capability class በ൭ׅᯪ  {
-mut method imm @ᱵ ਗ਼() =
-head(imm _ே _ൣ = false,
-tail(13));
+mut method @ᱵ ਗ਼() =
+head(imm _ே _ൣ = false ,
+tail(13 ));
 
 imm method read ᾁ Ὓ᪑ොූꩌꧥ​() =
 டꢀ;

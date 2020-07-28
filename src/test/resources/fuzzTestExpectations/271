@@ -6,18 +6,18 @@ class P߱  {
 }
 
 class ៗ implements 逸็݉ᤶ, ঽ, ꠸ั  {
-imm method imm ဆ ㇰ(imm @ঢ়ෛ ߺ᳗ꠦ︇ܑ, imm @ૐۙ⳰ࠝ ℍ, imm ຮେ ꬕ, imm @ꬔၙଁৈ ኳ) =
-new ガ(59, new ꪧၠ(), 10.0, head(imm @ꣳ ࠓ = new ꠙ(),
-tail(new ഐ়߫ꢀꠋ(@[new દ़౧(); \uu4feB], ߒো))));
+imm method imm ဆ ㇰ(@ঢ়ෛ ߺ᳗ꠦ︇ܑ, @ૐۙ⳰ࠝ ℍ, imm ຮେ ꬕ, @ꬔၙଁৈ ኳ) =
+new ガ(59 , new ꪧၠ(), 10.0 , head(@ꣳ ࠓ = new ꠙ(),
+tail(new ഐ়߫ꢀꠋ(@[new દ़౧(); "\uu4feB"], ߒো))));
 
 read method mut ꠸ Ὓ(imm য় చ) =
-4000.0;
+4000.0 ;
 
-capsule method imm এ ꣻ(mut ۼ ℕ, read ͷ ਏ꯳, imm ᾢ ﹰ, imm @ⷌೌ⃬ ៗ, imm @Πꫮ ঽ, capsule Å வꩍৢྲ, imm 〵ꩍ הּೊᰳଃ, imm ᳩ ಸ) =
-8.0E79;
+capsule method imm এ ꣻ(mut ۼ ℕ, read ͷ ਏ꯳, imm ᾢ ﹰ, @ⷌೌ⃬ ៗ, @Πꫮ ঽ, capsule Å வꩍৢྲ, imm 〵ꩍ הּೊᰳଃ, imm ᳩ ಸ) =
+8.0E79 ;
 
-imm method imm @ড়ׇ⳰ ᩈ᮪֤꧔() =
-false;
+imm method @ড়ׇ⳰ ᩈ᮪֤꧔() =
+false ;
 }
 
 interface ꧫ  {

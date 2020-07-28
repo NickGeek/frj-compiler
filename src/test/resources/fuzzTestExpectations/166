@@ -1,20 +1,20 @@
-main = 0;
+main = 0 ;
 
 interface ࡓ  {
-imm method imm @ￓ ꫴꪷ();
+imm method @ￓ ꫴꪷ();
 
 mut method imm ௹܏ꠋೃᮭॢঁܑ ⴭᢩ(imm ﬖ ѡ۝);
 
-capsule method imm @ਸ਼୧ ﮀഀ(imm ኍ ຣ);
+capsule method @ਸ਼୧ ﮀഀ(imm ኍ ຣ);
 }
 
 class ࠚ  {
 capsule ꩺ࠘꧕꧓ಁۤ ᝏෲ;
 imm ꢆ ௹ࠢੇ;
 mut Ό܏ႚ ꧤؐംၗ;
-imm @ꤼ ǔ;
-imm @ꬪ ᰘ਼;
-imm @ᰏ ዀ৩;
+@ꤼ ǔ;
+@ꬪ ᰘ਼;
+@ᰏ ዀ৩;
 imm G් ꬡૼ;
 }
 

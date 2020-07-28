@@ -1,19 +1,19 @@
-main = false;
+main = false ;
 
 interface ˉ᭬ extends ۯ  {
 imm method imm ⁱ ወ꛰ీ();
 
-imm method imm @ꧫ ὑั॒ႋ᠘();
+imm method @ꧫ ὑั॒ႋ᠘();
 
-imm method imm @う ౡ９ࠥ⁢(imm @ꭥৗ್ ꠸߲᭯);
+imm method @う ౡ９ࠥ⁢(@ꭥৗ್ ꠸߲᭯);
 
-imm method imm @︳ു ଢ଼();
+imm method @︳ു ଢ଼();
 
-capsule method imm @ﶨ̺ ⶮ(imm $ೖ 㙑ೃ੦);
+capsule method @ﶨ̺ ⶮ(imm $ೖ 㙑ೃ੦);
 }
 
 interface ߟี  {
-imm method imm @ఽા⁯ ⷎྭ༘(imm @ᨕୌ ˣெ, mut ᛯⷠ რ);
+imm method @ఽા⁯ ⷎྭ༘(@ᨕୌ ˣெ, mut ᛯⷠ რ);
 }
 
 interface ꦉ᥇ٰ extends ຍ, ਅ  {

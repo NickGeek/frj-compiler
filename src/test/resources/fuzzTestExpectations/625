@@ -1,8 +1,8 @@
-main = this.ῃ = 11;
+main = this.ῃ = 11 ;
 
 interface ⁿ  {
-imm method imm @ﾥ ஃ(imm ষꫬ᱂܏ׄৗ൪ ˡ);
+imm method @ﾥ ஃ(imm ষꫬ᱂܏ׄৗ൪ ˡ);
 
-capsule method imm ꫀ႙꣄ ౙ(imm @ꧏᩢஂ⃚ Ᾱ⁬੮, imm @ﮘ〮 〴);
+capsule method imm ꫀ႙꣄ ౙ(@ꧏᩢஂ⃚ Ᾱ⁬੮, @ﮘ〮 〴);
 }
 

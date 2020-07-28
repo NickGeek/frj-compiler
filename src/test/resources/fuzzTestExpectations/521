@@ -1,21 +1,21 @@
-main = tail(true);
+main = tail(true );
 
 class ߺꪷົ۸ꦴੑ  {
-imm method imm @ꔅ ໜ፟() =
-true;
+imm method @ꔅ ໜ፟() =
+true ;
 
-imm method capsule ೞି ಛꠂ꙯(imm @﹍༙ ቋ, imm @ºૢ഻ୋ઼ Ὑ, imm @ꩺ৭ௗ ಸ) =
-false.@Ⴭൣ(@[this; this], imm @ꜟ ୱᰧ᥌ = 255.0,
-\'\f, ኡ, @[0.66; this]);
+imm method capsule ೞି ಛꠂ꙯(@﹍༙ ቋ, @ºૢ഻ୋ઼ Ὑ, @ꩺ৭ௗ ಸ) =
+false .@Ⴭൣ(@[this; this], @ꜟ ୱᰧ᥌ = 255.0 ,
+"\'\f", ኡ, @[0.66 ; this]);
 }
 
 capability class ⶍ᳴  {
-imm @ᢪ ℽႂٰ࿆;read method imm @Ꚓ ߺॗࠗ୩ೄ() =
-imm ℇ ᚄ = tail(imm ၮ ὓ = 448.0,
-2.0.투ᬺ = 448.0),
+@ᢪ ℽႂٰ࿆;read method @Ꚓ ߺॗࠗ୩ೄ() =
+imm ℇ ᚄ = tail(imm ၮ ὓ = 448.0 ,
+2.0 .투ᬺ = 448.0 ),
 new ສ(this);
 
-mut method imm @Ꮔ 〇ೢ￻ﬞ፝() =
+mut method @Ꮔ 〇ೢ￻ﬞ፝() =
 this;
 }
 

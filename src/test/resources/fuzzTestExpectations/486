@@ -1,14 +1,14 @@
-main = 0.19140625;
+main = 0.19140625 ;
 
 interface ৲  {
 
 }
 
 class Ⴧ  {
-imm @ਫ਼ ꬁ;
+@ਫ਼ ꬁ;
 mut ᦜ૽ꢿ〬ౣ ଏꪸ꣕྇;
 imm ۯ ௹;
-imm @ⴘ ⵯ;
+@ⴘ ⵯ;
 }
 
 interface ঢ়  {
@@ -16,8 +16,8 @@ imm method capsule ၽ ᝠ();
 
 imm method capsule ᖱ࡚ ꧡ(imm ഐ ₯);
 
-mut method imm @ج᷌ Ꚉ(imm @ਈ ᢼ, mut ਇ ଵ෮);
+mut method @ج᷌ Ꚉ(@ਈ ᢼ, mut ਇ ଵ෮);
 
-read method imm @ᒙෙ Άୌ᪖(mut ꧤꚟ ᰠంྐ);
+read method @ᒙෙ Άୌ᪖(mut ꧤꚟ ᰠంྐ);
 }
 

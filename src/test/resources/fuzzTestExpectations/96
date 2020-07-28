@@ -1,8 +1,8 @@
-main = 11;
+main = 11 ;
 
 capability class ꧼꢀ  {
-imm @ਲ਼ ℇ༿ൣ⃧;
-imm @ଐ⃡ ﬆ;
+@ਲ਼ ℇ༿ൣ⃧;
+@ଐ⃡ ﬆ;
 imm Ὑ ￥ꩌ;read method read ୱ ︴꩘() =
 @[];
 }
@@ -12,36 +12,36 @@ interface ㆣ extends Ⴭ, ὓꦺౖ  {
 }
 
 capability class ᢁ﻿ implements ᤙ  {
-imm ⴱੑ؜ ສ܏;imm method imm @લ ༀ(mut 〡︧ Ѥ᭯, capsule ⶦੈ ຊᰬ, imm ꩤ ꜟ) =
-new ᶕﬞ(mut ኳ ⷐ࠭ꪲັ༵ = 87305.0,
+imm ⴱੑ؜ ສ܏;imm method @લ ༀ(mut 〡︧ Ѥ᭯, capsule ⶦੈ ຊᰬ, imm ꩤ ꜟ) =
+new ᶕﬞ(mut ኳ ⷐ࠭ꪲັ༵ = 87305.0 ,
 ኍ, imm Ⳮ࠙ᜲ Ꞣ = this,
-new つං꣮(tail(13.25), 0.0, ൖꚟ⁤ၖ), ꣻ, ຂ);
+new つං꣮(tail(13.25 ), 0.0 , ൖꚟ⁤ၖ), ꣻ, ຂ);
 
 capsule method imm ῲ ㆡ() =
-head();
+head("");
 
-mut method imm @ଡ଼౭ꢽ ꘔꪴ() =
-false;
+mut method @ଡ଼౭ꢽ ꘔꪴ() =
+false ;
 
-imm method imm @ວ ℸ᱖() =
-0.0;
+imm method @ວ ℸ᱖() =
+0.0 ;
 
-capsule method mut 〇ऻ3 ℬ(imm @＿ᩡ ꣽ, imm @௹ ఝ্ஂ) =
-@[12.0; @[]];
+capsule method mut 〇ऻ3 ℬ(@＿ᩡ ꣽ, @௹ ఝ্ஂ) =
+@[12.0 ; @[]];
 
-capsule method imm @ᢃ ৼ() =
-imm @ꣽ༷ꚞ ¥ֽ = 3711,
-;
+capsule method @ᢃ ৼ() =
+@ꣽ༷ꚞ ¥ֽ = 3711 ,
+"";
 }
 
 interface ಎ  {
-imm method imm @ᕙႂ தె();
+imm method @ᕙႂ தె();
 
-capsule method imm @µྕ ﺺ();
+capsule method @µྕ ﺺ();
 }
 
 class ᤅৢ  {
-capsule method imm @ᧁ ヿ() =
-1.5446368976148174E-211;
+capsule method @ᧁ ヿ() =
+1.5446368976148174E-211 ;
 }
 

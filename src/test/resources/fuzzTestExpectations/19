@@ -5,9 +5,9 @@ interface ຊ extends কૢ, ᢪᝳྫ꠆ႝ, ணꠂੌᝒ  {
 }
 
 interface ഽ  {
-imm method imm ＄ู၉ ຄ(imm @Ｅ ঢ়);
+imm method imm ＄ู၉ ຄ(@Ｅ ঢ়);
 
-read method imm Ὓ୫꫁ൃ ௹(imm @ᤛ ᲀ);
+read method imm Ὓ୫꫁ൃ ௹(@ᤛ ᲀ);
 
 mut method imm Ⴄ ەີᢅ(imm ῄ ࠚઃ၁, imm ꟻ۷ ￚ);
 }

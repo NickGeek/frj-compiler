@@ -1,7 +1,7 @@
 main = tail(ꢖั);
 
 class ୱ  {
-read method imm @ℤ⃒ಃꥏે Ὕ(imm ಷॖ ﴇᬃ, capsule ವ ˮ, imm @ῃீ ￊ, imm @ଖ༵ ⅇࠬ, imm @ꬋ꧷ࠥ Ὂஂ￻, imm Ꜣ︯᳑ Ⳉ᱁) =
+read method @ℤ⃒ಃꥏે Ὕ(imm ಷॖ ﴇᬃ, capsule ವ ˮ, @ῃீ ￊ, @ଖ༵ ⅇࠬ, @ꬋ꧷ࠥ Ὂஂ￻, imm Ꜣ︯᳑ Ⳉ᱁) =
 head(this);
 }
 

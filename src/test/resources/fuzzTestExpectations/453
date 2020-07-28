@@ -1,2 +1,2 @@
-main = @[@[false; \'਩]; false];
+main = @[@[false ; "\'਩"]; false ];
 

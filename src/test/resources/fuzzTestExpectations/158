@@ -1,14 +1,14 @@
-main = head(@[head(new ﭝ⃘()); ]);
+main = head(@[head(new ﭝ⃘()); ""]);
 
 interface ຈ  {
 
 }
 
 interface ￦േ  {
-imm method imm ꩆ ߴ(imm ဗ ܕ, imm @Ꭓ꣖়༙ Ἐ, imm @ヵై ꬕ);
+imm method imm ꩆ ߴ(imm ဗ ܕ, @Ꭓ꣖়༙ Ἐ, @ヵై ꬕ);
 
-capsule method imm @ಽ എꧥ();
+capsule method @ಽ എꧥ();
 
-imm method imm ไ೪ัົꩍ࠘ ஏ⁭෨ᮧꪴ᱆(imm @ૹ ℊિᮡ, imm @ᱍ ᨦ);
+imm method imm ไ೪ัົꩍ࠘ ஏ⁭෨ᮧꪴ᱆(@ૹ ℊિᮡ, @ᱍ ᨦ);
 }
 

@@ -1,4 +1,4 @@
-main = 23269.0;
+main = 23269.0 ;
 
 interface ᨕ extends ຽ  {
 
@@ -10,20 +10,20 @@ interface ୠ‌ꫵ extends ⁔়  {
 
 capability class ﺈ᳔ࠞៈ⃡ implements ꣽ‮࡚, ￅᯪﬞꦂ  {
 imm ೞೣᢆ ꡅ;
-imm ڸ ኮឹ;imm method imm @ޕᷴ ઐ() =
-false;
+imm ڸ ኮឹ;imm method @ޕᷴ ઐ() =
+false ;
 
-read method imm @প઼ Ꞩ(imm @ଽൈໍ יִ) =
-0;
+read method @প઼ Ꞩ(@ଽൈໍ יִ) =
+0 ;
 
-imm method imm @ᎏ︯⳱ ꠊ(read ℐ ℓ) =
+imm method @ᎏ︯⳱ ꠊ(read ℐ ℓ) =
 @[];
 
-imm method capsule ऽ‏ྫྷు ઽ(imm @$഼ᷙ Ⴄ) =
-0.0;
+imm method capsule ऽ‏ྫྷు ઽ(@$഼ᷙ Ⴄ) =
+0.0 ;
 
 imm method imm ঐ൭ꣂఀ ᾞ() =
-false;
+false ;
 }
 
 capability class ચ implements ஓ  {
@@ -31,6 +31,6 @@ capability class ચ implements ஓ  {
 }
 
 capability class ୟ゙꠆  {
-imm @ᏼ᠎ꩃੵ ຊꩍ;
+@ᏼ᠎ꩃੵ ຊꩍ;
 }
 

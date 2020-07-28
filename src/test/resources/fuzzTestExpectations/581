@@ -1,15 +1,15 @@
-main = 31;
+main = 31 ;
 
 interface ଉ઼  {
-imm method imm @ㆦ ਏ(imm ὗ ᳵ, imm ⴧ ⅎਃୣ, imm ໄ៍ ଵৈੱꠂ᪰, imm @ꚝׂ ꩲ, imm ﰅ ꫀᬃ࡚, imm Ꮸ Ⴭ, capsule ￆ୧ ⁔ේັ);
+imm method @ㆦ ਏ(imm ὗ ᳵ, imm ⴧ ⅎਃୣ, imm ໄ៍ ଵৈੱꠂ᪰, @ꚝׂ ꩲ, imm ﰅ ꫀᬃ࡚, imm Ꮸ Ⴭ, capsule ￆ୧ ⁔ේັ);
 }
 
 interface ൠꢀ3  {
-imm method imm @Ⴧ ⷕ᷼ꯪ(imm @ଽ᥎ ଵ, imm @ꬓ ۦ);
+imm method @Ⴧ ⷕ᷼ꯪ(@ଽ᥎ ଵ, @ꬓ ۦ);
 
-imm method imm @ᜁ ૹܾ(capsule ꬠ꯭༵၆ ﹱ්);
+imm method @ᜁ ૹܾ(capsule ꬠ꯭༵၆ ﹱ්);
 
-read method imm @〇ᮡ ⰹ();
+read method @〇ᮡ ⰹ();
 }
 
 interface ۋঁ extends ෆૻ܏  {

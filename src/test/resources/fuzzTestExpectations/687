@@ -1,18 +1,18 @@
-main = ;
+main = "";
 
 capability class 〹 implements লੇ⃧  {
-imm @ﭱꩼ ᾄ๓︌;imm method imm @ச۵ ﭢ8ั(imm ꠃ ਏ, imm @סּ կੵ᮱᩷꙯ࠖ২) =
-false;
+@ﭱꩼ ᾄ๓︌;imm method @ச۵ ﭢ8ั(imm ꠃ ਏ, @סּ կੵ᮱᩷꙯ࠖ২) =
+false ;
 
 imm method mut µ ᳪ() =
-head(tail(0));
+head(tail(0 ));
 
-imm method imm @ⶱ᪰ᜲꚞ ઈ᠍꤃၂ಂ(imm @ൽൢ ຂֿ໔ׇꩌ) =
-head(7.555786372591432E23);
+imm method @ⶱ᪰ᜲꚞ ઈ᠍꤃၂ಂ(@ൽൢ ຂֿ໔ׇꩌ) =
+head(7.555786372591432E23 );
 }
 
 capability class ഽ᮹ೇ  {
 imm ℨೇঁൊ વ;
-imm @ꨁೆ Ὑ୮ᬂึே;
+@ꨁೆ Ὑ୮ᬂึே;
 }
 

@@ -1,17 +1,17 @@
 main = this;
 
 class ॐ implements ﶄ, Ⱇ୪ᢩ  {
-mut ꠄಂొ༾ؖ ꜗෳࣔ;imm method imm @ᱏೕࣵേ ⵯᷯ(imm @ဗ נּꦼ) =
-read ⷎେ ຢી = true,
+mut ꠄಂొ༾ؖ ꜗෳࣔ;imm method @ᱏೕࣵേ ⵯᷯ(@ဗ נּꦼ) =
+read ⷎେ ຢી = true ,
 new ଐ⳱();
 
-imm method imm @ॳ༙ ၥ(imm @ℰ ꧫ, imm @ˣ ꪵ, imm 〳゙︤ ᝮ഼, imm @ၡ ᝤ, imm @ঢ় ஏ, imm @ࢦၗ෦ৄ႖ ቘ, imm ᤎ ꠸) =
-imm @ᬎ꯲ ວ꪿ઁ = head(tail(tail(1.@ꪼ(true)))),
-false;
+imm method @ॳ༙ ၥ(@ℰ ꧫ, @ˣ ꪵ, imm 〳゙︤ ᝮ഼, @ၡ ᝤ, @ঢ় ஏ, @ࢦၗ෦ৄ႖ ቘ, imm ᤎ ꠸) =
+@ᬎ꯲ ວ꪿ઁ = head(tail(tail(1 .@ꪼ(true )))),
+false ;
 }
 
 capability class 볏ే  {
 imm ꦡ഻ ຂ;
-imm @Òޯ્ ଢ଼;
+@Òޯ્ ଢ଼;
 }
 

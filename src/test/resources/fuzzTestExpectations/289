@@ -5,11 +5,11 @@ class ὒ implements ヽ  {
 }
 
 interface ច extends ኴ, ۿೕ  {
-imm method imm @יִ҇⳱⃡ ꚽ(imm ⵯ ᙱ៤);
+imm method @יִ҇⳱⃡ ꚽ(imm ⵯ ᙱ៤);
 }
 
 interface ꬅ  {
-imm method imm @ퟺఃꦀ לּ();
+imm method @ퟺఃꦀ לּ();
 }
 
 capability class ꮣౣൗ܏ꪰ‪ implements ਉ  {
@@ -18,20 +18,20 @@ capability class ꮣౣൗ܏ꪰ‪ implements ਉ  {
 
 capability class ﹩ implements ᮈ  {
 imm method imm ֏ॣ ⁿੑ() =
-;
+"";
 }
 
 interface ྋ extends ŧ഼༷ೈۡඃ  {
-capsule method imm @ꧢ꣰ೄ ꓸૌ(mut ॳ ᢀᢩ྇);
+capsule method @ꧢ꣰ೄ ꓸૌ(mut ॳ ᢀᢩ྇);
 
 mut method imm ກ꥓ௗ෭ ᨏੵ();
 
-imm method imm @ٮ಼ ՙ(imm @ⅎ ტ);
+imm method @ٮ಼ ՙ(@ⅎ ტ);
 
 read method imm ऽׇ බ៣꙯ꩌ꯸ॣ();
 
-mut method imm @ᝨ ꫀႃꪰ();
+mut method @ᝨ ꫀႃꪰ();
 
-imm method imm @ꘪ ⴤ೧ꪰᱲ(imm ᏸ ຄ, imm ⴧ᳸ઃ ᪧ⁤ో꙯ꪳ, imm @ᢴຸ ਫ਼, imm @ゟ᭗ູ ﭓဲ්);
+imm method @ꘪ ⴤ೧ꪰᱲ(imm ᏸ ຄ, imm ⴧ᳸ઃ ᪧ⁤ో꙯ꪳ, @ᢴຸ ਫ਼, @ゟ᭗ູ ﭓဲ්);
 }
 

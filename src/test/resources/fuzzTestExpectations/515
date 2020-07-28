@@ -1,8 +1,8 @@
-main = 15.671630859375;
+main = 15.671630859375 ;
 
 class ﬓ  {
-imm @ₓꪴ ળ;imm method imm @Ⴧऺ᪁ୣ ㄊ() =
-;
+@ₓꪴ ળ;imm method @Ⴧऺ᪁ୣ ㄊ() =
+"";
 }
 
 interface ష extends ꩇ, ঽ, V  {
@@ -14,16 +14,16 @@ class ન  {
 }
 
 class ၰ​  {
-capsule method imm ຫ ᱯ۲(imm @Ｗ נּ, imm ᰂ︢ ᳪ, imm @ຳؗੀ ಉ, imm ꕨ ஒുⷷ) =
+capsule method imm ຫ ᱯ۲(@Ｗ נּ, imm ᰂ︢ ᳪ, @ຳؗੀ ಉ, imm ꕨ ஒുⷷ) =
 ணᝲᨚ;
 
-imm method imm ஊ Ҡ؜(imm @ꦕࠧ פּ) =
+imm method imm ஊ Ҡ؜(@ꦕࠧ פּ) =
 this;
 }
 
 interface మ extends £꣔៝ᨗऻ᳒, Ⴧ  {
-imm method imm Kܲ ῃ࠭(imm @¥ ᣴ, imm @આ ൔ);
+imm method imm Kܲ ῃ࠭(@¥ ᣴ, @આ ൔ);
 
-mut method imm ᝡ಼ۨ ࠂᯫ‪ৢ۝(imm @ᏹꢁ பൗ);
+mut method imm ᝡ಼ۨ ࠂᯫ‪ৢ۝(@ᏹꢁ பൗ);
 }
 

@@ -1,19 +1,19 @@
-main = head(@[imm @﹍٨ꪳ ە = ೞం,
-true; this]);
+main = head(@[@﹍٨ꪳ ە = ೞం,
+true ; this]);
 
 capability class Ͷ៑  {
-imm method imm ఉ Ά(imm ਲॕ ￒ­, imm @Ά༙ᮂ٩ۖ௫ ⅱృᜓ) =
-true;
+imm method imm ఉ Ά(imm ਲॕ ￒ­, @Ά༙ᮂ٩ۖ௫ ⅱృᜓ) =
+true ;
 
-imm method imm @ଽೕׁ લు(imm @ॐ්ꠂ ॲ࡚, imm @ࢴ᪲౨ ຢ, imm @ⁿ ዉ, read ኾ᥈ ዮॊ⁧, imm Ῐ ⸯ) =
-0.@ᵱ();
+imm method @ଽೕׁ લు(@ॐ්ꠂ ॲ࡚, @ࢴ᪲౨ ຢ, @ⁿ ዉ, read ኾ᥈ ዮॊ⁧, imm Ῐ ⸯ) =
+0 .@ᵱ();
 }
 
 class み  {
 imm 煮ᮂ ⷛੑ;
 imm ᥘ᧑༿҃ Ç­෨໌;
 imm ꬂ ۦ;
-imm @ៗ ῆၱ;
-imm @Ⴧ Ɦ;
+@ៗ ῆၱ;
+@Ⴧ Ɦ;
 }
 

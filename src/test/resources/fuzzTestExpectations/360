@@ -5,31 +5,31 @@ class ఊి  {
 }
 
 capability class ྋং  {
-read method imm @⁔ ᚲ() =
-imm ꣻ ஐ꘡െ᳭ੵ = false,
-\';
+read method @⁔ ᚲ() =
+imm ꣻ ஐ꘡െ᳭ੵ = false ,
+"\'";
 
-imm method imm @ⅉ᯦ොׄ ͼ〪꘧೦(imm ఏ९ ऽ, imm @ᮞ〪 ꬕ) =
-77040.0;
+imm method @ⅉ᯦ොׄ ͼ〪꘧೦(imm ఏ९ ऽ, @ᮞ〪 ꬕ) =
+77040.0 ;
 
 imm method mut ಜ Ωꧥ() =
-false;
+false ;
 
 capsule method imm ᳮ ऽ() =
-0.ଦၘ;
+0 .ଦၘ;
 }
 
 class ᪧ꤫ implements ͳ  {
-read method imm @ⳬ ﻆ઼() =
-false;
+read method @ⳬ ﻆ઼() =
+false ;
 
 imm method capsule ￇॣၭૢ Ꙛ() =
-new דּ(new ቌ(0).ൎ);
+new דּ(new ቌ(0 ).ൎ);
 
-read method imm @ச ꣻ(imm @ᇮ꩕፝ য, imm ۿ઼ֿࠦᰦ ꚑ, imm @ՙ ꣽ, imm @ଋং Ʇ꠆ᝲܑঁ, imm @Ʇᝒ ࡉ, imm ବꤩꪷ E, imm @ਸ਼઼ ᢦ, mut יִၠ ﺖ౬, imm మ ໜֿ᳴, imm ຽ︅༷ ၜᯫꦼެၢ) =
-0.234375;
+read method @ச ꣻ(@ᇮ꩕፝ য, imm ۿ઼ֿࠦᰦ ꚑ, @ՙ ꣽ, @ଋং Ʇ꠆ᝲܑঁ, @Ʇᝒ ࡉ, imm ବꤩꪷ E, @ਸ਼઼ ᢦ, mut יִၠ ﺖ౬, imm మ ໜֿ᳴, imm ຽ︅༷ ၜᯫꦼެၢ) =
+0.234375 ;
 
 capsule method mut ꩅ 䪷಼() =
-head(1);
+head(1 );
 }
 

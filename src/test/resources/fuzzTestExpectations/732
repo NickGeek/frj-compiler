@@ -1,12 +1,12 @@
-main = head(@[ᳫ; this.@Ⴙ￺(, 98.0, new ꬼ(), imm @֏๙ޮ៓܏ ꣽ߱⳯ೋ = @[],
-ط, true.傅 = 0.4)]);
+main = head(@[ᳫ; this.@Ⴙ￺("", 98.0 , new ꬼ(), @֏๙ޮ៓܏ ꣽ߱⳯ೋ = @[],
+ط, true .傅 = 0.4 )]);
 
 capability class ทꫭ  {
-imm @ᏸৗ ବႇ;imm method imm @ⅉ ꣳ(imm פּ Ｌୣ) =
+@ᏸৗ ବႇ;imm method @ⅉ ꣳ(imm פּ Ｌୣ) =
 this;
 
-imm method imm ଡ଼ᮂ ⶰ઼້(imm ⸯ ᲆᯬံᯪో൬ू, imm @ൕ ῒ, imm رঁၢ ୠૈ, imm 〻 Ɫ༹࡙ௗ) =
-imm @ຄ ฯ = ௹,
+imm method imm ଡ଼ᮂ ⶰ઼້(imm ⸯ ᲆᯬံᯪో൬ू, @ൕ ῒ, imm رঁၢ ୠૈ, imm 〻 Ɫ༹࡙ௗ) =
+@ຄ ฯ = ௹,
 tail(imm ꙏ Ό೨ꢷꩍ = this,
 @[]);
 }
