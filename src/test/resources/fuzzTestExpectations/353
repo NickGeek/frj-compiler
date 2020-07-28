@@ -1,0 +1,29 @@
+main = this;
+
+interface ಷ೬  {
+
+}
+
+capability class თ implements ጥேೆൌ  {
+read ง᳭ Έ;
+capsule Ἕ ဿ;capsule method imm @ೠ த(imm @ࢪૣ ભ) =
+3;
+}
+
+capability class ﬗ implements Ｉᨗⷻ  {
+imm ຊ᭙ᮭ᧕ ῼ;
+imm @ᬤ︧ ഽ;imm method capsule ॠ಼ Ὑྛ() =
+ᬪ݇;
+
+imm method imm @ዀ Ⴢ᳒(imm @ߴ ꞟั၈) =
+0.0;
+}
+
+interface ꣻᢩ extends ⳬ  {
+imm method read Ὑ ำ༤﻿ၲᩛ();
+}
+
+interface ῼ extends ၜ, ᬧꠦ, ퟴ༾्⃧, ໃౣ࡙๔⃦꤈ၲ, ဩ, Ⲍ  {
+
+}
+

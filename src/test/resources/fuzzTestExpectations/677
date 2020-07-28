@@ -1,0 +1,6 @@
+main = @[tail(@[false; this]); head(this)];
+
+interface ᪧ  {
+
+}
+

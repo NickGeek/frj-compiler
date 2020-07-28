@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 public class GenerateFuzzTestingAnswers {
-	public static final Path expectations = Paths.get("src/test/resources/fuzzTestExpectations.txt");
+	public static final Path expectations = Paths.get("src/test/resources/fuzzTestExpectations");
 
 	public static void main(String[] args) throws IOException {
 		var testCases = new File("src/test/resources/fuzzTestCases").listFiles();
@@ -20,27 +20,24 @@ public class GenerateFuzzTestingAnswers {
 			throw new FileNotFoundException("Error reading test cases");
 		}
 
-		var results = Arrays.stream(testCases)
+		Arrays.stream(testCases)
 				.filter(File::isFile)
-				.map(file -> {
+				.forEach(file -> {
 					try {
 						var programContext = Parser.fromPath(file.toPath());
 
 						// The test case will be skipped if this well formedness check fails
 						try {
 							new NoDuplicateNames().visit(programContext);
-							return Program.fromCtx(programContext).toString();
+							var expectation = Program.fromCtx(programContext).toString();
+							Files.write(expectations.resolve(file.toPath().getFileName()), expectation.getBytes());
 						} catch (MalformedException e) {
-							return "Skipped test";
+							System.out.println("Skipping test: " + file);
 						}
 
 					} catch (IOException e) {
 						throw new RuntimeException(e);
 					}
 				});
-
-		// Write the results of the parse to a file.
-		// The results will need to be checked manually to validate they're correct.
-		Files.write(expectations, (Iterable<String>) results::iterator);
 	}
 }

@@ -1,0 +1,14 @@
+main = נּ່ꪳ᭰ꦶ᮳ᜒ꠆ාꠦ;
+
+interface ꤒ࿆  {
+read method capsule ՙ ਥޯ();
+
+mut method mut ᾷ ঢ়();
+
+capsule method imm ሟ᪅ ㆫ︅();
+}
+
+interface બ extends ￚ੮ֵ, ď, ힶ, ⳬ  {
+
+}
+

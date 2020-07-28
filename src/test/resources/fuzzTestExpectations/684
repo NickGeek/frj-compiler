@@ -1,0 +1,34 @@
+main = 0;
+
+interface ΉჍ extends ﬄ፞  {
+
+}
+
+interface $⃥ׄ extends ꚛ, Ⴧೢ, ⶮೋ, ᏹ, リ9, ࡠ, ࠨ  {
+read method mut ࠤ່࡙ ካ͘();
+}
+
+capability class ℴ implements ゟ  {
+imm ቜ ₘ;mut method imm @ꡲ ࢨꦂ(imm @ㄦୣ ዜ⃙︨ා༙۴, imm @ॿ᠕ᮭၞ 益꛱ෲ) =
+false;
+
+read method imm @ᛵ ꠉ᜔() =
+;
+}
+
+interface ℨ  {
+imm method imm @ৎ８ ⁿෲᰭ();
+
+imm method imm @ーꥊࠪ៝꤆ എ();
+}
+
+class ʖ٣ᜳ implements ₐ  {
+imm method imm @ꪼ᷼ॆॢ 〇(imm や්ֿ᷻෦ ᥕൗٰ‪ꦹꦶֿ, imm @ὦ Ɥ) =
+new ວ();
+}
+
+capability class ℬ implements ᥳ᠋  {
+imm ﷰ ℂ;capsule method imm @ᏹෟۧੑ౦ ᮮౖ() =
+true;
+}
+

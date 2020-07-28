@@ -2,7 +2,7 @@ package parser;
 
 import org.antlr.v4.runtime.tree.TerminalNode;
 
-enum Modifier {
+public enum Modifier {
 	MUT,
 	IMM,
 	CAPSULE,

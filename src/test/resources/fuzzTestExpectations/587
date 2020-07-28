@@ -1,0 +1,18 @@
+main = .@ୱ();
+
+interface ᝩ‮ᤡૂ઼ೊၳ  {
+
+}
+
+capability class ꛔ  {
+
+}
+
+capability class ꬪ  {
+read ଲ⁠ פּ;imm method imm @ͻ ၔᰭꩻ(imm ຄ‪ Ꭾﬞ) =
+this;
+
+imm method imm @ⶆ s() =
+.@ݳ();
+}
+

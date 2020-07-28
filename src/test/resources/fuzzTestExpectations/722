@@ -1,0 +1,29 @@
+main = @[];
+
+capability class ꠍ಼ׇ  {
+
+}
+
+capability class ꬫ  {
+capsule method imm @ߺૃ‮ ℂ(imm @ᴬෑ ಐ, read ಏꥋ ᚇ꘥۵, imm @ૐ ｗୗ, imm @ⁿ ﺗ؂) =
+this;
+
+imm method imm @ꓮ ᥴᜓ۬1ׅ() =
+this;
+
+imm method imm ၹ ຈ੮() =
+@[];
+
+mut method imm ࡉ؀ ᛱ࠙() =
+new ᏽ᠎(1.1303456413396783E26, \0\137);
+
+imm method imm ල ไꩽ() =
+imm @ℛ ꧣো꯲ = tail(this),
+head(head(imm ⶱ ൿ = @[\r; @[]],
+imm ৠꨪັ વ = new ᲇ(),
+tail(ॿ)));
+
+imm method imm ቘꠂ ⷎ() =
+;
+}
+

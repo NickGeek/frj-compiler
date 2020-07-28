@@ -1,0 +1,28 @@
+main = ;
+
+capability class დ  {
+capsule method imm ଛ ꓑ꣐ꨬ() =
+true;
+
+imm method imm @ꓰ நꧥ￺ֿ() =
+tail(new ຳׄ().@ᨓ()).ﷴૉ;
+
+imm method imm @ඐ ᥖ꫶්໊­১༙(imm @ힻ၄ ℛັ, imm @ˬึ ጪ) =
+@[head(false.ڝ); @[new ໜ્᱇(@[]); 35.0]];
+
+capsule method imm װ ຍ() =
+0.0;
+}
+
+interface ꬖ᳒ၣ਼  {
+imm method imm @ቌ ⷎ(imm @ষૄෛ ਐ, imm @ᮯꩍ ۯ);
+}
+
+class এ  {
+imm ㄑ౬ Թ៝ꦀ;
+}
+
+class _  {
+
+}
+

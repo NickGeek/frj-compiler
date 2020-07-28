@@ -5,6 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public interface Expression extends ProgramNode {
 	static Expression ctxToExpression(FRJSimpleParser.ExprContext ctx) {
 		if (DotExpression.isBiExpression(ctx)) {
@@ -36,8 +40,8 @@ public interface Expression extends ProgramNode {
 		if (ctx.letExpr() != null) {
 			return new LetExpr(
 					new Position(ctx.letExpr().start),
-					Modifier.mdfTerminalToModifier(ctx.letExpr().typeName().MDF()),
-					ctx.letExpr().typeName().Identifier().getText(),
+					Type.typeNameCtxToType(ctx.letExpr().typeName()),
+					ctx.letExpr().Identifier().getText(),
 					ctxToExpression(ctx.letExpr().expr(0)),
 					ctxToExpression(ctx.letExpr().expr(1))
 			);
@@ -84,10 +88,9 @@ public interface Expression extends ProgramNode {
 				.toArray(Expression[]::new);
 	}
 
-	@ToString
 	@AllArgsConstructor
 	class InstantiationExpr implements Expression {
-		public final Position pos;
+		private final Position pos;
 		public final String name;
 		public final Expression[] args;
 
@@ -95,12 +98,24 @@ public interface Expression extends ProgramNode {
 		public Position pos() {
 			return this.pos;
 		}
+
+		@Override
+		public List<Expression> children() {
+			return Arrays.asList(this.args);
+		}
+
+		@Override
+		public String toString() {
+			var argStringStream = Arrays.stream(this.args).map(Object::toString);
+			var argString = String.join(", ", (Iterable<String>) argStringStream::iterator);
+
+			return String.format("new %s(%s)", this.name, argString);
+		}
 	}
 
-	@ToString
 	@AllArgsConstructor
 	class SignalConstructionExpr implements Expression {
-		public final Position pos;
+		private final Position pos;
 		public final Expression head;
 		public final Expression tail;
 
@@ -108,61 +123,108 @@ public interface Expression extends ProgramNode {
 		public Position pos() {
 			return this.pos;
 		}
+
+		@Override
+		public List<Expression> children() {
+			return List.of(this.head, this.tail);
+		}
+
+		@Override
+		public String toString() {
+			return String.format("@[%s; %s]", this.head.toString(), this.tail.toString());
+		}
 	}
 
-	@ToString
 	@AllArgsConstructor
 	class EmptySignalExpr implements Expression {
-		public final Position pos;
+		private final Position pos;
 
 		@Override
 		public Position pos() {
 			return this.pos;
 		}
+
+		@Override
+		public String toString() {
+			return "@[]";
+		}
 	}
 
-	@ToString
 	@AllArgsConstructor
 	class HeadExpr implements Expression {
-		public final Position pos;
+		private final Position pos;
 		public final Expression signalExpr;
 
 		@Override
 		public Position pos() {
 			return this.pos;
 		}
+
+		@Override
+		public List<Expression> children() {
+			return Collections.singletonList(this.signalExpr);
+		}
+
+		@Override
+		public String toString() {
+			return String.format("head(%s)", this.signalExpr.toString());
+		}
 	}
 
-	@ToString
 	@AllArgsConstructor
 	class TailExpr implements Expression {
-		public final Position pos;
+		private final Position pos;
 		public final Expression signalExpr;
 
 		@Override
 		public Position pos() {
 			return this.pos;
 		}
+
+		@Override
+		public List<Expression> children() {
+			return Collections.singletonList(this.signalExpr);
+		}
+
+		@Override
+		public String toString() {
+			return String.format("tail(%s)", this.signalExpr.toString());
+		}
 	}
 
-	@ToString
 	@AllArgsConstructor
 	class LetExpr implements Expression {
-		public final Position pos;
-		public final Modifier mdf;
+		private final Position pos;
+		public final Type type;
 		public final String name;
-		public final Expression value;
 		public final Expression boundTo;
+		public final Expression value;
 
 		@Override
 		public Position pos() {
 			return this.pos;
+		}
+
+		@Override
+		public List<Expression> children() {
+			return List.of(this.value, this.boundTo);
+		}
+
+		@Override
+		public String toString() {
+			return String.format(
+					"%s %s = %s,\n%s",
+					this.type.toString(),
+					this.name,
+					this.boundTo.toString(),
+					this.value.toString()
+			);
 		}
 	}
 
 	@AllArgsConstructor
 	class ThisExpr implements Expression {
-		public final Position pos;
+		private final Position pos;
 
 		@Override
 		public String toString() {
@@ -178,7 +240,7 @@ public interface Expression extends ProgramNode {
 	@AllArgsConstructor
 	@EqualsAndHashCode
 	class Identifier implements Expression {
-		public final Position pos;
+		private final Position pos;
 		public final String name;
 
 		@Override
@@ -195,7 +257,7 @@ public interface Expression extends ProgramNode {
 	@AllArgsConstructor
 	@EqualsAndHashCode
 	class Literal<T> implements Expression {
-		public final Position pos;
+		private final Position pos;
 		public final T value;
 
 		@Override

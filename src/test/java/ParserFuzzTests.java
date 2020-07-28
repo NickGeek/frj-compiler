@@ -27,9 +27,20 @@ public class ParserFuzzTests {
 			throw new FileNotFoundException("Error reading test cases");
 		}
 
+		Arrays.sort(testCases);
+
 		var testFiles = Arrays.stream(testCases).filter(File::isFile);
 
-		var expectations = Files.lines(Paths.get("src/test/resources/fuzzTestExpectations.txt"));
+		var expectations = Arrays.stream(GenerateFuzzTestingAnswers.expectations.toFile().listFiles())
+				.filter(File::isFile)
+				.sorted()
+				.map(file -> {
+					try {
+						return Files.readString(file.toPath());
+					} catch (IOException e) {
+						throw new RuntimeException(e);
+					}
+				});
 
 		return Streams.zip(
 				testFiles,

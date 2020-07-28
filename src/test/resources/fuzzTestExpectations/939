@@ -1,0 +1,30 @@
+main = false;
+
+interface ⁱ꧗ extends ૱  {
+
+}
+
+interface ແ༹  {
+imm method imm @ꩺ꣒ ꫳ();
+
+mut method imm @Ⴭ਼ าͤ꫁￻ெ꯴();
+
+imm method imm Ꙭ ଐ܏(imm ⶸ ꫴౕ, imm ꬿ଼ Ͱ);
+}
+
+interface ꧽ෬  {
+capsule method imm @ख़ᝒ ⷌ᱗ൈ();
+
+imm method read χ᭔ॖ؁ ﬔો();
+
+mut method imm @〻 પ(capsule ⁔ୖ ᢒ, mut ᳮ າ࡙);
+
+imm method imm @ૐ ꭤׇ᳭();
+}
+
+capability class ຖ᭔  {
+capsule ಏꩌൣ ︳꛰;
+imm ਤࠢঁႋ Ὃ;mut method read ᝨືꠋ઼഻ঁ ସ૿(imm @ײ ऽો᱃଼) =
+this;
+}
+

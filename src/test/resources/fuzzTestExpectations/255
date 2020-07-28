@@ -1,0 +1,32 @@
+main = ꩈ;
+
+interface ᱲੵ  {
+imm method imm ᢪ ℭෲ៣(imm Ό ힿᯪ៑, imm @נּ꩙८ ᾆ, imm @ॳٰ ¤, imm @ட ﹴ, imm @ߴ ঈגּ);
+
+mut method imm @ൡ ꣲ๒(capsule ֏ ㅕ, imm @րື྇ ﬔ႔);
+
+imm method imm टී៝ꯣ ਖ਼();
+
+read method imm @ᳩ ຽ᳸();
+
+imm method imm @వ ୱਃᬼု꣥ી(imm ቝ᱆ॢֿ༷ ヽ, imm ᰟ 〱, capsule ᭇ ㆩ);
+
+imm method imm @ᲆౄ ᜋ();
+
+read method mut է ৱ੍(capsule ኖ Ⴆৌ, imm @ᝥ ߢ, imm @ථ ঐֲ, imm @Ὕ ට༘, imm @ৎ༙؜༹ଂ ഏ, imm ວ 〢ꢶ‬);
+}
+
+class ቡ implements ஔ්႐  {
+imm method imm ܐ ੲૻᮥ() =
+new ℾ(this, true, @[new ͷᳲꥒ︧(); @[imm @ৠ၇් ᮈ = 0.3,
+tail(imm @Ꝑ ഏ = imm ΐ ಲ༹ = false,
+false,
+imm @ໃ ꩋꪷ꙯ = head(@[]),
+ӗ); ༀ὾]], false);
+}
+
+capability class ໟ  {
+imm ꢇྏﬞ᮱ᢩᝒ࿆ ၷᝒ⃗ు;read method imm @એ Ὑ(imm @ꪶ଼ ৻ᤸ, imm @ລ ਹॢ॑ꫵ, imm ஙั７ ரꧥᬵ, imm Ὓ᜔༿܏ꦸ꠆ ὕ) =
+new ອ();
+}
+

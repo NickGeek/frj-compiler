@@ -4,7 +4,11 @@ import antlrGenerated.FRJSimpleParser;
 import lombok.AllArgsConstructor;
 import lombok.ToString;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public interface DotExpression extends Expression {
     static DotExpression ctxToBiExpression(FRJSimpleParser.ExprContext ctx) {
@@ -51,10 +55,9 @@ public interface DotExpression extends Expression {
 
     Expression receiver();
 
-    @ToString
     @AllArgsConstructor
     class CallExpr implements DotExpression {
-        public final Position pos;
+        private final Position pos;
         public final Expression receiver;
         public final boolean isLifted;
         public final String methodName;
@@ -69,12 +72,30 @@ public interface DotExpression extends Expression {
         public Position pos() {
             return this.pos;
         }
+
+        @Override
+        public List<Expression> children() {
+            var children = new ArrayList<>(Arrays.asList(this.arguments));
+            children.add(this.receiver);
+
+            return children;
+        }
+
+        @Override
+        public String toString() {
+            var source = new StringBuilder();
+            source.append(this.receiver.toString()).append('.');
+            if (this.isLifted) source.append('@');
+            source.append(this.methodName).append('(');
+            source.append(Arrays.stream(arguments).map(Object::toString).collect(Collectors.joining(", "))).append(')');
+
+            return source.toString();
+        }
     }
 
-    @ToString
     @AllArgsConstructor
     class FieldAccessExpr implements DotExpression {
-        public final Position pos;
+        private final Position pos;
         public final Expression receiver;
         public final String fieldName;
 
@@ -87,12 +108,21 @@ public interface DotExpression extends Expression {
         public Position pos() {
             return this.pos;
         }
+
+        @Override
+        public List<Expression> children() {
+            return Collections.singletonList(this.receiver);
+        }
+
+        @Override
+        public String toString() {
+            return String.format("%s.%s", this.receiver.toString(), this.fieldName);
+        }
     }
 
-    @ToString
     @AllArgsConstructor
     class FieldAssignExpr implements DotExpression {
-        public final Position pos;
+        private final Position pos;
         public final Expression receiver;
         public final String fieldName;
         public final Expression value;
@@ -105,6 +135,16 @@ public interface DotExpression extends Expression {
         @Override
         public Position pos() {
             return this.pos;
+        }
+
+        @Override
+        public List<Expression> children() {
+            return List.of(this.receiver, this.value);
+        }
+
+        @Override
+        public String toString() {
+            return String.format("%s.%s = %s", this.receiver.toString(), this.fieldName, this.value.toString());
         }
     }
 }

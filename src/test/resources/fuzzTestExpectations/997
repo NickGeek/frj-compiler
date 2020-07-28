@@ -1,0 +1,26 @@
+main = tail(new ℂ‪ၖଂ());
+
+interface බؗ extends Ⴭꪳ, ᝮ  {
+read method read ꦇৗ ષၨ();
+
+mut method imm @ⴧ ꖴֻ(imm @ᎋୀெ Ꚇ, read ສ יִྯ, imm @ࠑັ­ ⅎ, capsule ႎཽਂ ᤂ໖, imm @ᚙၟ ᱯ);
+
+mut method imm ল ﴻ(mut ⵢ᥋ ꫴ, mut វ య, capsule ꪑ ᡧ);
+
+mut method imm @ⷁ꤫ᬁ࡙꩓ᜒ‌ ऽׅૺ௨(read ﻒꦴᮂ ᛐূ, imm Зା ઽ, imm @ஞ 々ࠞ);
+}
+
+class ᦝ  {
+imm @ࠤꙷึ ব⳱;read method imm @ກ ꩵ(imm @ኧ ቔ) =
+tail(4);
+
+imm method read ᢚꫯ Ὑۙ꫁߅(imm @Ⅎ⁮ ಀ) =
+false;
+
+imm method imm @ຍං ຍ(imm c אּૉ) =
+ⶴ୪.Ⰸ꩖ = ￖୗ.懲;
+
+read method imm @ﷻ ᬭऺ() =
+true;
+}
+

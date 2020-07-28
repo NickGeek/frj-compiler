@@ -6,10 +6,10 @@ import lombok.ToString;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
-public interface ProgramNode {
+public interface ProgramNode extends Visitable {
 	Position pos();
 
 	@AllArgsConstructor
@@ -24,10 +24,9 @@ public interface ProgramNode {
 		}
 	}
 
-	@ToString
 	@AllArgsConstructor
 	class ClassDeclaration implements ProgramNode {
-		public final Position pos;
+		private final Position pos;
 		public final boolean isCapability;
 		public final boolean isInterface;
 		public final String name;
@@ -37,6 +36,8 @@ public interface ProgramNode {
 		public final Map<String, Method> methods;
 
 		public static ClassDeclaration ctxToClassDeclaration(FRJSimpleParser.ClassDeclarationContext ctx) {
+			var isInterface = ctx.INTERFACE() != null;
+
 			var implNode = ctx.implementsDeclaration();
 			String[] impl = new String[0];
 			if (implNode != null) {
@@ -61,32 +62,53 @@ public interface ProgramNode {
 					))
 					.collect(Collectors.toMap(f -> f.name, f -> f));
 
-			var methods = ctx.methodDeclaration().stream()
-					.map(methodCtx -> {
-						var header = methodCtx.methodHeader();
-
-						return new ProgramNode.Method(
-								new Position(methodCtx.start),
-								Modifier.mdfTerminalToModifier(header.MDF()),
-								Type.typeNameCtxToType(header.typeName()),
-								header.Identifier().getText(),
-								header.methodDeclarationArgument()
+			Map<String, Method> methods;
+			if (isInterface) {
+				methods = ctx.methodHeader().stream()
+						.map(headerCtx -> new Method(
+								new Position(headerCtx.start),
+								Modifier.mdfTerminalToModifier(headerCtx.MDF()),
+								Type.typeNameCtxToType(headerCtx.typeName()),
+								headerCtx.Identifier().getText(),
+								headerCtx.methodDeclarationArgument()
 										.stream()
-										.map(arg -> new ProgramNode.BindingDeclaration(
+										.map(arg -> new BindingDeclaration(
 												new Position(arg.start),
 												Type.typeNameCtxToType(arg.typeName()),
 												arg.Identifier().getText()
 										))
-										.toArray(ProgramNode.BindingDeclaration[]::new),
-								Expression.ctxToExpression(methodCtx.expr())
-						);
-					})
-					.collect(Collectors.toMap(meth -> meth.name, meth -> meth));
+										.toArray(BindingDeclaration[]::new),
+								null
+						))
+						.collect(Collectors.toMap(meth -> meth.name, meth -> meth));
+			} else {
+				methods = ctx.methodDeclaration().stream()
+						.map(methodCtx -> {
+							var header = methodCtx.methodHeader();
+
+							return new ProgramNode.Method(
+									new Position(methodCtx.start),
+									Modifier.mdfTerminalToModifier(header.MDF()),
+									Type.typeNameCtxToType(header.typeName()),
+									header.Identifier().getText(),
+									header.methodDeclarationArgument()
+											.stream()
+											.map(arg -> new ProgramNode.BindingDeclaration(
+													new Position(arg.start),
+													Type.typeNameCtxToType(arg.typeName()),
+													arg.Identifier().getText()
+											))
+											.toArray(ProgramNode.BindingDeclaration[]::new),
+									Expression.ctxToExpression(methodCtx.expr())
+							);
+						})
+						.collect(Collectors.toMap(meth -> meth.name, meth -> meth));
+			}
 
 			return new ProgramNode.ClassDeclaration(
 					new Position(ctx.start),
 					ctx.CAP() != null,
-					ctx.INTERFACE() != null,
+					isInterface,
 					ctx.Identifier().getText(),
 					impl,
 					extend,
@@ -99,12 +121,53 @@ public interface ProgramNode {
 		public Position pos() {
 			return this.pos;
 		}
+
+		@Override
+		public List<Expression> children() {
+			return this.methods.values()
+					.stream()
+					.map(Visitable::children)
+					.flatMap(List::stream)
+					.collect(Collectors.toList());
+		}
+
+		@Override
+		public String toString() {
+			var source = new StringBuilder();
+			if (this.isCapability) source.append("capability ");
+			source.append(this.isInterface ? "interface" : "class").append(' ').append(this.name).append(' ');
+			if (this.impl.length > 0) {
+				source.append("implements ")
+						.append(String.join(", ", Arrays.asList(this.impl)))
+						.append(' ');
+			}
+			if (this.extend.length > 0) {
+				source.append("extends ")
+						.append(String.join(", ", Arrays.asList(this.extend)))
+						.append(' ');
+			}
+
+			String fields = this.fields.values()
+					.stream()
+					.map(f -> f.toString() + ";")
+					.collect(Collectors.joining("\n"));
+
+			source.append(" {\n").append(fields);
+
+			String methods = this.methods.values()
+					.stream()
+					.map(Object::toString)
+					.collect(Collectors.joining("\n\n"));
+
+			source.append(methods).append("\n}");
+
+			return source.toString();
+		}
 	}
 
-	@ToString
 	@AllArgsConstructor
 	class BindingDeclaration implements ProgramNode {
-		public final Position pos;
+		private final Position pos;
 		public final Type type;
 		public final String name;
 
@@ -112,28 +175,62 @@ public interface ProgramNode {
 		public Position pos() {
 			return this.pos;
 		}
+
+		@Override
+		public String toString() {
+			return String.format("%s %s", this.type.toString(), this.name);
+		}
 	}
 
-	@ToString
 	@AllArgsConstructor
 	class Method implements ProgramNode {
-		public final Position pos;
+		private final Position pos;
 		public final Modifier mdf;
 		public final Type returnType;
 		public final String name;
 		public final BindingDeclaration[] args;
-		public final Expression expression;
+		private final Expression expression;
+
+		public Optional<Expression> expression() {
+			return Optional.ofNullable(this.expression);
+		}
 
 		@Override
 		public Position pos() {
 			return this.pos;
 		}
+
+		@Override
+		public List<Expression> children() {
+			return this.expression()
+					.map(Collections::singletonList)
+					.orElse(Collections.emptyList());
+		}
+
+		@Override
+		public String toString() {
+			var source = new StringBuilder();
+			source.append(this.mdf.toString().toLowerCase()).append(" method ");
+			source.append(this.returnType.toString()).append(' ');
+			source.append(this.name);
+			source.append('(');
+			source.append(
+					Arrays.stream(this.args)
+					.map(Object::toString)
+					.collect(Collectors.joining(", "))
+			);
+			this.expression()
+					.map(expression -> source.append(") =\n").append(this.expression.toString()))
+					.orElseGet(() -> source.append(')'))
+					.append(';');
+
+			return source.toString();
+		}
 	}
 
-	@ToString
 	@AllArgsConstructor
 	class Type implements ProgramNode {
-		public final Position pos;
+		private final Position pos;
 		public final Modifier mdf;
 		public final boolean isLifted;
 		public final String name;
@@ -148,6 +245,16 @@ public interface ProgramNode {
 		@Override
 		public Position pos() {
 			return this.pos;
+		}
+
+		@Override
+		public String toString() {
+			var source = new StringBuilder();
+			source.append(this.mdf.toString().toLowerCase()).append(' ');
+			if (this.isLifted) source.append("@");
+			source.append(this.name);
+
+			return source.toString();
 		}
 	}
 }

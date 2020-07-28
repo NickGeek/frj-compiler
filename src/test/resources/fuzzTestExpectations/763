@@ -1,0 +1,17 @@
+main = Εꫮꩌ;
+
+capability class ᢍ⃓ implements 著ꪷᤱ, ၓੀැ  {
+mut method read º ﮱ() =
+head(this);
+
+imm method imm @ಬ᧓ ኹೃ(imm @懫ֿ꧶ੑׇ ꠇ, imm ﹩꤁᪳ົ Ï) =
+tail(@[]);
+
+imm method imm @ใ ߊ(capsule ￗിീൢ Ⴭ꠆ൣఁ܏᠘) =
+;
+}
+
+class ပ࿆ൗ implements ᏻ  {
+
+}
+

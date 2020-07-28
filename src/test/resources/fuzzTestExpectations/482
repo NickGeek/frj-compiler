@@ -1,0 +1,15 @@
+main = ﹏ꧥ;
+
+capability class ힸો  {
+imm 〵 ꣵ᳑௩ಂ;mut method imm @ꨀׇ ཬ(read ໄ័ ꩺ೧ෛ) =
+true;
+
+capsule method imm ͷ ⴭׅ(imm @ᨖ ଌ) =
+@[0.002838134765625; this];
+}
+
+class ኌ implements ୟ  {
+imm @ٲ᥆ׇ︮ ୱ;
+imm װெ ＄;
+}
+

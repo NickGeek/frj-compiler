@@ -1,0 +1,18 @@
+main = head(@[this; this]);
+
+interface Q extends દֿ, ⁔, ｂ  {
+capsule method imm ℴ൪ৌ༵ ꫳ(mut ল꠆ ῐ᭗ᨚ꫶);
+}
+
+interface ᢪᳲ  {
+imm method imm @ಅ Β(imm ഏ ໞ);
+}
+
+capability class ꪼ  {
+mut ஞ݂ i;imm method imm @ખ༨︣೯ ஃ଼๖(imm @﹩༥ ⷚ) =
+@[head(true); @[]];
+
+imm method imm @ᦎ ਙૺၟ꯭᥉ꪳ() =
+@[];
+}
+

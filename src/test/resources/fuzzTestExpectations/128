@@ -1,0 +1,60 @@
+main = 0.0;
+
+class Ꙓೢ implements ૱ୢ, ᮯ, סּ  {
+imm ᢪ ഭ෮᩻;imm method imm ຢ ꚇ፞᭑(imm ະꚞࠥꠋ៑ ꪭ, read ꩀ ࠚဵ) =
+imm ꣵ႘્ ܤׂׂ = ,
+ቱ;
+
+read method imm ௐ࡚ ꗻ() =
+imm ℇ ꠃ༿ᝓ = 0,
+5;
+
+imm method imm ঽ ᏼ(imm @ൎ ލ, imm @ℜ ⴧ) =
+𑲐ഒ\";
+
+imm method imm @ꕾ܏̬ ઇꙸୗ() =
+tail(this);
+
+mut method imm ᜐ ᦽ૽ꨭ() =
+true;
+}
+
+capability class ᜇ੍̓ implements Ὕ  {
+imm method capsule ⷀ⃘ ૡ() =
+@[];
+
+imm method imm @အ ﺒ() =
+@[true; head(this)];
+
+capsule method imm @ܫྩ ꬢᝓ(imm ࢭ ك, imm @ఽ ப, imm @ℂ ਫ਼, imm ຟ੪ ഽ) =
+3875;
+
+imm method capsule ࠂ µ(capsule ਲ ⶻ઼྆ꧥ࡚) =
+this;
+
+mut method imm ꤻઁ ῂ༘() =
+read ᜑ ᙑ꙯ = head(tail(imm @ຍ ඞ = @[],
+@[@[]; 169])),
+this;
+
+mut method imm @ⶴ ഏꢻꩍ(imm @૱ ꤝ௪⃡, imm @ၥᰤੈ ቝ۳〬) =
+this;
+
+capsule method imm ᇖ ॐꦽ઼(imm @ኽ︦ ᬔ︃, imm ꦎ ச, capsule ₷ ℂஂ꯬ॢ) =
+1;
+
+imm method read ຈ ᦑൊ(imm ࡧ ퟁ) =
+@[1.Ν(tail(@[new ﾬ(imm ౠ಼ டꦷ = \3,
+true.Ᾱ(head(@[]))); @[capsule 々￻ ᥨ = 7,
+imm @ኝ ऽೇᳳ = @[new ꘫਃౢ(new ಭឺ(), imm ⲽ ଢ଼࡙⃔ੈ = imm @ෂ ꘪ­ = imm מּ ᏸ᜔ = head(this),
+0.0,
+0.0609283447265625,
+\5).@ꬣിු().@ᢂ(head(@[tail(); 3584.0]), tail(tail(tail())), head(5.0)); 1.125],
+imm @ഽౕᤧ ៗ꣐ = imm @ᠡ ﹳ = new ኲൄ્(),
+@[],
+this.ၒ = new ᢉ(); head()]]), @[true; false.ｃ = this]); ];
+
+imm method imm @ꪨ ﬠः() =
+0.0.ᳰ゚༵॓.ᢥ.ຍౌ;
+}
+

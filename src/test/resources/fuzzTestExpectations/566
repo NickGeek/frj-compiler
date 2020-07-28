@@ -1,0 +1,46 @@
+main = @[];
+
+capability class ꬎ꛱െ  {
+imm @$໊ ঢ়ୌ᳴;
+imm ℓୣ Ꞵ੭ྒྷ;imm method imm @ଡ଼ ܐ࡛() =
+@[0; imm @ⵯ഼ೆ ቘు = Infinity,
+\0];
+
+imm method imm @גּ ମৈ(imm @ⴧ ங᜔) =
+0.0;
+}
+
+class ꠸꩖ූ꤁ꤧ۬ implements מּஂ, ଡ଼॒̄, ℇ  {
+imm @ਇ ⁿ;imm method imm ౡ ঽৗ܏() =
+head(mut Ꙓᬀె᱓ ᦟ = imm ℾꩃ꯶゙༹᳒ྸ҇ ૹ = @[],
+ﬂ,
+1);
+
+read method imm @ௐ ཁ(imm @ៗ ᘀ, imm @ⴧ ಏ) =
+tail(ঢ়ׄௌ);
+
+imm method imm @લꥈ કു႗ဳ() =
+imm @ꥀ༘ ՙ҄ = tail(imm @ྋׅ ຽઃ = head(tail(4.0)),
+this).ꪵ = false,
+0.06;
+}
+
+capability class Ⴧ implements ‿  {
+mut ⷓ઼࿆ ቐ;
+imm @ޓ໒ ଢ଼꙽;
+}
+
+class ὗꠥੑ implements ｓো, ஹ, ᢚ⵿  {
+imm method imm @ၥୂொꩻ᳷ᝳ ۮ‪ૈ(imm @ە ஐ, imm @Å꙯᪲ົৣ़ Ⲭꠋ਼༵꙯) =
+true;
+
+read method imm @ᨁ༵ ꭡ() =
+ꧺ;
+
+imm method imm @き ল() =
+this;
+
+capsule method capsule ꪱ ޱᢩ(imm @ۯ ਊ༦ꪰ) =
+ທ;
+}
+

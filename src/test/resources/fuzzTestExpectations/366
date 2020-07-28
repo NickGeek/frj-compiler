@@ -1,0 +1,2 @@
+main = head(@[this; new ௐ()]);
+

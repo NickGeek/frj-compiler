@@ -1,0 +1,36 @@
+main = head(@[]);
+
+interface ၡীꦃ࣫᪕ extends ℇᤲ়ꙷꠋ༷  {
+imm method imm @ᦸ ল();
+
+imm method imm @ךּ ߵ(mut ध ཀ);
+
+imm method capsule ὤ ᮮ();
+}
+
+class ՙ೮  {
+imm @_ ૠ;
+imm ꫀ੨ܶ ۻ၈;imm method imm @ਅ ண(imm ܐ ዃ᳜࡙, read נּ ⷅ៝ે, imm ﹺꩌੵ᥇ ᳯੇ) =
+@[];
+
+imm method imm ͽ ￎ(imm ¢ ῄ) =
+.々 = 4;
+}
+
+capability class က໔ᩗ implements ͷ⁬, ຄ, ኼ೦ඃ﻿ౢऻ౯  {
+read ﺣ ℑ୫;imm method imm @ࢷ Ὑ꧔ੵ() =
+tail(@[]);
+
+capsule method imm @ࢸ ꮤ(imm @ℊಾ༹ಂૂ၆ ºᤦ) =
+3.19;
+
+imm method mut 瓩ීᢆ ℛ(imm ￥ූ៦ׇꚞऻ⁪ܑৗ ℨ) =
+ᔘႆ;
+
+imm method imm @ℂ߃ এ() =
+.@ྋ(this.ႎ = \6);
+
+imm method imm @ቑֿ Ὀꪰꩍ() =
+ᪧూ᷼;
+}
+

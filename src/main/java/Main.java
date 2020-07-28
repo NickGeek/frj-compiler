@@ -13,10 +13,13 @@ public class Main {
 				"\n" +
 				"class Foo implements Hello {\n" +
 				"\tmut String name;\n" +
-				"\tmethod String name(Int hey, Int hey2) = this.name;\n" +
+				"\tmethod String name(Int hey, capsule Int hey2) = Int hey3 = 5, Int hey4 = 6, this.name;\n" +
+				"\tmethod String foo(capsule Int trouble) = this.name(12, trouble);\n" +
 				"}\n" +
 				"\n" +
 				"main = new Foo().name();";
+
+		System.out.println(source);
 
 		try {
 			var programContext = Parser.fromString(source);
@@ -30,6 +33,7 @@ public class Main {
 			}
 
 			System.out.println("Done!");
+			System.out.println(program.toString());
 		} catch (ParseCancellationException e) {
 			System.err.println(e.getLocalizedMessage());
 			System.exit(1);
