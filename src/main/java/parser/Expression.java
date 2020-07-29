@@ -3,7 +3,6 @@ package parser;
 import antlrGenerated.FRJSimpleParser;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 
 import java.util.Arrays;
 import java.util.Collections;

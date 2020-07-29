@@ -10,10 +10,12 @@ public class RunChecks {
 		var runners = new ArrayList<WellFormednessRule.WellFormednessRunner>();
 
 		runners.add(p -> new NoShadowing().check(p));
+		runners.add(p -> new ClassDecExtendImplsCheck().check(p));
 
 		program.classDeclarations
 				.values()
 				.stream()
+				.peek(cd -> new FieldMdfOnlyImmMut().check(cd))
 				.flatMap(cd -> cd.methods.values().stream())
 				.forEach(method -> {
 					runners.add(p -> new MethodArgumentNaming().check(method.args));
