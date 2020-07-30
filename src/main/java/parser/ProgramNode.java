@@ -180,6 +180,15 @@ public interface ProgramNode extends Visitable {
 		public String toString() {
 			return String.format("%s %s", this.type.toString(), this.name);
 		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+			BindingDeclaration that = (BindingDeclaration) o;
+			return type.equals(that.type) &&
+					name.equals(that.name);
+		}
 	}
 
 	@AllArgsConstructor
@@ -226,6 +235,17 @@ public interface ProgramNode extends Visitable {
 
 			return source.toString();
 		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+			Method method = (Method) o;
+			return mdf == method.mdf &&
+					returnType.equals(method.returnType) &&
+					name.equals(method.name) &&
+					Arrays.equals(args, method.args);
+		}
 	}
 
 	@AllArgsConstructor
@@ -258,6 +278,16 @@ public interface ProgramNode extends Visitable {
 			source.append(this.name);
 
 			return source.toString();
+		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+			Type type = (Type) o;
+			return isLifted == type.isLifted &&
+					mdf == type.mdf &&
+					name.equals(type.name);
 		}
 	}
 }

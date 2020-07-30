@@ -4,14 +4,11 @@ import antlrGenerated.FRJSimpleParser;
 import lombok.AllArgsConstructor;
 import lombok.ToString;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public interface DotExpression extends Expression {
-    static DotExpression ctxToBiExpression(FRJSimpleParser.ExprContext ctx) {
+    static DotExpression ctxToDotExpression(FRJSimpleParser.ExprContext ctx) {
         if (ctx.liftedCallExpr() != null) {
             return new CallExpr(
                     new Position(ctx.liftedCallExpr().start),
@@ -55,6 +52,10 @@ public interface DotExpression extends Expression {
 
     Expression receiver();
 
+    default Set<String> bindings() {
+        return this.receiver().bindings();
+    }
+
     @AllArgsConstructor
     class CallExpr implements DotExpression {
         private final Position pos;
@@ -66,6 +67,20 @@ public interface DotExpression extends Expression {
         @Override
         public Expression receiver() {
             return this.receiver;
+        }
+
+        @Override
+        public Set<String> bindings() {
+            var result = new HashSet<String>();
+
+            result.addAll(
+                    Arrays.stream(this.arguments)
+                            .flatMap(arg -> arg.bindings().stream())
+                            .collect(Collectors.toSet())
+            );
+            result.addAll(this.receiver.bindings());
+
+            return result;
         }
 
         @Override
@@ -130,6 +145,15 @@ public interface DotExpression extends Expression {
         @Override
         public Expression receiver() {
             return this.receiver;
+        }
+
+        @Override
+        public Set<String> bindings() {
+            var result = new HashSet<String>();
+            result.addAll(this.receiver.bindings());
+            result.addAll(this.value.bindings());
+
+            return result;
         }
 
         @Override

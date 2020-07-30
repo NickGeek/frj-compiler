@@ -4,14 +4,13 @@ import antlrGenerated.FRJSimpleParser;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public interface Expression extends ProgramNode {
 	static Expression ctxToExpression(FRJSimpleParser.ExprContext ctx) {
 		if (DotExpression.isBiExpression(ctx)) {
-			return DotExpression.ctxToBiExpression(ctx);
+			return DotExpression.ctxToDotExpression(ctx);
 		}
 		if (ctx.instantiationExpr() != null) {
 			return new InstantiationExpr(
@@ -87,11 +86,22 @@ public interface Expression extends ProgramNode {
 				.toArray(Expression[]::new);
 	}
 
+	default Set<String> bindings() {
+		return Collections.emptySet();
+	}
+
 	@AllArgsConstructor
 	class InstantiationExpr implements Expression {
 		private final Position pos;
 		public final String name;
 		public final Expression[] args;
+
+		@Override
+		public Set<String> bindings() {
+			return Arrays.stream(args)
+					.flatMap(arg -> arg.bindings().stream())
+					.collect(Collectors.toSet());
+		}
 
 		@Override
 		public Position pos() {
@@ -117,6 +127,15 @@ public interface Expression extends ProgramNode {
 		private final Position pos;
 		public final Expression head;
 		public final Expression tail;
+
+		@Override
+		public Set<String> bindings() {
+			var result = new HashSet<String>();
+			result.addAll(this.head.bindings());
+			result.addAll(this.tail.bindings());
+
+			return result;
+		}
 
 		@Override
 		public Position pos() {
@@ -155,6 +174,11 @@ public interface Expression extends ProgramNode {
 		public final Expression signalExpr;
 
 		@Override
+		public Set<String> bindings() {
+			return new HashSet<>(this.signalExpr.bindings());
+		}
+
+		@Override
 		public Position pos() {
 			return this.pos;
 		}
@@ -174,6 +198,11 @@ public interface Expression extends ProgramNode {
 	class TailExpr implements Expression {
 		private final Position pos;
 		public final Expression signalExpr;
+
+		@Override
+		public Set<String> bindings() {
+			return new HashSet<>(this.signalExpr.bindings());
+		}
 
 		@Override
 		public Position pos() {
@@ -198,6 +227,11 @@ public interface Expression extends ProgramNode {
 		public final String name;
 		public final Expression boundTo;
 		public final Expression value;
+
+		@Override
+		public Set<String> bindings() {
+			return new HashSet<>(this.value.bindings());
+		}
 
 		@Override
 		public Position pos() {
@@ -226,6 +260,11 @@ public interface Expression extends ProgramNode {
 		private final Position pos;
 
 		@Override
+		public Set<String> bindings() {
+			return Set.of("this");
+		}
+
+		@Override
 		public String toString() {
 			return "this";
 		}
@@ -241,6 +280,11 @@ public interface Expression extends ProgramNode {
 	class Identifier implements Expression {
 		private final Position pos;
 		public final String name;
+
+		@Override
+		public Set<String> bindings() {
+			return Set.of(name);
+		}
 
 		@Override
 		public String toString() {
