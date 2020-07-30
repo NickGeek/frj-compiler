@@ -1,42 +1,44 @@
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 import parser.Parser;
 import parser.Program;
+import typing.TypingRule;
 import wellFormedness.NoDuplicateNames;
 import wellFormedness.RunChecks;
 import wellFormedness.WellFormednessRule;
 
 public class Main {
 	public static void main(String[] cliArgs) {
-		var source = "interface H2 extends Hello { method Int foo2(); } interface Hello {\n" +
-				"\tmethod String name();\n" +
-				"}\n" +
-				"\n" +
-				"class Foo implements Hello {\n" +
-				"\t@String name;\n" +
-				"\tmethod String name(Int hey, capsule Int hey2) = Int hey3 = 5, Int hey4 = hey, this.name;\n" +
-				"\tmethod String foo(capsule Int trouble) = this.name(12, trouble);\n" +
-				"}\n" +
-				"\n" +
-				"main = new Foo().name();";
+		var source = "interface A extends C { method Int foo(); }" +
+				"interface B extends A { }" +
+				"interface C extends B { }" +
+				"interface D extends C { mut method Int foo(); }" +
+				"main = true;";
 
 		try {
+			// Build parse tree
 			var programContext = Parser.fromString(source);
+
+			// Compute high level program object from the tree (duplicate names need to be removed because we use a Map data structure)
 			new NoDuplicateNames().check(programContext);
-
 			var program = Program.fromCtx(programContext);
-			var errors = WellFormednessRule.runAllProgramChecks(program, RunChecks.makeChecks(program));
 
-//			var idk = program.classDeclarations.values().stream().filter(cd -> cd.isInterface).map(Interface::new).map(i -> i.methods(program).collect(Collectors.toList())).collect(Collectors.toList());
+			WellFormednessRule.runAllProgramChecks(
+					RunChecks.makeChecks(program),
+					program
+			).ifPresent(Main::printErrorsAndQuit);
 
-			if (errors.isPresent()) {
-				System.err.println(errors.get());
-				System.exit(1);
-			}
+			TypingRule.getErrors(program).ifPresent(Main::printErrorsAndQuit);
+
+//			var idk = program.classDeclarations.values().stream().filter(cd -> cd.isInterface).map(typing.Interface::new).map(i -> i.methods(program).collect(java.util.stream.Collectors.toList())).collect(java.util.stream.Collectors.toList());
 
 			System.out.println("Done!");
 		} catch (ParseCancellationException e) {
-			System.err.println(e.getLocalizedMessage());
-			System.exit(1);
+			printErrorsAndQuit(e.getLocalizedMessage());
 		}
+	}
+
+	private static void printErrorsAndQuit(String errors) {
+		System.err.println(errors);
+		System.exit(1);
 	}
 }

@@ -45,7 +45,7 @@ public interface Expression extends ProgramNode {
 			);
 		}
 		if (ctx.THIS() != null) {
-			return new ThisExpr(new Position(ctx.THIS().getSymbol()));
+			return new IdentifierExpr(new Position(ctx.THIS().getSymbol()), "this");
 		}
 		if (ctx.IntegerLiteral() != null) {
 			var literal_value = ctx.IntegerLiteral().getText().toUpperCase();
@@ -53,7 +53,7 @@ public interface Expression extends ProgramNode {
 			literal_value = literal_value.replaceAll("_", "");
 			var value = literal_value.startsWith("0B") ? Long.parseLong(literal_value.substring(2), 2) : Long.decode(literal_value);
 
-			return new Literal<>(new Position(ctx.IntegerLiteral().getSymbol()), value);
+			return new LiteralExpr<>(new Position(ctx.IntegerLiteral().getSymbol()), value, LiteralExpr.LiteralType.INTEGER);
 		}
 		if (ctx.FloatingPointLiteral() != null) {
 			var literal_value = ctx.FloatingPointLiteral().getText().toUpperCase();
@@ -62,18 +62,18 @@ public interface Expression extends ProgramNode {
 				literal_value = "0" + literal_value;
 			}
 
-			return new Literal<>(new Position(ctx.FloatingPointLiteral().getSymbol()), Double.parseDouble(literal_value));
+			return new LiteralExpr<>(new Position(ctx.FloatingPointLiteral().getSymbol()), Double.parseDouble(literal_value), LiteralExpr.LiteralType.FLOAT);
 		}
 		if (ctx.StringLiteral() != null) {
 			var text = ctx.StringLiteral().getText();
-			return new Literal<>(new Position(ctx.StringLiteral().getSymbol()), text.substring(1, text.length() - 1));
+			return new LiteralExpr<>(new Position(ctx.StringLiteral().getSymbol()), text.substring(1, text.length() - 1), LiteralExpr.LiteralType.STRING);
 		}
 		if (ctx.BooleanLiteral() != null) {
 			var value = ctx.BooleanLiteral().getText().equals("true");
-			return new Literal<>(new Position(ctx.BooleanLiteral().getSymbol()), value);
+			return new LiteralExpr<>(new Position(ctx.BooleanLiteral().getSymbol()), value, LiteralExpr.LiteralType.BOOLEAN);
 		}
 		if (ctx.Identifier() != null) {
-			return new Identifier(new Position(ctx.Identifier().getSymbol()), ctx.Identifier().getText());
+			return new IdentifierExpr(new Position(ctx.Identifier().getSymbol()), ctx.Identifier().getText());
 		}
 
 		throw new IllegalStateException(String.format("Unexpected expression: %s", ctx.getText()));
@@ -256,28 +256,8 @@ public interface Expression extends ProgramNode {
 	}
 
 	@AllArgsConstructor
-	class ThisExpr implements Expression {
-		private final Position pos;
-
-		@Override
-		public Set<String> bindings() {
-			return Set.of("this");
-		}
-
-		@Override
-		public String toString() {
-			return "this";
-		}
-
-		@Override
-		public Position pos() {
-			return this.pos;
-		}
-	}
-
-	@AllArgsConstructor
 	@EqualsAndHashCode
-	class Identifier implements Expression {
+	class IdentifierExpr implements Expression {
 		private final Position pos;
 		public final String name;
 
@@ -299,9 +279,10 @@ public interface Expression extends ProgramNode {
 
 	@AllArgsConstructor
 	@EqualsAndHashCode
-	class Literal<T> implements Expression {
+	class LiteralExpr<T> implements Expression {
 		private final Position pos;
 		public final T value;
+		public final LiteralType type;
 
 		@Override
 		public String toString() {
@@ -315,6 +296,13 @@ public interface Expression extends ProgramNode {
 		@Override
 		public Position pos() {
 			return this.pos;
+		}
+
+		public enum LiteralType {
+			INTEGER,
+			FLOAT,
+			STRING,
+			BOOLEAN
 		}
 	}
 }

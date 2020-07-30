@@ -20,8 +20,8 @@ public class CapsuleUsage implements WellFormednessRule<ProgramNode.Method> {
 
 					method.expression()
 							.ifPresent(methodExpr -> methodExpr.visit(expr -> {
-								if (expr instanceof Expression.Identifier) {
-									var identifier = (Expression.Identifier) expr;
+								if (expr instanceof Expression.IdentifierExpr) {
+									var identifier = (Expression.IdentifierExpr) expr;
 									if (identifier.name.equals(arg.name) && count.incrementAndGet() > 1) {
 										var pos = identifier.pos();
 										throw new MalformedException(
