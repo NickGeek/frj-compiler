@@ -8,11 +8,14 @@ import wellFormedness.WellFormednessRule;
 
 public class Main {
 	public static void main(String[] cliArgs) {
-		var source = "interface A extends C { method Int foo(); }" +
-				"interface B extends A { }" +
-				"interface C extends B { }" +
-				"interface D extends C { mut method Int foo(); }" +
-				"main = true;";
+		var source = "interface Greeter { method String greeting(); }" +
+				"class UnknownGreeter implements Greeter {" +
+				"   String msg;" +
+				"   method String greeting() = this.msg;" +
+				"}" +
+				"main =" +
+				"   String msg = \"Hello, World!\"," +
+				"   new UnknownGreeter(msg).greeting();";
 
 		try {
 			// Build parse tree

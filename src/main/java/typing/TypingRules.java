@@ -7,7 +7,6 @@ import parser.ProgramNode;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class TypingRules {
 	private final Program program;
@@ -25,7 +24,8 @@ public class TypingRules {
 			return this.typeLiteral((Expression.LiteralExpr<?>) expr);
 		}
 
-		throw new IllegalArgumentException("No type rules cover: " + expr);
+//		throw new IllegalArgumentException("No type rules cover: " + expr);
+		return null; // TODO: Tmp to just test out without throwing the exception
 	}
 
 	/**

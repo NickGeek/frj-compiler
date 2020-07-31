@@ -36,17 +36,17 @@ public class CheckVarsUsedAreInScope implements WellFormednessRule<Program> {
 			if (!(v instanceof Expression)) return;
 			Expression expr = (Expression) v;
 
+			if (expr instanceof Expression.LetExpr) {
+				Expression.LetExpr letExpr = (Expression.LetExpr) expr;
+				bindings.add(letExpr.name);
+			}
+
 			if (!bindings.containsAll(expr.bindings())) {
 				throw new MalformedException(
 						expr.pos().line,
 						expr.pos().col,
 						String.format("'%s' uses variables that are not in scope.", expr)
 				);
-			}
-
-			if (expr instanceof Expression.LetExpr) {
-				Expression.LetExpr letExpr = (Expression.LetExpr) expr;
-				bindings.add(letExpr.name);
 			}
 		});
 	}
