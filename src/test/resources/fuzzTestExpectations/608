@@ -1,8 +1,2 @@
-main = head(@[]);
-
-interface ꭞ extends ῡᮀ۰, ℬ  {
-mut method @ࢽ Ῐ꧶();
-
-imm method imm ﲂ ᝮ();
-}
+main = tail(46 );
 

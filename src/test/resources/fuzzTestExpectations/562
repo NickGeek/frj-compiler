@@ -1,2 +1,32 @@
-main = 600 ;
+main = false ;
+
+capability class ແം implements ᢪ༨ၴ߀߳  {
+capsule method @ᝥఀ ｬ༵ꢁ(capsule ஐ ૹ, @ꩁூ ⶫ) =
+@[@[]; head(new ஊ())];
+}
+
+class ਲ਼­ౢ  {
+imm method mut ꪶࠥᬁ ⶱ() =
+imm ꤚׁ྆౦ꫫ ລꨶ = this,
+false ;
+
+capsule method capsule ଡ଼ᝲූ྆ો ఠ꧖() =
+"\ueFeA";
+
+capsule method read ꫂꢀ؜ స(@η⁣͎െ ऽ) =
+this;
+
+imm method @@ଌേ າ︎ྒై() =
+tail(0 );
+
+imm method mut £ ઍௗ() =
+169 ;
+
+imm method read ଡ଼ ල(@@@@ⶃ 〇಼) =
+this;
+}
+
+capability class ୟ  {
+@@ℐ᥍؜ ᥖꩌ;
+}
 

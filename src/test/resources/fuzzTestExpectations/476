@@ -1,2 +1,2 @@
-main = this;
+main = @[29 ; head("𐣠")];
 

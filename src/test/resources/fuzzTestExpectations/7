@@ -1,27 +1,2 @@
-main = head(㫬);
-
-interface ௐ extends ই꯸࿆ૼꩼᮀ⃡꪿  {
-
-}
-
-interface ࢻ extends ໂᜓ  {
-
-}
-
-class ଢ଼ᮁᤵ implements ቋ, ຍ, ⳬ  {
-imm method @Ὓᮬ ꚹֿി꤬োો܏() =
-tail(tail(87.2 ));
-
-imm method mut ᛶ￻ׇ ꪨ྇(imm Ὺ ꤣ, @ᢚ ᤁⷷූ, capsule ᇘ ࠨ) =
-217.0 ;
-
-imm method read ퟲྗ ﬅ༘ಁ(@Ɠ ⷅ, imm _᧓ ኲ, @ຕ ꮜ) =
-true .ៜ〫ஂ‌߆();
-}
-
-interface ꧏ  {
-mut method imm ℤ⃡᳚ ॐ();
-
-imm method @ꭹ ᳮ़();
-}
+main = @[];
 

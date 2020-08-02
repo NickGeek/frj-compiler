@@ -1,22 +1,29 @@
-main = 0 ;
+main = @ᮯ ߗॅ = 700 ,
+new إਿ();
 
-class Ｑ്ࠪ  {
-
-}
-
-interface ឯ઼්ྒྷ extends ਲ਼්, ﷷꧥ഻႙  {
+interface ៗ extends ৲, লᮥꫯ౯ੑె༾, µ, ⴭᨗ  {
 
 }
 
-capability class ᢞ implements ດ௮ઃ︍, 〳, ⳳ, ͱ, ࠨ۸ೋ೨ం੍ে, יּ༹  {
+interface ͼੑꫬ extends ఽ〮  {
 
 }
 
-interface Ά꠆ extends ቘ  {
-read method read ਜ਼⵿ೢ ຮ(@ೡ ﶿ, @௹ ª꯭ੑ);
+capability class ἦ៝ॎັ  {
+imm method @@ͽ᪖ ঐෑ() =
+head(true );
+
+imm method @@@@ῧั Ｏꩼ(@ॸ ᜪ, @ዎ ൔ) =
+tail(મ);
 }
 
-interface ဿ  {
+class 〺᧙ implements ߴ꪿, ῥ  {
+mut method imm ℍ ＄() =
+this.Ὓ᱄꪿;
 
+imm method imm ៗ ఋ꧱᷼ᮤ(imm χ ౡ) =
+head(capsule ཥ ᱵ = @[],
+@ஜ Ⴠ᷂ = 1 ,
+"");
 }
 

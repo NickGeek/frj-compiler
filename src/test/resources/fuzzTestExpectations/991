@@ -1,15 +1,2 @@
-main = @[@[]; this];
-
-capability class Ｌ࠙  {
-
-}
-
-interface ᚑꪲꚟ  {
-imm method @ಀ ⶰ();
-}
-
-capability class ㆵஂ implements ಸ਼  {
-imm ઉ൨ ᨌ;mut method @લ꩙ ꧻ༩(@ண଼ު ﶮൣ៎ে) =
-this;
-}
+main = new Ⳬ("");
 

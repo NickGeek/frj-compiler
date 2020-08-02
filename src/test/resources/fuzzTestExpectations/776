@@ -1,6 +1,30 @@
-main = @[];
+main = 60.0 ;
 
-interface Ῑ extends ࠨ, ࡊ  {
-mut method imm লᜒ ৎ(@ഐ Ꮆꠂ෨);
+interface ἠ extends ⁱಁ  {
+imm method @@@ঠ ℜ፝();
+
+capsule method imm ꪉꫵ꙯ ಢ᱆();
+
+mut method @ퟘ ᾃ᭮();
+
+imm method @ෂ਼⃡ לּ();
+
+imm method @@@ਆ ᳬ();
+}
+
+class µৗ  {
+
+}
+
+class Ꮑዋ  {
+
+}
+
+interface ℭ  {
+
+}
+
+interface ꜞ extends ꫛ᪔࿆ࠦ, ᛗާ  {
+
 }
 

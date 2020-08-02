@@ -1,22 +1,11 @@
-main = ໜ;
+main = @[this; @[]];
 
-interface ᝰ૪ઃ  {
-imm method @ｏꫜੵୁ܏ 画();
+capability class ጎ implements ಲ᷾᮴  {
+imm method @ಏັླྀৗ ףּ() =
+ㇴ;
 
-imm method @‿ ࡪ꣒();
-}
-
-class ਝ  {
-@ງ ሽ៩ꪸे;imm method @ᛴ ꢓ(@ㇰ Ͳ️) =
-19 ;
-
-imm method @סּ‭ ￗୁ(@ࢭୋٰ༹ ៗꩼ, @ᳵ ꪱ୭) =
-head(false );
-
-mut method @꠸ꩍ ᶖꙸ꫁ঃ߆ౣ़ꣃ() =
-ꕣ.ᜀ = 0.0 ;
-
-imm method @ຈ ڨ(@າ ⅎᰯ６ࠦື, imm ၰ ͷ꧶) =
-this.ꝯ = 176 ;
+imm method @@ꢇే ｃ(read ଆ؂ ℤ, @@@ꩁ᠎ॣ ઽୈ, imm ヾꦴ אּᢅ႕ꠋު, imm ꓞ ﵐׁ) =
+read Όৗ ៛ᝳ = 222 ,
+@[];
 }
 

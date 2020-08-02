@@ -53,6 +53,12 @@ public interface FRJSimpleParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitTypeName(FRJSimpleParser.TypeNameContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link FRJSimpleParser#liftedTypeName}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLiftedTypeName(FRJSimpleParser.LiftedTypeNameContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link FRJSimpleParser#methodHeader}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

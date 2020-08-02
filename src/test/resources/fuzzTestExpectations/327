@@ -1,15 +1,21 @@
-main = head(head(ᜥͧ));
+main = tail(imm ఋ࡛ ಋׁ = 0.0 .@ᝫ߀(),
+@[true ; new ꬒ(new ᭅަ૽())]);
 
-class ￠ implements ዃ൯  {
-@ᶁୀ Ꚅ︬⃛;
-imm த ೞྍ;imm method @ந ῃ() =
-new ຢ᪙();
-
-capsule method @ⳗ4᭔ਃꠦ ۿೋ(imm ꓖ ໜ) =
-new ᦇ(441 );
+capability class ρ implements ஃ, Ό  {
+@@ঽ ឞ༵ׄ᭫ੵ߯;
 }
 
-interface Ὀ  {
+capability class ࡣ implements ಀ, ೲ, Ⅎୣ҃ୖ  {
+imm method @ˮ઼ ﹰ() =
+ᤍ;
 
+imm method imm ቋ ퟝ᳕() =
+this;
+
+imm method imm ળ Ⳳ⳱(@ຣၠ᪆ ஔ) =
+head(1 );
+
+imm method @@า ᨒା(imm ϊꚞ ຍ, @ꖻ‎ ﹳ᪐) =
+new 퉍ꪴ();
 }
 

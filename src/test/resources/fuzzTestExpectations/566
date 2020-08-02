@@ -1,46 +1,18 @@
 main = @[];
 
-capability class ꬎ꛱െ  {
-@$໊ ঢ়ୌ᳴;
-imm ℓୣ Ꞵ੭ྒྷ;imm method @ଡ଼ ܐ࡛() =
-@[0 ; @ⵯ഼ೆ ቘు = Infinity ,
-"\0"];
-
-imm method @גּ ମৈ(@ⴧ ங᜔) =
-0.0 ;
+capability class ￖ  {
+@@¥ ੴၢऻූ;
 }
 
-class ꠸꩖ූ꤁ꤧ۬ implements מּஂ, ଡ଼॒̄, ℇ  {
-@ਇ ⁿ;imm method imm ౡ ঽৗ܏() =
-head(mut Ꙓᬀె᱓ ᦟ = imm ℾꩃ꯶゙༹᳒ྸ҇ ૹ = @[],
-ﬂ,
-1 );
-
-read method @ௐ ཁ(@ៗ ᘀ, @ⴧ ಏ) =
-tail(ঢ়ׄௌ);
-
-imm method @લꥈ કു႗ဳ() =
-@ꥀ༘ ՙ҄ = tail(@ྋׅ ຽઃ = head(tail(4.0 )),
-this).ꪵ = false ,
-0.06 ;
+interface Ⴉ  {
+imm method @@Ҵ᷵ ގ();
 }
 
-capability class Ⴧ implements ‿  {
-mut ⷓ઼࿆ ቐ;
-@ޓ໒ ଢ଼꙽;
-}
+capability class હ⃡ implements ॐఁ  {
+capsule method @@@ꧯᩝ ၥ() =
+this.@ﬦᨙᢅᬂ(false );
 
-class ὗꠥੑ implements ｓো, ஹ, ᢚ⵿  {
-imm method @ၥୂொꩻ᳷ᝳ ۮ‪ૈ(@ە ஐ, @Å꙯᪲ົৣ़ Ⲭꠋ਼༵꙯) =
-true ;
-
-read method @ᨁ༵ ꭡ() =
-ꧺ;
-
-imm method @き ল() =
-this;
-
-capsule method capsule ꪱ ޱᢩ(@ۯ ਊ༦ꪰ) =
-ທ;
+imm method imm ᥴꩻ༿ัꪷ ᜈ(@@@@ꠞ শ, read ज़ᢩ໘ꚟꪾ ﹏᳸) =
+500.0 ;
 }
 

@@ -1,15 +1,12 @@
-main = tail(ꢖั);
+main = head(@[]);
 
-class ୱ  {
-read method @ℤ⃒ಃꥏે Ὕ(imm ಷॖ ﴇᬃ, capsule ವ ˮ, @ῃீ ￊ, @ଖ༵ ⅇࠬ, @ꬋ꧷ࠥ Ὂஂ￻, imm Ꜣ︯᳑ Ⳉ᱁) =
-head(this);
+capability class ಹ implements 龍, ኚ  {
+imm ফ సꤦ;imm method capsule ຖ⵿ ﬓ̸᧑(capsule ہ ၦ, capsule ল߈ ॐ, imm ꧢ ಪၢৢ፟⁮, imm ལං ೱஂ) =
+734.0 ;
 }
 
-class ⴭ꯲ᬷ៝ implements ⷙ, ￅ໔ੵ  {
-
-}
-
-interface ༀ꙯ extends ࡠ⁦꪿ೖ, ೠᢩ  {
-
+class ᱣۜ implements ዀೌ᳙ᮣ, વ  {
+imm ឭ ˮ;read method @ﬗ ᾎೢᤩ(imm ౘౌ１ ঢ়҇) =
+tail(1 );
 }
 

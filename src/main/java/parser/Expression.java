@@ -3,11 +3,13 @@ package parser;
 import antlrGenerated.FRJSimpleParser;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
+import visitors.CollectorVisitor;
+import visitors.Visitable;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public interface Expression extends ProgramNode {
+public interface Expression extends ProgramNode, Visitable {
 	static Expression ctxToExpression(FRJSimpleParser.ExprContext ctx) {
 		if (DotExpression.isBiExpression(ctx)) {
 			return DotExpression.ctxToDotExpression(ctx);
@@ -30,10 +32,10 @@ public interface Expression extends ProgramNode {
 			return new EmptySignalExpr(new Position(ctx.emptySignalExpr().start));
 		}
 		if (ctx.headExpr() != null) {
-			return new HeadExpr(new Position(ctx.headExpr().start), ctxToExpression(ctx.headExpr().expr()));
+			return new LookupExpr(new Position(ctx.headExpr().start), ctxToExpression(ctx.headExpr().expr()), LookupExpr.Lookup.HEAD);
 		}
 		if (ctx.tailExpr() != null) {
-			return new TailExpr(new Position(ctx.tailExpr().start), ctxToExpression(ctx.tailExpr().expr()));
+			return new LookupExpr(new Position(ctx.tailExpr().start), ctxToExpression(ctx.tailExpr().expr()), LookupExpr.Lookup.TAIL);
 		}
 		if (ctx.letExpr() != null) {
 			return new LetExpr(
@@ -120,6 +122,11 @@ public interface Expression extends ProgramNode {
 
 			return String.format("new %s(%s)", this.name, argString);
 		}
+
+		@Override
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitNew(this);
+		}
 	}
 
 	@AllArgsConstructor
@@ -151,6 +158,11 @@ public interface Expression extends ProgramNode {
 		public String toString() {
 			return String.format("@[%s; %s]", this.head.toString(), this.tail.toString());
 		}
+
+		@Override
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitNewSignal(this);
+		}
 	}
 
 	@AllArgsConstructor
@@ -166,12 +178,18 @@ public interface Expression extends ProgramNode {
 		public String toString() {
 			return "@[]";
 		}
+
+		@Override
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitEmptySignal(this);
+		}
 	}
 
 	@AllArgsConstructor
-	class HeadExpr implements Expression {
+	class LookupExpr implements Expression {
 		private final Position pos;
 		public final Expression signalExpr;
+		public final Lookup lookup;
 
 		@Override
 		public Set<String> bindings() {
@@ -190,33 +208,18 @@ public interface Expression extends ProgramNode {
 
 		@Override
 		public String toString() {
-			return String.format("head(%s)", this.signalExpr.toString());
-		}
-	}
-
-	@AllArgsConstructor
-	class TailExpr implements Expression {
-		private final Position pos;
-		public final Expression signalExpr;
-
-		@Override
-		public Set<String> bindings() {
-			return new HashSet<>(this.signalExpr.bindings());
+			var lookup = this.lookup == Lookup.HEAD ? "head" : "tail";
+			return String.format("%s(%s)", lookup, this.signalExpr.toString());
 		}
 
 		@Override
-		public Position pos() {
-			return this.pos;
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitLookup(this);
 		}
 
-		@Override
-		public List<Expression> children() {
-			return Collections.singletonList(this.signalExpr);
-		}
-
-		@Override
-		public String toString() {
-			return String.format("tail(%s)", this.signalExpr.toString());
+		public enum Lookup {
+			HEAD,
+			TAIL
 		}
 	}
 
@@ -225,12 +228,16 @@ public interface Expression extends ProgramNode {
 		private final Position pos;
 		public final Type type;
 		public final String name;
-		public final Expression boundTo;
 		public final Expression value;
+		public final Expression boundTo;
 
 		@Override
 		public Set<String> bindings() {
-			return new HashSet<>(this.value.bindings());
+			var bindings = new HashSet<>(this.boundTo.bindings());
+			bindings.remove(this.name);
+			bindings.addAll(value.bindings());
+
+			return bindings;
 		}
 
 		@Override
@@ -249,9 +256,14 @@ public interface Expression extends ProgramNode {
 					"%s %s = %s,\n%s",
 					this.type.toString(),
 					this.name,
-					this.boundTo.toString(),
-					this.value.toString()
+					this.value.toString(),
+					this.boundTo.toString()
 			);
+		}
+
+		@Override
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitLet(this);
 		}
 	}
 
@@ -274,6 +286,11 @@ public interface Expression extends ProgramNode {
 		@Override
 		public Position pos() {
 			return this.pos;
+		}
+
+		@Override
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitIdentifier(this);
 		}
 	}
 
@@ -303,6 +320,11 @@ public interface Expression extends ProgramNode {
 			FLOAT,
 			STRING,
 			BOOLEAN
+		}
+
+		@Override
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitLiteral(this);
 		}
 	}
 }

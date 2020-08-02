@@ -1,19 +1,27 @@
-main = 7.0E-4 ;
+main = new l();
 
-class ຄ၇ implements ﹷ᧓, ＄, ὔ൯଼  {
-imm method imm Ά᷇ ࢰ(imm ₔ ল, imm ℤૼৃ ꪼ, imm ߑ ⵖ, read Ꭰࠪ๖ ە, @ꭡ ᳶ, @ꪜ ꫀෑۤ, imm ੜ؃ ℼ, @ꧢ ퟔ) =
-@Ἑၴၢꦂັ؜ ؋ꪷᝓ = @[],
+class ૐ implements ࠨົ  {
+imm method imm ᾊ ߵ᳑꣒ᤧ꪿៝(@ꪻ ⶺ؄) =
 @[];
-
-imm method mut ල༾ ꤥ() =
-true ;
 }
 
-class ল᩿  {
-imm method imm ힿો ใ() =
-head(true );
+interface ᱍ଼ܑ  {
 
-imm method @ⸯ ῇ() =
-tail(false );
+}
+
+interface ₷઼᪳⳱ extends Įᰴ؜, ۥཷ⃦ࠪ, ॐֿ  {
+read method @@@@એ က็(@@@@ⷍꙶ ਹ, @ࡉ꪿ ॹ, imm ᣪ᠗ꫭേೋ ጆี￹᧑᳹, @ꤶಁၘా ኵ);
+
+mut method capsule ၡၙꯥੋ᠔᭘ꩍྐྵੇ ꠅ௨(imm ৎ ࢣ);
+
+imm method mut ஞ१﻿ੑໍ౩ၠ ￠0(@@ਕꥇꩃၭꫫ ၮႈੇᬄ);
+}
+
+interface ຝ  {
+
+}
+
+interface ⁿ  {
+
 }
 

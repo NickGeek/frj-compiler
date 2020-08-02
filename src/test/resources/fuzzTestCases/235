@@ -1,1 +1,1 @@
-interface ꯓ { method capsule ౙ᯦  ⴧ્ ( @ ໆ೭්۲ୌ  ₔऺ⃡  , read ܤ  ꞓٞܶ  )  ; method @ ລ⵿  ઉো ( )  ; capsule method mut 〢  ︳᭗ึ ( )  ; }  capability class כ᜴꯭ּးௌ implements ꡍාၙ , ᳯഁൣ , ୟ߂ , ㇼ༷᳷  { capsule method 婢ੌ௪ۨ  ℂ ( )  = @ [ new ︳᭫ೃꩌ ( @ [ ]   )    ; false  ]   ;  }  main = new ꠉ ( ힶླྀ  , ᯛࠜ᥋  , true  )    ;  
+main = false  ;  

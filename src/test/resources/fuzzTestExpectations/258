@@ -1,28 +1,7 @@
-main = "";
+main = @ꤣ ᢥ = @[],
+@[];
 
-capability class დ  {
-capsule method imm ଛ ꓑ꣐ꨬ() =
-true ;
-
-imm method @ꓰ நꧥ￺ֿ() =
-tail(new ຳׄ().@ᨓ()).ﷴૉ;
-
-imm method @ඐ ᥖ꫶්໊­১༙(@ힻ၄ ℛັ, @ˬึ ጪ) =
-@[head(false .ڝ); @[new ໜ્᱇(@[]); 35.0 ]];
-
-capsule method imm װ ຍ() =
-0.0 ;
-}
-
-interface ꬖ᳒ၣ਼  {
-imm method @ቌ ⷎ(@ষૄෛ ਐ, @ᮯꩍ ۯ);
-}
-
-class এ  {
-imm ㄑ౬ Թ៝ꦀ;
-}
-
-class _  {
-
+interface ᢄ extends ই  {
+imm method imm ᡲ ܐ༵ූ(@ם၇േં ਆ઼ꥐ້, @@ਰ؃҇ۜ ஒ೧, capsule ੜ᷁９ ꫴ);
 }
 

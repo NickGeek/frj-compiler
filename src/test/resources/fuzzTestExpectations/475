@@ -1,11 +1,38 @@
-main = new Ⳳ؀();
+main = 1.16 ;
 
-class ꩺ  {
-@ῆ￹ ᛶ꫁;read method @ቛꦀꙴං᮲ׁૉૌ ຣ᪙⃗ྚ(@ꛓื Ὕ, @ῐ ջ゚) =
-@[new 〢ࣻ(); imm ૠ ൡ = @[],
-this];
+interface ꥠ  {
+mut method read ऽ Ὑ(imm ഏ ￜꠂ, capsule Ꙃಃᮀ᱕ ퟎ);
 
-imm method imm ퟃͭৌৣۧਁ ૐେ() =
-new ᲃ();
+mut method mut יִ ꜝ්();
+}
+
+capability class ଔ  {
+imm ￅ ꠊ௮ོῙ꛱;imm method imm ꖤ ఎၳ(imm ૐ ἴ, @ኾ１ ﶮුັ) =
+new ΐ("﹬", ൎ.ᦻஂ);
+}
+
+interface ⶸ extends ꧏ, ﹩5꦳  {
+
+}
+
+interface হ  {
+
+}
+
+capability class ⁀ୈᤸኺ implements ꘪ്ႛ  {
+@ﷂ ࡑ;
+capsule ঽఃೢ᳴ ꫂ༹;
+@@ޑ ਲ਼ꙹ;imm method read ῌ ॐ(@@ꠜ ＄ั) =
+new ᔳ፝ୢྒ꘠();
+}
+
+interface ᗻᝲׇీ᧒්ۡ  {
+
+}
+
+interface ଽ  {
+capsule method imm ꠉੑᭂ ᢄꢀୖ꫁(@@@ˬ ₿);
+
+imm method imm ᢝ ঽၲৣ౦ৢꠋ(imm ቊ ι);
 }
 

@@ -3680,18 +3680,32 @@ class FRJGenerator(Generator):
     def typeName(self, parent=None):
         current = UnparserRule(name='typeName', parent=parent)
         self.enter_rule(current)
-        choice = self.model.choice(current, 0, [0 if [2, 2][i] > self.max_depth else w for i, w in enumerate([1, 1])])
+        choice = self.model.choice(current, 0, [0 if [2, 3][i] > self.max_depth else w for i, w in enumerate([1, 1])])
         if choice == 0:
             if self.max_depth >= 1:
                 for _ in self.model.quantify(current, 0, min=0, max=1):
                     self.MDF(parent=current)
             self.Identifier(parent=current)
         elif choice == 1:
-            self.AT(parent=current)
-            self.Identifier(parent=current)
+            self.liftedTypeName(parent=current)
         self.exit_rule(current)
         return current
     typeName.min_depth = 2
+
+    @depthcontrol
+    def liftedTypeName(self, parent=None):
+        current = UnparserRule(name='liftedTypeName', parent=parent)
+        self.enter_rule(current)
+        choice = self.model.choice(current, 0, [0 if [2, 3][i] > self.max_depth else w for i, w in enumerate([1, 1])])
+        if choice == 0:
+            self.AT(parent=current)
+            self.Identifier(parent=current)
+        elif choice == 1:
+            self.AT(parent=current)
+            self.liftedTypeName(parent=current)
+        self.exit_rule(current)
+        return current
+    liftedTypeName.min_depth = 2
 
     @depthcontrol
     def methodHeader(self, parent=None):

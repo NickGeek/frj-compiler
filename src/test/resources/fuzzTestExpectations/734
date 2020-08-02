@@ -1,6 +1,25 @@
-main = 41.0 ;
+main = true ;
 
-capability class ꦛ  {
+interface ﷲ⵿  {
 
+}
+
+class Ὄஂ  {
+imm ઍ่ ઍ໊;read method mut ؋௭ ࢮ꣖༹(imm ꬢ ꠃ) =
+"";
+
+imm method capsule ᰜ ቝꩌ੩༹(@ᢃ ॐۣ, imm ഔ 〼ૣﬞ‬಼ٰꪾ໖) =
+@[];
+
+imm method @Éૺ꙯ ᜑ꫁߰(mut ᜈ᷒ য়) =
+tail(@[1972.5 ; head("᝴\uuuuuA4Cb\'")]);
+
+mut method imm เ഼ ࢼ() =
+4 ;
+}
+
+capability class ꯆꪾ implements ல꠆, ᛷ, ⶰ  {
+imm method @@ᝯෙੵైൢ ݰ() =
+0 .ｏ();
 }
 

@@ -1,6 +1,25 @@
-main = "က";
+main = head(เ๙);
 
-interface ᶡ  {
-imm method imm ιੂൗ ꣳ();
+capability class ၡ⃧  {
+@ඪ ⶤꧥഁ;read method @ᢃ ᥳ(capsule Ⴁ ຣ) =
+new ਦ(5 , new ޝ᥈(), @@ⅈ༵ ឩ = imm ၡ Ｋ۱ = new Ὑ０("᜷", @[], ⸯ),
+tail(this),
+true , @[@[ᥠ; new אּ꧗᳑០()].ￛ = ""; ""], ዊ.ꤷັೇ);
+
+capsule method read ఐ ᛷ‎ꚞ０ꪲ() =
+tail("\65঄\62");
+
+imm method read ⳳஂுꠧ ৎ(imm Ὑ ၛ, @セ෮꧕ ߺ) =
+"";
+}
+
+capability class ꤸ implements ꥱ, ⷕ๗, מּꙺ, Ⴧ⁡ൗึ  {
+@@@ᱧ ⷐ;
+imm ဿ᳣ ꩢ;imm method @㔈 ၔꧥ­() =
+head(head(@[])).ヌ៦ = false ;
+}
+
+interface ኍ⳱ႊ extends µ, ߵ꯶, 缮ᰮ༷ⷾ  {
+
 }
 

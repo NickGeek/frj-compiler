@@ -1,12 +1,6 @@
-main = @[];
+main = this;
 
-interface ﹎ஂ extends ꪱ७༷  {
+interface ㆮ extends ቋ, Ί꩔, ﬣោ, ᳮ  {
 
-}
-
-capability class 췟 implements Ｓ੭  {
-imm ꓬ­ᝳ᳐꣒꫁ ᢁ઼;
-@ઽ ҡ๎;read method @ଳ॑ º() =
-"𑌄";
 }
 

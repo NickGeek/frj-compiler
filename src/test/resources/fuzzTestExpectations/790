@@ -1,2 +1,44 @@
-main = ჶঁ;
+main = head(head("\010\015"));
+
+capability class ࠚࣺ implements ၛ­  {
+@ᶙ ౠ;
+@@@@@֏ᯧ ὰ;
+read ⶍ٘ ꩺ;
+read ῴ ቻ;capsule method @ꫤ਼ೖ꠆⳯ ᏻ઼(@ᬑ Ⴘ, read ꭒ ەਿ७) =
+head(this.ῃং = 13 );
+
+imm method @@@ਉ ଢ଼ޮ︪ᷔ२ඃૢᝲ፝() =
+@[@[]; 14 ];
+
+capsule method imm ꪽ⵿ ਡཷ() =
+ၥ.ៜ = true ;
+
+capsule method @ঽ꤫⁡ౣ ଽౢ᥈() =
+head(@[]);
+
+imm method imm ㇾෟ ↁ᭭ࠥ() =
+head(head(89 .@〻￹()));
+
+imm method @︳ ૹ៣ု(@@@@ၚᤡ︎ Ꚉൢ਼⁡⃗۹) =
+tail(2970 .ꬄ(head(imm ⁀ ர໙ = @[],
+2 )));
+
+capsule method @ꛤ ª୦() =
+2.6445252304070013E23 ;
+
+read method @ጞ ೞ꣭() =
+head(栈);
+}
+
+capability class ˬᤱܑො  {
+capsule Դ҄ ꤿ;
+}
+
+interface ｆ  {
+imm method read ﹍༵ ল(@@@Ά ৻, read ங ໜꧥ);
+}
+
+interface ኲؐ  {
+
+}
 

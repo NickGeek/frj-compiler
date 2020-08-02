@@ -1,6 +1,10 @@
-main = @[];
+main = "಩";
 
-interface ꫀ꩐  {
+class ມ implements ๅ, ꤿ, ი  {
+
+}
+
+capability class ꫂั implements ℨ  {
 
 }
 

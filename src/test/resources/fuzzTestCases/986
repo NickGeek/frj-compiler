@@ -1,1 +1,1 @@
-main = "\'"  ;  
+main = @ [ tail ( tail ( false  )   )   . ᱍ಼   ; 08_0F  ]   ;  

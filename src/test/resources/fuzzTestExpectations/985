@@ -1,2 +1,20 @@
-main = tail(@[]);
+main = @[];
+
+capability class ຫຼ  {
+imm method imm ໃ഻ꚟר១ ﹩꩙(imm ネ ａܑ᩺, mut ܐ Ⱘ) =
+head(new _゙᷼());
+}
+
+interface ᝂॢ  {
+mut method capsule ＿᥋ ᝌྏ꛱(imm ᳱ Ꙁ);
+}
+
+class ﬖ៝  {
+imm method @@@@@$゙ ꧮౣិ() =
+0.2 ;
+}
+
+capability class Ꭹ̼᳭ͮᢆ implements $, థၤ  {
+@ºᜓ ફᨚ;
+}
 

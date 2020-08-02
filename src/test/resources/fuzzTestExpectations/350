@@ -1,10 +1,10 @@
-main = ᳱ;
+main = this;
 
-class ᾂ implements וּ, Կ, ꭔ, ꬑ࿆᳐  {
-@ᣝ இ᳭;mut method @ℕ࿆ ꘪၠ(read ˉ᧕ೊ 〵) =
-true ;
+interface ਜ਼ extends ᛔ  {
 
-imm method imm ວᩢ᳭ ዀౖ(capsule ࠨః 細, imm қ µ, imm ᜬ଼ ℨ, imm স Ὑ, @ℭ ὃ, read ዂ ភೕ) =
-@[];
+}
+
+capability class ꛬ  {
+
 }
 

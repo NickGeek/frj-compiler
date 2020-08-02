@@ -1,16 +1,8 @@
-main = this;
+main = new य़ஂ꠆();
 
-class ግ߲ঁ  {
-imm ເୋ ﬕ;
-@ඛ꣡۬ ໆ;
-@Ꞷೣ Ꙭ;
-}
-
-interface ⅿ⵿ extends ₕ  {
-
-}
-
-class ᦤٰꦀ  {
-imm ꚏে් ਫ਼;
+capability class ௹᜔ׇ྇ࠦ implements ⶦ, ହ  {
+imm ﱟ፞ෲ 鱗꫁;
+@ૐ๘ 齃࿆;
+imm ꦡֿૼ Ά༢;
 }
 

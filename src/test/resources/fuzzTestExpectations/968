@@ -1,2 +1,12 @@
-main = @[];
+main = this;
+
+interface ఆ extends ﬆ  {
+mut method @ⶴ ෂ();
+
+mut method @ⳏ ᮮୢେ();
+}
+
+capability class Ήׇ implements ആ᭫, ঽꠂ꤄  {
+@ᎃꙺ 껀;
+}
 

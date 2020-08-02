@@ -1,18 +1,15 @@
-main = @[];
+main = 5.0 .ᜤᰳ = head(head(@[tail(7.0 ); this]));
 
-class ௐ implements ゝ, ຄ൬ꪸ, ஷ, ၡஂ, ό᱕  {
-capsule method imm ᇰ Ὲ() =
-this;
+interface ວ  {
+mut method @ᝮ ꓔ(@@@ணᤣ ਙ);
 }
 
-capability class ᪧ  {
-@ໞ ⁿ᠌ઃ;capsule method imm ࠅৈ ꟼ́() =
-"";
+interface ￍ extends ໜꫬᮥ  {
 
-mut method @Ἕ ㅕ() =
-this;
+}
 
-mut method @ꧻ০ ဌ(imm ⁔ ᮒ, imm ኳۡ ౘꯦັ⵿, @ၡ ኦ꤉ꩍ, @Ᾱ ʅ) =
-"\u02f0\uA5c5";
+class ۯ implements ⶱ, य़, ၥ  {
+@@ℯ᱓ ꩲூ᩷ᭂ;
+@ቝૢ ゝ;
 }
 

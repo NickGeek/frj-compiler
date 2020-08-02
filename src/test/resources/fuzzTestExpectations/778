@@ -1,2 +1,35 @@
-main = @[];
+main = this;
+
+interface מּੵ༙ extends ஊ᪘  {
+
+}
+
+interface Ⱚ extends ꓚැ  {
+
+}
+
+capability class ଽꥊ  {
+capsule method mut ය ѹ‮੍() =
+@[head(tail(head(3064 ))); @@@ڼ ᜮ = @[],
+head(tail(tail(new ㇸ(240 .ᪧ゚, ﶙׁูᢅ, 53 .ำ෮(ဿ), 188 ))))];
+
+imm method imm ၥၞꠦ ⁔ၬ්(mut ឬၣ ℭ, @@@@າᤳ ꧏ, @@ݳ ᮔၬꯨ꤀ꦁ) =
+ゟۧ;
+
+imm method read ૹ ಋ() =
+false ;
+
+imm method imm ಈేંಃ်ಂ পⷩׄೂ(imm ง ቧ, imm Ϳ ﬀ, @⁔᪲ઁৣ ꡑஂ) =
+new ℝ();
+}
+
+interface ゟ extends ந, ˣꨭ੧, Ѥ  {
+imm method @ۿ༷ꪰං۰ꨮۛಃ ꪱ(@ꩺ ឤ);
+
+capsule method capsule ⱎ த();
+
+imm method imm ऽ Υ();
+
+capsule method @ـᤥֿ҄ ꪂ಼ৗ(@@@@@@@@ᬣ҇ ऽ);
+}
 

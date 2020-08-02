@@ -1,2 +1,32 @@
-main = 1764 ;
+main = imm Ï ꬂ࠭꣱ = 1.94780683883773952E17 ,
+0 ;
+
+interface ௹ᤩ extends ꤤࠥཿඃ꧑ૼୗ, Ὑ  {
+imm method mut ၦ ഊ႕();
+
+imm method @ଭ ﹎(imm Ωౣ ໜ);
+}
+
+class ⶲ  {
+
+}
+
+class ວ implements কఀ, Ω꣐ืᬂ๘ૣ, Γ᱅  {
+
+}
+
+capability class ૱ِ೯ꪴ implements 쏬  {
+read Ἕ ರ;
+@@@ၿੵೣ༘ ᜯೖၤ;mut method @ꧠ Ϡ() =
+0 ;
+
+read method mut ઑ়꛱ඃৣ ዅ(imm ಽ ൻ) =
+1 ;
+
+imm method @ℒꢀ ྌ() =
+"";
+
+imm method @ⴭ ઽ(imm ᝮ꛱ෞၟ ῴ꛰, imm ᢔ ۺ‭ૢ) =
+"";
+}
 

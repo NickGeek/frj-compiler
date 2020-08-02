@@ -1,24 +1,2 @@
-main = 13 ;
-
-capability class ચꫬ implements ¢, Ἒ  {
-mut method imm ଳ᥇ ꫛ؜() =
-true ;
-}
-
-class ਜ਼゚  {
-imm method @ຄ8 ᏻᝓ༿(@ⵯ⁠᭕ ㇼ) =
-ܧ;
-
-imm method imm Ⴭ ὓ༿ꪰ() =
-ヷ;
-
-imm method imm ℕ᳒ꯧ ۼ() =
-this;
-
-imm method @ળ ꩂꩌ(@ౚੑྍోஂ೮ິ Ⴧ, @ઽॄ਼꙯ை ୱ) =
-head(head(@ቾ०ᨛ ൿꚟ = this,
-imm Όꧥ ⵯ᭔ૉෙ = head(6 .@ⁱⷹ­፞(new ຝࠧၫ(tail(new ൡ꤆౩၀⃐())))),
-1.6940658945086007E-21 .ˮ൭2 = capsule ꮗ ਪꥊ়〭 = new ຢ꣔ަຼ(@[]),
-0 ));
-}
+main = false ;
 

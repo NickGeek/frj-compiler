@@ -1,8 +1,2 @@
-main = this;
-
-interface ꨃ extends ଏ߈, ꜝൊֿᝒ  {
-imm method imm ງ྄ כּ();
-
-imm method @ι࡚ హⷼᮥ꯳ੈັ();
-}
+main = @[""; head(2 )];
 

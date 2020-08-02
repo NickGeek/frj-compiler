@@ -1,19 +1,6 @@
-main = new ర();
+main = ഽ;
 
-class ɠ  {
-imm method @డ ᳪ᳐ၖ᮲᠎() =
-head(@￦ꫯ ⴭꩻ๕ = this.ஏ꩐෮︨ᝒං = tail(8 ),
-head(tail(ꤼꪰꙹূꧥ଼ం)));
-
-capsule method @ⵯ Ⴧ(imm ㇶ ⅎ) =
-imm ꧏꫫਃெ ꨢ = head(0.0 ),
-"\udCc4\\𞣗\uub261\b𐮒";
-
-capsule method @ণ ᣀꧥ෫(imm ꤝູ Ⱇ, @৻ਁୁ ஃੑ) =
-t;
-}
-
-capability class ਇ implements ﬀ, 㝣, ℨ꙯ऺ, ៗ໕ি  {
-capsule µ ຊീ;
+interface ﹴ  {
+imm method imm ጀꪲ ֏();
 }
 

@@ -1,1 +1,1 @@
-interface יִ { method read ပ௮ോ  ႎꨱ ( )  ; }  capability class ਸٜ꫁ୌ﻿ implements 〸  { ଲ  ຜ ;  }  main = @ ꣽ  ℐ = ᤖ  Ή = @ [ ]   , 0X.4P+1D    , @ [ ]     ;  
+interface ￋ extends ͽ , ᚨ , ᰐॢ  { method ῲ  〻ெᩩ6 ( )  ; method @ @ @ ᧁꠣ     ୱ ( )  ; method imm ᮯ  ⷁ ( )  ; }  interface íܵᨛ extends ઐᳲ , ﷰ  { mut method @ ⶬ   ꫳૈং ( )  ; }  main = true  ;  

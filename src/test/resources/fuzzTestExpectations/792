@@ -1,10 +1,14 @@
-main = @[];
+main = head(true );
 
-interface ྊ  {
-read method @ⶰ਼ࣺ ˮి();
+interface ற extends ꬦ, ᣴ൮  {
 
-imm method @ￋ⳰໐༹᠍์⃡ ୡ᱆ோᢩ᷼(@ⶦ 襤, imm ⵯ ῄ);
+}
 
-mut method @ڞ ᄠᢅ᳝᭕ೂࠩ();
+interface ੴූ  {
+mut method @ꔇ እ(@¥⁠៝ ਏᝒ);
+
+imm method @@@ᛯ᳑ ⶭ(@@Ðꫵ ⳳ்꙽, imm ꥶ഻ ㇴ, imm ꢳඃ ꫝ‬);
+
+imm method imm ൎ ۮ(@@ࠚ ॐ, imm ዀ᷽ۭᨘ ਗ਼ꠂꢀฺ);
 }
 

@@ -1,14 +1,19 @@
-main = ⴭ꧷ெ;
+main = new יִ(0 );
 
-capability class ㄣ implements ಳ, 䶳꧓  {
-
+class ꤴ implements ꣽ؜, ἳॢꩽၠ  {
+imm method read હ࿆፝᧖ ཚ᭭(@ꪵ༘ﬞᨙႛ ꫛ) =
+@[ꯜ⁤಼᭭ᮁ꠆; this];
 }
 
-class µૣ  {
-
+interface ℂ༙꘡ extends ᛸ, ǣ  {
+read method imm ꪹ ⶾ();
 }
 
-interface ۮ extends ᜆ  {
+class ﵰׂ  {
+imm ῃॢ ຣၤꫫ;imm method read ｗۧꪸ Ὂꚟ៝() =
+tail("\"");
 
+imm method @@@@ⶦ༵꣫ ໆஂᝲ() =
+"ᝠ";
 }
 

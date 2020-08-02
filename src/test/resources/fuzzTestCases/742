@@ -1,1 +1,1 @@
-interface µൗ { }  main = tail ( head ( this  )   )   ;  
+main = false  ;  

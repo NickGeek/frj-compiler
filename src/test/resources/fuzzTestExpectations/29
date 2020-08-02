@@ -1,6 +1,11 @@
-main = @[].ゞ();
+main = @[];
 
-interface Ω extends ৡ  {
+capability class יִંౣ implements ດۘ, Ί, ᥫ, ᝦ, ＿  {
 
+}
+
+class ⁱ꣩ೕᰩ implements Ꜥꠂ  {
+read method imm ⁔ﬞꠋ᯲ க(imm ẇ ؋) =
+@[@[new ㅬ(); head(new ૹ())]; "\01"];
 }
 

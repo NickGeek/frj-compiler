@@ -1,2 +1,11 @@
-main = "";
+main = @[];
+
+capability class s  {
+imm method imm ꤳ⃡ ૹ() =
+head(@[false ; "\uuuuCBeb\b"]);
+
+read method imm h ߺ(capsule ᢪ ᠼ) =
+@@ແ꧘­ ᢎ = "",
+head(tail(head("\r\t")));
+}
 

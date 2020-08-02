@@ -1,10 +1,35 @@
 main = @[];
 
-interface ꫧ extends אָ, ଋ, ꠸, 桅, ﯵੁ￹ੇ  {
+class ᎀ  {
+capsule method read ‿ၠ꠆꩖ᢩ᳴ꚟ ꥼ១() =
+this;
+
+imm method @ꣻᮧ ਲ(imm ᳩ꧑ೂ ᮍ꤁༵ާ) =
+new ଽꤦ᧓(@@Ὕ ਲ਼ = tail("𐣻\u3dF4"),
+head(imm ॐ ۯ = @[],
+"ᭌ").Ⳳ්໌￻૦⁡()).@ꓲ(ￒ, 3 );
+
+imm method capsule ᄖ ਸ਼­᪗(@@ኽൃꨬꠦ ᏻ᷿᮷ং഼, imm מּ᪓ၙఃۤ ᪧ, capsule ￚಁ꫶ ꚳࠩ) =
+this;
+
+imm method capsule ⶴꦃྔ ꥲ꙯꫁ۨ() =
+head(@[].அ᪃);
+}
+
+capability class ꬴ implements ￜ  {
+capsule method @@װ් ꬿ() =
+false ;
+}
+
+class ந implements ᬖ  {
 
 }
 
-class 㶂࡚  {
+interface ட  {
+imm method @@@@@@Ὃॏ߳᧓ෑ ᱏု();
 
+imm method read ઢ ೡࠡ⁤෩();
+
+imm method imm এꩌஂ꙯ ශೊੵ(imm ໆ ળ᭐);
 }
 

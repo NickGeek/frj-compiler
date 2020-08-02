@@ -1,8 +1,22 @@
-main = new ﹩(@[imm ວᳲਿ᳴ົ̒ ߵ = 6 ,
-42 ; tail(ౘ)].@ෂ(0.0 , "", 70.0 , ງ, @[]));
+main = "\055";
 
-capability class ㄊᯰꦻ᱉ implements ࠚ, ꬤၖୖੈ  {
-mut method @ꬤ ཛ(@ꬪ ଽ, imm ܠ ൾ᭑, @ᱏກ ꬑ) =
-this;
+interface ń extends ͺ౧໕ੑৌ  {
+
+}
+
+interface உ  {
+capsule method read ර ଉᜒী​େ(@ℛ꯬ꩽꣀ༵ 說़྇);
+
+imm method @@ꩊ ቛ(@@@য় 㢿);
+}
+
+interface ᆪ⃩ꢷൣ  {
+
+}
+
+interface ఽ  {
+read method imm Ⴧ ঐ();
+
+imm method capsule 〦 ਜ਼ꤨ();
 }
 

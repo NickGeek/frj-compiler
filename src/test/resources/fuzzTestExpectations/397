@@ -1,15 +1,10 @@
-main = this;
+main = 0.001 ;
 
-capability class 〵  {
-@ੳ༷ ꙁ;read method @︴ ଡ଼() =
-tail(tail(""));
-}
+interface ￡ᬾ  {
+imm method @Ⴧ᠎ ᝮٰ꙯ૻ();
 
-class ຄ࿆꣦  {
-mut method @ಀ᠋ ꪱ() =
-ཪ;
+mut method mut ᜑ ࢶೃ();
 
-imm method imm យ ପ؅᠋() =
-"";
+capsule method @ೡ ꢞ(@@ꢖᨘ߯ୌ ꫜ, imm ᨓఀ⃕྇ິꠂ ꫝ᧙꧔, @@ﬖ ⵯ);
 }
 

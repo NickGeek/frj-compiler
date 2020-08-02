@@ -1,2 +1,2 @@
-main = new Ѝႊൌ();
+main = @[head(tail(2000 )); @[this; this]];
 

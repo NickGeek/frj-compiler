@@ -1,34 +1,20 @@
-main = 0 ;
+main = ଶ;
 
-interface ΉჍ extends ﬄ፞  {
+interface ࠑઁ extends ꩁ  {
+mut method @@@⁔ᤩၴׁ꙯᩷ ካ(read ਖ਼ঁো װ᤺, imm ᦆ਼ ⶽ, capsule ᢘ᱐ ヹ, @ำֿ ஞ️, @ㄚ Ǘ༵);
 
+imm method @ဿ໔ ꔮ(@@@@ꪎ४ এ);
 }
 
-interface $⃥ׄ extends ꚛ, Ⴧೢ, ⶮೋ, ᏹ, リ9, ࡠ, ࠨ  {
-read method mut ࠤ່࡙ ካ͘();
-}
+class ਛ  {
+imm ⶥꢫ ᲅੂે;
+@ऽ ኌ;imm method @@@ម ॴ꥓ٰ(@ୟ ꙋ) =
+@[43135 ; 2 ];
 
-capability class ℴ implements ゟ  {
-imm ቜ ₘ;mut method @ꡲ ࢨꦂ(@ㄦୣ ዜ⃙︨ා༙۴, @ॿ᠕ᮭၞ 益꛱ෲ) =
-false ;
+imm method @ﶼ ₪഻(@@@ⶣᜲ 祿⃡ୌ, @@ᝣۤ ଡ଼, @ꧏᜲ 〳࡚ꠂၘ, @@@สഃ ㄡ, @@@ᥪ ꦜ) =
+head(this);
 
-read method @ᛵ ꠉ᜔() =
-"";
-}
-
-interface ℨ  {
-imm method @ৎ８ ⁿෲᰭ();
-
-imm method @ーꥊࠪ៝꤆ എ();
-}
-
-class ʖ٣ᜳ implements ₐ  {
-imm method @ꪼ᷼ॆॢ 〇(imm や්ֿ᷻෦ ᥕൗٰ‪ꦹꦶֿ, @ὦ Ɥ) =
-new ວ();
-}
-
-capability class ℬ implements ᥳ᠋  {
-imm ﷰ ℂ;capsule method @ᏹෟۧੑ౦ ᮮౖ() =
-true ;
+capsule method @@︴꙽ா લේꪷ() =
+this;
 }
 

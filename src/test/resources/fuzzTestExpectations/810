@@ -1,6 +1,14 @@
-main = false ;
+main = @[ꤝ; tail(head(this))];
 
-interface ῑऺ extends ￅౄ಼, ල่  {
+capability class ኳꩍ  {
+@Ῥ অ;
+}
 
+interface ౚ extends ꬪ  {
+read method imm ῡ ᢗ();
+
+imm method @֏ ￋ(imm ꥮ ℎܑ, @ງেෳ ＄්ၣ);
+
+imm method @ߵ ﱉꥋꥌᮂஂׄ();
 }
 

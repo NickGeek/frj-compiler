@@ -1,15 +1,8 @@
-main = @ഹࠦ ꩅ = head(tail(3 )),
-એꠋ;
+main = ＿;
 
-interface ꙏᢩ꯹ᝒ  {
+interface ⵕ࠙  {
+mut method imm ⶲৗ ⷂൣ();
 
-}
-
-interface ணୣ꠆ extends ত୧  {
-
-}
-
-interface ꤍ extends ꭟ, ￥, યើ⁢  {
-
+mut method @ൎ కୖࠗ();
 }
 

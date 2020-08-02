@@ -1,18 +1,6 @@
-main = ৠ;
+main = 3.0 ;
 
-capability class ྋ implements ﴼ๋, ꭢ  {
-@ꬢ ೱᰨ;
-}
-
-class ˬ implements ℜ, ዃࠩꩌ, ᚵ᜴࡛꧱  {
-imm ৡஂ ᢪ;
-}
-
-interface ල  {
-imm method imm ೡؕ ꮁ(imm ᤞ྇ᩥ ꪶ, read ᴹ႔‍ꢀೂ্ᢩ ՙೈ);
-
-read method imm ካႊ ꟹਁꙵ(@ហ᳐ ˤౕ, imm ው ວ়ொࠦ);
-
-read method @ℽੌ᳦۶ﬞٰ᪁ັ ۯ۬﻿(@ൎ ᝤ꩓, @ᄱ꘥៍ྖ mۤᩜ઼゚ೢ᳤, imm ೡ ꪱ️);
+interface Γ  {
+imm method imm ባꦾ એဴ(@@@ዀా꫶ ߴ, @ۿ᱒ ℜ꙯);
 }
 

@@ -1,10 +1,2 @@
-main = 6.021017265658798E22 ;
-
-class Ῡ২  {
-imm ਉೄৌׇ ၾੇ;read method mut ⷊᰳୌ ι᳸() =
-true ;
-
-imm method @µ್ಁ ဿ(@ၦ હؗ, capsule Ά ቘ) =
-head(ℳꢁ);
-}
+main = head(@[tail(head(@[])); ⷆ]);
 

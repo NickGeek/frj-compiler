@@ -1,11 +1,21 @@
-main = head(true );
+main = @[];
 
-interface ￠ extends ታ̉, ℨ᱓꫁ૣ‌  {
-imm method imm ＄ଃ ￥ઃ꧱(@ᾠ ଋ, @ⷃꪰ ª);
+class ḅ҅  {
+imm method imm છꩌ â᠌﻿(@ˬॕ ௹) =
+this;
+
+capsule method imm ᪧ লꨪ(@ງੈ ಎേ) =
+this;
+
+capsule method @ᡮۧ ⁔ٰ() =
+ઽ;
 }
 
-capability class ｉ഻꣨꙯ implements Ͱ﻿  {
-read method @⁀꣕ৢ‫ෝᤧોা Ὀྎ() =
-1 ;
+capability class ៛ implements ꟾঃ, ⁿొꩼᜒ  {
+
+}
+
+capability class ￜ implements කࠬ  {
+
 }
 

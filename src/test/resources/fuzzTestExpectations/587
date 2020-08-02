@@ -1,18 +1,2 @@
-main = "".@ୱ();
-
-interface ᝩ‮ᤡૂ઼ೊၳ  {
-
-}
-
-capability class ꛔ  {
-
-}
-
-capability class ꬪ  {
-read ଲ⁠ פּ;imm method @ͻ ၔᰭꩻ(imm ຄ‪ Ꭾﬞ) =
-this;
-
-imm method @ⶆ s() =
-"".@ݳ();
-}
+main = this;
 

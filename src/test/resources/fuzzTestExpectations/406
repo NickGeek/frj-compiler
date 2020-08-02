@@ -1,18 +1,28 @@
-main = head(@[this; this]);
+main = this;
 
-interface Q extends દֿ, ⁔, ｂ  {
-capsule method imm ℴ൪ৌ༵ ꫳ(mut ল꠆ ῐ᭗ᨚ꫶);
+interface ᨤ꙽ extends ద, ￠  {
+
 }
 
-interface ᢪᳲ  {
-imm method @ಅ Β(imm ഏ ໞ);
+interface ꧠۗᯩೋ extends ஜॢ, ꠉ, ಇ܏ꪲꙹ߉゚  {
+imm method imm ༀ ΐ(imm ˬູᩞⷿ ୠ);
+
+mut method imm ꬆ਼゙᪸ ୠ๒(imm ૠ ॹᬀ᭑);
+
+mut method capsule ꬫၬ୫ ᳶ();
 }
 
-capability class ꪼ  {
-mut ஞ݂ i;imm method @ખ༨︣೯ ஃ଼๖(@﹩༥ ⷚ) =
-@[head(true ); @[]];
+interface ኌ  {
+imm method @ॐো ꣽംஂ(@@@@@ஈ סּ᭰꫁ோံ, @ꧤ꩓ྏ꩔ ﹍ൢ, @@@@ﾟ︤ ঐ);
+}
 
-imm method @ᦎ ਙૺၟ꯭᥉ꪳ() =
-@[];
+interface ⷉꢁ extends ꚪ  {
+capsule method read ꜚ ꘪ(mut ᜑ︧ ഓ);
+
+imm method @@@ﬀꠂైౖ ꪯ္(read ۦ︦၀ פּ, capsule ᪧ᠍᥆ ঐ︠ᝲ);
+}
+
+interface ቘૅౖ  {
+
 }
 

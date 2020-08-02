@@ -1,1 +1,1 @@
-class ပ࿆ൗ implements ᏻ  { }  capability class ᢍ⃓ implements 著ꪷᤱ , ၓੀැ  { method @ ಬ᧓  ኹೃ ( @ 懫ֿ꧶ੑׇ  ꠇ  , ﹩꤁᪳ົ  Ï  )  = tail ( @ [ ]   )   ;  method @ ใ  ߊ ( capsule ￗിീൢ  Ⴭ꠆ൣఁ܏᠘  )  = ""  ;  mut method read º  ﮱ ( )  = head ( this  )   ;  }  main = Εꫮꩌ  ;  
+interface м꘨ਂ಼۫ { capsule method imm É  ꩆ ( @ θ   ˢ  , @ @ ꪼࠞ３    ͷ᭘ׇ꧗  )  ; method @ @ ꪱ܏    ຳ ( imm ⷜ  ਵ  , ॐ  ᵞܑ᥊  )  ; method ᝇ࡚ꠤ  ꚍ ( ಎ  ࡖ  )  ; }  main = tail ( this  )   ;  

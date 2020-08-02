@@ -3,7 +3,7 @@ package wellFormedness;
 import parser.Expression;
 import parser.Program;
 import parser.ProgramNode;
-import parser.Visitable;
+import parser.Walkable;
 
 import java.util.*;
 
@@ -32,8 +32,8 @@ public class NoShadowing implements WellFormednessRule<Program> {
 		this.checkLetExprs(bindings, method);
 	}
 
-	private void checkLetExprs(Set<String> bindings, Visitable visitable) {
-		visitable.visit(expr -> {
+	private void checkLetExprs(Set<String> bindings, Walkable walkable) {
+		walkable.walk(expr -> {
 			if (!(expr instanceof Expression.LetExpr)) return;
 			Expression.LetExpr letExpr = (Expression.LetExpr) expr;
 

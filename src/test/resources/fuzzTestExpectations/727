@@ -1,2 +1,29 @@
-main = this.ꣳ = ἶ;
+main = new ড়();
+
+capability class ცࠝ  {
+@@Ό‮܏ ˍ;imm method @@@ၿୢ ঢ়ۧ(read ª ιா) =
+false .ಌ = @[];
+}
+
+interface ၡ extends ㅬ  {
+imm method @@@〦େ に();
+}
+
+interface ۥ໌ extends લ, ቛੵ꛱  {
+imm method @௹ི ꦦ᳷୩();
+}
+
+class ꧢຼᝒ implements Ή８, ꡒ  {
+imm method imm ଢ଼ޭ ၦ(imm ﵥ ː꣓) =
+"\'";
+}
+
+class ྉ implements Ṣ༥﻿ׄ੧ᩴၭ꧒  {
+
+}
+
+class ଏ implements ꭥꠂ, ᳰꧥ﻿, Θ  {
+imm method mut ຝ ⷕ(imm ۮ ল, imm ഉ༘ൊ ℂ, @ᱎైॄ ᥴൢ, @ዂ꠆ Q) =
+@[head(26576.0 ); "\'"];
+}
 

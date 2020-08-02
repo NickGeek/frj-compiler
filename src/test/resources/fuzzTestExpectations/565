@@ -1,15 +1,29 @@
-main = @ᲀં ࠊེ᳷꠆᳗᳑⃡ￛ᭮ = @[],
-head(true ).ῗ්꫁ై();
+main = @[];
 
-class 〆ၟ  {
-@ךּᮤ ᲂ;
-imm ៗྗ ᛸ;
-capsule ℑ꫶ ఉ;
-@ສ ᅾ᩸ૢ︀꣨;
-@ˤ႘ꪴু ֏;mut method @ᚋ ᳮ() =
+interface ᬡ  {
+
+}
+
+class ẵࠧྐྵꪸᷛ  {
+@益ᬀ ஃ;imm method imm ၮ꛱ⷽ྇ ቦ() =
+@[@স઼ܑࠧ෭ِᷧ ۻ꯵ೢ่ꩼ = tail(tail(12.0 )),
+head(@[]); @@@ゞ ລૣ഼ꯤ᜴ = @ۮ൬ ଆ഻ = head(head(this)).ஔ,
+1.03E10 ,
+this];
+
+read method imm Ὓ܏ ઽ(mut ܪ ₑ༙, @@@ෆ‌︋഼ࣸ ල) =
 1 ;
+}
 
-imm method @Ͷૢຼꠣ៣ᨗ⁦ ᏺᩗ઼਼࣠(@Ꚏ Ό) =
-0.0 ;
+interface ꨆ extends ꬅ  {
+
+}
+
+capability class ꫝ  {
+read method @ᮓ༙ ጕ() =
+head(Å);
+
+capsule method @ℕி໒⁢ ￇ() =
+ࡉ.ㄾ();
 }
 

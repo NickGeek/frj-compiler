@@ -1,33 +1,10 @@
-main = tail(true );
+main = 0 ;
 
-class ߺꪷົ۸ꦴੑ  {
-imm method @ꔅ ໜ፟() =
-true ;
-
-imm method capsule ೞି ಛꠂ꙯(@﹍༙ ቋ, @ºૢ഻ୋ઼ Ὑ, @ꩺ৭ௗ ಸ) =
-false .@Ⴭൣ(@[this; this], @ꜟ ୱᰧ᥌ = 255.0 ,
-"\'\f", ኡ, @[0.66 ; this]);
-}
-
-capability class ⶍ᳴  {
-@ᢪ ℽႂٰ࿆;read method @Ꚓ ߺॗࠗ୩ೄ() =
-imm ℇ ᚄ = tail(imm ၮ ὓ = 448.0 ,
-2.0 .투ᬺ = 448.0 ),
-new ສ(this);
-
-mut method @Ꮔ 〇ೢ￻ﬞ፝() =
-this;
-}
-
-capability class ਫ᭐ implements ਲ਼ଃ〬, ﾠ, ꪵୗෲ꘦ܑ  {
+class 〼ஂ implements ˮ, ኼ, ૠꠋ, ܒ  {
 
 }
 
-capability class ῗ implements ዄꨩ  {
-
-}
-
-class ៜ  {
-
+interface ວૅ extends ᣧ, _  {
+imm method imm ᤁ ℒ(imm Ⱝ _, imm ᾌை ସ​, imm ꘗ꙯ ከ, @@ಽꨱ ᴕꧥౢ, @@ﬖၭ Ωୢ);
 }
 

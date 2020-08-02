@@ -1,8 +1,11 @@
-main = tail(this);
+main = 2 ;
 
-class ಽﬞ implements ଵ  {
-imm Çᮩ ಽ௯;
-@தۨ ⷓ;
-@ᚰ়᷿ූ༩ ꧽେ;
+capability class ࢰ implements ᜥ઼༙ۡ, ጔ  {
+@ဤෳ ੴ;
+@〥 ﮄ᪺;imm method imm ৻ ତ() =
+2.5 ;
+
+imm method @@Ό ⴐ؀() =
+new ꭟ(@[]).ꫀ;
 }
 

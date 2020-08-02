@@ -1,2 +1,14 @@
-main = false ;
+main = @[];
+
+interface È  {
+imm method @@@ଅ ͱ();
+
+read method @@@@@ዛ꯷ Ｔ(imm ퟘ ㇿ);
+
+mut method @@ퟮ Ꚕ();
+
+capsule method read ᚤ್ ﮪ(capsule ਕ ߛ);
+
+imm method capsule ன࡙፞ ᝰ਼();
+}
 

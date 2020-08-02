@@ -1,2 +1,40 @@
-main = head(ꬰ⃛ஂ༷ൈ﻿);
+main = head(@ಒ〫 Ἡౣ༾ၙ྇ = 0 ,
+؋);
+
+interface ၡ extends ਗ਼  {
+mut method @ൻ༷ ꣲ۝߯ಁ(imm ࠨ ℰ꯭ൌ⁤);
+}
+
+capability class ⷈ⁨  {
+read ⶢ ῑ;
+imm ߺ⵿ৈ ਗ਼༹;capsule method imm ⶺੵ ৲(@@@@Ҭ ꬒ, capsule ‿ శ૾ੑ) =
+true ;
+
+imm method @@@ங ٮ() =
+false ;
+}
+
+interface ꠏᩢ  {
+
+}
+
+class ຊॖ༥៝େ implements ꬰ່, ዡ܏ꠋ꤃⁠  {
+read method imm ܬ Ίᝳ() =
+new ଵᜒ(head(ⁿੈ͚ొ), @[]);
+}
+
+capability class ܚ  {
+capsule ㇴ ࠨࣨ;
+@@ꘗ ⵯᬁ;
+}
+
+interface ℭ extends ꪶ, ª  {
+imm method imm ꥹ ບॣ႗︪();
+
+mut method mut ଓꧥ ꭟׂ(mut ൎꢁ꣫ັิ਼ٕ ףּࣸ, @@﹩〭ᬀ Ֆ);
+
+read method @@@@ⅎ ꤳੑ(@ﻒ ₶ꙹ);
+
+imm method imm ⷆ౭ 䰝ꥑ();
+}
 

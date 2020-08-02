@@ -1,10 +1,6 @@
-main = @[37 .ࢶ; head(new ଆ᪷꣭ೀ())];
+main = "Ὕ\uuuuuuuuuuuuuF2Ca\0";
 
-capability class ह꫁  {
-read method imm ຟූၣාꤧ ߴ() =
-@[].ꧧ();
+interface Ὅ᠕  {
 
-imm method imm ⴵ ⸯേꢿ() =
-this;
 }
 

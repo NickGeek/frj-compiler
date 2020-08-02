@@ -1,2 +1,30 @@
-main = @[head(this); 79 .@֏().ཊః൯];
+main = 3.93359375 ;
+
+interface ฃ  {
+read method @ጒ߀ ꭹ();
+}
+
+interface ℕਂ  {
+imm method @મ۫ 턙ਂ(@ᳰ⃚ஂ ጯ෭᷼᪘ూ­, @@@@@ቐ ঽ꠆ꫵ⳯ॅ̧, read ঌාׇ ᬥັׁ, read ᏼೌ ઽீ့ࠖ᪑߃, @@@@@ⷂ ＿༵, imm த᪘ꠂௌ ᝰ, @@Ϳ լ);
+
+imm method @@@@ꫥ꣗ ᮯັ(imm ꫪ ౚ);
+
+imm method @ᝬꠥ µఃੂ‪();
+
+mut method @@ⳳ ℼ();
+
+imm method @@@@@ᢣᢆ᱂੍⃡᭑᳴ౣୢ Ό۸();
+}
+
+capability class ‿ၧ implements ៗಿ, ᥖౣ  {
+imm method imm Ϳᜒ Ὑ() =
+@ກ়꣄ׇ２ ቔ = false ,
+@[];
+}
+
+interface ဿ extends ᥳꤧꚟ  {
+read method @ଽ2 ܡᩜ();
+
+capsule method imm ꬥ୭ יִ(imm ঐ ᨽ);
+}
 

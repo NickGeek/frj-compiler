@@ -16,6 +16,7 @@ java.targetCompatibility = JavaVersion.VERSION_14
 dependencies {
     implementation 'org.antlr:antlr4:4.8-1'
     implementation 'org.antlr:antlr4-runtime:4.8-1'
+    implementation group: 'com.google.guava', name: 'guava', version: '29.0-jre'
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
 

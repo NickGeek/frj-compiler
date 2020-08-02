@@ -1,2 +1,6 @@
-main = 8.0 ;
+main = @[this; 5.0 ];
+
+interface ﵚ၆  {
+
+}
 

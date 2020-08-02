@@ -1,6 +1,2 @@
-main = this;
-
-interface ளֿેୗୗֿිෝ extends ഏઁ  {
-capsule method @ⅅ ᱵᬽೇ‬();
-}
-
+Well-Formedness error at: Line 1, col 220
+	Method names must be unique within a class.

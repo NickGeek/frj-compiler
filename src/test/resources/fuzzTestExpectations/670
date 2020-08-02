@@ -1,18 +1,10 @@
-main = 416.625 ;
+main = new ଣ();
 
-interface Ｒ extends ﹱૣ, ப  {
-imm method @全༾ ไ‫();
-}
-
-interface ⴂ extends ᓵ  {
-
-}
-
-interface ਨ  {
-imm method imm ቛ᭔܏ꩃꯧ ൕۜ᪘(@ቖ⃡ ӛޯᩯ୬, imm ꠅ ລ, imm ཧꠂ４ꥊ゙ֿ࡛ ᗖ, imm ရ꩗ ﻹ);
-
-imm method @⁔ ힿࠦ(imm ጕ ದ১ؐ꘡);
-
-imm method @Եֿᰤ ⅎ();
+class ଽ꛰ᷢꠥᢅ implements ಏࠟൗ  {
+@@ࠚ๋ த;
+@@ହ Ωؕ;
+imm ㆊ ਐ‍;
+@@@@@@@ﬕ ₜঃ઼;mut method imm ΐ ኸ() =
+this;
 }
 

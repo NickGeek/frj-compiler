@@ -1,19 +1,23 @@
 package parser;
 
 import antlrGenerated.FRJSimpleParser;
-import lombok.ToString;
+import std.Literals;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Program implements Visitable {
+public class Program implements Walkable {
 	public static Program fromCtx(FRJSimpleParser.ProgramContext ctx) {
-		var classDecs = ctx.classDeclaration()
+		var userClassDecs = ctx.classDeclaration()
 				.stream()
 				.map(ProgramNode.ClassDeclaration::ctxToClassDeclaration)
 				.collect(Collectors.toMap(cd -> cd.name, cd -> cd));
+
+		var classDecs = new HashMap<>(Literals.classes);
+		classDecs.putAll(userClassDecs);
 
 		var mainExpr = Expression.ctxToExpression(ctx.main().expr());
 

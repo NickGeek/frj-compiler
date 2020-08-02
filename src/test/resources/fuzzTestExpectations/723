@@ -1,15 +1,2 @@
-main = 716.0 ;
-
-capability class ﬀ  {
-@ୱ ᨋ;imm method @ꘪ ಠં(@ᜑࠖ༿ ῼ) =
-@[""; tail(tail(ｉ))];
-}
-
-interface 䁩៝ extends ଢ, ゾ, ၾႝ  {
-mut method imm ꧏ ௐꥐಁ(@ª ＄, mut ﶽੌ ꣻꥐං, @ౡꥎৣಃ္ о೪, imm ⴭ ಀ, imm ၺ ই);
-
-imm method @ⅆೆ꠆꫁ ૡং⃗ꙴ();
-
-read method @ￏၤ ဿ(read ᨎ︬ ꩺຼੑ້ॆ, @ঝ߇﻿ ꘛ꠆);
-}
+main = @[];
 

@@ -1,10 +1,12 @@
-main = 205.0 ;
+main = true ;
 
-capability class ஏᝒੱ  {
-@ᝮ ﶶෳ;
+interface ꭀ extends ࠤ  {
+
 }
 
-class Ẩ implements ￠, ປ፞꫁  {
-@㰕︯ ᳱྏᩫ;
+interface ⶲႃ4  {
+imm method @ࠨૣᨚ ￗ༿়ܑ(mut ﾒఁ ஓ);
+
+read method imm 雷ﬞཱུ ಀၞ(@ᙵืൣᜒ ฌ, imm ㅂ꧗ ⴧ, @יִ Ὕෲ);
 }
 

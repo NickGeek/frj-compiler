@@ -1,12 +1,2 @@
-main = head(ౙஂૢꦃ߯);
-
-interface ൎﬞۧુ extends ͺ  {
-
-}
-
-class ﻺ implements ᰆᮁ  {
-@ࢻ᠍ᳳ࿆ྟ໊ᳳ ℨၞࣵ;
-@Á᜴ v‏;
-imm ᡳ ⁿ;
-}
+main = tail(7.0 );
 

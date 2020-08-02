@@ -1,8 +1,47 @@
-main = new ￎ(522 .ⷂ, this, @[]);
+main = 3.0 ;
 
-interface ௐೖ extends ꙉ, ႎꪸ, এ  {
-imm method capsule ￌ഻ొࠖ ꆚ(imm ᜨั෪꯱᪲⃰ 〱);
+interface ដુ  {
 
-capsule method @Ͷ਼ ℕྏ(imm ಎ จ);
+}
+
+interface ꠅᜓ extends ດ؜  {
+imm method @@ສ ꣷ(imm ቘᢆ᪸༙ Ⱏি༵);
+
+imm method @ൿ ஜ();
+}
+
+interface ꠕ‮  {
+imm method read ꦪ ᢀꪰ();
+
+imm method @@@@ഏၖ ጅୢ֓᥋(@ꤏై៨ ꡃ);
+
+imm method imm ౡᢩ Ήౌෙ(imm ঽ ꬃۙ३్꙯ੈ, mut ᜎ ࡘ);
+
+read method imm ౠัੵ ഋ();
+
+imm method @ℹ எ಼꫶༹〬๕᠎ௗ۵៝ᮂ(@ꢯ᤺꧷ׁ༵꙯꣡０ꫯ ୱ؜ᢅ);
+}
+
+class ﹏  {
+@@@@סּ ﭰ;imm method capsule ꬔ ڠٰ() =
+this;
+
+imm method @﹩ັ਼ ຂ() =
+@[];
+
+imm method @@@@ꩁ ⷂ() =
+ﰑോ੨᱕.ລ़֮;
+
+imm method read ኆ Ὓે۷ྔ(capsule ⰱ ꧣ, @ⴧ ඓঁꠦ, imm ꭥഽ྆ ၥो, @@וּ᳸ꨪ Ω) =
+ලୌ҇⁤;
+
+read method @ቛꥌ ಘၠ() =
+ଐ;
+
+imm method read ౠ ᏺ(@@@ল מ꫶ּാ᭫ৃേ) =
+1.6013381139907237E53 ;
+
+read method @@P ᣱၟ(@ꧪ ꣽ) =
+false ;
 }
 

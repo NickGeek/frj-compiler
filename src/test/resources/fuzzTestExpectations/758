@@ -1,16 +1,8 @@
-main = head(true );
+main = 1.2274317E7 ;
 
-capability class ຽ４  {
-imm method @ޱ७ྲྀ᳭ ୱ() =
-"";
+interface Ῠؑௗ྆ᝒ­ extends ମ, ᏹ, வ, ਤ, ႎ  {
+imm method imm ₛ় ᭋᩛેੵ();
 
-imm method imm ஆ ￔޯೣ() =
-new ឝ();
-
-capsule method read ﶷੇॣ᳒߳ꩌె ܣ꙽() =
-@[];
-
-imm method @ວ ಭ() =
-new 懲⃡(96 , "");
+mut method imm ຳ ೡ݇ౣા();
 }
 

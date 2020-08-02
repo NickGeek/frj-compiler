@@ -1,2 +1,18 @@
-main = this;
+main = true ;
+
+capability class ꫝၭ۪ implements Ⴧௗ  {
+imm method read ꢈ៥ ᙵে() =
+tail("\5\5𐮰\\﹨\6");
+}
+
+interface ꠓᮂ᠒ᢅꚞ extends ꪺ, ไ෮ྠܑꠂ੨ஂ, ꤠᭂ഼  {
+
+}
+
+capability class ힾ implements ＄, ⅈ  {
+read ૹ ꠠ;
+mut ལ ୱᯮ;
+@ቘ ᭋ්྆;mut method capsule Ń ª() =
+@[@[@[]; false ].ˮᮀ; new מּ()];
+}
 

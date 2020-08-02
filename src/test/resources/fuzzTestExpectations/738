@@ -1,8 +1,6 @@
-main = head(this);
+main = this;
 
-interface ၐ୍ຼ⃮྇ extends ꫀ႗  {
-mut method @ౘූ ￅ();
+interface ଉ  {
 
-read method capsule ՙᯯ ᳵ();
 }
 

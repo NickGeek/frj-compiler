@@ -1,10 +1,18 @@
-main = new ٲ(this);
+main = tail(this);
 
-interface ၡ extends ງ‪  {
+interface ﬅꪰௌ᠔ෑၳٰ extends ὔ, ᳮ, ᚒૈꪸ, ዀ᪀￻᳚⁠ଂಁৃᢅ᭲  {
 
 }
 
-capability class ᡏႇꪰ implements ල҇  {
+class ဠ  {
+
+}
+
+interface ਫ਼ꠂᮭ  {
+read method capsule ῷ᠌゚︭ؔ ＿();
+}
+
+interface Ή  {
 
 }
 

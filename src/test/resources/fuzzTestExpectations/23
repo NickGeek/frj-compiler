@@ -1,13 +1,2 @@
-main = tail(ꩂ〪);
-
-capability class ᭅ  {
-imm ﷂᝒ ጔుࠪ;
-@እၢ〭၅ ၰൈ;
-imm ꫝ ম;
-}
-
-class Ν implements ⶮ, ꛘ, ⵯ  {
-imm method @ㇾ਼؜ꠋೢ ۺ() =
-tail(@[true ; tail("")]);
-}
+main = true ;
 

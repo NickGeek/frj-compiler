@@ -19,7 +19,7 @@ public class CapsuleUsage implements WellFormednessRule<ProgramNode.Method> {
 					var count = new AtomicInteger();
 
 					method.expression()
-							.ifPresent(methodExpr -> methodExpr.visit(expr -> {
+							.ifPresent(methodExpr -> methodExpr.walk(expr -> {
 								if (expr instanceof Expression.IdentifierExpr) {
 									var identifier = (Expression.IdentifierExpr) expr;
 									if (identifier.name.equals(arg.name) && count.incrementAndGet() > 1) {

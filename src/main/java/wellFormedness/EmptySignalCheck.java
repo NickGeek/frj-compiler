@@ -7,7 +7,7 @@ import parser.Program;
 public class EmptySignalCheck implements WellFormednessRule<Program> {
 	@Override
 	public void check(Program program) throws MalformedException {
-		program.visit(visitable -> {
+		program.walk(visitable -> {
 			if (visitable instanceof DotExpression.CallExpr) {
 				DotExpression.CallExpr expr = (DotExpression.CallExpr) visitable;
 				if (!expr.isLifted) return;

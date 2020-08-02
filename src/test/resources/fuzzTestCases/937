@@ -1,1 +1,1 @@
-main = head ( tail ( @ [ @ [ ]   ; this  ]   )   )   ;  
+main = @ [ 05l  ; @ [ ]   ]   ;  

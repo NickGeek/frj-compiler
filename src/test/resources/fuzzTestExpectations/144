@@ -1,61 +1,6 @@
-main = head(this);
+main = Ὼ;
 
-interface ˠେີ  {
-mut method @ꠈ꧰ Ñ();
+interface ᛰ़ꙸ  {
 
-imm method @શ ˑೋ᜔(read ៗో த);
-
-imm method @ῼँ ꫴ۪१ၧ();
-
-capsule method @ߌ ᤌ(imm ய ﹩ꢀ, imm ۦ ೞ, imm ၒ Ꞣ෬꧔￻, imm ኊꤪৗ ⵯ༿);
-}
-
-capability class Åો⃔ၗ  {
-imm method @ᚂ⁬༵ ⷆ(@ꦭႚ ⱉ, imm ไ಼ୂ໋ ꠸) =
-mut ண྆ ꙡ = tail(12.345947265625 ),
-2 ;
-}
-
-class ಀேේ  {
-
-}
-
-capability class ਲ਼  {
-imm ⅎ ṃ９;mut method @ำ᳤ מּﬞ︍ൗ() =
-tail(@[]);
-}
-
-capability class ᬠ᮲￻  {
-read method @ⳬ ໃ꯲꤇() =
-false ;
-}
-
-capability class ਸ྆ꥊ implements ℇ, ﭓ᭘  {
-imm ኍ ⲕ;
-imm ੜైࠗ ࢶ;
-imm ؋ ꫝ︅;
-imm ௐ9 ꡞ;read method @ꪽ꛱ ՙᷮ() =
-@ꘔ 䖓ഀॢ = 0.73046875 ,
-false ;
-
-imm method @ࢧ ￗ() =
-@["጑\uFC54𐀼"; this];
-
-imm method @మ ￎ(@ە ﹩, @ಐ്ั ᴆ֗) =
-true ;
-}
-
-interface Ω extends ꬠ, ⶤ  {
-
-}
-
-interface ব҇  {
-
-}
-
-class ᥘ︇‏ൊ⃓᳭꣬ꢀ⵿᭱  {
-@Ձྗॄ᳭ୖᰴ ਹၪ;
-imm ⴭ꤃ᮩ٣ એഁ੮ၤ;
-@ⶢ ︳ຼൣ;
 }
 

@@ -78,6 +78,16 @@ public interface FRJSimpleParserListener extends ParseTreeListener {
 	 */
 	void exitTypeName(FRJSimpleParser.TypeNameContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FRJSimpleParser#liftedTypeName}.
+	 * @param ctx the parse tree
+	 */
+	void enterLiftedTypeName(FRJSimpleParser.LiftedTypeNameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FRJSimpleParser#liftedTypeName}.
+	 * @param ctx the parse tree
+	 */
+	void exitLiftedTypeName(FRJSimpleParser.LiftedTypeNameContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FRJSimpleParser#methodHeader}.
 	 * @param ctx the parse tree
 	 */

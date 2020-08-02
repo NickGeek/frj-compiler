@@ -1,23 +1,20 @@
-main = @എౣ ำ = "\\𞥚",
-this;
+main = true ;
 
-capability class ᭈ implements õ​҃  {
-capsule method @ঋ ਠෲ(read ዕ ႎ۪) =
-25 ;
+interface ⶑ  {
+imm method mut ᳵ௪ୢ ᘄ();
 
-imm method imm ᱍૣ ཅ(imm க ᳶ) =
-W;
-
-imm method @Ὁௗ‎ৢ ς౯ࠧ(@ힱ༣ঃ ਜ਼᠔, @Ë ͳ๑െ෭, @բ ﬨ, imm ൖ ت) =
-@[];
-
-read method imm נ්ּ य़(imm 〇ꠦ಼3᱐ ஆుꪸ, capsule 〡᭲ၖ᥈⁯ॗ ৳꠆ꯩ) =
-0 .ౘ३ꪸ();
+imm method capsule ਲ਼꫁ᩘ ॐ᮪();
 }
 
-capability class ௐ࡛ implements ⁔࿆ܸ  {
-imm ᛈႊ ఐ꙯ो൨ᨚ;
-@ῇ º;mut method imm ᝥऻׄᝳ႕ᯩ୍ৌੁꦵౢ۴ ៗ(@ៗ ㆸ) =
-0 .@יִ༘();
+class 㮝  {
+
+}
+
+interface ຣ  {
+imm method imm ＿ Ὓ(@@@ᪧ ⶾ);
+}
+
+interface 뾅  {
+
 }
 

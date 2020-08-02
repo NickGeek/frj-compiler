@@ -1,27 +1,2 @@
-main = @[];
-
-interface ﾡ  {
-imm method @ܭ ㆫᢩ(mut ฿ 瘟);
-
-imm method @〦 ཐ೩۪྆ਾಂ(imm ஃ⃡ิ︄ ଢ଼);
-}
-
-class Ⳳ implements ნ, ഽ፞꤁  {
-read method @ႎ۹ꠣ ᬲ() =
-1 ;
-
-imm method capsule ﹩ؚૻၟ⵿ັ᪕ ഽ഼() =
-@[];
-
-imm method imm ᏽ 〇ൢ() =
-@[this; true ];
-}
-
-interface ງ extends ꬉྪً༵, Ωੑ  {
-
-}
-
-interface h extends ଘ, ೱᰧྔ, ᭅ, ˬ  {
-
-}
+main = "";
 

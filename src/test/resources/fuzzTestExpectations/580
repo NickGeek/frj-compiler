@@ -1,4 +1,20 @@
-main = @[tail(true ); capsule ະ ঢ᳣়ైꥍ්᥊઼ = imm ຜ᪓ೊ ஜ = tail(tail(head(false ).ꨝ३ = head(@[].ⷙ᪇()))),
-389 ,
-this];
+main = true ;
+
+capability class ລ߇ূ྄่  {
+imm method imm า ꤤ() =
+false ;
+}
+
+capability class ͱ implements Πി੨᱓១؜꠆꯱, ວ, פּ, ܐ௦, ந઼, ᢪ  {
+imm ⁔ොฺോේ ວாංුෞ;mut method mut ଳ ﬂ꣕ೈᝲൗꦂ(@סಁଁ ᩋ１) =
+@[];
+}
+
+interface ℛ  {
+
+}
+
+class ͼ  {
+
+}
 

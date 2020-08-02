@@ -1,15 +1,2 @@
-main = 58 .ꧣ઼྆ූౕ꙯;
-
-interface ጤ extends ᣚ᭘႗꤅, ቇ҆  {
-mut method imm ຈᳲ ๅ(imm ಹ ຯ, mut լ፟ ఊ);
-
-imm method @ၡ၁ ‿();
-}
-
-capability class ೞ implements ⴭେ, ષ్, ⅎ, _ೆ  {
-@ⵯܑ ⱄ;
-read אַ᥍܏ௌೆᩤൃᬷ 〳᷶;
-imm ꬉ ﮫ;
-@ౡ Ꚋ၄܏ୣ;
-}
+main = new ࢶૢാൊ();
 

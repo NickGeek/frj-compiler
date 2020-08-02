@@ -1,2 +1,36 @@
-main = @[this; ⁿ⁩௬౧];
+main = 0 ;
+
+class ශಂ  {
+@ˮ ર੦ۣ;
+}
+
+interface ﬨ꧐  {
+imm method @@@@ഽ໐꠆ ﹲ();
+
+imm method @ౠۡ໙ེ ߺ(imm ℂꩃ Îୋ, imm ⳳேୢ ﬣ꧓, mut ຊ੍᳭ ꫜꢁ);
+}
+
+interface ຊ extends Ⲽ, ﬗ  {
+
+}
+
+capability class Ἔ implements ⶲൊ  {
+mut method imm ⵯ࿆ Ⳳ(imm Ὑ ఘꙴ꪿᮳, read ຫୢ઼︤؃ ꪻ) =
+this;
+
+capsule method @@ꬌ൬༷ූ५྇ Ό⳰(imm ꣽಾၠ ꅓ, imm լ າ, @ౠ ￓᤵ) =
+ꭢोੁၢ.ຳ;
+
+mut method @@ૹ વ() =
+tail("׈𑶙\173");
+
+imm method read ՙࠢ ঢ়ే() =
+0.2 ;
+
+mut method @יִ ຍ࿆ූ２ࠬ(read ⶵੑۨ๘ܑ ናীꢽⷻ, mut 〸 ઽ) =
+0 ;
+
+imm method read Ὤ ഽే௫්൧(imm ⳓ ￋ) =
+false ;
+}
 

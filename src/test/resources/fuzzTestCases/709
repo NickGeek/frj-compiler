@@ -1,1 +1,1 @@
-interface ຍׁൗ extends גּ෩ , ף꫶ּ  { }  interface ർ extends ￃೀᝲ  { imm method @ ᮇै  ᠳਁᝲ ( )  ; }  class ៛ implements ܐ  { capsule Åඃ  ᚂ ;  method read ૐ  ഽ ( @ ϗ  ꫝ᷄  )  = "𞹝\b"  ;  imm method capsule ແ  鼣 ( )  = true  ;  method capsule ꡣ꘥ࠪ  ￍ⁬ ( @ ⁱ  ꫴ  )  = .0e2  ;  }  main = new יִ ( this  )    ;  
+main = this  ;  

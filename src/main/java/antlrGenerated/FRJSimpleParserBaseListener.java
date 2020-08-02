@@ -100,6 +100,18 @@ public class FRJSimpleParserBaseListener implements FRJSimpleParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterLiftedTypeName(FRJSimpleParser.LiftedTypeNameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLiftedTypeName(FRJSimpleParser.LiftedTypeNameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterMethodHeader(FRJSimpleParser.MethodHeaderContext ctx) { }
 	/**
 	 * {@inheritDoc}

@@ -1,2 +1,28 @@
-main = new ⷒ(100.0 , this, "");
+main = tail("");
+
+interface ⷝꪲௗ extends ල࡚ৗ  {
+
+}
+
+capability class ە  {
+@ꠗ ᲃႜ;
+imm Ꭱ ￡ۛ꙯꘢ਿ;imm method @@@ὑ ꓘ() =
+@[];
+
+imm method imm ₗੵꠋ઼ࠧ۫꣓ⷽ౩ ꧭ() =
+@[];
+
+imm method imm ⶳ ꪽ() =
+head("");
+}
+
+interface ꠸  {
+imm method @@Ὑ ⵯୣ᧖྆ꥇ਼ꪳ();
+
+capsule method @@ᜀ ᣚٰ࿆();
+}
+
+interface ঐࠩઁ̉  {
+
+}
 

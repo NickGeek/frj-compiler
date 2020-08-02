@@ -1,1 +1,1 @@
-main = this  ;  
+main = @ [ this  ; false  ]   ;  

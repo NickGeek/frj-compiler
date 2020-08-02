@@ -1,11 +1,27 @@
-main = @ݯౣ­ ՙ֓ = ൠೣꥍ᧒াꨳ⁩༡឵,
-this;
+main = this.ળꚞ;
 
-class ꜘ implements זּ, ꠸, ꗋ  {
+capability class ੜ್  {
+@ꤕ ﹏᳭;imm method mut ꠃ ૠ(@ߵ ꤖ) =
+206.125 ;
+
+capsule method mut ᰆ ਹੱ() =
+41.0 ;
+}
+
+interface ꦑెꩍ  {
 
 }
 
-capability class ቚ implements ਈ, ະ, ⶄᰲෳ  {
+interface ۺ extends ޱ༹, ଇྃꯥ, ຂꦹ, ၺ, ଫꢀ  {
+
+}
+
+capability class ﵺ  {
+@@@@@Ὃ ⴭ્꫁ٔேꦴై;imm method @î ቑ౯(imm µ ﬤ) =
+@[new আ(); 1.5 ];
+}
+
+class ծ  {
 
 }
 

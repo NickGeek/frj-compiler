@@ -9,9 +9,8 @@ import java.util.stream.Collectors;
 public class TypeError extends ParseCancellationException {
 	public TypeError(ProgramNode.Position pos, String msg) {
 		super(String.format(
-				"Type error at: Line %d, col %d\n\t%s",
-				pos.line,
-				pos.col,
+				"Type error at: %s\n\t%s",
+				pos.line >= 0 ? String.format("Line %d, col %d", pos.line, pos.col) : "???",
 				msg
 		));
 	}

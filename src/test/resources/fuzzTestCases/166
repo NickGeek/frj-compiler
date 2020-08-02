@@ -1,1 +1,1 @@
-interface キ extends ꬊ  { }  capability class ﷻ implements ࡢ8  { }  class ࠚ { @ ꤼ  ǔ ;  @ ꬪ  ᰘ਼ ;  capsule ꩺ࠘꧕꧓ಁۤ  ᝏෲ ;  ꢆ  ௹ࠢੇ ;  mut Ό܏ႚ  ꧤؐംၗ ;  @ ᰏ  ዀ৩ ;  G්  ꬡૼ ;  }  interface ࡓ { capsule method @ ਸ਼୧  ﮀഀ ( ኍ  ຣ  )  ; mut method ௹܏ꠋೃᮭॢঁܑ  ⴭᢩ ( ﬖ  ѡ۝  )  ; imm method @ ￓ  ꫴꪷ ( )  ; }  main = 0  ;  
+main = this  ;  

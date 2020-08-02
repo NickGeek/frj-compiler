@@ -1,2 +1,27 @@
-main = head(22 );
+main = tail("𑂾\045᣶");
+
+capability class ꨣ  {
+imm method @ዀ߮ꩼ꩔႗െ༾ ୡ(read Ϳ؜ ￏ, @@ங᭕ො ᮉ, @@@@ൡ қੇ, @ளൂ ਲ᳔਼ି) =
+0 ;
+
+read method imm ༀ ￦() =
+"";
+
+capsule method @ꡛֹ ꤖᰯ() =
+1 ;
+}
+
+capability class ࡣ  {
+
+}
+
+interface ਸ਼ം extends क़  {
+capsule method imm ܓ ৎಂ(@ᜏꨮꯦ꧴྄ᨛꩃോ Ή꠆, @@ꧺ ۿⷬ);
+
+capsule method imm ഋ 〴ੵࠬ(mut ᙶ ⶭ꯬ٙٗ܏);
+}
+
+interface ງ᱂ֿ  {
+read method @@ˉᮂ༹࡛ׅౣ ଡ଼߄꛱꫁༿(imm ዏ ꘒ‪);
+}
 

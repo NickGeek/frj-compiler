@@ -1,10 +1,14 @@
-main = 1.0 ;
+main = tail(head(1 ));
 
-interface ℨ゙ extends ῒ, ꢒ  {
+capability class ໆᯫ્  {
 
 }
 
-interface ࠉ extends ೲ, ꫳ۴ꥒౣ  {
+interface ᨓ੍ূ၂ෑⷼ extends ಽ  {
+
+}
+
+interface ﬨ  {
 
 }
 

@@ -1,1 +1,1 @@
-main = @ [ ""  ; @ [ ]   ]   ;  
+main = @ [ "\235\uuuuuuu60B6"  ; tail ( tail ( this  )   )   ]   ;  

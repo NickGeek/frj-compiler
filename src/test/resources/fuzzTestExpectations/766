@@ -1,2 +1,19 @@
-main = 500000.0 ;
+main = @[];
+
+capability class ￇ  {
+imm method capsule ਫ਼ னၢ੍ૌ() =
+tail(head(ࡦ));
+
+mut method imm ସ᠎ Ό(@Ὼ ゐ, imm Ὸꢀေ꫶ ᛕ) =
+"";
+}
+
+capability class ᾼ  {
+@@@ꩀꩼ ꫀꙸৈ;
+@@ၦ ﲆ;mut method imm ପ꛱߃ੂఀ೧ೖ ⶠ༵๎᜴() =
+tail(tail(@[])).ῥ;
+
+mut method @ꫪ ᨴ᪉ေ৪ᝳ(imm స ℇ, @@ఫ⃡ ᡨ, imm ৠ 殮ᨚ, @@@@＄ꫮꠧ ဏ) =
+@[];
+}
 

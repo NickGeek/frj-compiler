@@ -1,1 +1,1 @@
-main = @ [ @ [ ]   ; "\u9F2a"  ]   ;  
+main = head ( this  )   ;  

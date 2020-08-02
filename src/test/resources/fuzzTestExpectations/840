@@ -1,7 +1,2 @@
-main = "";
-
-capability class ⳳ implements གᯬ᳛  {
-mut ℤೣ ￖ;
-capsule ཌྷᨘ ᙻੵᜳ;
-}
-
+Well-Formedness error at: Line 1, col 305
+	Class and interface names must be unique.

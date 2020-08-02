@@ -1,24 +1,6 @@
-main = 6 ;
+main = tail(tail(true ).@າ());
 
-capability class ⶤ  {
+interface ªࠗ႘೬಼ extends ຫ൦, ꧏ᥌ொா᪅  {
 
-}
-
-interface ༀ᳭  {
-read method @ࠤৗෞ ਏෲ(imm Όꨯ Ὄ);
-}
-
-interface ￍິૣ extends థᮁ‮۟  {
-
-}
-
-interface ᝏ extends ቒ, ଭ  {
-
-}
-
-interface ͺ࡙  {
-mut method imm ℹ ℇ();
-
-imm method imm ꬂ ܨ(read ᝦ༹ ᳰୖૺ, @ꝲ ᲆ꧳);
 }
 

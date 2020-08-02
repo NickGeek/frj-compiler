@@ -74,7 +74,8 @@ public class ParserFuzzTests {
 		try {
 			new NoDuplicateNames().visit(programContext);
 		} catch (MalformedException e) {
-			assumeNoException(e);
+			assertEquals(e.getLocalizedMessage(), this.expected);
+			return;
 		}
 
 		var program = Program.fromCtx(programContext);

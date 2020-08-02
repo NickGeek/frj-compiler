@@ -1,13 +1,12 @@
-main = @[@ਫ਼ ᮔ = new ܓ(),
-tail(@[]); this].〴;
+main = @[@[this; ᤎ]; true ];
 
-interface ｯ่ો᧔༘ી  {
-read method @ᳵ⃘ ಳॉ(imm হ ၡൈં່ං, @ଳ ᡕ꣧ꦃୃ༾྄, imm ₖ௪ꠋ ௐ, @ꠊ ఽ);
+interface ヽ؜ extends ⁿ, Ʝࣘ, Ꙧௌ  {
+imm method @ⲅ໐ ꣻັ(@@ὅ יִ᷼, @ῲ൬ װ, @ၽ߲ࠦ҇ ﴴ, capsule ꟽ ڲᢅׇ);
 
-mut method @ܐೣೕ꧕ Ͷੁ⃛();
+read method @ᱳ ꥨ༹፝۝(@@@@ቌೊে ۦෳ, capsule ඕ ᮮ᠌);
 }
 
-interface ௐ߲᪰ extends Õ  {
-
+interface ˬ  {
+imm method capsule ૐ ഽꢁੑ(@@שׂ ᱚꦃ, imm ⵯ᷼ੑ ﴸ, @@ˮ ၵ);
 }
 

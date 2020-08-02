@@ -20,10 +20,10 @@ public interface TypingRule<T extends Expression> {
 
 	static Optional<String> getErrors(Program program) {
 		var errors = new ArrayList<TypeError>();
-		var rules = new TypingRules(program);
+//		var rules = new TypingRules(program);
 
 		// Is main okay?
-		var foo = rules.type(program.main);
+//		var foo = rules.type(program.main);
 
 		// (class) rule
 		// TODO

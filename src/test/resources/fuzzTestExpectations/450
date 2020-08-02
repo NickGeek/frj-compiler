@@ -1,8 +1,7 @@
-main = 3 ;
+main = @[new ᢈ؄୯(க, read ꣽ༾᪔⁫ ൎ = 1.0 ,
+this, "𑊈\udD5C\3᩽"); @[]];
 
-capability class ខ꯱ implements ຽ, ຣꧥ៝  {
-imm method @ຄ ⷍྎ᷾ื() =
-@[this; imm Ῑ ձླ = true ,
-@[]];
+interface य़ extends 〇ੑ  {
+
 }
 

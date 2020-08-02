@@ -1,14 +1,10 @@
-main = tail(@[]);
+main = this;
 
-interface ᰖ්⃕￺ေ extends ຄ  {
-
+interface ໆ extends ଳ, ૹ  {
+imm method @@ၮ Ｑ();
 }
 
-interface ꪻ  {
-imm method @বۣ ք(mut ኧׁ ۓ૾ஂॢ⁡ᜲ);
-
-mut method @⁔์ ｖ(@ထ ഈ፟);
-
-mut method @ᱺ Ꮛ();
+interface ൎ  {
+read method imm ℤೈ ՙઃೕ(capsule ண１ ꜜ಼ེ᠓);
 }
 

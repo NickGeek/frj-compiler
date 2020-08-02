@@ -1,17 +1,11 @@
-main = @হ ഏ = this,
-head(@ኋ ＿ૢ = 198 ,
-ᢂྃꠥ);
+main = 17822 ;
 
-class ⶊޫ  {
-
+capability class ꝉ implements ꞎ, ݩ, ə, ꬖા  {
+imm ஏ ເ;
+capsule ￏ ￌ;
 }
 
-capability class ꠅ  {
-imm ຈ ൡ⃮ꤧс;imm method @ꫂ ᰑྱྤ(read উ꫶ࠠ꯸ ഝ, mut ⷋୌᮧ ዪ, @〼 ⁿ, read 〤 ذ, @ਝ ၥ۶, @ㄇ לּ⃭, capsule ܐ᭖ ꠃ) =
-"\uu7b18𑑝";
-}
-
-interface ઽ  {
+capability class ℾ  {
 
 }
 

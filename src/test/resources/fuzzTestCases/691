@@ -1,1 +1,1 @@
-interface 參 { }  main = @ [ ]   ;  
+main = tail ( tail ( @ [ ]   )   )   ;  

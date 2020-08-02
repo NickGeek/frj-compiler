@@ -1,1 +1,1 @@
-main = new ⷒ ( 100f  , this  , ""  )    ;  
+interface ঐࠩઁ̉ { }  interface ꠸ { capsule method @ @ ᜀ    ᣚٰ࿆ ( )  ; method @ @ Ὑ    ⵯୣ᧖྆ꥇ਼ꪳ ( )  ; }  capability class ە { Ꭱ  ￡ۛ꙯꘢ਿ ;  @ ꠗ   ᲃႜ ;  imm method @ @ @ ὑ     ꓘ ( )  = @ [ ]   ;  method imm ₗੵꠋ઼ࠧ۫꣓ⷽ౩  ꧭ ( )  = @ [ ]   ;  method ⶳ  ꪽ ( )  = head ( ""  )   ;  }  interface ⷝꪲௗ extends ල࡚ৗ  { }  main = tail ( ""  )   ;  

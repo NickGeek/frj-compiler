@@ -27,6 +27,7 @@ public class GenerateFuzzTestingAnswers {
 				.forEach(file -> {
 					try {
 						var programContext = Parser.fromPath(file.toPath());
+						var outputPath = expectations.resolve(file.getName());
 						String expectation;
 
 						// The test case will be skipped if this well formedness check fails
@@ -35,11 +36,12 @@ public class GenerateFuzzTestingAnswers {
 							expectation = Program.fromCtx(programContext).toString();
 						} catch (MalformedException e) {
 							System.out.println("Skipping test: " + file);
+							Files.write(outputPath, e.getLocalizedMessage().getBytes());
 							return;
 						}
 
 						validateExpectation(file.getName(), expectation);
-						Files.write(expectations.resolve(file.getName()), expectation.getBytes());
+						Files.write(outputPath, expectation.getBytes());
 
 					} catch (IOException e) {
 						throw new RuntimeException(e);

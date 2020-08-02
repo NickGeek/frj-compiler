@@ -1,10 +1,12 @@
-main = this;
+main = head(@[]);
 
-interface ᢄ  {
-imm method @ꤡ⃡ છ();
+interface ᲆ꛱๒  {
+
 }
 
-capability class èᮀ implements ᦾ, ࠤ  {
+interface ꧽ extends ᤓ, ۻୋ⵿ୢ  {
+capsule method imm ൡ꯬ ଽᨚ();
 
+imm method @列় ۥ꤃ꦀ⁦ꠋ၄(@Ó ‿ꦁ);
 }
 

@@ -1,20 +1,2 @@
-main = 43 ;
-
-interface ௐ extends ଧࣜ  {
-
-}
-
-interface ᤁᨛᤵ extends Ὡ, ਲ਼, ꦜ᠓ᝳ  {
-mut method imm ৻়߲ึ ඇۚ(@ኳ ௹꤫, mut ⅶੇ෭ Ⳳꪷଃ);
-
-imm method capsule ࠤ⃑ᝲ ߛ(imm ၹ ኤ, @ૐ ꫀᢅ༙);
-}
-
-class Άॉ implements ꩺ२  {
-@Ꞵ ஆ;imm method imm ﹰ ﶒ(mut ೱ ᝪ੧ۨꦶ, capsule ၡ ⳳ۫ৈ) =
-7 .ଐ;
-
-mut method capsule ₹᪀꠆ ꢊ(@￡༷ ஃᜓ, read Ͷۗ1 Ιᭀ꛱ৄ, @ە಼ ℿ, @ꞔ᳠᪳ ৡ, imm ፃᢩ᱙ֻੈ ᯉꦂஂ੯ৈ᤻꯶ׅ꣔ꩌ) =
-10.0 ;
-}
+main = tail(this);
 

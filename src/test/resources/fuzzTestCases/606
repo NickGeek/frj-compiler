@@ -1,1 +1,1 @@
-main = ᢉ߀ৈꦼ༡  ;  
+interface ᾗ { }  main = head ( tail ( head ( true  )   )   )   ;  

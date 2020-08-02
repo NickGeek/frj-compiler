@@ -1,12 +1,3 @@
-main = ꪱ;
-
-interface ֏ extends Ⰵౣ  {
-
-}
-
-class ၦ᭳ implements ꪱ, ﹴູ  {
-@ச᱑ᜳೖ ﹩;
-@ﶽ᪱ Έ᪄ꤩ;capsule method @ຫ ⷆ⃡ஂൂ꩙ꠦ(imm ۻ꯭ೄ​़ ꭈᮭ, @ૐ ଲ࡙᥌) =
-1 ;
-}
+main = tail(mut ල ℙೆၴﬞ = @[tail("በ"); tail(@[tail(tail(﹩ೖ)); @[].ຍ])],
+@[ﭭ; Ⴧೕ]);
 

@@ -1,20 +1,6 @@
-main = head(this);
+main = 4.0E84 ;
 
-capability class ἳ  {
-imm ਲ୯ ୱ;
-}
+capability class ꩺꪷၠꦁୋ‮  {
 
-interface ਛୖؒு extends ⶹ  {
-
-}
-
-capability class ꓙ  {
-read ⷈ؜ ￎৌၞ︪;
-imm ଐ ᕚ;
-imm ኸꙶ็ కॢ;
-}
-
-interface ꭞ៥ࠦ extends ᳵৗ  {
-imm method @ꣽ ᱼၢꩻᨛ᷽݀ࠝ(@ᳬࠧୌ ༀ, capsule ꪺ⁣ ဦ);
 }
 

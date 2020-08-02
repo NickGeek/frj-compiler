@@ -1,6 +1,17 @@
-main = 26.0 ;
+main = this;
 
-capability class ᾯ implements ꪵ᳷  {
+interface ٯᮀ  {
+mut method @ª ଵิ();
+}
 
+class ຄᰳ  {
+capsule ٮ ཪ;imm method imm ਊ꯬ ⁱᳳ() =
+@[false ; new ଽ()];
+
+imm method @@@@@ጔꩌ᮳ ᮙܑ(@@@@@@฿ µᮀੈ꣣) =
+272736.0 ;
+
+imm method imm ৼၞ꫶᱑࡛ො װꪾ() =
+655360.0 ;
 }
 

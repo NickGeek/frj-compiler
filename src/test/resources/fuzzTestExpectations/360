@@ -1,35 +1,14 @@
-main = ﻣ;
+main = ૐ᱙᱗꙼;
 
-class ఊి  {
+interface ꣷ  {
+imm method @@@@@ಡ ꢂ();
+}
+
+interface ۼ extends ὡႍ, ட  {
 
 }
 
-capability class ྋং  {
-read method @⁔ ᚲ() =
-imm ꣻ ஐ꘡െ᳭ੵ = false ,
-"\'";
+interface ࠍ  {
 
-imm method @ⅉ᯦ොׄ ͼ〪꘧೦(imm ఏ९ ऽ, @ᮞ〪 ꬕ) =
-77040.0 ;
-
-imm method mut ಜ Ωꧥ() =
-false ;
-
-capsule method imm ᳮ ऽ() =
-0 .ଦၘ;
-}
-
-class ᪧ꤫ implements ͳ  {
-read method @ⳬ ﻆ઼() =
-false ;
-
-imm method capsule ￇॣၭૢ Ꙛ() =
-new דּ(new ቌ(0 ).ൎ);
-
-read method @ச ꣻ(@ᇮ꩕፝ য, imm ۿ઼ֿࠦᰦ ꚑ, @ՙ ꣽ, @ଋং Ʇ꠆ᝲܑঁ, @Ʇᝒ ࡉ, imm ବꤩꪷ E, @ਸ਼઼ ᢦ, mut יִၠ ﺖ౬, imm మ ໜֿ᳴, imm ຽ︅༷ ၜᯫꦼެၢ) =
-0.234375 ;
-
-capsule method mut ꩅ 䪷಼() =
-head(1 );
 }
 

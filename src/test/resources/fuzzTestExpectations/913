@@ -1,7 +1,12 @@
-main = @[];
+main = tail(false );
 
-capability class ㆺꨶ implements ៜ, ഽⷶ  {
-imm ۿၱ৪〪ꠦ ₪ႜ઼᷻;
-read ಸ ⳙັꥊ;
+interface ဉ extends ꓤ  {
+imm method imm ஒ Ͳ();
+
+read method @ꩉ ᝣ߭(@@ｂ꣒ ષ, imm ﷳ ⴭꢀ);
+
+imm method capsule ఽ ﹏ٍ⳱();
+
+imm method @@@@Ʇꠋ _();
 }
 

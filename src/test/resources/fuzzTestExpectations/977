@@ -1,2 +1,18 @@
-main = false ;
+main = @[155 ; true ];
+
+capability class ዃ߱᳒  {
+
+}
+
+capability class ഽޮᰩ៦ׁ implements ጓ, ໞᮀ  {
+imm method imm ݲෛᤰ ￡() =
+"";
+
+imm method read Ｃ ಞ꯴(imm ಀ ᶊ, @ᳱ૧ ₮) =
+false ;
+}
+
+interface എ extends Ι؃៥꛱༿ᤱ, า  {
+
+}
 

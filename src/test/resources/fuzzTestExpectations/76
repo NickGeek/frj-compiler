@@ -1,2 +1,16 @@
-main = @[];
+main = @[0 ; "ﷰ֑዁\46ͺ"];
+
+interface ລ  {
+read method imm ߴ꧳༵⃮᭫ ᱻ꙯();
+
+imm method imm ﮯ߳ ᢪ(@அ࡛￺᭭๗ ꦚ);
+
+imm method @ౠႌ꧐່ ஙୣ();
+
+imm method imm ૡ ℨ᧐(@؋ ꩆၫ, @@য ⶻࠪࠫꧥ);
+}
+
+capability class ꤋึ implements ῇ  {
+imm Ⰳോ़៩￹ั ᜨ᭄;
+}
 

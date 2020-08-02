@@ -1,16 +1,2 @@
-main = new ງ(imm ߺ᠐়⵿᭭ ߘ = ﮜ,
-@ￓ ι߉໑ಁ꙯ᜳಿॣ႘ = @[],
-tail(@[""; 38 ]), head(@[]), @b්ૄᮂ ఉ = false ,
-3.0 ).וั້⁫௬();
-
-class ჳ઼ᰩ઼ implements ⸯ  {
-
-}
-
-capability class ဿ implements கꪾ, ⷝꫂෲ, ਹ  {
-@褐 ၦ۵;
-@ⅎ ꩮࠗ;
-imm ¤‍ꧥ ߴֳ;imm method @ⳳ ė() =
-@[true ; this];
-}
+main = head(3 );
 

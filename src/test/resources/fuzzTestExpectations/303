@@ -1,2 +1,44 @@
-main = @[];
+main = new 〹ᨘ(Àꠋ);
+
+interface ࠨ extends ቔஂֿಂ਼  {
+imm method @Ⲡ꘧ Ϳ(imm ำ ಀ);
+}
+
+capability class Ὀ implements ﬡꢁ, ꩺ᭗, ꣽ  {
+
+}
+
+class ௹ implements ຝꨵ  {
+
+}
+
+capability class ℂૻ implements 〻  {
+imm ਲ מּﬞே;imm method capsule ಀ᳒ ଐ() =
+new ι꩓(112.0 , 2.0 );
+
+imm method read ﬗ ⶳ() =
+ᶆ๗᳒ೆੵྔ;
+
+imm method @ㅋᬽ᠋ີ સ(imm ℿ꫁ၪ ⶽ­ೌ, @Ⅷଃ ಽꫭൣ, imm ட̷ ᢓ, imm ꬔै᪲ᤦᮬ º) =
+tail(0.0 );
+
+imm method capsule ⵢ ⶸ(@@@ℼ ͳೣ) =
+@[229.97616577148438 ; 224.0 ].ഽ;
+
+mut method imm ꪹ ᢙੑ์ꣂꪰ(mut ኴ Ҡ, @ಐ꣣ ஏ) =
+head(10.5 );
+
+imm method imm ᤐௗ ぐꪰ⃔() =
+false ;
+}
+
+class ᠯ  {
+imm એᮂꩻেୁٔ ൖौຸ;
+mut ງ Ʇ༵᮶;
+imm ᦽᮀ ۦ᜴ை;imm method @ኼॎ ࡐ() =
+"";
+
+imm method imm ዊ ޱ꣕() =
+@[];
+}
 

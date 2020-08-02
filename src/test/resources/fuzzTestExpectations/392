@@ -1,8 +1,16 @@
-main = @Ʝ 폙ꨫ᮹ = imm 〸 ꤴ = @[],
-@[],
-@[ˬ; @[false ; @[]]];
+main = head(false );
 
-interface ভ  {
+capability class ᢪൣ꠆ implements ℨ, ਫ  {
 
+}
+
+capability class 〵 implements ஞಿ਼  {
+imm ۿ ਵౌ;mut method @@@ՙਂ ᝪ() =
+this.@ᨊ(1262 );
+}
+
+capability class 〆ꨲ implements ꪱᨗ  {
+imm method capsule ㅹ଼⁢ৣ꠆ၙ ˢೌ() =
+7.737125245533627E26 ;
 }
 

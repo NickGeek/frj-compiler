@@ -1,11 +1,6 @@
-main = true ;
+main = @[ມ; @[]];
 
-capability class ꠖঃ௦ூ implements ㆫொൣ, ஐ︄ꠋ  {
-imm method imm অ਼ ꬊ(imm Ͳ ቔ༿, mut ຯׄ Ⳬ, @ˮ ௐࠡ, capsule ᢃ ⁿ᠌ྂ) =
-100.0 .Ⴧ(0.203125 , new ⷉᝒۘ("\124", @[]), "\f");
-}
+interface ꨏ extends ⴤು  {
 
-capability class ꧺ implements ᢪ  {
-@〲 ࡕ;
 }
 

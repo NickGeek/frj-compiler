@@ -1,2 +1,27 @@
-main = @[];
+main = true ;
+
+interface ޱ  {
+
+}
+
+interface פּꙶੑި  {
+
+}
+
+interface ਸ extends ˬ  {
+read method @ⵑᢩு ﶞ(imm 々ꨯ᥇ ꭡઃ);
+}
+
+interface ᤊ extends ଞ࠙ଂై꤈꙯ॊ, K  {
+
+}
+
+capability class ऽ  {
+imm method @行 ꓛ(@셙 ꬔ) =
+"";
+}
+
+interface ຍ  {
+mut method imm Ω࿆ ꤱ(capsule Ԓੵ ૐꪰ);
+}
 

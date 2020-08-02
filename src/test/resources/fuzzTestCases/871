@@ -1,1 +1,1 @@
-interface ￠ { method @ ຝ၂  ᮎ ( )  ; method ر  ￡꙯ ( ֏  ญെ಼  )  ; imm method imm ቘ  ⶬ ( read ࠨਃုੑᩘ  ﻒ  , @ ྌँඃ  લ  , @ ቘ  ﱘ  )  ; mut method imm ຂ̛  ટ ( capsule わ  ᥰ૬ిꥒ  )  ; }  capability class ퟴ﻿ా implements ᾅ  { read ท  ዂ ;  imm ใ  ℚ͏ ;  }  class ኣꥏ { Ⴭ  ඓఁ ;  mut ᳮ  ៗૄ ;  method @ ߵ  ዀ ( )  = @ [ ]   ;  read method read ຖ  ಈ؜ ( @ ྌৣ  vႆ౮  )  = true  ;  }  main = this  ;  
+main = false  ;  

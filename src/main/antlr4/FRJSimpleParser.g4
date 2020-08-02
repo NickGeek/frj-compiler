@@ -22,7 +22,12 @@ fieldDeclaration : typeName Identifier SEMI;
 
 typeName
 	: MDF? Identifier
-	| AT Identifier
+	| liftedTypeName
+	;
+
+liftedTypeName
+	: AT Identifier
+	| AT liftedTypeName
 	;
 
 methodHeader : MDF? METHOD typeName Identifier LPAREN (methodDeclarationArgument (COMMA methodDeclarationArgument)*)? RPAREN;

@@ -1,27 +1,6 @@
-main = 0 ;
+main = "০\\";
 
-interface ੳ߅ extends ೠ७, ᙸ  {
-imm method capsule ⅅ઼ ﹳ(mut ὑ ｏ);
+interface ヾ  {
 
-mut method @ஃᤥૣꪷၪ ˮ(@_ ກ, imm ዅ ἵ, mut ჩ ਲ, @ꧽഁၠࠢ ⴴ, imm ퟍ්᷎ బ);
-}
-
-interface Όై༠ၬ  {
-imm method @ﬤ ၮꢀ(read ι ଌ, imm ኊൣᝒ⃡ࠦ ⁱૢಁۙ);
-
-mut method @Ή ఱ();
-
-imm method imm ῃ꩐ ᥨ();
-
-imm method @ኌ ອো(read ᚴ ऽັᬃ᱉, @⁔ ಲ᱘, @ℤ Թ);
-}
-
-class ຊ  {
-
-}
-
-capability class ΰﬞ᱁ implements ၮ  {
-imm ዐ ꘪ᱄ုꦽ્;read method imm ℾৣ4꤃ ࠨ(@ꫝ ꫳ, @ᪧైᜒ໗ ஃ) =
-0 ;
 }
 

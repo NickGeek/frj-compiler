@@ -1,6 +1,18 @@
-main = 2176.0 ;
+main = mut ￡ ᳪఁ = head(@[Infinity ; false ]),
+@[ྋ; new ʹ(ￓ්៝, @[])];
 
-interface ᢪ extends ᦓ  {
-capsule method @ⴻ ℕ();
+capability class এ༿ implements ꪶ  {
+capsule method imm ጆ ॼ() =
+true ;
+
+imm method imm ၒ ퟌ(imm ྋ ۿ҅, read ዅ β༷⳰) =
+ཆ.ⶢ౧();
+
+imm method read ힺ෫۫ ভ() =
+tail(840.0 );
+}
+
+interface ᜏ extends ਐ, ᨋ, ॐ៦, ឃ‎, ꬬ  {
+
 }
 

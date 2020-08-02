@@ -1,2 +1,22 @@
-main = ಆ;
+main = "";
+
+capability class ຍั  {
+
+}
+
+capability class ⷚ  {
+imm method @ⶦං ˬ෬⁠ા༘ෳᜳ꘦() =
+@@ⵯ ޱ­ৗꠋ = 1 ,
+@[];
+
+imm method @@ൖࠝ ៜ᪶⃡ೊ(@ꫨ ຢ, @@ළ ங྇, @ࡤ٩ऺ༤ ຢ, @ఉ ਖ਼ꯪৈ) =
+3.0 ;
+
+imm method mut ⴭ ႎ() =
+false ;
+}
+
+capability class ꪼെᨗ  {
+
+}
 

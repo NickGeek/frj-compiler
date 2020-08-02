@@ -1,2 +1,2 @@
-main = tail(tail(false ));
+main = this;
 

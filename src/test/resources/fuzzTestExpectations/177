@@ -1,17 +1,2 @@
-main = "\5\f";
-
-class ꪢ  {
-mut method read ゃ ꬒ() =
-@[];
-}
-
-capability class ה  {
-capsule ૹ ￜ;mut method imm ￎ ඞ⵿() =
-@[];
-}
-
-class Ꙛ  {
-@ᮯ だ;imm method @ጔ᥌२ ᚫ(@ঽᯮ Ꮑ) =
-9506.0 ;
-}
+main = head(this);
 

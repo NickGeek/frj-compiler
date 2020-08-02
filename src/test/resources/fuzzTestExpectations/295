@@ -1,6 +1,7 @@
-main = this;
+main = tail(this);
 
-interface ꫂ  {
-mut method imm ⁱ߯ థ();
+capability class ቨ០ੌ  {
+imm method imm ꬊົٰ ஃᰤୢ(@ῴి࠙ۜ᪼ౌ ꩅⷰᮀ︧, @@ꣽᤶ ᝨ) =
+tail(true ).ᳫᜲୖ­;
 }
 

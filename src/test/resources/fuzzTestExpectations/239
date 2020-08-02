@@ -1,19 +1,4 @@
-main = @[0.0 ; 111 ];
-
-interface ஐ⳯꧔ັ  {
-imm method @Ϳ ｘ();
-}
-
-capability class ｕꦂ  {
-
-}
-
-class ꩿ҇  {
-@ఎꦃ Ꮭົഁ;imm method @ਸ ໆ(@ইె ꫀ) =
-ⶬ්;
-}
-
-class ⁿꢹ  {
-
-}
+main = @ఓ ힴ꧗ = @[imm ຫꦽ ຈ༤୭゚᪖໌ = 2000.0 ,
+tail(900 ); this],
+@[tail(@[@["\bￚ"; 4.0E8 ]; new ب(@[0 ; @[false ; tail(this)]])]); @[]];
 

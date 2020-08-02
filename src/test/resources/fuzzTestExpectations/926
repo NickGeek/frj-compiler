@@ -1,2 +1,37 @@
-main = true ;
+main = tail(@[]);
+
+interface ઑ extends Ὄ  {
+imm method imm ໆ ௐ(@ﬁ ᳵٰ);
+
+imm method @@ⶏ _ූ(@Ⴀ ⳳ៎᳭);
+
+imm method @@@ⶠ מ᮶᳛ഀ(imm ＄ᝒ Ⳳ);
+
+imm method @ၶ ࢻ൨(imm ቔ༿᳑ᳳ ꩺᮡ߂๓);
+
+imm method imm מּၤ บျ۪(@@@क़ ඌ॒ꙶ, read ﬔ ᛱ);
+}
+
+interface ꦟꧥ  {
+imm method imm Aᨚ಼꩙ ￦ೖ();
+}
+
+interface ດ extends ᬋ, ۻ  {
+capsule method @@ዀꩃ් ᙻ￻(@ᩉ꥓፞ טּ, @@@〥ᯯ਼ ቘົ࿆େ);
+
+imm method @＿ ಯ(@ꬒ࡙۶ ཀ้᳷ꧥം);
+}
+
+capability class ℨ︅  {
+imm ቺ͙ ኴꪴ;imm method capsule ℨꩍ‍᭙ প() =
+ऽ᪻;
+}
+
+capability class ꣻ implements ຝ۹ౣั, ῲఀ᪂ॕ, ઽ, ஐ, ℙ៝  {
+
+}
+
+interface ຝ⃮ୂ extends ᦖ  {
+
+}
 

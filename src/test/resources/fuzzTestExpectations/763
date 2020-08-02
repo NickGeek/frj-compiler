@@ -1,17 +1,10 @@
-main = Εꫮꩌ;
+main = tail(this);
 
-capability class ᢍ⃓ implements 著ꪷᤱ, ၓੀැ  {
-mut method read º ﮱ() =
-head(this);
+interface м꘨ਂ಼۫  {
+imm method @@ꪱ܏ ຳ(imm ⷜ ਵ, imm ॐ ᵞܑ᥊);
 
-imm method @ಬ᧓ ኹೃ(@懫ֿ꧶ੑׇ ꠇ, imm ﹩꤁᪳ົ Ï) =
-tail(@[]);
+capsule method imm É ꩆ(@θ ˢ, @@ꪼࠞ３ ͷ᭘ׇ꧗);
 
-imm method @ใ ߊ(capsule ￗിീൢ Ⴭ꠆ൣఁ܏᠘) =
-"";
-}
-
-class ပ࿆ൗ implements ᏻ  {
-
+imm method imm ᝇ࡚ꠤ ꚍ(imm ಎ ࡖ);
 }
 

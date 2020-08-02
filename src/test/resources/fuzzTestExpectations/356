@@ -1,21 +1,19 @@
-main = new ꡳ᮹ೆ꯭꠆9();
+main = љ;
 
-capability class ག᭙ॅ︆  {
-capsule Ʞᳲ᳸ ອ;
+capability class ꤟ᳔  {
+imm method @ঢ়෭ ℕꚞె୩(@ৡ ꣽ, imm ﭩࠧୈۢ͂੨ ꭚ7, @@@ᬝ1‪࿆ ਲ, read סּ꩑ ᢁ, @@ᬥ ଐ۹ോ३ࠞ, imm ꪻัိ ˑ) =
+15 ;
+
+capsule method capsule _ ᚌֿ() =
+1 ;
+
+imm method capsule ₱ ᳵ(@ݖ ɳׂ, @@@@Ⳳ ਫ਼ౢ, @ꬤ゚ ᄃᜲ, @ऱ ꧪ૽) =
+tail(ⷌ);
 }
 
-interface Ճ  {
-imm method @ඐೂ ཙ(@ὒி ߵಁ);
-
-mut method @ᡊ ሒ꫁(imm Ⴧ ᨒ, @ૠ ᱹೕ꪿ޯࠩ);
-}
-
-interface ᛵ  {
-
-}
-
-capability class ௹ୌ҆ᬶ〬 implements ⷞ, ꭋೖꧥ, ＿߃ੂﬞॢ, ਫ਼, ꫀັ࿆ৢ  {
-capsule ㆱ ࡐ;
-@ज़༹ಿ ⶫୈৗ;
+class ᛒީෳ implements ቫ￹  {
+capsule $꣪ ℎׄൄ༹;imm method imm 畚ꠥ഻ ‿‬꤄⵿(@@@ຊၴֿ ჺ) =
+new ꧏ(@@ꦚⷯ ၚ = "",
+$);
 }
 

@@ -1,11 +1,15 @@
-main = @Ｂꯥ ன = @[],
-200000.0 ;
+main = head(true );
 
-interface ℓ extends 셨, ﹲ  {
-capsule method read ꫲ ᜨ꠆᠍ೢ(@க ণ);
+class ⶡ్፟ૢ implements ኽ, ኦ  {
+imm method imm ዹ ܐ() =
+ῇ;
 
-mut method imm ⱈ᭑় ཇ();
+imm method @؋ௗ µ༘() =
+@ਸ‮୪໌ૂ ൖູᮨ = true ,
+@[@[@[]; 5.01E-93 ]; ﹩];
 
-imm method imm ۿ ｉ(imm ῦ ꧏ্૩༹༥);
+capsule method @@ℕ ‿() =
+@@@@અັ ꗼ = head(@[]),
+@[];
 }
 

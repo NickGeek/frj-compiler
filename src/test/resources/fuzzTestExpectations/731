@@ -1,6 +1,14 @@
-main = head(ῂׇ);
+main = @[];
 
-interface ྊ extends ᛞే  {
+interface ΐ  {
+imm method imm ‿ ড়(imm Ꚏ ල, @@@ষ Ξ, @¢ Rਂ);
+}
 
+capability class ਢ༩ implements ࡇ൫, ᝩ, ⴧ່, ㄡ, ໃ  {
+
+}
+
+class ರၙ implements ঔ⳱ৄᰰ  {
+mut Ⳳ ൎ;
 }
 

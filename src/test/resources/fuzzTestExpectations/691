@@ -1,6 +1,2 @@
-main = @[];
-
-interface 參  {
-
-}
+main = tail(tail(@[]));
 

@@ -66,6 +66,13 @@ public class FRJSimpleParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> i
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitLiftedTypeName(FRJSimpleParser.LiftedTypeNameContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitMethodHeader(FRJSimpleParser.MethodHeaderContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}

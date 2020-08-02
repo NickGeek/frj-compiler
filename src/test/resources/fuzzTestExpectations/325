@@ -1,6 +1,30 @@
 main = @[];
 
-interface ࡪꤩ  {
-imm method mut ச Ͳ();
+capability class ＿് implements ⳬ, µ  {
+
+}
+
+class ⅎ  {
+mut ଡ଼ ᥔ୬ຈ༵;
+@ଽꪷ ᚘ­ඃ᭘䬈;imm method @$ిັׁ ᝤ(capsule ኵ ꤎ, @ͷ ᮮూੁᩰࣛୄ) =
+"𑇎\uuuuu0a80";
+
+imm method imm ຍ ᤘ­༿() =
+〹౦ꥊꪾꦸ;
+
+imm method imm ඉ e() =
+@[true ; ""];
+
+mut method capsule ￦ૌⷠ ⵗ() =
+@ൡ ꩰୋ = @[],
+@ꭠ්ં ဥື९⁨ွੵ܏ఁꩃ = new Ὃ(),
+new _();
+
+imm method @@న᠋ ꪶ়(imm ﬗ෫゙ ຕﬞⷺ) =
+this;
+
+imm method @@@ດ ៜ(imm ꧩ છꣃ) =
+"\uuuue384ಎ\uac67".ￛា = @[imm ൕ〮ୋ ஏ൦ = new ؋(),
+0.0 ; 4517.59375 ];
 }
 

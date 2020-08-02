@@ -1,11 +1,17 @@
-main = imm ᮮ‮ꨴ ֏ꠧ༹ꧥၞႍଁ = false ,
-new ਵ᪓ಾಂ().ኋ();
+main = ꩇੵ;
 
-capability class í᠙ோ implements Ὑ  {
-imm ຯ ໜ܏;
+capability class ޱ೯ൢׇ᷽  {
+imm ꠸ ℤ꯬ੈັ꘡;
+@@ꡑ ຖ;
+imm ℓ ឮ;
+@ਫ਼ ஐ૿;imm method @ட꪿ ହೕ᪆(@@@ச ࡡৃ) =
+tail(@[tail(1 ); ᱍ]);
+
+read method imm Ἀ ᾶ၄꯭᱁ꠣ෦() =
+false ;
 }
 
-interface ꪽ  {
-capsule method imm Ὴ᳹᧔ ૐ();
+interface ќ০  {
+imm method capsule װ ឝ(@ℤ⁩꣥‍ꥊ꫶⳱໘ ứ, imm ኸ࿆ ꥺ, read ໝ ꬢ, @@@ꬎ‮ ㄤ, imm ޱ಼ ਆ൪៦);
 }
 

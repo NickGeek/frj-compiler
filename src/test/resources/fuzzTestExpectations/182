@@ -1,22 +1,7 @@
-main = false ;
+main = "";
 
-class ℤ  {
-@㽗⁫ꙴ ষꪳᩕ;
-mut ೡ ῑ;
-@朗ଁୈꪰ ۯ᭔̴;
-imm ٯ ᳵ꙯ꢀܑ;
-@qꥊ๎ ᛶ;
-@ମั ວ;
-capsule ቘ ヿ;
-@ය ℑੵ᪺େ៣;read method @ਖ᳭௮ை ॐ() =
-head(tail(head(@ꞧ ഽ = true ,
-@ᢧꦂௗ ສೆ = 90.0 ,
-this)).ￂ);
-
-read method @ຈႆ ⴭੑ᳭() =
-tail(true );
-
-imm method read $​꛱ ۅ߉ൗ() =
-56028 ;
+capability class ꧯ implements 〲ܑ  {
+@@@@@〣 ໆી꯬;imm method @@ῥ ୱ(@ꫡ͎ෳ ຳ, @ऽ ձ꯱፟ꦁ, imm Ҋ ყᮡ, imm ౡ ۦׄ꧙, read ೡ ঐ) =
+head(head(head(head(@[]))));
 }
 

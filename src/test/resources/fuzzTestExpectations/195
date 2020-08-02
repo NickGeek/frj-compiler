@@ -1,10 +1,16 @@
-main = this;
+main = ᳶ;
 
-capability class ଳ implements ៛ూ, ꨀ  {
-capsule method imm ೞ ቛ꠆(imm ළ ﲈ, @ଓෞ ᜂື᷾) =
-@[true ; 0 ];
+interface ⁔  {
+mut method imm ℇੑࣝ ㇷ();
 
-imm method imm ⸯ ⷛ(@ᢪ᱁ႍۢ ⵅ, imm ഢੀ ະ, @〼֖ ໆ) =
-head(@[false ; 12 ].ꜗ᭙⵿);
+imm method @@@ⷝꪳ൧ ㅻ១ׇ(imm ¥‌ ଧෛ⵿ૻၘ, @@@@ꭣ໌़ ꬩ, mut ಈ â, imm ᭅ﻿ऺ ៜ, imm ၛ ຊᯪୌ);
+}
+
+interface ՙோృ extends ढ़꤆  {
+imm method @ଡূ 〹ႈఀ();
+}
+
+interface ൎ extends ヱ  {
+imm method mut ꠈۖ Ӡၢ();
 }
 

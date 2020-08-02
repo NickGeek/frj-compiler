@@ -1,12 +1,14 @@
-main = @ꣽ ℐ = imm ᤖ Ή = @[],
-0.5 ,
-@[];
+main = true ;
 
-interface יִ  {
-imm method read ပ௮ോ ႎꨱ();
+interface íܵᨛ extends ઐᳲ, ﷰ  {
+mut method @ⶬ ꫳૈং();
 }
 
-capability class ਸٜ꫁ୌ﻿ implements 〸  {
-imm ଲ ຜ;
+interface ￋ extends ͽ, ᚨ, ᰐॢ  {
+imm method @@@ᧁꠣ ୱ();
+
+imm method imm ᮯ ⷁ();
+
+imm method imm ῲ 〻ெᩩ6();
 }
 

@@ -1,2 +1,2 @@
-main = true ;
+main = head(tail(@[true ; new Ῡ()]));
 

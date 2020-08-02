@@ -1,1 +1,1 @@
-capability class ힸો { 〵  ꣵ᳑௩ಂ ;  mut method @ ꨀׇ  ཬ ( read ໄ័  ꩺ೧ෛ  )  = true  ;  capsule method imm ͷ  ⴭׅ ( @ ᨖ  ଌ  )  = @ [ 0x.bAP-8  ; this  ]   ;  }  class ኌ implements ୟ  { @ ٲ᥆ׇ︮  ୱ ;  װெ  ＄ ;  }  main = ﹏ꧥ  ;  
+interface ࡧ { read method @ ⴭ᳒ึ෮   ﶈ ( )  ; }  main = this  ;  

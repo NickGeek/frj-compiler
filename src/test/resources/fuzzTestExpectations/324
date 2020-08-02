@@ -1,28 +1,2 @@
-main = ꩣ;
-
-interface ⴒ꤂ྙ extends ଽ༙౭, ລ  {
-
-}
-
-interface ನ extends ங  {
-imm method @Ξ த();
-
-imm method imm ꞔ ຍၴ();
-
-imm method @ⅵ Ί();
-}
-
-capability class ਪ  {
-
-}
-
-interface ͼ extends ΐ, ຊ  {
-
-}
-
-interface ଢ଼ extends ꩨ, ₪, ⁿ, ᳫஂంꯤೆ3, ௐோꩃꥈ๗, ೡ, ᣍ᪶࠙྇߇ೃ￺, ઍ, ꣻ  {
-imm method @ࠚ ড়ੌ();
-
-imm method @ῢો ࠨ(imm ꮶ ഽ, @ໜ꠆ ᝈ);
-}
+main = this;
 

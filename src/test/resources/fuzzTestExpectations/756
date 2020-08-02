@@ -1,25 +1,22 @@
-main = false ;
+main = "".ଏ᪗;
 
-class භ  {
-imm method imm ￜ ز(capsule ۦ ਵ᪑) =
-@[@[]; tail(tail(tail(this)))];
+capability class ྉؔ implements ῑ್ꪰۧ  {
+@ൕ _;imm method @ஏ ᤝ᭬ၤ() =
+ꭚ;
 
-read method mut ೡᬃ็ ͷ() =
-true ;
+imm method imm ඔܑ લީ᳷(@@@ﷰꦁ ֏) =
+@[];
 
-imm method imm യܑ ꪣᜓঃꠣ() =
-this;
+imm method read ᏽ Ⴇ⵿() =
+new ꨥ();
 
-imm method imm ળᜳ ໄ᳐() =
-0.4375 .એ;
-}
+imm method @@@@ՙ Ό() =
+@[];
 
-class ٮ  {
-capsule ⷒ ଲᢩ;
-imm ⷝ Ⴧ;
-}
+imm method imm ၦଂ ﹍(@@@௹ި ಜ࠭ꚞ) =
+@[];
 
-interface ˮ  {
-
+imm method @ᜦ ֏() =
+tail(tail(this));
 }
 

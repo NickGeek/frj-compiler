@@ -1,28 +1,10 @@
-main = tail(head(new ꧏ២()));
+main = @[];
 
-capability class ࠨ  {
-imm method @ᚅ Ⱕꪲ() =
-tail(this);
+interface ￏꠋ  {
+imm method @ძ ຂ();
 
-capsule method capsule Ω ￜ() =
-0.0 ;
-}
+imm method @@ౙ ꘪۢ(@ࡤ Ἶ, @@ব⃕ੋॣি 〴);
 
-capability class ꠸  {
-imm ዀ ⴛ;
-}
-
-interface ꭿֿ‏ೖ  {
-imm method read ਘେܳ ꬶ੨(@ਫ਼ֿ ኵ܏ੁ);
-
-imm method imm ਫ਼ ਵ࡛();
-
-imm method imm ꭄ ﺔꘜᰶ፟ꧥ⃡();
-}
-
-capability class ኊ  {
-imm method imm ὁ꧘፝ᨛ ኀ() =
-new ᥛ(ᮏ, head(new կ()), 2 .கܲ᪘(), head(@ແ Ⴖ = 1 ,
-tail(187.0 ))).ዮ;
+imm method @க ऽ(read ⁀ ꣽꪾ);
 }
 

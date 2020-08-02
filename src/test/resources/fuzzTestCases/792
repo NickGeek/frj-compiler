@@ -1,1 +1,1 @@
-interface ྊ { mut method @ ڞ  ᄠᢅ᳝᭕ೂࠩ ( )  ; method @ ￋ⳰໐༹᠍์⃡  ୡ᱆ோᢩ᷼ ( @ ⶦ  襤  , ⵯ  ῄ  )  ; read method @ ⶰ਼ࣺ  ˮి ( )  ; }  main = @ [ ]   ;  
+interface ੴූ { mut method @ ꔇ   እ ( @ ¥⁠៝   ਏᝒ  )  ; method @ @ @ ᛯ᳑     ⶭ ( @ @ Ðꫵ    ⳳ்꙽  , ꥶ഻  ㇴ  , imm ꢳඃ  ꫝ‬  )  ; method imm ൎ  ۮ ( @ @ ࠚ    ॐ  , ዀ᷽ۭᨘ  ਗ਼ꠂꢀฺ  )  ; }  interface ற extends ꬦ , ᣴ൮  { }  main = head ( true  )   ;  

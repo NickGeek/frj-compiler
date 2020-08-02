@@ -1,6 +1,26 @@
-main = 50000.0 ;
+main = 0 ;
 
-interface פּ  {
+interface ෂ  {
+imm method @@@דꧥ ᥱ(@@ﰰᜲ ᏺ૦ꯤ᠌൮ੇꠧ⃪);
+
+read method @彩᱁ৄ ᥟ(@ຂꚞ ⅇ);
+}
+
+capability class ൎᬻ implements ˋఃꩼ௩, Ῐ  {
+@ໂ Ⅸ;
+}
+
+interface ⴜ extends ກⷧ, Ꙏ  {
+imm method @@@ৡ ᳶ෭ꤪౖ(imm ၚᨚ ι);
+
+imm method imm ߺ৫︍᳑ົ 〩‫ঃ໐(imm ⶨຶ ර);
+
+capsule method imm ᝤ಼ Ά();
+
+imm method imm ᦺﾇৗ๘ Ⴭ(imm ߵ ㆷ);
+}
+
+capability class ㆮ implements ꪵꠋ  {
 
 }
 

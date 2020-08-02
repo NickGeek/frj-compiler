@@ -1,58 +1,27 @@
-main = @[];
+main = new ⷄꠋ؜༷();
 
-class ˆࠗ  {
-imm 땴 ᡲஂ;
-@ௐ᧒ òᯱ್;imm method @Ό ᠦᨙ(@ὒ ＿꙼ᨚꥊ, mut ⸯੁׇ ጝ᭲ၣੁ) =
-new ຄ൫ூଃׁ();
-
-mut method @ⷔ၃ ৠꠥꫫູ() =
-@ຽঃꠋ᠍ᤤ߭ᬄ ၐੇ = @[],
-"⶷";
-
-capsule method imm Ͷ9 ਫ() =
-49 ;
-
-read method @ᠳ ኵৣ꯭ᳳ(@ਸꤨ᭐ׂ३ꣁ ࡓ, @ঔꢁׇ ఽ࠭େ) =
-head(tail(@[@[tail(@⁀ ᾟ = this,
-1 ).ຊ = false .@Ϳ૫(@[], this, "", @[], imm Ὶেೖ ၷׁ꪿ = @[@[@[]; @[head(head(tail(@[]))); @૱ ﹏ = head(tail(ㄪූ)),
-0.5 ]]; 0.308 ],
-@[]); mut ͽౖؗၱ ῄ = "\f",
-@[imm ꟷ ໝ = head(this),
-head(true ); head(false )]]; @ఽ Ⰵ༦ၫ = tail(false ),
-tail(imm ৎ ኔ᧓ = 888.0 ,
-head(@[]))]));
-}
-
-interface ಐ႔  {
+interface ᜎ࿆ั extends ミ⁬ೢ਼, ꣽ  {
 
 }
 
-interface সೌິ᠋ׂۢꪰૈ  {
-imm method imm ױꠂು ጔ(@ꬔ ଶ);
-}
-
-interface ኖ࡚  {
-imm method mut V θ҅();
-}
-
-interface ౘ extends 攔ை  {
+interface ⲁ  {
 
 }
 
-capability class ￍ්ૻ༤ implements ଲᢆ, ଚ, ꚕ, ֏  {
-imm method read ⲋ ៛ၠ১ۧ() =
-"";
+interface ತ  {
+capsule method @@ᳮ﻿ᝳ ༀೢ፞(@Ὑ꯭᳠ ⶨ￹⁩);
+
+imm method @@@க ۼ();
 }
 
-interface ﬧૌꩃు extends ྈ  {
-
+capability class ລ implements ۺౖ, ߴ꘠๋ꧥ  {
+imm ꪱ ꭞಂິ꤁;
+imm ࢻᳳ ꓩ;
+imm ࢺ7ోꢁ ቊ꥓;mut method imm ቔ ꫂ⁫(mut ꠀாၠ০ ꤰ) =
+@[400 ; this];
 }
 
-interface ῼ  {
-
-}
-
-interface ⱏ extends ૡ゚゙໊, ῶ  {
+interface ℋ३ extends ꯟૉᤱ್ﬞ  {
 
 }
 

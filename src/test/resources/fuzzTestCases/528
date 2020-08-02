@@ -1,1 +1,1 @@
-capability class ￦⳱ { method @ ಀ҅ࠖੋං  ⶹ ( )  = 0d  ;  }  capability class ﹍ࠦೇ⁯ implements ᱧ﻿ׇ߰܏ௗ , ⷑ , 〹ꣀᰲ৮ٰ , ە , ᥨ  { capsule method ι  ᝐි ( )  = tail ( this  )   ;  imm method @ ꢎ  ண ( @ ቖꧥ  ꢏ  )  = 0__7  ;  }  capability class មᝒ { @ Ⰸ  ￦ ;  imm ᎄ  ກަ ;  @ ຄ  ଵ ;  }  interface ல᮫ৌ extends Ì  { method ஜ  າ‭ ( )  ; }  main = @ ꨨ  ﹩ = this  , લꯣ    ;  
+main = head ( tail ( tail ( true  )   )   . ዀ   )   ;  

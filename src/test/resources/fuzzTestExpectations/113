@@ -1,6 +1,10 @@
-main = @[];
+main = @[ՙ; head(ˮெૈ﻿៝)].ຟ();
 
-interface ⳳ  {
+class ª implements ℇ  {
+@I ᝊഁ;capsule method @ⁱ ꪱ() =
+@[];
 
+capsule method imm Ὕ᳭ ൎ() =
+@[false ; true ].ॻ();
 }
 

@@ -1,14 +1,6 @@
-main = @[];
+main = new ﬄ();
 
-class ؋߫  {
-@ஐ᷽ ᚧ﻿ஂ;mut method imm ܥ ઽຶੵ႔໌︌᪂ᳲ(imm ￥ ꪺ, @ৠ ຯ) =
-"";
-
-mut method @టୈ҇ ܐ଼() =
-0 ;
-}
-
-capability class ヿ  {
+interface ￚೈഃ extends Ύ, ૠ्  {
 
 }
 

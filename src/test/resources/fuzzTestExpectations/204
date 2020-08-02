@@ -1,23 +1,19 @@
-main = true ;
+main = 11 ;
 
-capability class ℂ  {
-capsule method imm ﾺ៝ ಽꤧ્() =
-new ꧻ๐ႋᬶ();
+capability class ￠ implements ℤ৫  {
+capsule method @@@Ꞣ Ωેൗ() =
+this.@ⷔ໖ൗ();
 }
 
-interface ℇ  {
+class ঀ  {
+imm method @ꩺ ꊗঁ() =
+136 ;
 
+imm method @@@@ࠈ ᢪ(imm מ়ּ ୱ) =
+@[];
 }
 
-class ऽ  {
-@ꣽ מּ;mut method @Ⴧ ၦ᪼(imm Ό ℌ༵ܶ⳰๖ᬼ༷ᬁဴۚࠦ, @ˡۧ߉ אַ3ॢ, @〸 Ἓັᜳ) =
-@[@[@["꬗".ວꪾ = 87.0 ; Infinity ]; 3 ]; ℕ];
+class æꥍ implements ঽ, ⴘൢꢁ  {
 
-imm method imm ဇීႋᜲ Ͷ(mut ቝ շ) =
-this;
-
-imm method imm ௹ா꫶ ꩋ() =
-బ؄२.@แꪰ7ົ౬ಾ(tail(42.4 ), @[false ; @[0.04 ; imm ᨑ⃧７ ﮁั = "",
-""]], @[new ﹲ(); @[@[]; true ]], æ);
 }
 

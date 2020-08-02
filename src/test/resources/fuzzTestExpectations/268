@@ -1,13 +1,2 @@
-main = @[];
-
-capability class ೠ഼෯᩠꫶ࠦ⁫ᤫ⵿᷊ implements ଢ଼­, ဍ, ꩺဴ꧷ꫵ꫁  {
-@ଜ ᜐ;
-mut ꤾⷾ ຂ;
-@য়ൣ Ʇꪾ;
-capsule ഐ ಝ;imm method imm শ ㇶ() =
-ᥲ;
-
-imm method @ࠚॣ ꜙ(imm സႇׁૄা ⱶ) =
-tail("");
-}
+main = @[3.136906674044928E15 ; new ኢ(@[]).ᏹ];
 

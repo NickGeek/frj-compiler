@@ -1,24 +1,30 @@
-main = ඹ;
+main = tail(this);
 
-interface ቘ๙ extends ꧬ  {
-imm method imm ꬎ᪂ ዀ೧(imm ퟩ ዑ᱔ၠ﻿, @Ί ᠳ, read ລ઼ﬞᝒؒ ਵ);
-
-capsule method @ዣ ௹();
+interface ಊ්ޮ໕  {
+mut method @@@@ᧀꙶꩃ߱ၘ വ(@@ℕ ຄ, @ꬿ ޱ᠖, @@@ਸ ᛰ, imm Ｑ ۿେ);
 }
 
-interface ᜤ extends ᾑ, ລ༹  {
+class ℹ௧్  {
+imm סּٰูꩌ႖ ৠ;read method read ࠨ ஜ᠐⃡() =
+55 ;
 
+imm method capsule ºൗ ધර(@ﬓ၉ ૹ, read ౘ଼ ꬭੵ) =
+55037.75 ;
+
+mut method imm ஞ ຽ() =
+this;
+
+imm method read சੇׂੋ યꦹ᷷ੇ᪕(imm ຍꩍ୨৮ ជ, imm ำ ਢׂܼᩘ௫, imm ᲆ ऽ) =
+"\uuu3e3E";
 }
 
-interface ਈ extends Ή१᱒, ଵ, ﹍­᠍  {
-imm method imm 〴ੵ܏ ٹᨚ(imm ꬎ ײ);
+interface ῃ꧴ extends Ｅ, ख़  {
+imm method @@@Ꙟ ଶெୖᤲ(@ﹴ ﬗൈࠖ);
+
+imm method imm ਘ ℌ();
 }
 
-interface ਨꪰᩚ extends ະ, Ⳬ‎‭, ཇᨘ  {
-read method mut ￓ ዄ(@ቓ ᮓ);
-}
-
-interface ଽ  {
+interface ⳬ extends ຽ  {
 
 }
 

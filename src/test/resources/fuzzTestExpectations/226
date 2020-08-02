@@ -1,7 +1,8 @@
-main = @[""; 0.1201171875 ];
+main = 175 ;
 
-capability class ݖ implements ஐ  {
-imm ߏ ⴭ;
-@ᱠ゚ᷪꦿ ꫀႃ᠎⃡ႉ;
+interface ի extends ഊ, ꪼ  {
+imm method @ꬤ៝ံ ꬅ();
+
+imm method @﹩ஂ ꣶ();
 }
 

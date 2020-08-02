@@ -1,53 +1,7 @@
-main = head(true );
+main = 120.0 ;
 
-capability class ῶ implements ⷂ៝  {
-mut method mut ꬭ ᭋ᳥(read Ὃᬂ ກ, imm Η ᜄ) =
-@ೞ༿ ῳ۰ = 0.0 ,
-14 ;
-}
-
-class ᲆ implements ߤූൗၗ  {
-
-}
-
-interface Ⴧ extends Ὕ, Ⳬֻ༹, ࠤ  {
-mut method @ল ແ();
-
-imm method imm ঽ ૱(imm ￜ ᝂ૦);
-
-mut method imm ச ︴(@ၔ ꤠઃ);
-
-imm method capsule ꬊ୩ ꡦ(imm ᨍ ຽꠤൣೣ);
-
-imm method read ଶ᪃ ꫂା(imm ະ ᝢᰧ꤁);
-
-read method @ￜ ᦈ(@Ϳ๗ ୠෙ, imm ਭ ዄ);
-
-imm method @ೡ൨‏༢ꯤ ຍ(imm ੲোྭ รׅ);
-
-imm method @ਗ਼ྀ᳑ ႎ(imm ⶉ ⅎ, imm ⴭ︉ែ ੴꠂ, @ஸ߃̡ៈ ℽୗ, capsule ܐ୩ ྉ, imm ᯛᢩັׇ੮ ͷ, @ꟼ҆ ៗᯮ༿, imm ℕ ৲ᤡ);
-}
-
-class ᦝ5１ implements נּᬸ᱆, ₓᤷ, ퟅ  {
-imm Ф꛰ ῐ;
-@ᏸ ൔૣෳ໓ⷷ;
-imm డ ︳;imm method imm ℱ 줕ႅੋັோઃ໕ઁ() =
+capability class ꩲꫵ્ implements ܐ꤄᮳଼  {
+imm method imm ᭆ ச(@@ⳮၠၞ ῃൈꩍ, capsule ල４ ꫀ១ூଃે) =
 this;
-}
-
-interface ՙ  {
-imm method mut ퟤ ꣻ᱈();
-}
-
-class Ι꤄  {
-@ΰ Ⳮ;imm method imm ꜙ c() =
-this;
-
-capsule method @ⶬ૮ მ(@ꬨ ቋ๙, @ꚛൈ ἲ, imm ₴ ࡢ) =
-@[head(tail(6.359375 )); head("")];
-}
-
-class ⶼ  {
-
 }
 

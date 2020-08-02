@@ -1,1 +1,1 @@
-main = head ( this  )   ;  
+main = this  ;  

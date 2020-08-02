@@ -1,15 +1,19 @@
 package parser;
 
 import antlrGenerated.FRJSimpleParser;
+import aux.Aux;
 import lombok.AllArgsConstructor;
 import lombok.ToString;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.ParseTree;
+import typing.TypeError;
 
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public interface ProgramNode extends Visitable {
+public interface ProgramNode extends Walkable {
 	Position pos();
 
 	@AllArgsConstructor
@@ -32,7 +36,7 @@ public interface ProgramNode extends Visitable {
 		public final String name;
 		public final String[] impl;
 		public final String[] extend;
-		public final Map<String, BindingDeclaration> fields;
+		public final SortedMap<String, BindingDeclaration> fields;
 		public final Map<String, Method> methods;
 
 		public static ClassDeclaration ctxToClassDeclaration(FRJSimpleParser.ClassDeclarationContext ctx) {
@@ -55,12 +59,19 @@ public interface ProgramNode extends Visitable {
 			}
 
 			var fields = ctx.fieldDeclaration().stream()
+					.sequential()
 					.map(fieldCtx -> new ProgramNode.BindingDeclaration(
 							new Position(fieldCtx.start),
 							Type.typeNameCtxToType(fieldCtx.typeName()),
 							fieldCtx.Identifier().getText()
 					))
-					.collect(Collectors.toMap(f -> f.name, f -> f));
+					.collect(Collector.of(
+							TreeMap<String, BindingDeclaration>::new,
+							(fieldMap, field) -> fieldMap.put(field.name, field),
+							(fieldMap1, fieldMap2) -> {
+								throw new UnsupportedOperationException("Can't be parallel");
+							}
+					));
 
 			Map<String, Method> methods;
 			if (isInterface) {
@@ -126,7 +137,7 @@ public interface ProgramNode extends Visitable {
 		public List<Expression> children() {
 			return this.methods.values()
 					.stream()
-					.map(Visitable::children)
+					.map(Walkable::children)
 					.flatMap(List::stream)
 					.collect(Collectors.toList());
 		}
@@ -250,16 +261,73 @@ public interface ProgramNode extends Visitable {
 
 	@AllArgsConstructor
 	class Type implements ProgramNode {
-		private final Position pos;
+		public static final Type ANY = new Any();
+
+		protected final Position pos;
 		public final Modifier mdf;
-		public final boolean isLifted;
 		public final String name;
 
 		public static Type typeNameCtxToType(FRJSimpleParser.TypeNameContext ctx) {
 			var mdf = Modifier.mdfTerminalToModifier(ctx.MDF());
-			var isLifted = ctx.AT() != null;
 
-			return new Type(new Position(ctx.start), mdf, isLifted, ctx.Identifier().getText());
+			if (ctx.liftedTypeName() != null) {
+				return LiftedType.liftedTypeNameCtxToLiftedType(ctx.liftedTypeName());
+			}
+			return new Type(new Position(ctx.start), mdf, ctx.Identifier().getText());
+		}
+
+		public Type compose(Modifier b) {
+			if (this.mdf == b) return this;
+
+			if (b == Modifier.IMM) return this.withMdf(Modifier.IMM);
+			if (b == Modifier.MUT) return this;
+			if (b == Modifier.CAPSULE) return this;
+			if (this.mdf == Modifier.MUT && b == Modifier.READ) return this.withMdf(Modifier.READ);
+			if (this.mdf == Modifier.IMM && b == Modifier.READ) return this.withMdf(Modifier.READ);
+
+			throw new TypeError(
+					new ProgramNode.Position(-1, -1),
+					String.format("Cannot compose %s and %s", this, b)
+			);
+		}
+
+		public Type withMdf(Modifier mdf) {
+			return new Type(this.pos, mdf, this.name);
+		}
+
+		/**
+		 * Ensure that T' is valid for T (implementing the (sub) rule).
+		 */
+		public boolean okayWithSub(Program program, Type tPrime) {
+			// T' = T
+			if (this.equals(tPrime)) return true;
+
+			// For @T (and @@T, etc) we want to just get the T value and the order to ensure that it matches
+			var expectedPlain = this.name.replaceAll("@", "");
+			var expectedOrder = this.name.length() - expectedPlain.length();
+
+			var tPrimePlain = tPrime.name.replaceAll("@", "");
+			var tPrimeOrder = tPrime.name.length() - tPrimePlain.length();
+
+			// Check the modifier subtyping rules (T'.mdf <= T.mdf)
+			boolean isMdfSubtype = Modifier.canInto(tPrime.mdf, this.mdf);
+
+			// The orders must be equal
+			boolean sameOrder = tPrimeOrder == expectedOrder;
+
+			// is T' <= T?
+			var tPrimeDec = program.classDeclarations.get(tPrimePlain);
+			if (tPrimeDec == null) {
+				throw new TypeError(
+						tPrime.pos(),
+						String.format("'%s' does not exist or is not a class.", tPrime)
+				);
+			}
+
+			boolean isSubtype = Stream.concat(Arrays.stream(tPrimeDec.impl), Arrays.stream(tPrimeDec.extend))
+					.anyMatch(expectedPlain::equals);
+
+			return (tPrimePlain.equals(expectedPlain) || isSubtype) && isMdfSubtype && sameOrder;
 		}
 
 		@Override
@@ -269,15 +337,7 @@ public interface ProgramNode extends Visitable {
 
 		@Override
 		public String toString() {
-			var source = new StringBuilder();
-			if (this.isLifted) {
-				source.append("@");
-			} else {
-				source.append(this.mdf.toString().toLowerCase()).append(' ');
-			}
-			source.append(this.name);
-
-			return source.toString();
+			return this.mdf.toString().toLowerCase() + ' ' + this.name;
 		}
 
 		@Override
@@ -285,9 +345,61 @@ public interface ProgramNode extends Visitable {
 			if (this == o) return true;
 			if (o == null || getClass() != o.getClass()) return false;
 			Type type = (Type) o;
-			return isLifted == type.isLifted &&
-					mdf == type.mdf &&
+			return  mdf == type.mdf &&
 					name.equals(type.name);
+		}
+
+		private static class Any extends Type {
+			private Any() {
+				super(new Position(-1, -1), Modifier.IMM, "//Any//");
+			}
+
+			@SuppressWarnings("EqualsWhichDoesntCheckParameterClass")
+			@Override
+			public boolean equals(Object o) {
+				return true;
+			}
+		}
+	}
+
+	class LiftedType extends Type implements ProgramNode {
+		public static final Type ANY = new LiftedType.Any();
+
+		public final Type innerType;
+
+		public static Type liftedTypeNameCtxToLiftedType(FRJSimpleParser.LiftedTypeNameContext ctx) {
+			var pos = new Position(ctx.start);
+
+			final Type innerType;
+			if (ctx.liftedTypeName() != null) {
+				innerType = liftedTypeNameCtxToLiftedType(ctx.liftedTypeName());
+			} else {
+				innerType = new Type(pos, Modifier.IMM, ctx.Identifier().getText());
+			}
+
+			return new LiftedType(pos, innerType);
+		}
+
+		public LiftedType(Position pos, Type innerType) {
+			super(pos, Modifier.IMM, '@' + innerType.name);
+			this.innerType = innerType;
+		}
+
+		@Override
+		public String toString() {
+			return this.name;
+		}
+
+		private static class Any extends LiftedType {
+			private Any() {
+				super(new Position(-1, -1), Type.ANY);
+			}
+
+			@Override
+			public boolean equals(Object o) {
+				if (this == o) return true;
+				return o != null && getClass() == o.getClass();
+			}
 		}
 	}
 }

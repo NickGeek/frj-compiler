@@ -1,15 +1,44 @@
-main = Infinity ;
+main = ⶮ꧕ੋ႖;
 
-capability class ඍ᜔꫁ꦃ implements Ⳬ꣑ꦀ, ي, ⅎ, Ŝ꩓, Ⴭ  {
-imm Ͷ ৼ౫ॖූ;
-read ㄣ༡ෙ࿆᮱ ꬆ;
-imm ᝌ ྊ႓;
-@Ά ۿᢩᩛ᥈;
-imm ၸ່ ˮ᮸;
-@Ὑ প;
+interface ળ  {
+capsule method @ທၣꦸ۫ ⳳ(imm าௗ ਹ);
 }
 
-interface ゟ  {
+interface ঽ  {
 
+}
+
+capability class ﶂౢ implements ગ؀, ਯ߫܏ﬞ᱔, ౡ؜഼﻿, ⸯ꧷, ᤑᬻ  {
+imm ಉ ꫣ​ୣ;imm method imm _ၖெ3 ءൣ() =
+new ＿ை(tail(this), "\26".ಈ᩻ꪾఀ().@ࡎ().Ῑ, @[], new ⁱ⵿(), @[], new ౚ(@@Ἐಂ ꣽັៈׅ = this,
+ῴ, false , "\u5Aa1⶿\13\f", head(0.4 ), ヾ۪), false , head(mut ܐ᮪ ⴖ〫؁ਁ = head(ℕᮁ),
+1 ), true , "\"\n", true );
+
+capsule method imm ꚣ ￓꩍ() =
+1 ;
+
+mut method read ꜻ ໆ() =
+true ;
+
+imm method read ⶦꯣ ၯ(@〇ާׂ࡚ 〦ෞ້) =
+23.0 ;
+
+imm method @@@@ဿ០༷ே ଟੇ() =
+0 ;
+
+capsule method imm ઐാ⃬꛰ ହ(capsule ￦ꠧ ၡ᭑) =
+head(@[]);
+
+read method imm ύႝ ᘔ᯳౪(read ｱ ࠚ, imm ꨎ᳐ ஃ, read ஃܿ ⲻ᥉ৈః) =
+0.0 .ᱫ = head(false .ៜ(113.0 ));
+
+imm method @ℤᬸ _() =
+head(imm ௹ ງᨚׁ = imm එ፞ ꥯോஂം = @[head(head(imm Ｃ᳞ ၜ = Ω,
+false ).ꪼ); head(tail(imm ᬗ᠋ Ϳೆ಼۰ = new தୖ(),
+tail(this)).ℕ())].@ᴉ(@[@[@ꬽୖꪲ﻿ $ = @[],
+head(imm ⸯ ؋꣄ = 9 ,
+tail(ᳬ)); this]; this], 5 ),
+false ,
+tail(0.0 ));
 }
 

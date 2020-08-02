@@ -2,7 +2,7 @@ package parser;
 
 import antlrGenerated.FRJSimpleParser;
 import lombok.AllArgsConstructor;
-import lombok.ToString;
+import visitors.CollectorVisitor;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -35,7 +35,7 @@ public interface DotExpression extends Expression {
             );
         }
         if (ctx.fieldAssignExpr() != null) {
-            return new FieldAssignExpr(
+            return new FieldUpdateExpr(
                     new Position(ctx.fieldAssignExpr().start),
                     Expression.ctxToExpression(ctx.expr()),
                     ctx.fieldAssignExpr().Identifier().getText(),
@@ -106,6 +106,15 @@ public interface DotExpression extends Expression {
 
             return source.toString();
         }
+
+        @Override
+        public void accept(CollectorVisitor visitor) {
+            if (this.isLifted) {
+                visitor.visitLiftedCall(this);
+            } else {
+                visitor.visitCall(this);
+            }
+        }
     }
 
     @AllArgsConstructor
@@ -133,10 +142,15 @@ public interface DotExpression extends Expression {
         public String toString() {
             return String.format("%s.%s", this.receiver.toString(), this.fieldName);
         }
+
+        @Override
+        public void accept(CollectorVisitor visitor) {
+            visitor.visitFieldAccess(this);
+        }
     }
 
     @AllArgsConstructor
-    class FieldAssignExpr implements DotExpression {
+    class FieldUpdateExpr implements DotExpression {
         private final Position pos;
         public final Expression receiver;
         public final String fieldName;
@@ -169,6 +183,11 @@ public interface DotExpression extends Expression {
         @Override
         public String toString() {
             return String.format("%s.%s = %s", this.receiver.toString(), this.fieldName, this.value.toString());
+        }
+
+        @Override
+        public void accept(CollectorVisitor visitor) {
+            visitor.visitFieldUpdate(this);
         }
     }
 }

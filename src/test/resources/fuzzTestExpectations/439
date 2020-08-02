@@ -1,11 +1,16 @@
-main = ͳ፝;
+main = head(true );
 
-interface 調ᩱ๙  {
-imm method imm ޱ ࢲ(@ᜏ ߺ᱁ꪰꢸ);
+class 〲 implements ੴ  {
+
 }
 
-class ᴼ  {
-imm method @ઞ᳒ ﷵ() =
-@[];
+interface _઼ᝳූꙹ᳚ૃ extends ￥ે, יִٰ꛰  {
+
+}
+
+interface ױ᠍ෳ‌  {
+imm method imm ꡂ⃡꣧６ꨬ ⅉꯧ꣘(imm אַ ℛ);
+
+imm method capsule 聾ූ ꬕৗ্(@ꟷਃ҇ හ);
 }
 

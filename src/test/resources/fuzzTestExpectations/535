@@ -1,3 +1,23 @@
-main = imm ꤍั ఌ = 0 ,
-સ;
+main = false ;
+
+capability class ຄ܏઼  {
+imm method @ਹꪾஂ്ූ ₜꪰ() =
+capsule ଚઃ በူ꦳ᤫ = @[new ܠꠋ(@[]); 13.0625 ],
+true ;
+
+imm method @@ۦ᧗ۡ౫ ヽோ(imm ⶡ ྊ꣭, @@ༀᢩୢ ᜰ౭႗ۧꥏ, imm ௐᨙꧥি꫁￺ၧ ৼ) =
+tail(false );
+}
+
+capability class ၒࠟ implements ᰐଁృ۫  {
+imm ၓ ੳ;
+imm ﾺ7ׂ ᢥ;
+imm ৻〮 ＄ꩍ;
+imm ᤑ༿﻿᮶ Ꮡ゙꣣;
+@@ႎ߲ை Ὓ᪑ോ᪔;
+@@ଡ଼ ոৣ୩;
+capsule Ω４꯬྆᪲ ⶾ;
+capsule ৼ ֏;read method @@ꪼ ড়ౄ() =
+603 ;
+}
 

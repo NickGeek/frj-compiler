@@ -1,18 +1,14 @@
-main = ꩁ꙯;
+main = @@@@ៜಂ $ꯩࣝ = tail(this),
+@ዃ ೡ᳭ܼੇ = 7 ,
+@[tail(ℝ); 4 ];
 
-capability class ޢ implements ẏ꯭ꙹႂ  {
-imm ⴭ፝ઁಃ Ή༵ૢᢩ;imm method imm હ፝ Ἑା(imm 殺 ࡃ᳭, @ண꠆ ਲဴ) =
-256.0 ;
+interface ᎎ઼꩑ං  {
+imm method mut ન ᚊᜲ();
 
-imm method mut ꩢ Ｙ(@եꢁ ᱎꢁ, @⁀ ࢫಃ) =
-this;
-}
+imm method @ᝢ⃡ެ ॐ؃ꪴ﻿᥌႕೪ັு();
 
-class ︴ั implements ຽ൬, ۿ, অ༩, Ὰ  {
+capsule method imm ൻ ᠬ۫߰ᮩ();
 
-}
-
-interface ꁷꧥ  {
-imm method @Ὕୣ៎ ꪵꢁ٩ࠪ();
+capsule method mut 픱૧ ⁿ೬ఁ(imm గ ℨ);
 }
 

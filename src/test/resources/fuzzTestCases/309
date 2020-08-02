@@ -1,1 +1,1 @@
-main = "𐇐"  ;  
+main = @ [ @ [ tail ( false  )   ; @ [ @ [ false  ; head ( true  )   ]   ; @ [ ]   ]   ]   ; ""  ]   ;  

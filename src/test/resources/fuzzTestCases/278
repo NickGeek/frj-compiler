@@ -1,1 +1,1 @@
-main = this  ;  
+main = @ [ 0x2  ; 05l  ]   ;  

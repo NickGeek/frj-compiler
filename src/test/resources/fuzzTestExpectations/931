@@ -1,2 +1,34 @@
-main = @[head(à); 187 ];
+main = this;
+
+interface ₖং꯷ၣం  {
+
+}
+
+interface ຄᨗੑꚟ‫۰  {
+read method imm ￒ ꠊࣖ();
+}
+
+capability class ꠄᮡ٨ௗ  {
+
+}
+
+class ኧ  {
+read method imm ఴෑ ૹꪸ() =
+@[new ଢ଼ꪰ(@ൿౕ༵⃔꣰ Ὂಁꪴ࠙ = ۦ᮳ꧥੈ੭.ۥ = new ະ(@[head(false ); @@み ῧ = @[നੀ; this],
+new とઃื()], tail(this).@䋓().@ｻ()),
+@[], ﹍.ꬤ = @@ࠨ­ ঊ൦ = new ℍׇ᭳(),
+ⷁ, head(706.703 )); @[]];
+}
+
+capability class ⷍ  {
+
+}
+
+interface ᱎ extends ᶳ  {
+
+}
+
+interface এ  {
+
+}
 

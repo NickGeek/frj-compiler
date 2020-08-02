@@ -1,1 +1,1 @@
-interface ቝ extends ᜱ꫁ , ª , ຍ༵ , ὲ  { method @ Ὓ  ℬ꯬ ( @ ᜬٰꪳ༩⳰  ᲅ  )  ; }  capability class ଲ〫፝ઃ { ａ  ヤົ꘡ੋે߰ ;  imm method @ ঞ  ఽ༷ ( ۿ  ᚄ߈  , capsule µ‎ྎ᠑  ﰙꩽၲ  , @ ꔯ  ጧൗ  )  = 0xd400  ;  }  interface ꠙ᳭ { }  capability class ᰢ௨҆ { @ ૱  ៗී ;  @ ⴭ  ῷ៝ ;  ౙ᩼  ኻ ;  imm וּᝲ  ꬃૢ߯ꚟ ;  method @ க  ᦝ ( mut ˡ  ޱꠦ૭  , imm $ௌ⁢  נּꪳ  )  = 4________00  ;  }  main = head ( new ۻ઼ࠖ࠙ྖٰٰ ( @ [ false  ; true  ]   )    )   ;  
+main = false  ;  

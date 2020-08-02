@@ -1,2 +1,6 @@
-main = நંᮀ;
+main = head("\10𛋼\u2c1a\65");
+
+capability class ࠌׇ᠕ implements ຫ  {
+
+}
 

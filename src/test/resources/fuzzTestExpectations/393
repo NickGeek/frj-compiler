@@ -1,10 +1,2 @@
-main = this;
-
-capability class Ὂఀ࡙፞ implements ᮉૣୖ  {
-imm method imm ךּ ⴧ(imm ꧏ ർꦃ়, @ૐ ℇ) =
-this;
-
-imm method @ՙ ꬠୃ(@ໆೢ ज़, capsule གૼ ⷐꥍᬿ, imm ꧏີⷠ ҳ) =
-0 ;
-}
+main = @[];
 

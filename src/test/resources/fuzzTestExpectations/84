@@ -1,13 +1,7 @@
-main = mut ৼਿ൧ ퟐૢ‍ೖ = this,
-new ꨛ();
+main = read ເၫ Ϳ้ = this,
+this;
 
-interface Ὅ߬ோ༨  {
-imm method @ຽ্ ᯍ꛰(imm ໆ᩷ൢ⳯༣ ꚏ, read Iꯧ ຊ়ۤ݃ံୖ഼);
-
-capsule method @ᬙ ꣽꦹ2();
-}
-
-capability class ª꧶  {
-
+interface Ⴭ゙꠆  {
+imm method capsule ဋ៥ ⴭై();
 }
 

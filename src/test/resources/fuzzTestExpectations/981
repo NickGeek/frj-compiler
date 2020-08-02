@@ -1,8 +1,26 @@
-main = @[];
+main = this;
 
-class ਏꥍ  {
-mut ງͧᤶ ₑ;
-imm ﾡ ၿू᠐;
-imm ౚ ͷం;
+interface Ⰲ  {
+
+}
+
+interface ꬋꩍ extends ઽꪸ  {
+imm method @@ꫠૈꪴꥋ ꓝ૧ാ(read ꪶ Ἴ؜, imm ථ ᇴ্, @ᢀ ਖ਼);
+
+imm method @@₱ ͻ();
+
+imm method @@ୱᢩׄ ಽ();
+
+capsule method @@@@ઐ ఒޯ৮ැ್ﬞ(imm ড়ૢ૮0 ળᷗౢ, capsule ꮩૺ ઽ);
+}
+
+capability class ቚ  {
+mut ஃ ர꧴;
+imm ଇ ਉ;
+imm ວ ສ᳘;
+}
+
+interface ι  {
+
 }
 

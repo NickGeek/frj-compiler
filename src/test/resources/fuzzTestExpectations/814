@@ -1,11 +1,3 @@
-main = ᜣ;
-
-class ⶻ  {
-imm ꭎ ଭᤱ;
-read ꩺ ঈࣧ꫁;
-}
-
-capability class ⳬ  {
-
-}
+main = head(tail(capsule ൔ அ = this.@ໟූႃ(),
+this));
 

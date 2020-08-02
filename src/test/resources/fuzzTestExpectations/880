@@ -1,2 +1,10 @@
-main = @[];
+main = tail(true );
+
+interface ῄ  {
+
+}
+
+interface घ଼ extends ኻ܏  {
+
+}
 

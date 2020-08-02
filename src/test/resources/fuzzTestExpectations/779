@@ -1,18 +1,19 @@
-main = ၽઁ;
+main = "";
 
-capability class Ⳬ‮ొ᳙  {
-@ꫛׂ เ;
-@ใ ᰔଁં;imm method @ເ ࠀ(read ؋ ܟⷮꦴ) =
-head(this);
+capability class ꭣ implements ܘౌ, ວ︫ࠣॣ꘨ൂ, ퟆ, Έ, ﹩꫁, ණ6, ײ゙ַᬃ, Ⳳᝲ, Ῑ, ޝᜒ  {
 
-imm method imm ꧺ ℙ() =
-ꠉை;
-
-imm method @M $಼॑(mut 〆ঁ៝ᮂ ኝ઼્ۧ, mut ⶴᷥ Ωꦴᮢ꫁, mut Ϳ ஃᰨ, imm ￄေ２ൈ ﶳ) =
-new יּ(new ￠᷄­());
 }
 
-interface ⵯ extends ꧣ, எު, ῴஂ෦  {
+interface 〆 extends ֏๙, ῼ  {
+imm method @ᝰൌꯪ᪂ܸ ๆ઼();
+}
+
+capability class ચ implements ૹ, ꁦ߂, ϰ  {
+imm method @ಐ༹ ꜚ྆(read ຂ ꩈ, @ꘪ ࢣ, imm Ή꤭ מּꥒ) =
+"⶗".〥଼;
+}
+
+interface Ԯ extends ந, ღ, ੳ؂, ൡູⷢ  {
 
 }
 

@@ -1,2 +1,31 @@
-main = ⴧූ;
+main = tail(tail(tail(0 ).ຍ࿆(@[], head(0.02 ))));
+
+interface ࠤ୍⃐ extends ᢪ, ꦜ꛰, ⶥᰤ, ꧼ, ꘞ  {
+
+}
+
+capability class ࢬ︢ implements Ὑ  {
+@@@ᦸ⳱ᝳ ਖ਼⃡１;
+imm ﻷ᮵ ೲ;
+read ຍ ㇰ꣢;
+mut ᢪ ᾤ༹;
+@ำ Ἔ;
+mut ꫜ ꬭ॔ঁౣ;imm method imm ೞ ຍ᱆ꙴ(capsule ﬗ⃡ೖ ຖᮁ) =
+head(ຍ॒᱖);
+}
+
+capability class ꦊ implements ড়  {
+imm ຊ ᎂᬂ꪿;imm method imm ၶੵ ᳶె᳭᳸(@ᳶ᳸ຼෲౢ ꧡ൦༿, @ꧏ ⅆ, imm ῄ ꧢ꣘) =
+@[new ݤꥇ(); "੒\uudebD"];
+
+read method imm ఽ ၦ() =
+tail(new ퟧ());
+
+imm method @@@@@@@ࢶᝒ ங() =
+this;
+}
+
+capability class ᮇ꩕ޯᰮ implements ቐ꯬૬꘧ၘ  {
+imm ॾ९⁠ ＿;
+}
 

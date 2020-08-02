@@ -15,4 +15,10 @@ public enum Modifier {
 	public static Modifier mdfTerminalToModifier(TerminalNode mdf) {
 		return mdf != null ? Modifier.fromLiteral(mdf.getText()) : Modifier.IMM;
 	}
+
+	public static boolean canInto(Modifier mdfP, Modifier mdf) {
+		return mdfP == mdf
+				|| mdfP == Modifier.CAPSULE
+				|| mdf == Modifier.READ;
+	}
 }

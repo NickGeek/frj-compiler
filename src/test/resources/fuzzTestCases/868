@@ -1,1 +1,1 @@
-interface ៜ extends ꜞ , ಢ­᮶ , ᳩ  { capsule method @ த  ຽ ( @ ᤔ  ম  )  ; imm method @ ᵝ༷໓  ꬹಁ ( capsule ₮  ఐ‏  , ＄  º၇  , capsule ℼ  כּᝳైۗ  )  ; imm method imm ࠚా৯᧒  Ό ( )  ; }  interface ਐ extends ꤎํ໖൭  { method @ ࡢ  ՙ੭ ( ᾘ  ઽ܏ಿꠤ྇  , @ ౘᬀ  ఇ꛱​  )  ; }  interface ퟔ extends ᢜ , ꬁ੧҄  { imm method @ ࡣౖ〭  ꫀ ( )  ; method ዥൗ゚  ல ( )  ; method @ ｕ  ꠸ ( )  ; }  main = ""  ;  
+main = this  ;  

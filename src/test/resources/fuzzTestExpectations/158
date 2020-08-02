@@ -1,14 +1,24 @@
-main = head(@[head(new ﭝ⃘()); ""]);
+main = tail(this);
 
-interface ຈ  {
+capability class ꠃ  {
+imm method mut ຊૢ ૐ() =
+ꩬᤴ;
 
+read method imm ૱ ⅎ() =
+true ;
 }
 
-interface ￦േ  {
-imm method imm ꩆ ߴ(imm ဗ ܕ, @Ꭓ꣖়༙ Ἐ, @ヵై ꬕ);
+interface ꬕ extends ꙩ, ਏᢆ᳸ୖᤡ  {
+mut method mut ਐ Ά(@ᜐ ಹଁ໓ႇ);
+}
 
-capsule method @ಽ എꧥ();
+interface ꬥ extends ອྵ‬, ۦ᮪ೖ, ჺ, ᎈುঁ, ᮻ۫  {
+capsule method @ꬄ ୠ(mut ªູ꯹ꚞ ꠗ);
 
-imm method imm ไ೪ัົꩍ࠘ ஏ⁭෨ᮧꪴ᱆(@ૹ ℊિᮡ, @ᱍ ᨦ);
+imm method imm ਫ੯ ￋৈ(@@ༀ︎ ‿);
+}
+
+interface ᒪ extends ά꤈, ௐ, Kೣ  {
+
 }
 

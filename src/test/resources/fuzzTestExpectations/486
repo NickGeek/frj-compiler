@@ -1,23 +1,32 @@
-main = 0.19140625 ;
+main = ಝ;
 
-interface ৲  {
+class ቧ꯬᷿  {
 
 }
 
-class Ⴧ  {
-@ਫ਼ ꬁ;
-mut ᦜ૽ꢿ〬ౣ ଏꪸ꣕྇;
-imm ۯ ௹;
-@ⴘ ⵯ;
+interface ༀ᜴᠌᩺  {
+
 }
 
-interface ঢ়  {
-imm method capsule ၽ ᝠ();
+interface ꙩ  {
 
-imm method capsule ᖱ࡚ ꧡ(imm ഐ ₯);
+}
 
-mut method @ج᷌ Ꚉ(@ਈ ᢼ, mut ਇ ଵ෮);
+interface ⴭꙻꦃ  {
+imm method @@@৳ ￖ();
 
-read method @ᒙෙ Άୌ᪖(mut ꧤꚟ ᰠంྐ);
+imm method imm 〺 ಝ۪ꯣ(@ఽꧥ ￄ, @@ㆴ µ꯰꯳ꠂ⃡, @ﹱ᳒ ऽׇ༷ு࠘໔༙);
+
+imm method @ኖ և();
+
+capsule method @ߍ⃒ ⶪ​҇(@@ഽ 﨨߉, read ഽોೋ ꞷ, imm ಭ￻ၭ઼ ﹰ, @¤྆ꪲ ൖ⃡);
+}
+
+class դᯰ  {
+
+}
+
+interface ῌ  {
+imm method @@@ᏽ ꭤ();
 }
 

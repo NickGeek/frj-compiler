@@ -1,2 +1,16 @@
-main = false ;
+main = @[];
+
+interface ᙰ  {
+
+}
+
+capability class ꫂެႅ implements ι, ﵬು, ＄༵᳭ୗ  {
+@〧 ʪ;
+}
+
+capability class Ꭼୣ⵿ੵ༢ implements ၒ  {
+@￥ ຽۢ;
+@@@@@@@ꝕ꣖꧐ ꪱၬ;mut method imm ﹎４ ٯ(imm ᲆ︤ၞ ᄇො, read ޖ ꧫ) =
+@[@[true ; @[31.0 ; tail(@[tail(tail(head(ଐ꩓))); "㇤\uuuuuufb0c"])]]; ࡢަ꯵༵];
+}
 

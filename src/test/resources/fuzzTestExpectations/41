@@ -1,16 +1,16 @@
 main = this;
 
-class ºꪸ implements 쨮  {
-@ꤿോ ৻၆;imm method imm 直 ꤸ(@ﹳ ຽᮧ꧐ꩃ, @ͷ ಲൈ) =
-@[read ៗ꣘ Ὓੈ۵ׅࠬ॓ⷮ᷼ႋ = @[read ᤘ ㅡୄෲ = "\uuuuuuF7B7\\𞀣ᜎ\317ꬨ\f",
-false ; 10.0 ].ள,
-"៺"; new ဦᯭ("𛲀", false .ῖྒྷ, ﬗׇ)];
+interface ಸ⳯ꠣ۲ᨘꙷ  {
+imm method @@@@@@ၡ ⁿ⃡(imm ᝆ ꟺ๊, mut ꫠ ꡃ);
+}
 
-read method imm ᣟ _഻᳐() =
-this;
+interface ॶຼ  {
+imm method @@ࢨູ൨᧙ ﬖ๑();
 
-imm method @Ή ݼ⁫() =
-imm ᜌ ꢓ = @[],
-tail(1228.0 );
+imm method @@@@@ၦਁ ꫂ꛰();
+}
+
+interface 村߅ extends ៗ꘢਼, ۦିׇ๖, ୱ෦ࠪ  {
+imm method imm ꫂ ࡩ᤻();
 }
 

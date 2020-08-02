@@ -1,16 +1,10 @@
-main = new ఋॎ(29 );
+main = false ;
 
-interface ୟ꧳ extends ၜ  {
-imm method imm ལꦂ᳴༥৯ ྈ࡚();
+interface ꠢ゙ extends ೞޯൢ  {
 
-mut method @હ ﹱꠋ(@ꬠ שּׁ੯ꢀ);
-
-imm method mut ῲ ℹ۫(@ﶪ ꄼꢁ);
-
-imm method imm פּ ꜘ(@ꞣ લ, imm ꬩెꠂ ஞ൭, imm যᝓ ᦦ);
 }
 
-interface ꪣﬞ extends ⁿ  {
-mut method @ഺൗ ᨧᳳୂ߁ᮂ(capsule ఆ༹᥆ౕᨙֺ ¢, read Ռ שּׂ);
+interface Ս extends ＿  {
+
 }
 

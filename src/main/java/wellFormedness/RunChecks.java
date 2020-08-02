@@ -24,6 +24,8 @@ public class RunChecks {
 					runners.add(p -> new CapsuleUsage().check(method));
 				});
 
+		runners.add(p -> new CapsuleUsageMain().check(p.main));
+
 		return runners;
 	}
 }

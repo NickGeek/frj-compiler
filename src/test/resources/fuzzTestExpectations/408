@@ -1,17 +1,10 @@
-main = head(0.0 );
+main = true ;
 
-interface ᨴ‮࿆ຼ  {
+class ᙴ  {
 
 }
 
-capability class ൺ implements ඊ, ச  {
-imm Ｕ ؿ;imm method capsule ጔು ඔ᮴(@µ୍ ꪱ, @ἤ ೲୖ, @ೱ ສ, imm ຫ໔ ৻, capsule ㇱ꫁ ኢࠜ, @ⶅ ῲଁ) =
-"";
+interface ῗ  {
 
-imm method capsule ਔৗு ⶢ(@ꬓ ਖ᳤਼, read מּ ퟓު) =
-@[];
-
-imm method @ଳ Ⴋ꛰(imm ዀ҇ ೲ, @Ⳮ︯ާꠦై ࠚ︆꫁, @ਐꧥ Ό, imm ၐ꣓ ᨍಁే, @ܐ ᳱ) =
-9.527906273786277E39 ;
 }
 

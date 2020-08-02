@@ -1,10 +1,12 @@
-main = 3 ;
+main = true ;
 
-interface ꥠ extends ꣳొ, ܐ  {
-mut method capsule ମ á();
+interface $ extends ዂ, ल, ৻  {
+imm method @@@ঌ᧘ଂ۵ ߴ྇௭ം(@ᜅ᱂⵿ܑ᳭ ª႘, imm ꡖ ঽ);
 
-imm method imm ௐ ᠹୢ();
+read method mut º ഋ್ۖ();
+}
 
-imm method imm ꧽ ট();
+capability class ಋ  {
+
 }
 

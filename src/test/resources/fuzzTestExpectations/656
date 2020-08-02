@@ -1,25 +1,2 @@
-main = @[];
-
-capability class 먶  {
-capsule method @Ⴧ ᱝೕ() =
-@[];
-
-mut method imm ﹩ ਫ਼(@ە ថ) =
-æ;
-}
-
-capability class ꬩ implements ڱ, ସ॓  {
-imm method @ᳵ ᲆ() =
-@[imm ૡ Ⳬ〯ॖ = 0.0 .ㇳ(@[@[this; @[]]; ""]),
-@ະ࡙ ড় = head(@[0 ; @[]]),
-н; tail(8 )];
-}
-
-interface වؗၟ፟ઃꪲௗ᳘၄ୂ extends ꘝ॒  {
-imm method imm ⷁ ળ(capsule ໃꦽ ܚ);
-
-imm method @ᭈꥒꪰ ꭜؔ໕(imm ꟼؘꤧ ਸ਼);
-
-imm method capsule ᯣꧥ ಹ؃ේ￹ວ(@ප ℨ൪﻿, @￠ై dֿᢩ, imm ߺࠪꢀ য়, imm ꧤ꠆ ఽܑ᭱⁢);
-}
+main = true ;
 

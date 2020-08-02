@@ -1,24 +1,2 @@
-main = false ;
-
-class బꢀ implements ۿ൭߫ୣ, Ʞ಼꙯, Ⴈ֦  {
-
-}
-
-class Í  {
-
-}
-
-interface ㅗੂ extends ⶮ  {
-capsule method @¢්้ೌ᳭᭙ัि À゚ൗ଼ꩌﬞ();
-
-imm method @ወে⁧ ℇ(imm ߺം ߕ);
-
-imm method @ℼ ਖ਼();
-
-imm method @ιা ꟺ(@ￎ ₐ);
-
-imm method imm טּ ⷚ꛰ৢৃ();
-
-mut method @ઐ ઽ(@ᪧ ﹩༙༿​);
-}
+main = head(false );
 

@@ -1,2 +1,51 @@
-main = "઒";
+main = @[];
+
+capability class 廒  {
+imm method mut ＿๒ ୟꦍ៑්() =
+this.ᛟ();
+}
+
+class ᝇᤪ় implements ℤ؜  {
+mut method imm ॐ︨ꚟꩃಁ ສ᱖() =
+yၞ;
+
+imm method imm 〧ೣ ঝ() =
+this;
+}
+
+class ᦥׅ implements ຢৄ, ቘ៤ꪴ྆, ꪻ഻, ꠸ૢ, த  {
+
+}
+
+class ᢀׇ  {
+@ਲ ၡ;
+}
+
+interface ℇ extends ㆹೋ໋, ᥴ྇ᤵꠥꢀ൪꠆  {
+imm method @@@@@@@Kၘ ޱ͌();
+}
+
+class មௗᝒ  {
+@ⷈ ݾ;imm method @@@@@@@ꫤ ૱() =
+tail(3416.0 );
+
+imm method capsule ড ࠤ්() =
+"󠇰";
+
+read method capsule ︳ം༿ ᱸ(@@ऽ़ ꩳׁ᷼, read ዄႏ ಏⷵୢ​) =
+@[];
+
+imm method @@@Жෛﬞ Ü() =
+tail(@[]);
+}
+
+interface ຫ੨ extends ֏ࣶ꘥  {
+mut method @@ቮ Ͱ(imm ჼ ＄௫);
+
+read method @ᮘ ꬒ();
+
+imm method imm ᨆၢꢁ ࠔ(imm ەꪲၭٰၞ୍ൗ ำ);
+
+imm method read ٯꪷ ଽ();
+}
 

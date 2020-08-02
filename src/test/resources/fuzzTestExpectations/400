@@ -1,28 +1,10 @@
-main = @[ⷘ༢; 0 ];
+main = "".ⵯ៝ = this;
 
-class Ϳ꧀  {
+interface ෆၘ  {
 
 }
 
-interface ꠃ⁫᱄ൈ  {
-read method @ﬨ ๅ(@ଷׄ ඐﬞ̖, @ꧣ ꫣ⁣ॣം);
-}
-
-class ࠁ implements ⷆ, Άᬃ᪑ᬂਃ‪ූੋ, ￕ͖, ﭣ  {
-imm method @ὖ ஈ꣒ೈ() =
-this;
-
-read method imm ꣽໍෳ ᪧ༨(imm ꤵ ங) =
-this;
-
-imm method imm ⁿꙷ ຫ༡() =
-head(this);
-
-imm method capsule ૹ ኌ(@ஒ ଢ଼ᬀ) =
-22.5 ;
-}
-
-class ءઁꩃ  {
+interface ቘ extends ꤳ  {
 
 }
 

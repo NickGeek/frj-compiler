@@ -1,10 +1,10 @@
-main = "";
+main = true ;
 
-interface ㅁᝲ  {
-mut method mut ῂ ℨോᳲ();
+interface יּၤ extends ؋, ઊꦸ  {
+imm method mut Ὕᝓ ꬂ༵ᭁ⁠(capsule ఽၤ ጕື);
+}
 
-imm method @ମ Ι();
-
-mut method capsule ꩁ ꬣ྇໒(capsule ℂુᝓ᭑ ྌ);
+class Ꮨ implements ୠᝓ  {
+@Α ಅ్⃡;
 }
 
