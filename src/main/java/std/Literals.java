@@ -3,8 +3,8 @@ package std;
 import parser.ProgramNode;
 
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class Literals {
 	public static final Map<String, ProgramNode.ClassDeclaration> classes = Map.of(
@@ -24,7 +24,7 @@ public class Literals {
 				name,
 				new String[0],
 				new String[0],
-				new TreeMap<>(),
+				new LinkedHashMap<>(),
 				Collections.emptyMap()
 		);
 	}

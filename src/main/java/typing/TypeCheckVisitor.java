@@ -7,12 +7,8 @@ import parser.ProgramNode.LiftedType;
 import parser.ProgramNode.Type;
 import visitors.CollectorVisitor;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class TypeCheckVisitor extends CollectorVisitor {
 	public Type expected;
@@ -45,62 +41,65 @@ public class TypeCheckVisitor extends CollectorVisitor {
 			);
 		}
 
-		if (Modifier.canInto(Modifier.MUT, this.expected.mdf)) {
-			Streams.forEachPair(
-					classDef.fields.values().stream(),
-					Arrays.stream(expr.args),
-					(fieldDec, argExpr) -> this.visitExpecting(argExpr, fieldDec.type)
-			);
+		Set<Modifier> argMdfs = Arrays.stream(expr.args)
+				.map(argExpr -> {
+					this.visitExpecting(argExpr, Type.ANY);
+					return this.computed.mdf;
+				})
+				.collect(Collectors.toSet());
 
-			if (classDef.isCapability && !this.cap) {
-				throw new TypeError(expr.pos(), "Object capabilities may only be created in mut methods on capability" +
-						" classes or the main expression.");
-			}
-
-			var computed = new Type(expr.pos(), Modifier.MUT, expr.name);
-			this.expect(expr, computed);
-		} else if (Modifier.canInto(Modifier.IMM, this.expected.mdf)) {
+		// T1 f1 . . . Tn fn = fields(imm C<T>) and cap; Σ; Γ |- ei: Ti[mdf = imm]
+		// TODO: I've changed this to look at expected-- double check me
+		if (this.expected.mdf == Modifier.IMM && argMdfs.stream().allMatch(mdf -> Modifier.canInto(mdf, Modifier.IMM))) {
 			Streams.forEachPair(
 					classDef.fields.values().stream(),
 					Arrays.stream(expr.args),
 					(fieldDec, argExpr) -> {
-						this.visitExpecting(argExpr, fieldDec.type.compose(Modifier.IMM));
-						if (!Modifier.canInto(this.computed.mdf, Modifier.IMM)) {
-							throw new TypeError(
-									argExpr.pos(),
-									"Arguments must be immutable for creating an immutable object.\n" +
-											"You could try using capsules."
-							);
-						}
+						this.visitExpecting(argExpr, fieldDec.type.withMdf(Modifier.IMM));
 					}
 			);
 
 			var computed = new Type(expr.pos(), Modifier.IMM, expr.name);
 			this.expect(expr, computed);
-		} else {
-			throw new TypeError(expr.pos(), "Objects can only be created as mut/imm.");
+			return;
 		}
+
+		if (classDef.isCapability && !this.cap) {
+			throw new TypeError(expr.pos(), "Object capabilities may only be created in mut methods on capability" +
+					" classes or the main expression.");
+		}
+
+		Streams.forEachPair(
+				classDef.fields.values().stream(),
+				Arrays.stream(expr.args),
+				(fieldDec, argExpr) -> this.visitExpecting(argExpr, fieldDec.type)
+		);
+
+		boolean canPromote = !argMdfs.contains(Modifier.MUT) && !argMdfs.contains(Modifier.READ);
+		Modifier mdf = canPromote ? Modifier.CAPSULE : Modifier.MUT;
+
+		var computed = new Type(expr.pos(), mdf, expr.name);
+		this.expect(expr, computed);
 	}
 
 	@Override
 	public void visitNewSignal(Expression.SignalConstructionExpr expr) {
-		var oldGamma = this.gamma;
-		this.gamma = this.gamma
-				.entrySet()
-				.stream()
-				.filter(entry -> entry.getValue().mdf == Modifier.IMM || entry.getValue().mdf == Modifier.CAPSULE)
-				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+		this.scopeGamma(() -> {
+			this.gamma = this.gamma
+					.entrySet()
+					.stream()
+					.filter(entry -> entry.getValue().mdf == Modifier.IMM || entry.getValue().mdf == Modifier.CAPSULE)
+					.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
-		if (!(this.expected instanceof LiftedType)) {
-			throw new TypeError(expr.pos(), "Unexpected signal.");
-		}
+			if (!(this.expected instanceof LiftedType)) {
+				throw new TypeError(expr.pos(), "Unexpected signal.");
+			}
 
-		LiftedType expected = (LiftedType) this.expected;
-		this.visitExpecting(expr.head, expected.innerType);
-		this.visitExpecting(expr.tail, expected);
-		this.expect(expr, expected);
-
-		this.gamma = oldGamma;
+			LiftedType expected = (LiftedType) this.expected;
+			this.visitExpecting(expr.head, expected.innerType);
+			this.visitExpecting(expr.tail, expected);
+			this.expect(expr, expected);
+		});
 	}
 
 	@Override
@@ -126,14 +125,11 @@ public class TypeCheckVisitor extends CollectorVisitor {
 	public void visitLet(Expression.LetExpr expr) {
 		visitExpecting(expr.value, expr.type);
 
-		var oldGamma = this.gamma;
-		var scopedGamma = new HashMap<>(this.gamma);
-		scopedGamma.put(expr.name, this.computed.withMdf(expr.type.mdf));
-		this.gamma = scopedGamma;
 
-		expr.boundTo.accept(this);
-
-		this.gamma = oldGamma;
+		this.scopeGamma(() -> {
+			this.gamma.put(expr.name, expr.type);
+			expr.boundTo.accept(this);
+		});
 	}
 
 	@Override
@@ -169,10 +165,11 @@ public class TypeCheckVisitor extends CollectorVisitor {
 
 		// T_0..T_n -> T in methTypes(T_0, m)
 		var methTypes = this.aux.methTypes(receiverType, expr.methodName);
-		if (!Modifier.canInto(this.expected.mdf, method.mdf)) { // mdf' <= mdf
+		// mdf' <= mdf
+		if (!Modifier.canInto(receiverType.mdf, method.mdf)) {
 			throw new TypeError(
 					expr.pos(),
-					String.format("Cannot go between %s to %s", this.expected.mdf, methTypes.original.mdf)
+					String.format("Cannot go between %s to %s", receiverType.mdf, method.mdf)
 			);
 		}
 
@@ -182,14 +179,22 @@ public class TypeCheckVisitor extends CollectorVisitor {
 			default -> methTypes.original;
 		};
 
-		// e_i : T_i
-		Streams.forEachPair(
-				Arrays.stream(selectedMethod.args),
-				Arrays.stream(expr.arguments),
-				(methodArg, argExpr) -> this.visitExpecting(argExpr, methodArg.type)
-		);
+		this.scopeGamma(() -> {
+			this.gamma.put("this", receiverType);
 
-		this.expect(expr, selectedMethod.returnType);
+			// e_i : T_i
+			Streams.forEachPair(
+					Arrays.stream(selectedMethod.args),
+					Arrays.stream(expr.args),
+					(methodArg, argExpr) -> {
+						this.gamma.put(methodArg.name, methodArg.type);
+						this.visitExpecting(argExpr, methodArg.type);
+					}
+			);
+
+			this.computed = selectedMethod.args[0].type;
+			this.expect(expr, selectedMethod.returnType);
+		});
 	}
 
 	@Override
@@ -219,7 +224,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		this.visitExpecting(expr.receiver, Type.ANY);
 		var receiverType = this.computed;
 		if (receiverType.mdf != Modifier.MUT) {
-			throw new TypeError(expr.pos(), "Only mut objects may have their field's updated.");
+			throw new TypeError(expr.pos(), "Only mut objects may have their fields updated.");
 		}
 
 		var field = this.aux.fields(receiverType).get(expr.fieldName);
@@ -254,5 +259,11 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		this.expected = expected;
 		expr.accept(this);
 		this.expected = oldExpected;
+	}
+
+	private void scopeGamma(Runnable scoped) {
+		var oldGamma = this.gamma;
+		scoped.run();
+		this.gamma = oldGamma;
 	}
 }

@@ -22,7 +22,7 @@ public class CheckVarsUsedAreInScope implements WellFormednessRule<Program> {
 
 	private void checkMethod(ProgramNode.Method method) {
 		var bindings = new HashSet<String>();
-		bindings.add("this");
+//		bindings.add("this");
 
 		for (var arg : method.args) {
 			bindings.add(arg.name);

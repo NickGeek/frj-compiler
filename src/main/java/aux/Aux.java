@@ -40,29 +40,26 @@ public class Aux {
 	 */
 	public MethodTypes methTypes(ProgramNode.Type t, String methodName) {
 		var method = Objects.requireNonNull(this.classOf(t).methods.get(methodName));
-
-//		if (!method.returnType.okayWithSub(this.program, t)) {
-//			throw new TypeError(
-//					t.pos(),
-//					String.format("No valid subsumption for %s <= %s", t, method.returnType)
-//			);
-//		}
+		ProgramNode.Type receiver = t;
 
 		method = new ProgramNode.Method(
 				method.pos(),
-				t.mdf,
+				receiver.mdf,
+				receiver,
 				method.returnType,
 				method.name,
-				method.args,
+				Arrays.copyOfRange(method.args, 1, method.args.length),
 				method.expression().orElseThrow()
 		);
 
+		receiver = receiver.mdf == Modifier.MUT ? receiver.withMdf(Modifier.CAPSULE) : receiver;
 		ProgramNode.Method capsuleMethod = new ProgramNode.Method(
 				method.pos(),
-				t.mdf == Modifier.MUT ? Modifier.CAPSULE : t.mdf,
+				receiver.mdf,
+				receiver,
 				method.returnType.mdf == Modifier.MUT ? method.returnType.withMdf(Modifier.CAPSULE) : method.returnType,
 				method.name,
-				Arrays.stream(method.args)
+				Arrays.stream(Arrays.copyOfRange(method.args, 1, method.args.length))
 						.map(arg -> {
 							if (arg.type.mdf != Modifier.MUT) return arg;
 							return new ProgramNode.BindingDeclaration(
@@ -78,9 +75,10 @@ public class Aux {
 		ProgramNode.Method immMethod = new ProgramNode.Method(
 				capsuleMethod.pos(),
 				capsuleMethod.mdf == Modifier.READ ? Modifier.IMM : capsuleMethod.mdf,
+				t.mdf == Modifier.MUT ? t.withMdf(Modifier.CAPSULE) : t,
 				capsuleMethod.returnType.mdf == Modifier.READ ? capsuleMethod.returnType.withMdf(Modifier.IMM) : capsuleMethod.returnType,
 				capsuleMethod.name,
-				Arrays.stream(capsuleMethod.args)
+				Arrays.stream(Arrays.copyOfRange(capsuleMethod.args, 1, capsuleMethod.args.length))
 						.map(arg -> {
 							if (arg.type.mdf != Modifier.READ) return arg;
 							return new ProgramNode.BindingDeclaration(

@@ -36,10 +36,11 @@ public interface ProgramNode extends Walkable {
 		public final String name;
 		public final String[] impl;
 		public final String[] extend;
-		public final SortedMap<String, BindingDeclaration> fields;
+		public final LinkedHashMap<String, BindingDeclaration> fields;
 		public final Map<String, Method> methods;
 
 		public static ClassDeclaration ctxToClassDeclaration(FRJSimpleParser.ClassDeclarationContext ctx) {
+			var name = ctx.Identifier().getText();
 			var isInterface = ctx.INTERFACE() != null;
 
 			var implNode = ctx.implementsDeclaration();
@@ -66,7 +67,7 @@ public interface ProgramNode extends Walkable {
 							fieldCtx.Identifier().getText()
 					))
 					.collect(Collector.of(
-							TreeMap<String, BindingDeclaration>::new,
+							LinkedHashMap<String, BindingDeclaration>::new,
 							(fieldMap, field) -> fieldMap.put(field.name, field),
 							(fieldMap1, fieldMap2) -> {
 								throw new UnsupportedOperationException("Can't be parallel");
@@ -74,11 +75,13 @@ public interface ProgramNode extends Walkable {
 					));
 
 			Map<String, Method> methods;
+			Type receiver = new Type(new Position(-1, -1), Modifier.CAPSULE, name);
 			if (isInterface) {
 				methods = ctx.methodHeader().stream()
 						.map(headerCtx -> new Method(
 								new Position(headerCtx.start),
 								Modifier.mdfTerminalToModifier(headerCtx.MDF()),
+								receiver,
 								Type.typeNameCtxToType(headerCtx.typeName()),
 								headerCtx.Identifier().getText(),
 								headerCtx.methodDeclarationArgument()
@@ -100,6 +103,7 @@ public interface ProgramNode extends Walkable {
 							return new ProgramNode.Method(
 									new Position(methodCtx.start),
 									Modifier.mdfTerminalToModifier(header.MDF()),
+									receiver,
 									Type.typeNameCtxToType(header.typeName()),
 									header.Identifier().getText(),
 									header.methodDeclarationArgument()
@@ -120,7 +124,7 @@ public interface ProgramNode extends Walkable {
 					new Position(ctx.start),
 					ctx.CAP() != null,
 					isInterface,
-					ctx.Identifier().getText(),
+					name,
 					impl,
 					extend,
 					fields,
@@ -202,7 +206,6 @@ public interface ProgramNode extends Walkable {
 		}
 	}
 
-	@AllArgsConstructor
 	class Method implements ProgramNode {
 		private final Position pos;
 		public final Modifier mdf;
@@ -210,6 +213,19 @@ public interface ProgramNode extends Walkable {
 		public final String name;
 		public final BindingDeclaration[] args;
 		private final Expression expression;
+
+		public Method(Position pos, Modifier mdf, Type receiver, Type returnType, String name, BindingDeclaration[] args, Expression expression) {
+			this.pos = pos;
+			this.mdf = mdf;
+			this.returnType = returnType;
+			this.name = name;
+			this.expression = expression;
+
+			// The reciever is always implicitly given as an argument (`this`)
+			this.args = new BindingDeclaration[args.length + 1];
+			System.arraycopy(args, 0, this.args, 1, args.length);
+			this.args[0] = new BindingDeclaration(pos, receiver.withMdf(mdf), "this");
+		}
 
 		public Optional<Expression> expression() {
 			return Optional.ofNullable(this.expression);
@@ -277,7 +293,7 @@ public interface ProgramNode extends Walkable {
 		}
 
 		public Type compose(Modifier b) {
-			if (this.mdf == b) return this;
+			if (this.mdf == b || this.mdf == Modifier.ANY || b == Modifier.ANY) return this;
 
 			if (b == Modifier.IMM) return this.withMdf(Modifier.IMM);
 			if (b == Modifier.MUT) return this;
@@ -351,7 +367,7 @@ public interface ProgramNode extends Walkable {
 
 		private static class Any extends Type {
 			private Any() {
-				super(new Position(-1, -1), Modifier.IMM, "//Any//");
+				super(new Position(-1, -1), Modifier.ANY, "//Any//");
 			}
 
 			@SuppressWarnings("EqualsWhichDoesntCheckParameterClass")

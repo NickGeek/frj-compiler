@@ -12,7 +12,7 @@ public class EmptySignalCheck implements WellFormednessRule<Program> {
 				DotExpression.CallExpr expr = (DotExpression.CallExpr) visitable;
 				if (!expr.isLifted) return;
 
-				for (var argument : expr.arguments) {
+				for (var argument : expr.args) {
 					throwIfEmptySignal(argument);
 				}
 			}

@@ -6,7 +6,8 @@ public enum Modifier {
 	MUT,
 	IMM,
 	CAPSULE,
-	READ;
+	READ,
+	ANY;
 
 	public static Modifier fromLiteral(String literal) {
 		return Modifier.valueOf(literal.toUpperCase());
@@ -17,6 +18,8 @@ public enum Modifier {
 	}
 
 	public static boolean canInto(Modifier mdfP, Modifier mdf) {
+		if (mdfP == ANY || mdf == ANY) return true;
+
 		return mdfP == mdf
 				|| mdfP == Modifier.CAPSULE
 				|| mdf == Modifier.READ;
