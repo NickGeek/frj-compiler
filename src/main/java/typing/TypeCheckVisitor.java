@@ -50,7 +50,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 
 		// T1 f1 . . . Tn fn = fields(imm C<T>) and cap; Σ; Γ |- ei: Ti[mdf = imm]
 		// TODO: I've changed this to look at expected-- double check me
-		if (this.expected.mdf == Modifier.IMM && argMdfs.stream().allMatch(mdf -> Modifier.canInto(mdf, Modifier.IMM))) {
+		if (this.expected.mdf == Modifier.IMM || this.expected.mdf == Modifier.ANY && argMdfs.stream().allMatch(mdf -> Modifier.canInto(mdf, Modifier.IMM))) {
 			Streams.forEachPair(
 					classDef.fields.values().stream(),
 					Arrays.stream(expr.args),
@@ -151,7 +151,6 @@ public class TypeCheckVisitor extends CollectorVisitor {
 
 	@Override
 	public void visitCall(DotExpression.CallExpr expr) {
-		// e_0 : T_0
 		this.visitExpecting(expr.receiver, Type.ANY);
 		var receiverType = this.computed;
 
@@ -169,7 +168,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		if (!Modifier.canInto(receiverType.mdf, method.mdf)) {
 			throw new TypeError(
 					expr.pos(),
-					String.format("Cannot go between %s to %s", receiverType.mdf, method.mdf)
+					String.format("Cannot go between %s to %s", receiverType.mdf.toString().toLowerCase(), method.mdf.toString().toLowerCase())
 			);
 		}
 
@@ -179,28 +178,79 @@ public class TypeCheckVisitor extends CollectorVisitor {
 			default -> methTypes.original;
 		};
 
+		// e_0 : T_0
 		this.scopeGamma(() -> {
 			this.gamma.put("this", receiverType);
-
-			// e_i : T_i
-			Streams.forEachPair(
-					Arrays.stream(selectedMethod.args),
-					Arrays.stream(expr.args),
-					(methodArg, argExpr) -> {
-						this.gamma.put(methodArg.name, methodArg.type);
-						this.visitExpecting(argExpr, methodArg.type);
-					}
-			);
-
-			this.computed = selectedMethod.args[0].type;
-			this.expect(expr, selectedMethod.returnType);
+			this.visitExpecting(expr.args[0], selectedMethod.args[0].type);
 		});
+
+		// e_i : T_i forall i in 1..n
+		Streams.forEachPair(
+				Arrays.stream(selectedMethod.args).skip(1),
+				Arrays.stream(expr.args).skip(1),
+				(methodArg, argExpr) -> this.visitExpecting(argExpr, methodArg.type)
+		);
+
+		this.computed = selectedMethod.args[0].type;
+		this.expect(expr, selectedMethod.returnType);
 	}
 
 	@Override
 	public void visitLiftedCall(DotExpression.CallExpr expr) {
-		// TODO
-		throw new UnsupportedOperationException();
+		this.visitExpecting(expr.receiver, Type.ANY);
+		var receiverType = this.computed;
+		var receiverClassDec = this.aux.classOf(receiverType);
+
+		var method = receiverClassDec.methods.get(expr.methodName);
+		if (method == null) {
+			throw new TypeError(
+					expr.pos(),
+					String.format("Cannot find the method '%s' on %s", expr.methodName, receiverType)
+			);
+		}
+
+		// validActor(T_0)
+		if (!this.aux.isValidActor(receiverType)) {
+			throw new TypeError(
+					expr.pos(),
+					String.format(
+							"'%s' is not a valid actor. Actors must either be imm or be a capability class with only imm fields.",
+							expr.receiver
+					)
+			);
+		}
+
+		// T_0..T_n -> T in methTypes(T_0, m)
+		var methTypes = this.aux.methTypes(receiverType, expr.methodName);
+		// mdf' <= mdf
+		if (!Modifier.canInto(receiverType.mdf, method.mdf)) {
+			throw new TypeError(
+					expr.pos(),
+					String.format("Cannot go between %s to %s", receiverType.mdf.toString().toLowerCase(), method.mdf.toString().toLowerCase())
+			);
+		}
+
+		ProgramNode.Method selectedMethod = switch (this.expected.mdf) {
+			case CAPSULE -> methTypes.capsule;
+			case IMM -> methTypes.imm;
+			default -> methTypes.original;
+		};
+
+		// e_0 : T_0
+		this.scopeGamma(() -> {
+			this.gamma.put("this", receiverType);
+			this.visitExpecting(expr.args[0], selectedMethod.args[0].type);
+		});
+
+		// e_i : T_i forall i in 1..n
+		Streams.forEachPair(
+				Arrays.stream(selectedMethod.args).skip(1),
+				Arrays.stream(expr.args).skip(1),
+				(methodArg, argExpr) -> this.visitExpecting(argExpr, new LiftedType(methodArg.pos(), methodArg.type))
+		);
+
+		this.computed = selectedMethod.args[0].type;
+		this.expect(expr, new LiftedType(expr.pos(), selectedMethod.returnType));
 	}
 
 	@Override

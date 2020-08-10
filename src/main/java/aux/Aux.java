@@ -104,4 +104,11 @@ public class Aux {
 		public ProgramNode.Method capsule;
 		public ProgramNode.Method imm;
 	}
+
+	public boolean isValidActor(ProgramNode.Type receiver) {
+		var classDec = classOf(receiver);
+
+		return receiver.mdf == Modifier.IMM ||
+				(classDec.isCapability && classDec.fields.values().stream().allMatch(f -> f.type.mdf == Modifier.IMM));
+	}
 }
