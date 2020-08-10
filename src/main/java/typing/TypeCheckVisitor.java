@@ -1,10 +1,10 @@
 package typing;
 
-import aux.Aux;
 import com.google.common.collect.Streams;
 import parser.*;
 import parser.ProgramNode.LiftedType;
 import parser.ProgramNode.Type;
+import util.Pair;
 import visitors.CollectorVisitor;
 
 import java.util.*;
@@ -151,7 +151,8 @@ public class TypeCheckVisitor extends CollectorVisitor {
 
 	@Override
 	public void visitCall(DotExpression.CallExpr expr) {
-		this.visitExpecting(expr.receiver, Type.ANY);
+		// TODO: this is highly likely wrong
+		this.visitExpecting(expr.receiver, Type.ANY.withMdf(this.expected.mdf));
 		var receiverType = this.computed;
 
 		var method = this.aux.classOf(receiverType).methods.get(expr.methodName);
@@ -168,20 +169,23 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		if (!Modifier.canInto(receiverType.mdf, method.mdf)) {
 			throw new TypeError(
 					expr.pos(),
-					String.format("Cannot go between %s to %s", receiverType.mdf.toString().toLowerCase(), method.mdf.toString().toLowerCase())
+					String.format("Cannot go between %s and %s", receiverType.mdf.toString().toLowerCase(), method.mdf.toString().toLowerCase())
 			);
 		}
 
-		ProgramNode.Method selectedMethod = switch (this.expected.mdf) {
-			case CAPSULE -> methTypes.capsule;
-			case IMM -> methTypes.imm;
-			default -> methTypes.original;
-		};
+		ProgramNode.Method selectedMethod;
+		if (Modifier.canInto(receiverType.mdf, Modifier.IMM)) {
+			selectedMethod = methTypes.imm;
+		} else if (Modifier.canInto(receiverType.mdf, Modifier.CAPSULE)) {
+			selectedMethod = methTypes.capsule;
+		} else {
+			selectedMethod = methTypes.original;
+		}
 
 		// e_0 : T_0
 		this.scopeGamma(() -> {
 			this.gamma.put("this", receiverType);
-			this.visitExpecting(expr.args[0], selectedMethod.args[0].type);
+			this.visitExpecting(expr.receiver, selectedMethod.args[0].type);
 		});
 
 		// e_i : T_i forall i in 1..n
@@ -197,11 +201,11 @@ public class TypeCheckVisitor extends CollectorVisitor {
 
 	@Override
 	public void visitLiftedCall(DotExpression.CallExpr expr) {
-		this.visitExpecting(expr.receiver, Type.ANY);
+		// TODO: this is highly likely wrong
+		this.visitExpecting(expr.receiver, Type.ANY.withMdf(this.expected.mdf));
 		var receiverType = this.computed;
-		var receiverClassDec = this.aux.classOf(receiverType);
 
-		var method = receiverClassDec.methods.get(expr.methodName);
+		var method = this.aux.classOf(receiverType).methods.get(expr.methodName);
 		if (method == null) {
 			throw new TypeError(
 					expr.pos(),
@@ -226,15 +230,18 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		if (!Modifier.canInto(receiverType.mdf, method.mdf)) {
 			throw new TypeError(
 					expr.pos(),
-					String.format("Cannot go between %s to %s", receiverType.mdf.toString().toLowerCase(), method.mdf.toString().toLowerCase())
+					String.format("Cannot go between %s and %s", receiverType.mdf.toString().toLowerCase(), method.mdf.toString().toLowerCase())
 			);
 		}
 
-		ProgramNode.Method selectedMethod = switch (this.expected.mdf) {
-			case CAPSULE -> methTypes.capsule;
-			case IMM -> methTypes.imm;
-			default -> methTypes.original;
-		};
+		ProgramNode.Method selectedMethod;
+		if (Modifier.canInto(receiverType.mdf, Modifier.IMM)) {
+			selectedMethod = methTypes.imm;
+		} else if (Modifier.canInto(receiverType.mdf, Modifier.CAPSULE)) {
+			selectedMethod = methTypes.capsule;
+		} else {
+			selectedMethod = methTypes.original;
+		}
 
 		// e_0 : T_0
 		this.scopeGamma(() -> {
@@ -292,6 +299,96 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		this.expect(expr, field.type);
 	}
 
+	@Override
+	public void visitClassDeclaration(ProgramNode.ClassDeclaration classDec) {
+		// overrideOk
+		classDec.methods
+				.values()
+				.stream()
+				.map(method -> new Pair<>(
+						method,
+						Arrays.stream(classDec.impl)
+								.allMatch(name -> this.aux.overrideOk(this.program.classDeclarations.get(name), method))
+				))
+				.forEach(result -> {
+					ProgramNode.Method method = result.getFirst();
+					boolean isOk = result.getSecond();
+					if (!isOk) {
+						throw new TypeError(
+								method.pos(),
+								String.format(
+										"'%s' overrides an existing method with the same name but with a different signature.",
+										method.name
+								)
+						);
+					}
+				});
+
+		// dom(C') ⊆ dom(C) forall C' in Cs
+		Arrays.stream(classDec.impl)
+				.map(this.program.classDeclarations::get)
+				.flatMap(this.aux::getAllMethodNames)
+				.forEach(name -> {
+					if (!classDec.methods.containsKey(name)) {
+						throw new TypeError(
+								classDec.pos(),
+								String.format(
+										"'%s' does not implement '%s'",
+										classDec.name,
+										name
+								)
+						);
+					}
+				});
+
+		// Check methods are OK
+		this.cap = classDec.isCapability;
+		classDec.methods.values().forEach(method -> method.accept(this));
+	}
+
+	@Override
+	public void visitInterfaceDeclaration(ProgramNode.ClassDeclaration classDec) {
+		// overrideOk
+		classDec.methods
+				.values()
+				.stream()
+				.map(method -> new Pair<>(
+						method,
+						Arrays.stream(classDec.extend)
+								.allMatch(name -> this.aux.overrideOk(this.program.classDeclarations.get(name), method))
+				))
+				.forEach(result -> {
+					ProgramNode.Method method = result.getFirst();
+					boolean isOk = result.getSecond();
+					if (!isOk) {
+						throw new TypeError(
+								method.pos(),
+								String.format(
+										"'%s' overrides an existing method with the same name but with a different signature.",
+										method.name
+								)
+						);
+					}
+				});
+	}
+
+	@Override
+	public void visitMethod(ProgramNode.Method method) {
+		var _this = method.args[0].type;
+		if (_this.mdf != method.mdf) {
+			System.out.println("hi");
+		}
+
+		boolean oldCap = this.cap;
+		this.cap = this.cap && method.mdf == Modifier.MUT;
+		this.scopeGamma(() -> {
+			this.gamma.put("this", method.args[0].type.withMdf(method.mdf));
+			Arrays.stream(method.args).forEach(arg -> this.gamma.put(arg.name, arg.type));
+			this.visitExpecting(method.expression().orElseThrow(), method.returnType);
+		});
+		this.cap = oldCap;
+	}
+
 	private void expect(Expression expr, Type computed) {
 		boolean skipLiftedCheck = (computed instanceof LiftedType && this.expected.name.endsWith("@//Any//"))
 				|| (this.expected instanceof LiftedType && computed.name.endsWith("@//Any//"));
@@ -312,7 +409,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 	}
 
 	private void scopeGamma(Runnable scoped) {
-		var oldGamma = this.gamma;
+		var oldGamma = new HashMap<>(this.gamma);
 		scoped.run();
 		this.gamma = oldGamma;
 	}

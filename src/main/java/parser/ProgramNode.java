@@ -1,19 +1,20 @@
 package parser;
 
 import antlrGenerated.FRJSimpleParser;
-import aux.Aux;
 import lombok.AllArgsConstructor;
 import lombok.ToString;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.ParseTree;
 import typing.TypeError;
+import visitors.CollectorVisitor;
+import visitors.Visitable;
 
 import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public interface ProgramNode extends Walkable {
+public interface ProgramNode extends Walkable, Visitable {
 	Position pos();
 
 	@AllArgsConstructor
@@ -147,6 +148,15 @@ public interface ProgramNode extends Walkable {
 		}
 
 		@Override
+		public void accept(CollectorVisitor visitor) {
+			if (this.isInterface) {
+				visitor.visitInterfaceDeclaration(this);
+			} else {
+				visitor.visitClassDeclaration(this);
+			}
+		}
+
+		@Override
 		public String toString() {
 			var source = new StringBuilder();
 			if (this.isCapability) source.append("capability ");
@@ -189,6 +199,11 @@ public interface ProgramNode extends Walkable {
 		@Override
 		public Position pos() {
 			return this.pos;
+		}
+
+		@Override
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitBindingDeclaration(this);
 		}
 
 		@Override
@@ -244,6 +259,11 @@ public interface ProgramNode extends Walkable {
 		}
 
 		@Override
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitMethod(this);
+		}
+
+		@Override
 		public String toString() {
 			var source = new StringBuilder();
 			source.append(this.mdf.toString().toLowerCase()).append(" method ");
@@ -271,7 +291,7 @@ public interface ProgramNode extends Walkable {
 			return mdf == method.mdf &&
 					returnType.equals(method.returnType) &&
 					name.equals(method.name) &&
-					Arrays.equals(args, method.args);
+					Arrays.equals(Arrays.copyOfRange(args, 1, args.length), Arrays.copyOfRange(method.args, 1, method.args.length));
 		}
 	}
 
@@ -352,6 +372,11 @@ public interface ProgramNode extends Walkable {
 		}
 
 		@Override
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitType(this);
+		}
+
+		@Override
 		public String toString() {
 			return this.mdf.toString().toLowerCase() + ' ' + this.name;
 		}
@@ -399,6 +424,11 @@ public interface ProgramNode extends Walkable {
 		public LiftedType(Position pos, Type innerType) {
 			super(pos, Modifier.IMM, '@' + innerType.name);
 			this.innerType = innerType;
+		}
+
+		@Override
+		public void accept(CollectorVisitor visitor) {
+			visitor.visitLiftedType(this);
 		}
 
 		@Override

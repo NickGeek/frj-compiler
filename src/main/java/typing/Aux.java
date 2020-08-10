@@ -1,13 +1,13 @@
-package aux;
+package typing;
 
 import lombok.AllArgsConstructor;
 import lombok.Value;
 import parser.Modifier;
 import parser.Program;
 import parser.ProgramNode;
-import typing.TypeError;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 /**
  * Auxiliary functions for the auxiliary notation used in the formalism.
@@ -110,5 +110,47 @@ public class Aux {
 
 		return receiver.mdf == Modifier.IMM ||
 				(classDec.isCapability && classDec.fields.values().stream().allMatch(f -> f.type.mdf == Modifier.IMM));
+	}
+
+	/**
+	 * Ensures that a given method will not be incorrectly overridden (due to a signature conflict) by C'.
+	 *
+	 * @param cP C', the class/interface that is being checked to see if it correctly overrides.
+	 * @param method The method from the super-class/interface being checked against.
+	 */
+	public boolean overrideOk(ProgramNode.ClassDeclaration cP, ProgramNode.Method method) {
+		return this.overrideOk(cP, method, new HashSet<>());
+	}
+
+	public Stream<String> getAllMethodNames(ProgramNode.ClassDeclaration interfaceDec) {
+		return this.getAllMethodNames(interfaceDec, new HashSet<>());
+	}
+
+	private boolean overrideOk(ProgramNode.ClassDeclaration cP, ProgramNode.Method method, Set<String> visited) {
+		var parents = Optional.ofNullable(cP.extend).orElse(cP.impl);
+		boolean parentsOk = Arrays.stream(parents)
+				.filter(parent -> !visited.contains(parent))
+				.peek(visited::add)
+				.map(parent -> Objects.requireNonNull(this.program.classDeclarations.get(parent)))
+				.allMatch(parent -> overrideOk(parent, method, visited));
+
+		var alternateMethod = cP.methods.get(method.name);
+		if (alternateMethod == null) return parentsOk;
+
+		return alternateMethod.equals(method) && parentsOk;
+	}
+
+	private Stream<String> getAllMethodNames(ProgramNode.ClassDeclaration interfaceDec, Set<String> visited) {
+		assert interfaceDec.isInterface;
+		var baseNames = interfaceDec.methods.keySet().stream();
+
+		return Stream.concat(
+				baseNames,
+				Arrays.stream(interfaceDec.extend)
+						.filter(parent -> !visited.contains(parent))
+						.peek(visited::add)
+						.map(this.program.classDeclarations::get)
+						.flatMap(id -> this.getAllMethodNames(id, visited))
+		);
 	}
 }

@@ -2,6 +2,7 @@ package visitors;
 
 import parser.DotExpression;
 import parser.Expression;
+import parser.ProgramNode;
 
 public class CollectorVisitor {
 	public void visitNew(Expression.InstantiationExpr expr) {
@@ -46,5 +47,29 @@ public class CollectorVisitor {
 
 	public void visitFieldUpdate(DotExpression.FieldUpdateExpr expr) {
 		expr.children().forEach(child -> child.accept(this));
+	}
+
+	public void visitClassDeclaration(ProgramNode.ClassDeclaration classDec) {
+		classDec.children().forEach(child -> child.accept(this));
+	}
+
+	public void visitInterfaceDeclaration(ProgramNode.ClassDeclaration classDec) {
+		classDec.children().forEach(child -> child.accept(this));
+	}
+
+	public void visitMethod(ProgramNode.Method method) {
+		method.children().forEach(child -> child.accept(this));
+	}
+
+	public void visitBindingDeclaration(ProgramNode.BindingDeclaration bindingDeclaration) {
+		bindingDeclaration.children().forEach(child -> child.accept(this));
+	}
+
+	public void visitType(ProgramNode.Type type) {
+		type.children().forEach(child -> child.accept(this));
+	}
+
+	public void visitLiftedType(ProgramNode.LiftedType liftedType) {
+		liftedType.children().forEach(child -> child.accept(this));
 	}
 }

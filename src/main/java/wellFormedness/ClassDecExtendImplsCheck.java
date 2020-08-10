@@ -46,7 +46,7 @@ public class ClassDecExtendImplsCheck implements WellFormednessRule<Program> {
 				.map(badClassDec -> {
 					var pos = badClassDec.pos();
 					var rule = badClassDec.isInterface
-							? "interfaces can only extend other interfaces"
+							? "interfaces can only extend other interfaces and can't extend themselves"
 							: "classes can only implement interfaces";
 
 					return new MalformedException(

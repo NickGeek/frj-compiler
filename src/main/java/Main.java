@@ -20,16 +20,21 @@ public class Main {
 			new NoDuplicateNames().check(programContext);
 			var program = Program.fromCtx(programContext);
 
+			// Ensure the program is well-formed
 			WellFormednessRule.runAllProgramChecks(
 					RunChecks.makeChecks(program),
 					program
 			).ifPresent(Main::printErrorsAndQuit);
 
-//			TypingRule.getErrors(program).ifPresent(Main::printErrorsAndQuit);
+			// Type check the main expression
 			var visitor = new TypeCheckVisitor(program, ProgramNode.Type.ANY);
 			visitor.cap = true;
 			program.main.accept(visitor);
-			visitor.cap = false;
+
+			// Type check CDs
+			program.classDeclarations
+					.values()
+					.forEach(cd -> cd.accept(new TypeCheckVisitor(program, ProgramNode.Type.ANY)));
 
 //			var idk = program.classDeclarations.values().stream().filter(cd -> cd.isInterface).map(typing.Interface::new).map(i -> i.methods(program).collect(java.util.stream.Collectors.toList())).collect(java.util.stream.Collectors.toList());
 
