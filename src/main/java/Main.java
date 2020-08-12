@@ -1,17 +1,15 @@
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 import parser.Parser;
-import parser.Program;
-import parser.ProgramNode;
-import typing.TypeCheckVisitor;
-import wellFormedness.NoDuplicateNames;
-import wellFormedness.RunChecks;
-import wellFormedness.WellFormednessRule;
 
 import java.io.IOException;
 import java.nio.file.Path;
 
 public class Main {
 	public static void main(String[] cliArgs) {
+		if (cliArgs.length < 1) {
+			printErrorsAndQuit("Please provide a FRJ file to compile.");
+		}
+
 		try {
 			// Build parse tree
 			var programContext = Parser.fromPath(Path.of(cliArgs[0]));

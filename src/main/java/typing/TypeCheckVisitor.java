@@ -49,8 +49,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 				.collect(Collectors.toSet());
 
 		// T1 f1 . . . Tn fn = fields(imm C<T>) and cap; Σ; Γ |- ei: Ti[mdf = imm]
-		// TODO: I've changed this to look at expected-- double check me
-		if (this.expected.mdf == Modifier.IMM || this.expected.mdf == Modifier.ANY && argMdfs.stream().allMatch(mdf -> Modifier.canInto(mdf, Modifier.IMM))) {
+		if (this.expected.mdf != Modifier.MUT && argMdfs.stream().allMatch(mdf -> Modifier.canInto(mdf, Modifier.IMM))) {
 			Streams.forEachPair(
 					classDef.fields.values().stream(),
 					Arrays.stream(expr.args),
@@ -75,7 +74,9 @@ public class TypeCheckVisitor extends CollectorVisitor {
 				(fieldDec, argExpr) -> this.visitExpecting(argExpr, fieldDec.type)
 		);
 
-		boolean canPromote = !argMdfs.contains(Modifier.MUT) && !argMdfs.contains(Modifier.READ);
+//		boolean canPromote = !argMdfs.contains(Modifier.MUT) && !argMdfs.contains(Modifier.READ);
+		boolean canPromote = false; // Constructor promotion works, but it isn't in the formalism yet, so disabling for now.
+
 		Modifier mdf = canPromote ? Modifier.CAPSULE : Modifier.MUT;
 
 		var computed = new Type(expr.pos(), mdf, expr.name);
@@ -151,7 +152,6 @@ public class TypeCheckVisitor extends CollectorVisitor {
 
 	@Override
 	public void visitCall(DotExpression.CallExpr expr) {
-		// TODO: this is highly likely wrong
 		this.visitExpecting(expr.receiver, Type.ANY.withMdf(this.expected.mdf));
 		var receiverType = this.computed;
 
@@ -159,6 +159,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		Optional<ProgramNode.Method> methodOpt = receiverClassDec.isInterface
 				? this.aux.getInterfaceMethod(receiverClassDec, expr.methodName)
 				: Optional.ofNullable(receiverClassDec.methods.get(expr.methodName));
+
 		if (methodOpt.isEmpty()) {
 			throw new TypeError(
 					expr.pos(),
@@ -167,6 +168,19 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		}
 
 		ProgramNode.Method method = methodOpt.get();
+
+		if (expr.isLifted) {
+			// validActor(T_0)
+			if (!this.aux.isValidActor(receiverType)) {
+				throw new TypeError(
+						expr.pos(),
+						String.format(
+								"'%s' is not a valid actor. Actors must either be imm or be a capability class with only imm fields.",
+								expr.receiver
+						)
+				);
+			}
+		}
 
 		// T_0..T_n -> T in methTypes(T_0, m)
 		var methTypes = this.aux.methTypes(receiverType, expr.methodName);
@@ -190,79 +204,32 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		// e_0 : T_0
 		this.scopeGamma(() -> this.visitExpecting(expr.receiver, selectedMethod.args[0].type));
 
-		// e_i : T_i forall i in 1..n
-		Streams.forEachPair(
-				Arrays.stream(selectedMethod.args).skip(1),
-				Arrays.stream(expr.args).skip(1),
-				(methodArg, argExpr) -> this.visitExpecting(argExpr, methodArg.type)
-		);
+		if (expr.isLifted) {
+			// e_i : T_i forall i in 1..n
+			Streams.forEachPair(
+					Arrays.stream(selectedMethod.args).skip(1),
+					Arrays.stream(expr.args).skip(1),
+					(methodArg, argExpr) -> this.visitExpecting(argExpr, new LiftedType(methodArg.pos(), methodArg.type))
+			);
 
-		this.computed = selectedMethod.args[0].type;
-		this.expect(expr, selectedMethod.returnType);
+			this.computed = selectedMethod.args[0].type;
+			this.expect(expr, new LiftedType(expr.pos(), selectedMethod.returnType));
+		} else {
+			// e_i : T_i forall i in 1..n
+			Streams.forEachPair(
+					Arrays.stream(selectedMethod.args).skip(1),
+					Arrays.stream(expr.args).skip(1),
+					(methodArg, argExpr) -> this.visitExpecting(argExpr, methodArg.type)
+			);
+
+			this.computed = selectedMethod.args[0].type;
+			this.expect(expr, selectedMethod.returnType);
+		}
 	}
 
 	@Override
 	public void visitLiftedCall(DotExpression.CallExpr expr) {
-		// TODO: this is highly likely wrong
-		this.visitExpecting(expr.receiver, Type.ANY.withMdf(this.expected.mdf));
-		var receiverType = this.computed;
-
-		var receiverClassDec = this.aux.classOf(receiverType);
-		Optional<ProgramNode.Method> methodOpt = receiverClassDec.isInterface
-				? this.aux.getInterfaceMethod(receiverClassDec, expr.methodName)
-				: Optional.ofNullable(receiverClassDec.methods.get(expr.methodName));
-
-		if (methodOpt.isEmpty()) {
-			throw new TypeError(
-					expr.pos(),
-					String.format("Cannot find the method '%s' on %s", expr.methodName, receiverType)
-			);
-		}
-
-		ProgramNode.Method method = methodOpt.get();
-
-		// validActor(T_0)
-		if (!this.aux.isValidActor(receiverType)) {
-			throw new TypeError(
-					expr.pos(),
-					String.format(
-							"'%s' is not a valid actor. Actors must either be imm or be a capability class with only imm fields.",
-							expr.receiver
-					)
-			);
-		}
-
-		// T_0..T_n -> T in methTypes(T_0, m)
-		var methTypes = this.aux.methTypes(receiverType, expr.methodName);
-		// mdf' <= mdf
-		if (!Modifier.canInto(receiverType.mdf, method.mdf)) {
-			throw new TypeError(
-					expr.pos(),
-					String.format("Cannot go between %s and %s", receiverType.mdf.toString().toLowerCase(), method.mdf.toString().toLowerCase())
-			);
-		}
-
-		ProgramNode.Method selectedMethod;
-		if (Modifier.canInto(receiverType.mdf, Modifier.IMM)) {
-			selectedMethod = methTypes.imm;
-		} else if (Modifier.canInto(receiverType.mdf, Modifier.CAPSULE)) {
-			selectedMethod = methTypes.capsule;
-		} else {
-			selectedMethod = methTypes.original;
-		}
-
-		// e_0 : T_0
-		this.scopeGamma(() -> this.visitExpecting(expr.receiver, selectedMethod.args[0].type));
-
-		// e_i : T_i forall i in 1..n
-		Streams.forEachPair(
-				Arrays.stream(selectedMethod.args).skip(1),
-				Arrays.stream(expr.args).skip(1),
-				(methodArg, argExpr) -> this.visitExpecting(argExpr, new LiftedType(methodArg.pos(), methodArg.type))
-		);
-
-		this.computed = selectedMethod.args[0].type;
-		this.expect(expr, new LiftedType(expr.pos(), selectedMethod.returnType));
+		this.visitCall(expr);
 	}
 
 	@Override

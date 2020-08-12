@@ -16,23 +16,21 @@ head(@[@[@@@ꬡ⃡ۨ Ὓົ = @[],
 head(head(this)).ᬥ = 950.0 ; ບ᠋᩿]; "".ೱੑె꧲(this)]);
 }
 
-class Std  {
-imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+capability class Std  {
+read method imm Number add(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+read method imm Number sub(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
-0 ;
-
-imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
-new False();
-}
-
-capability class StdC  {
-mut method imm String print(mut StdC this, imm String msg) =
+mut method imm String print(mut Std this, imm String msg) =
 msg;
+
+read method imm Number mul(read Std this, imm Number a, imm Number b) =
+0 ;
+
+read method imm Bool gte(read Std this, imm Number a, imm Number b) =
+new False();
 }
 
 capability class ꬉⷼ implements ཀ  {

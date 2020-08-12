@@ -1,7 +1,6 @@
 package std;
 
 import parser.Parser;
-import parser.Program;
 import parser.ProgramNode;
 
 import java.io.IOException;

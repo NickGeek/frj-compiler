@@ -6,17 +6,20 @@ mut method @@@@ᰡ Ⴧ਼(mut ऽৈ­ this);
 read method imm Ά ꪉᝒ᯦(read ऽৈ­ this, imm ꣻౖ᪰⃑༾ັ ᯔ්ܶ);
 }
 
-class Std  {
-imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+capability class Std  {
+read method imm Number add(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+read method imm Number sub(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+mut method imm String print(mut Std this, imm String msg) =
+msg;
+
+read method imm Number mul(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+read method imm Bool gte(read Std this, imm Number a, imm Number b) =
 new False();
 }
 
@@ -36,11 +39,6 @@ interface ꪱೢᝲ extends ₜၫᨛ઼, 〳᥌᷌ꫯ  {
 
 interface ￄ extends ਗ਼ૼ  {
 
-}
-
-capability class StdC  {
-mut method imm String print(mut StdC this, imm String msg) =
-msg;
 }
 
 class True implements Bool  {

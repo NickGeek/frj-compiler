@@ -1,26 +1,46 @@
 main = "";
 
+interface Float extends Number, Literal  {
+
+}
+
 interface ೡ  {
 
 }
 
-class Std  {
-imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+capability class Std  {
+read method imm Number add(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+read method imm Number sub(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+mut method imm String print(mut Std this, imm String msg) =
+msg;
+
+read method imm Number mul(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+read method imm Bool gte(read Std this, imm Number a, imm Number b) =
 new False();
 }
 
-capability class StdC  {
-mut method imm String print(mut StdC this, imm String msg) =
-msg;
+interface Number extends Literal  {
+
+}
+
+interface Bool extends Literal  {
+imm method imm Bool not(imm Bool this);
+
+imm method imm Bool or(imm Bool this, imm Bool b);
+
+imm method imm Bool and(imm Bool this, imm Bool b);
+
+imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+}
+
+interface Literal  {
+imm method imm String toString(imm Literal this);
 }
 
 class True implements Bool  {
@@ -61,32 +81,6 @@ imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm Producer
 f2;
 }
 
-interface Int extends Number, Literal  {
-
-}
-
-interface Float extends Number, Literal  {
-
-}
-
-interface Number extends Literal  {
-
-}
-
-interface Bool extends Literal  {
-imm method imm Bool not(imm Bool this);
-
-imm method imm Bool or(imm Bool this, imm Bool b);
-
-imm method imm Bool and(imm Bool this, imm Bool b);
-
-imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
-}
-
-interface Literal  {
-imm method imm String toString(imm Literal this);
-}
-
 interface ProducerN  {
 imm method imm Number get(imm ProducerN this);
 }
@@ -99,5 +93,9 @@ imm method imm ၐ ણං୍ೣٰ᳴(imm ଽ this, imm ꬋ ⅇំ꯬ᢩ, mut ˆ�
 imm method @@@ῄ؜ၟ ڭ꫶ᤣ(imm ଽ this, imm ಷ ꩂᝲ, imm ঽৌ Έ);
 
 imm method imm ꪱꪰꚞ፟ྪ ᗮ੍(imm ଽ this);
+}
+
+interface Int extends Number, Literal  {
+
 }
 

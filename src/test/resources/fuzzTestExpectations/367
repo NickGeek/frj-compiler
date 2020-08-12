@@ -1,17 +1,20 @@
 main = new ڮ(imm _ ஏ؜᪆༙ = "\47𐼀",
 1 .¤ = new ᥥ⃒ஂ꙯４ׇ());
 
-class Std  {
-imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+capability class Std  {
+read method imm Number add(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+read method imm Number sub(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+mut method imm String print(mut Std this, imm String msg) =
+msg;
+
+read method imm Number mul(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+read method imm Bool gte(read Std this, imm Number a, imm Number b) =
 new False();
 }
 
@@ -23,11 +26,6 @@ imm method @@@ງ ꢳॣ(imm ຄ this, @ೠ உ, read 々 ㆮ଼၈᠕࿆ॢ, @@
 
 interface ຍᤲ  {
 
-}
-
-capability class StdC  {
-mut method imm String print(mut StdC this, imm String msg) =
-msg;
 }
 
 class True implements Bool  {

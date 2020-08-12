@@ -40,14 +40,11 @@ class False implements Bool {
 }
 
 // Stdlib wrappers
-class Std {
-	method Number add(Number a, Number b) = 0;
-	method Number sub(Number a, Number b) = 0;
-	method Number mul(Number a, Number b) = 0;
-	method Bool gte(Number a, Number b) = new False();
-}
-
-capability class StdC {
+capability class Std {
+	read method Number add(Number a, Number b) = 0;
+	read method Number sub(Number a, Number b) = 0;
+	read method Number mul(Number a, Number b) = 0;
+	read method Bool gte(Number a, Number b) = new False();
 	mut method String print(String msg) = msg;
 }
 

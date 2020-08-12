@@ -5,7 +5,10 @@ import parser.Program;
 import parser.ProgramNode;
 import parser.Walkable;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * TODO: Get description from the report

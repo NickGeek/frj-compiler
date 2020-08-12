@@ -1,16 +1,23 @@
 main = this;
 
-class Std  {
-imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+interface Float extends Number, Literal  {
+
+}
+
+capability class Std  {
+read method imm Number add(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+read method imm Number sub(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+mut method imm String print(mut Std this, imm String msg) =
+msg;
+
+read method imm Number mul(read Std this, imm Number a, imm Number b) =
 0 ;
 
-imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+read method imm Bool gte(read Std this, imm Number a, imm Number b) =
 new False();
 }
 
@@ -20,9 +27,22 @@ mut method @ᝰ᳭ꪾ꫁᭐ੋ ゅ(mut ￊ⃡᷒ౢ this);
 mut method imm ᏸ ቊ(mut ￊ⃡᷒ౢ this, @@ລᮀﬞ ॳꪳ‏ᯩഃ, @@@ﵖਃ סּࠦൗௗ಼, read µ ᡍ, imm ၡே ℼ, @@@@@@ꜞ ஷ, imm バཷਾ ۮ৬);
 }
 
-capability class StdC  {
-mut method imm String print(mut StdC this, imm String msg) =
-msg;
+interface Number extends Literal  {
+
+}
+
+interface Bool extends Literal  {
+imm method imm Bool not(imm Bool this);
+
+imm method imm Bool or(imm Bool this, imm Bool b);
+
+imm method imm Bool and(imm Bool this, imm Bool b);
+
+imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+}
+
+interface Literal  {
+imm method imm String toString(imm Literal this);
 }
 
 class True implements Bool  {
@@ -63,32 +83,6 @@ imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm Producer
 f2;
 }
 
-interface Int extends Number, Literal  {
-
-}
-
-interface Float extends Number, Literal  {
-
-}
-
-interface Number extends Literal  {
-
-}
-
-interface Bool extends Literal  {
-imm method imm Bool not(imm Bool this);
-
-imm method imm Bool or(imm Bool this, imm Bool b);
-
-imm method imm Bool and(imm Bool this, imm Bool b);
-
-imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
-}
-
-interface Literal  {
-imm method imm String toString(imm Literal this);
-}
-
 interface ProducerN  {
 imm method imm Number get(imm ProducerN this);
 }
@@ -100,5 +94,9 @@ imm ꡲੋੇ ᜏ;
 imm Ⅺ ꤟ༷᠙;
 @@Ὑ ꟸ᳐;imm method imm ۿ꫁ ળ(imm ⷛᝳ this) =
 this;
+}
+
+interface Int extends Number, Literal  {
+
 }
 

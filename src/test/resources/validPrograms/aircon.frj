@@ -31,8 +31,8 @@ capability class Sensors {
 
 capability class AC {
 	mut method Bool setPower(Bool powerState) =
-		mut StdC stdC = new StdC(),
-		String ignored = stdC.print(powerState.toString()),
+		mut Std std = new Std(),
+		String ignored = std.print(powerState.toString()),
 		powerState;
 }
 
@@ -44,7 +44,7 @@ main =
 
 	// Decide power state
 	@Number discomfort = new ComfortComputer().@discomfort(temps, humidities),
-	mut ACController controller = new ACController(new False()), // why did I have to split this?
+	mut ACController controller = new ACController(new False()),
 	@Bool powerState = controller.@powerSwitch(discomfort),
 
 	// Apply power state
