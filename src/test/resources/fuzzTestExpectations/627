@@ -1,2 +1,112 @@
-main = "𐩠ೞ";
+main = this;
+
+class Std  {
+imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+new False();
+}
+
+capability class StdC  {
+mut method imm String print(mut StdC this, imm String msg) =
+msg;
+}
+
+class True implements Bool  {
+imm method imm Bool not(imm True this) =
+new False();
+
+imm method imm Bool or(imm True this, imm Bool b) =
+this;
+
+imm method imm Bool and(imm True this, imm Bool b) =
+b;
+
+imm method imm String toString(imm True this) =
+"true";
+
+imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+f1;
+}
+
+interface String extends Literal  {
+
+}
+
+class False implements Bool  {
+imm method imm Bool not(imm False this) =
+new True();
+
+imm method imm Bool or(imm False this, imm Bool b) =
+b;
+
+imm method imm Bool and(imm False this, imm Bool b) =
+this;
+
+imm method imm String toString(imm False this) =
+"false";
+
+imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+f2;
+}
+
+interface Ⴭ  {
+imm method @@ຍꥐ ℤ(imm Ⴭ this);
+}
+
+interface Int extends Number, Literal  {
+
+}
+
+capability class ໆ࿆ௗ implements ⅅ  {
+@@@ᳶ꫶ ῴ;
+imm Ըྒྷ ૹ;
+@@ఫ _ୣႚ࿆ে;
+mut ၑ ꘓ࿆ⷦ9ٰ;
+}
+
+interface ம extends ޱ  {
+
+}
+
+interface Float extends Number, Literal  {
+
+}
+
+interface Number extends Literal  {
+
+}
+
+interface Bool extends Literal  {
+imm method imm Bool not(imm Bool this);
+
+imm method imm Bool or(imm Bool this, imm Bool b);
+
+imm method imm Bool and(imm Bool this, imm Bool b);
+
+imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+}
+
+capability class ወ઼ implements Ｋᮀ࿆឵  {
+@@ꬃ፟ ૡ়;
+mut ꣲ מּᝲ꠆;imm method @ᳵ᳭ ϡ(imm ወ઼ this, @@ୱ ⳳ᪄, imm ૐႏᤱ ಫ￺, @@@ヾꫫୂ ￗ゙) =
+imm Ｖ꤉ ﬓ = new ܐ(),
+@[@[""; 49 ]; tail(@[@[""; head(new ꧏ(@ⷌ ஐ = 0 ,
+ⁱ︉ᢩ, 39 ))]; new ன()])];
+}
+
+interface Literal  {
+imm method imm String toString(imm Literal this);
+}
+
+interface ProducerN  {
+imm method imm Number get(imm ProducerN this);
+}
 

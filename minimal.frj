@@ -1,0 +1,16 @@
+capability class ACController {
+	Bool isOn;
+
+	read method Number hysteresis() =
+		this.isOn // `this` is being typed as an `imm Bool` because it's doing `this.isOn` (silly billy)
+			.thenElse(
+				new ACController_hysteresis_t(),
+				new ACController_hysteresis_f()
+			).get();
+}
+class ACController_hysteresis_t implements ProducerN {method Number get() = new Std().sub(0, 0.5);}
+class ACController_hysteresis_f implements ProducerN {method Number get() = 0.5;}
+
+main =
+	mut ACController controller = new ACController(new False()),
+	controller.hysteresis();

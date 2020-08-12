@@ -1,1 +1,1 @@
-interface ᳰᬁ᮴් { }  capability class ำ { @ @ ฦꦂ    ᠠ᳴ ;  @ @ @ ꧠ೬     ஏੀ᱅҄ৄ ;  @ ⁱ۲   Ⱪೕ ;  }  main = @ [ ᜮ  ; 率  ]   ;  
+capability class ℨ᪘ { }  interface ٯืೕ extends ꜙ  { capsule method mut Ⴗ҃؜୯  ޱࠡᩞ్ৗ ( ꧼ᯳༨  מּ  )  ; }  interface ܐ҅ౢ੬ extends Ⴐ , Έେ⁮ , ර  { }  capability class ⴇ { @ @ @ ຢ     เ᭕ ;  method @ ﹍ᜳ༦   රേꪷ༧ ( )  = new ⳳ௭ၧ೯ ( @ [ 0x.fbAp+7  ; 0b0  ]   )    ;  }  capability class ᝪ { mut method හେ  ବ ( @ ൔ   ೞֿ  , ㆋ  ൎ  , @ ˮ   ᪧ  )  = head ( ൿ  . હ ( )    )   ;  }  main = @ [ ]   ;  

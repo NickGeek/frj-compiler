@@ -1,1 +1,1 @@
-main = @ [ tail ( 0xeB_6.P4_90d  )   ; @ [ ]   ]   ;  
+main = head ( @ [ this  ; 0d  ]   )   ;  

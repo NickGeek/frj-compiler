@@ -1,1 +1,1 @@
-main = @ [ true  ; tail ( tail ( ""  )   )   ]   ;  
+main = "\230𑅐"  ;  

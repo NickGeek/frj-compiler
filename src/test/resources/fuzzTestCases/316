@@ -1,1 +1,1 @@
-main = 0x81_AL  ;  
+main = tail ( this  )   ;  

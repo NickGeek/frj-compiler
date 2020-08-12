@@ -1,35 +1,90 @@
-main = @[];
+main = new ޱ(@[@@ḇۣ ኌ = new ᦑ("").@ꫀ(this),
+"\212𖹀𞹇\t\t\r𐆐"; new ષೂ(@[ꥵ­; @[head(head(tail(new キ(11.0 )))); @[]]], head(tail(@[@[].@ઍ(this).ಎ꣔ᮬ = ஒে.ੜ(this); ""])), 0.0 )], "");
 
-class ᎀ  {
-capsule method read ‿ၠ꠆꩖ᢩ᳴ꚟ ꥼ១() =
+interface Float extends Number, Literal  {
+
+}
+
+class Std  {
+imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+new False();
+}
+
+interface Number extends Literal  {
+
+}
+
+interface Bool extends Literal  {
+imm method imm Bool not(imm Bool this);
+
+imm method imm Bool or(imm Bool this, imm Bool b);
+
+imm method imm Bool and(imm Bool this, imm Bool b);
+
+imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+}
+
+interface Literal  {
+imm method imm String toString(imm Literal this);
+}
+
+capability class StdC  {
+mut method imm String print(mut StdC this, imm String msg) =
+msg;
+}
+
+class True implements Bool  {
+imm method imm Bool not(imm True this) =
+new False();
+
+imm method imm Bool or(imm True this, imm Bool b) =
 this;
 
-imm method @ꣻᮧ ਲ(imm ᳩ꧑ೂ ᮍ꤁༵ާ) =
-new ଽꤦ᧓(@@Ὕ ਲ਼ = tail("𐣻\u3dF4"),
-head(imm ॐ ۯ = @[],
-"ᭌ").Ⳳ්໌￻૦⁡()).@ꓲ(ￒ, 3 );
+imm method imm Bool and(imm True this, imm Bool b) =
+b;
 
-imm method capsule ᄖ ਸ਼­᪗(@@ኽൃꨬꠦ ᏻ᷿᮷ং഼, imm מּ᪓ၙఃۤ ᪧ, capsule ￚಁ꫶ ꚳࠩ) =
+imm method imm String toString(imm True this) =
+"true";
+
+imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+f1;
+}
+
+interface String extends Literal  {
+
+}
+
+class False implements Bool  {
+imm method imm Bool not(imm False this) =
+new True();
+
+imm method imm Bool or(imm False this, imm Bool b) =
+b;
+
+imm method imm Bool and(imm False this, imm Bool b) =
 this;
 
-imm method capsule ⶴꦃྔ ꥲ꙯꫁ۨ() =
-head(@[].அ᪃);
+imm method imm String toString(imm False this) =
+"false";
+
+imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+f2;
 }
 
-capability class ꬴ implements ￜ  {
-capsule method @@װ් ꬿ() =
-false ;
+interface ProducerN  {
+imm method imm Number get(imm ProducerN this);
 }
 
-class ந implements ᬖ  {
+interface Int extends Number, Literal  {
 
-}
-
-interface ட  {
-imm method @@@@@@Ὃॏ߳᧓ෑ ᱏု();
-
-imm method read ઢ ೡࠡ⁤෩();
-
-imm method imm এꩌஂ꙯ ශೊੵ(imm ໆ ળ᭐);
 }
 

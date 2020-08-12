@@ -1,0 +1,54 @@
+// Literals
+interface Literal {
+	method String toString();
+}
+interface Number extends Literal {}
+interface Int extends Number, Literal {}
+interface Float extends Number, Literal {}
+interface String extends Literal {}
+
+/*
+ * Booleans are a little special because we actually implement them in FRJ natively.
+ * Because this proof-of-concept lacks generics, booleans only work with number producers, which is
+ * what was the most useful for an example.
+ */
+interface Bool extends Literal {
+	method Bool not();
+	method Bool and(Bool b);
+	method Bool or(Bool b);
+	method ProducerN thenElse(ProducerN f1, ProducerN f2);
+}
+
+interface ProducerN {
+	method Number get();
+}
+
+class True implements Bool {
+	method Bool not() = new False();
+	method Bool and(Bool b) = b;
+	method Bool or(Bool b) = this;
+	method ProducerN thenElse(ProducerN f1, ProducerN f2) = f1;
+	method String toString() = "true";
+}
+
+class False implements Bool {
+	method Bool not() = new True();
+	method Bool and(Bool b) = this;
+	method Bool or(Bool b) = b;
+	method ProducerN thenElse(ProducerN f1, ProducerN f2) = f2;
+	method String toString() = "false";
+}
+
+// Stdlib wrappers
+class Std {
+	method Number add(Number a, Number b) = 0;
+	method Number sub(Number a, Number b) = 0;
+	method Number mul(Number a, Number b) = 0;
+	method Bool gte(Number a, Number b) = new False();
+}
+
+capability class StdC {
+	mut method String print(String msg) = msg;
+}
+
+main = 0;

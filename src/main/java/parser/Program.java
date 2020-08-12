@@ -1,7 +1,7 @@
 package parser;
 
 import antlrGenerated.FRJSimpleParser;
-import std.Literals;
+import std.Builtins;
 
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +16,7 @@ public class Program implements Walkable {
 				.map(ProgramNode.ClassDeclaration::ctxToClassDeclaration)
 				.collect(Collectors.toMap(cd -> cd.name, cd -> cd));
 
-		var classDecs = new HashMap<>(Literals.classes);
+		var classDecs = new HashMap<>(Builtins.parseBuiltIns());
 		classDecs.putAll(userClassDecs);
 
 		var mainExpr = Expression.ctxToExpression(ctx.main().expr());

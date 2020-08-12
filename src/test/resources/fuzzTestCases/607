@@ -1,1 +1,1 @@
-interface ਗ਼ࣙ߂ extends ꣳ਼૩  { imm method ⶼ  ⶭ༹ ( @ @ @ @ @ ぁ৬ၫ       ᓃ  )  ; read method @ @ @ @ ଚ      ₹్៑༷ ( )  ; method imm ޱ  றﬞ᳹ ( )  ; method read ῗ᮴  ᛐွ ( )  ; }  main = ""  ;  
+interface ག extends ᏸ〪 , ↇ , ೞ  { read method capsule ڟ  זּ ( )  ; }  class ͺܿ implements ଇొਃ᜔๒ܲ  { Ὓ  ᆚ ;  }  interface ঊ { method @ ᳪᜒ   આ়꧶ ( )  ; method @ @ @ @ ਏ꫁ୋ      ⷑ్ ( )  ; mut method capsule ᢪ᠎  ￚং߫ ( )  ; }  interface ᛷ extends ય܏࠘‭  { method @ @ @ @ @ ⅎ       ﬡ ( @ 〼   ௹  , mut e  ⶭ૭߫꙯ꩍ  )  ; read method @ @ @ ၒਿ     Ὃ؜︂᭕៝ࠬ ( )  ; }  capability class ⵈꚟ { }  main = @ [ ]   ;  

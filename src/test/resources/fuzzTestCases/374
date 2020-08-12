@@ -1,1 +1,1 @@
-capability class ⷝﬞঁ { @ @ ﹼ୧    ஐ ;  capsule ᲇඃ୬ੑ  ˮ ;  method mut ഏ  る ( )  = 0_70L  ;  }  main = ꠢ۲֚  ;  
+class ﹍ implements ꪄಁིᤦꪷ༥ , ੳা௨ , ᛸ꯭  { ᜉ  ⴧ ;  @ @ @ ୟ᪔꣒     ୡඃ಼ ;  @ ヽ   ᝰꩍ ;  @ @ ᏼັ    Ἕᩴᜒ়༷ᢩࠞ ;  imm method read ಀಾ  Çࠡ᠘ ( @ @ ఎౌ    ൎꢺ  , @ ꨡ   ⁿ  )  = 0B10l  . ኍ ( "\r\0"  )    ;  }  interface ڰ៓્ꦷ꣢ৌ { method read ఏ⳰  ࠉ ( )  ; read method capsule ៗⷸۛ  ณ් ( mut ˠ  டྐׇ  , @ ꩂꪲ   ࠨ  , imm ⲹ  ﹲ  )  ; method imm ퟓऻ᳴  ꨨ ( )  ; }  main = @ ஐ᧗୮   ⳳ꙯ె = new º᳭ੇ፝֯ ( )    , @ [ ]     ;  

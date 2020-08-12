@@ -1,1 +1,1 @@
-interface ᗒ { }  capability class ⳳ꠆༵ᬺ { Ά؜  ල ;  method ៗ  ꢏ ( )  = ቝ઼ؑ  ;  method @ ำৣ   Ὕᤴ ( )  = @ [ ]   ;  mut method @ ꪻၤ   ῶ ( @ ۥ઼᪵⁠   יִു  )  = ⁀  ;  method Ж  ߒᤵ ( @ @ ثꩌ    ఉ்᪸  , @ @ ە̥    ᦴ  )  = .08e0  ;  method ⅈ  ᏼ ( )  = ፍ  ;  capsule method @ ֏   ミׂᜓ ( )  = false  ;  }  interface ꠄ { }  capability class ಽฺꢸ implements ﶶ  { capsule method @ @ @ ᾼ۪᠕ॊ࡙     ਮ؜༹༷ ( @ @ @ @ ଏꦂ      ﬁ༘⁮  )  = new ℇୣ ( false  , @ [ ]   , this  )    ;  }  interface ᾨ { read method @ @ ٯ    ˬᤨ ( )  ; }  main = head ( tail ( 0_8e+0  )   )   ;  
+main = 0b1___0l  ;  

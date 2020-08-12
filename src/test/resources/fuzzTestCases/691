@@ -1,1 +1,1 @@
-main = tail ( tail ( @ [ ]   )   )   ;  
+main = tail ( @ [ ]   )   ;  

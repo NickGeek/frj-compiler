@@ -1,1 +1,1 @@
-interface ࡠ꯬ extends ቖۨႚ  { method @ @ @ @ ﬄ      ﶿ༢ۡைۭ ( imm ஓ  ඉॣ઼  , read લௌ  ꪵ  , read ண  ꬦऻ  )  ; imm method ꟻᤣ  ⶒ༷ ( )  ; }  class ࠤ { @ @ @ Ό‌໋     ਬ ;  }  interface ﹳ extends ன , ᱎ୮ਂ , ꩦ , ֏ೖୢ , ᭆ , ⸯ၁ू  { }  class ￦ implements ퟧꨵ , ﵵ  { read method ኙ  ꠈꯣࠖ ( @ ەੵୌ   ＄  , ףּ  ꤤ  )  = @ [ ]   ;  mut method imm ணௗ  ༀ ( ꓬ  ࡨ  , @ ፕ   ᯤᷬୗ᧙  , @ ॽؐੁைౢോ   ဨꧥ⁦꘣  , @ థ   ኴౢ  )  = tail ( new ߺ ( )    )   ;  }  main = ᯔ  ࡓᨛ = ""  , @ ﷺ   ኋ = this  , head ( @ [ ࡧࠧါ౦  ૡ = ""  , false  . ᡍ ( )      ; true  ]   )   . ࢸ       ;  
+main = 08f  ;  

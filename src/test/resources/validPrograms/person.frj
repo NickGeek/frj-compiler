@@ -1,0 +1,12 @@
+class Person {
+	String name;
+	Int age;
+
+	mut method Int setAge(capsule Int age) = this.age = age;
+}
+
+main =
+	mut Person mP = new Person("Bob", 24),
+	imm Person iP = new Person("Bob", mP.age),
+	read Person rP = mP,
+	mP.setAge(25);

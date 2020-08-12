@@ -155,13 +155,18 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		this.visitExpecting(expr.receiver, Type.ANY.withMdf(this.expected.mdf));
 		var receiverType = this.computed;
 
-		var method = this.aux.classOf(receiverType).methods.get(expr.methodName);
-		if (method == null) {
+		var receiverClassDec = this.aux.classOf(receiverType);
+		Optional<ProgramNode.Method> methodOpt = receiverClassDec.isInterface
+				? this.aux.getInterfaceMethod(receiverClassDec, expr.methodName)
+				: Optional.ofNullable(receiverClassDec.methods.get(expr.methodName));
+		if (methodOpt.isEmpty()) {
 			throw new TypeError(
 					expr.pos(),
 					String.format("Cannot find the method '%s' on %s", expr.methodName, receiverType)
 			);
 		}
+
+		ProgramNode.Method method = methodOpt.get();
 
 		// T_0..T_n -> T in methTypes(T_0, m)
 		var methTypes = this.aux.methTypes(receiverType, expr.methodName);
@@ -183,10 +188,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		}
 
 		// e_0 : T_0
-		this.scopeGamma(() -> {
-			this.gamma.put("this", receiverType);
-			this.visitExpecting(expr.receiver, selectedMethod.args[0].type);
-		});
+		this.scopeGamma(() -> this.visitExpecting(expr.receiver, selectedMethod.args[0].type));
 
 		// e_i : T_i forall i in 1..n
 		Streams.forEachPair(
@@ -205,13 +207,19 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		this.visitExpecting(expr.receiver, Type.ANY.withMdf(this.expected.mdf));
 		var receiverType = this.computed;
 
-		var method = this.aux.classOf(receiverType).methods.get(expr.methodName);
-		if (method == null) {
+		var receiverClassDec = this.aux.classOf(receiverType);
+		Optional<ProgramNode.Method> methodOpt = receiverClassDec.isInterface
+				? this.aux.getInterfaceMethod(receiverClassDec, expr.methodName)
+				: Optional.ofNullable(receiverClassDec.methods.get(expr.methodName));
+
+		if (methodOpt.isEmpty()) {
 			throw new TypeError(
 					expr.pos(),
 					String.format("Cannot find the method '%s' on %s", expr.methodName, receiverType)
 			);
 		}
+
+		ProgramNode.Method method = methodOpt.get();
 
 		// validActor(T_0)
 		if (!this.aux.isValidActor(receiverType)) {
@@ -244,10 +252,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		}
 
 		// e_0 : T_0
-		this.scopeGamma(() -> {
-			this.gamma.put("this", receiverType);
-			this.visitExpecting(expr.args[0], selectedMethod.args[0].type);
-		});
+		this.scopeGamma(() -> this.visitExpecting(expr.receiver, selectedMethod.args[0].type));
 
 		// e_i : T_i forall i in 1..n
 		Streams.forEachPair(

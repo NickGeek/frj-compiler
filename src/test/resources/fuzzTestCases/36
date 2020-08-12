@@ -1,1 +1,1 @@
-capability class ᠸ⁯ૣ { capsule ৰᩗ  ᏺ ;  @ ךּ   ೲꨫ ;  @ @ ಽྲం﻿    ᢗਾ಼ꢁ ;  method @ ꣻৈ   ꄚొ〯 ( @ @ @ я֠ᯮ꧓     ꡆ꣠  , @ ۿ꪿   ˮ਼  )  = ⶠ  ;  }  main = @ [ ]   ;  
+capability class ۻꚞ implements ʹ  { }  class ᳯ { read method @ @ @ ܐ꩗     ㆇི ( read ɜ꦳᠔ׂ߳  ঽꠂ  )  = tail ( @ @ ส    ૹৗᝳ = 0xeE.P+0d  , head ( 02_072l  )     )   . ಱ಼ = @ [ ]     ;  imm method mut ꜝ  ૱࡛߭ ( )  = head ( tail ( @ [ ]   )   )   ;  method @ ꯋ߅   ꬭಂ ( )  = ""  ;  }  interface ଡைᜲ਼ᳳೈෛ { method ꧏ᪽ꣂ︊  ⴧ ( )  ; }  main = this  ;  

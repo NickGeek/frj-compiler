@@ -319,7 +319,7 @@ public interface ProgramNode extends Walkable, Visitable {
 			if (b == Modifier.MUT) return this;
 			if (b == Modifier.CAPSULE) return this;
 			if (this.mdf == Modifier.MUT && b == Modifier.READ) return this.withMdf(Modifier.READ);
-			if (this.mdf == Modifier.IMM && b == Modifier.READ) return this.withMdf(Modifier.READ);
+			if (this.mdf == Modifier.IMM && b == Modifier.READ) return this.withMdf(Modifier.IMM);
 
 			throw new TypeError(
 					new ProgramNode.Position(-1, -1),

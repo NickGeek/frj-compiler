@@ -1,1 +1,1 @@
-capability class ꤟ᳔ { capsule method capsule _  ᚌֿ ( )  = 0b01L  ;  method @ ঢ়෭   ℕꚞె୩ ( @ ৡ   ꣽ  , ﭩࠧୈۢ͂੨  ꭚ7  , @ @ @ ᬝ1‪࿆     ਲ  , read סּ꩑  ᢁ  , @ @ ᬥ    ଐ۹ോ३ࠞ  , ꪻัိ  ˑ  )  = 0XFL  ;  imm method capsule ₱  ᳵ ( @ ݖ   ɳׂ  , @ @ @ @ Ⳳ      ਫ਼ౢ  , @ ꬤ゚   ᄃᜲ  , @ ऱ   ꧪ૽  )  = tail ( ⷌ  )   ;  }  class ᛒީෳ implements ቫ￹  { capsule $꣪  ℎׄൄ༹ ;  method imm 畚ꠥ഻  ‿‬꤄⵿ ( @ @ @ ຊၴֿ     ჺ  )  = new ꧏ ( @ @ ꦚⷯ    ၚ = ""  , $    )    ;  }  main = љ  ;  
+main = tail ( tail ( this  )   )   ;  

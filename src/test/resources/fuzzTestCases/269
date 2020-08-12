@@ -1,1 +1,1 @@
-main = head ( tail ( @ [ true  ; new Ῡ ( )    ]   )   )   ;  
+main = this  ;  

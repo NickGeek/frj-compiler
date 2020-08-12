@@ -43,6 +43,9 @@ public class GenerateFuzzTestingAnswers {
 						validateExpectation(file.getName(), expectation);
 						Files.write(outputPath, expectation.getBytes());
 
+					} catch (ParseCancellationException e) {
+						System.err.println(String.format("Error parsing %s", file));
+						throw e;
 					} catch (IOException e) {
 						throw new RuntimeException(e);
 					}

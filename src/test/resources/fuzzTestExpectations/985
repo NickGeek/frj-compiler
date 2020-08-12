@@ -1,20 +1,99 @@
 main = @[];
 
-capability class ຫຼ  {
-imm method imm ໃ഻ꚟר១ ﹩꩙(imm ネ ａܑ᩺, mut ܐ Ⱘ) =
-head(new _゙᷼());
+interface Float extends Number, Literal  {
+
 }
 
-interface ᝂॢ  {
-mut method capsule ＿᥋ ᝌྏ꛱(imm ᳱ Ꙁ);
+class Std  {
+imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+new False();
 }
 
-class ﬖ៝  {
-imm method @@@@@$゙ ꧮౣិ() =
-0.2 ;
+interface Number extends Literal  {
+
 }
 
-capability class Ꭹ̼᳭ͮᢆ implements $, థၤ  {
-@ºᜓ ફᨚ;
+interface Bool extends Literal  {
+imm method imm Bool not(imm Bool this);
+
+imm method imm Bool or(imm Bool this, imm Bool b);
+
+imm method imm Bool and(imm Bool this, imm Bool b);
+
+imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+}
+
+interface Literal  {
+imm method imm String toString(imm Literal this);
+}
+
+capability class StdC  {
+mut method imm String print(mut StdC this, imm String msg) =
+msg;
+}
+
+class True implements Bool  {
+imm method imm Bool not(imm True this) =
+new False();
+
+imm method imm Bool or(imm True this, imm Bool b) =
+this;
+
+imm method imm Bool and(imm True this, imm Bool b) =
+b;
+
+imm method imm String toString(imm True this) =
+"true";
+
+imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+f1;
+}
+
+capability class ສ implements ꪍᬃ؂, ዃꠋ꯬  {
+imm method read ㆇ෦ ಎꨮ(imm ສ this) =
+"\t𑋰";
+
+imm method imm יִຼꠋᷖ ன(imm ສ this) =
+@[@ퟬꩌᨛ ꨘࠞ = tail(62 ),
+new ਜ਼(@[imm ቘൌ゚꧀҅ ఎ = @[],
+ｺ; ዞ]); new ꧏ᭱()];
+}
+
+interface String extends Literal  {
+
+}
+
+class False implements Bool  {
+imm method imm Bool not(imm False this) =
+new True();
+
+imm method imm Bool or(imm False this, imm Bool b) =
+b;
+
+imm method imm Bool and(imm False this, imm Bool b) =
+this;
+
+imm method imm String toString(imm False this) =
+"false";
+
+imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+f2;
+}
+
+interface ProducerN  {
+imm method imm Number get(imm ProducerN this);
+}
+
+interface Int extends Number, Literal  {
+
 }
 

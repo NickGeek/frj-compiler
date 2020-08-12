@@ -20,7 +20,6 @@ public class Aux {
 		var concreteName = t.name.replaceAll("@", "");
 
 		return Optional.ofNullable(this.program.classDeclarations.get(concreteName))
-				.filter(cd -> !cd.isInterface)
 				.orElseThrow(() -> new TypeError(
 						t.pos(),
 						String.format("'%s' does not exist or is not a class.", t)
@@ -39,8 +38,19 @@ public class Aux {
 	 * @return The different method types possible for the given method.
 	 */
 	public MethodTypes methTypes(ProgramNode.Type t, String methodName) {
-		var method = Objects.requireNonNull(this.classOf(t).methods.get(methodName));
 		ProgramNode.Type receiver = t;
+		var receiverClassDec = this.classOf(receiver);
+		Optional<ProgramNode.Method> methodOpt = receiverClassDec.isInterface
+				? this.getInterfaceMethod(receiverClassDec, methodName)
+				: Optional.ofNullable(receiverClassDec.methods.get(methodName));
+		if (methodOpt.isEmpty()) {
+			throw new TypeError(
+					receiver.pos(),
+					String.format("Cannot find the method '%s' on %s", methodName, receiver)
+			);
+		}
+
+		ProgramNode.Method method = methodOpt.get();
 
 		method = new ProgramNode.Method(
 				method.pos(),
@@ -49,7 +59,7 @@ public class Aux {
 				method.returnType,
 				method.name,
 				Arrays.copyOfRange(method.args, 1, method.args.length),
-				method.expression().orElseThrow()
+				method.expression().orElse(null)
 		);
 
 		receiver = receiver.mdf == Modifier.MUT ? receiver.withMdf(Modifier.CAPSULE) : receiver;
@@ -69,7 +79,7 @@ public class Aux {
 							);
 						})
 						.toArray(ProgramNode.BindingDeclaration[]::new),
-				method.expression().orElseThrow()
+				method.expression().orElse(null)
 		);
 
 		ProgramNode.Method immMethod = new ProgramNode.Method(
@@ -88,7 +98,7 @@ public class Aux {
 							);
 						})
 						.toArray(ProgramNode.BindingDeclaration[]::new),
-				capsuleMethod.expression().orElseThrow()
+				capsuleMethod.expression().orElse(null)
 		);
 
 		return new MethodTypes(
@@ -126,6 +136,12 @@ public class Aux {
 		return this.getAllMethodNames(interfaceDec, new HashSet<>());
 	}
 
+	public Optional<ProgramNode.Method> getInterfaceMethod(ProgramNode.ClassDeclaration interfaceDec, String name) {
+		return this.getInterfaceMethods(interfaceDec, new HashSet<>())
+				.filter(method -> method.name.equals(name))
+				.findAny();
+	}
+
 	private boolean overrideOk(ProgramNode.ClassDeclaration cP, ProgramNode.Method method, Set<String> visited) {
 		var parents = Optional.ofNullable(cP.extend).orElse(cP.impl);
 		boolean parentsOk = Arrays.stream(parents)
@@ -151,6 +167,20 @@ public class Aux {
 						.peek(visited::add)
 						.map(this.program.classDeclarations::get)
 						.flatMap(id -> this.getAllMethodNames(id, visited))
+		);
+	}
+
+	private Stream<ProgramNode.Method> getInterfaceMethods(ProgramNode.ClassDeclaration interfaceDec, Set<String> visited) {
+		assert interfaceDec.isInterface;
+		var baseNames = interfaceDec.methods.values().stream();
+
+		return Stream.concat(
+				baseNames,
+				Arrays.stream(interfaceDec.extend)
+						.filter(parent -> !visited.contains(parent))
+						.peek(visited::add)
+						.map(this.program.classDeclarations::get)
+						.flatMap(id -> this.getInterfaceMethods(id, visited))
 		);
 	}
 }

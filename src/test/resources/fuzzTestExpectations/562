@@ -1,32 +1,103 @@
-main = false ;
+main = tail(tail(imm ᝰ ၐ = new ຳੌ੨(ૹ, ꪱ꤃⃡, "", imm ஒ꧔ ໟ᳷ = 131 ,
+"𖫮𐊀".ၰੌ؄ิૢ(this)),
+this));
 
-capability class ແം implements ᢪ༨ၴ߀߳  {
-capsule method @ᝥఀ ｬ༵ꢁ(capsule ஐ ૹ, @ꩁூ ⶫ) =
-@[@[]; head(new ஊ())];
+interface ౡ extends ꫴ୯, Ω  {
+imm method read ꘐ ૱(imm ౡ this);
+
+mut method @ᏽ ન(mut ౡ this, imm טּ൧ ౙ, capsule ㆩ ꟻ᪃);
+
+read method imm ટ ৡ્(read ౡ this);
 }
 
-class ਲ਼­ౢ  {
-imm method mut ꪶࠥᬁ ⶱ() =
-imm ꤚׁ྆౦ꫫ ລꨶ = this,
-false ;
+class Std  {
+imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+0 ;
 
-capsule method capsule ଡ଼ᝲූ྆ો ఠ꧖() =
-"\ueFeA";
+imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+0 ;
 
-capsule method read ꫂꢀ؜ స(@η⁣͎െ ऽ) =
-this;
+imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+0 ;
 
-imm method @@ଌേ າ︎ྒై() =
-tail(0 );
-
-imm method mut £ ઍௗ() =
-169 ;
-
-imm method read ଡ଼ ල(@@@@ⶃ 〇಼) =
-this;
+imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+new False();
 }
 
-capability class ୟ  {
-@@ℐ᥍؜ ᥖꩌ;
+capability class StdC  {
+mut method imm String print(mut StdC this, imm String msg) =
+msg;
+}
+
+class True implements Bool  {
+imm method imm Bool not(imm True this) =
+new False();
+
+imm method imm Bool or(imm True this, imm Bool b) =
+this;
+
+imm method imm Bool and(imm True this, imm Bool b) =
+b;
+
+imm method imm String toString(imm True this) =
+"true";
+
+imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+f1;
+}
+
+interface String extends Literal  {
+
+}
+
+class False implements Bool  {
+imm method imm Bool not(imm False this) =
+new True();
+
+imm method imm Bool or(imm False this, imm Bool b) =
+b;
+
+imm method imm Bool and(imm False this, imm Bool b) =
+this;
+
+imm method imm String toString(imm False this) =
+"false";
+
+imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+f2;
+}
+
+interface Int extends Number, Literal  {
+
+}
+
+interface Float extends Number, Literal  {
+
+}
+
+class ﹳ implements ë, ｄ໑ဴ  {
+
+}
+
+interface Number extends Literal  {
+
+}
+
+interface Bool extends Literal  {
+imm method imm Bool not(imm Bool this);
+
+imm method imm Bool or(imm Bool this, imm Bool b);
+
+imm method imm Bool and(imm Bool this, imm Bool b);
+
+imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+}
+
+interface Literal  {
+imm method imm String toString(imm Literal this);
+}
+
+interface ProducerN  {
+imm method imm Number get(imm ProducerN this);
 }
 

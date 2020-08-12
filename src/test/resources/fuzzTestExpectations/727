@@ -1,29 +1,113 @@
-main = new ড়();
+main = imm ꖂཱྀ ꥃ = @@@@@ඐ ଐ߮ऺᢅ = 56000.0 ,
+3.0E8 ,
+@@￡ ߺ = this,
+this;
 
-capability class ცࠝ  {
-@@Ό‮܏ ˍ;imm method @@@ၿୢ ঢ়ۧ(read ª ιா) =
-false .ಌ = @[];
+class Std  {
+imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+new False();
 }
 
-interface ၡ extends ㅬ  {
-imm method @@@〦େ に();
+capability class StdC  {
+mut method imm String print(mut StdC this, imm String msg) =
+msg;
 }
 
-interface ۥ໌ extends લ, ቛੵ꛱  {
-imm method @௹ི ꦦ᳷୩();
+class True implements Bool  {
+imm method imm Bool not(imm True this) =
+new False();
+
+imm method imm Bool or(imm True this, imm Bool b) =
+this;
+
+imm method imm Bool and(imm True this, imm Bool b) =
+b;
+
+imm method imm String toString(imm True this) =
+"true";
+
+imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+f1;
 }
 
-class ꧢຼᝒ implements Ή８, ꡒ  {
-imm method imm ଢ଼ޭ ၦ(imm ﵥ ː꣓) =
-"\'";
-}
-
-class ྉ implements Ṣ༥﻿ׄ੧ᩴၭ꧒  {
+interface String extends Literal  {
 
 }
 
-class ଏ implements ꭥꠂ, ᳰꧥ﻿, Θ  {
-imm method mut ຝ ⷕ(imm ۮ ল, imm ഉ༘ൊ ℂ, @ᱎైॄ ᥴൢ, @ዂ꠆ Q) =
-@[head(26576.0 ); "\'"];
+class False implements Bool  {
+imm method imm Bool not(imm False this) =
+new True();
+
+imm method imm Bool or(imm False this, imm Bool b) =
+b;
+
+imm method imm Bool and(imm False this, imm Bool b) =
+this;
+
+imm method imm String toString(imm False this) =
+"false";
+
+imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+f2;
+}
+
+interface Int extends Number, Literal  {
+
+}
+
+interface Float extends Number, Literal  {
+
+}
+
+class ὲ implements ꧠׇ  {
+imm method imm ೲ ꭣ(imm ὲ this) =
+ഏ;
+}
+
+interface า  {
+
+}
+
+interface Number extends Literal  {
+
+}
+
+class ⶔ  {
+imm method @ꬂ ΐၠꫵྺ⳱ꠋࠦ(imm ⶔ this, read ஞۨ ៛, imm ೠꨩ༹ ᎏેࠝ, @ⷙᨚ੍ۢ 醙) =
+"\u56FB૑";
+
+read method @ە྇ ᜏ়(read ⶔ this, @@ꩺ৯ ஃᷕ) =
+new 宅(tail(டેᝲֿꢾꯦ᪻));
+}
+
+interface Bool extends Literal  {
+imm method imm Bool not(imm Bool this);
+
+imm method imm Bool or(imm Bool this, imm Bool b);
+
+imm method imm Bool and(imm Bool this, imm Bool b);
+
+imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+}
+
+interface Literal  {
+imm method imm String toString(imm Literal this);
+}
+
+interface ProducerN  {
+imm method imm Number get(imm ProducerN this);
+}
+
+interface ꪱࠛ  {
+
 }
 

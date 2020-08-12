@@ -1,1 +1,1 @@
-interface ͼੑꫬ extends ఽ〮  { }  interface ៗ extends ৲ , লᮥꫯ౯ੑె༾ , µ , ⴭᨗ  { }  class 〺᧙ implements ߴ꪿ , ῥ  { mut method ℍ  ＄ ( )  = this  . Ὓ᱄꪿   ;  method ៗ  ఋ꧱᷼ᮤ ( χ  ౡ  )  = head ( capsule ཥ  ᱵ = @ [ ]   , @ ஜ   Ⴠ᷂ = 0b0__1  , ""      )   ;  }  capability class ἦ៝ॎັ { method @ @ ͽ᪖    ঐෑ ( )  = head ( true  )   ;  imm method @ @ @ @ ῧั      Ｏꩼ ( @ ॸ   ᜪ  , @ ዎ   ൔ  )  = tail ( મ  )   ;  }  main = @ ᮯ   ߗॅ = 70_0l  , new إਿ ( )      ;  
+main = tail ( new ꢰ ( )    )   ;  

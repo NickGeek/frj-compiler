@@ -1,1 +1,1 @@
-interface ဉ extends ꓤ  { method @ @ @ @ Ʇꠋ      _ ( )  ; read method @ ꩉ   ᝣ߭ ( @ @ ｂ꣒    ષ  , ﷳ  ⴭꢀ  )  ; imm method capsule ఽ  ﹏ٍ⳱ ( )  ; imm method ஒ  Ͳ ( )  ; }  main = tail ( false  )   ;  
+interface ᦚ extends Ὸ , ᡎ  { mut method @ c   ꩯ ( )  ; imm method @ ﹍   ഇ ( Ꙭ  ꠸  , imm ৳  º‎  , ػ⁠  ە꠆  , capsule ꡝ  ؋  )  ; }  main = head ( tail ( capsule ⳳൊ⁤ၳ  ቕ = @ [ "\253"  ; imm ⁱ  ܐ = this  , "\""    . ૹ   ]   , "𑇵\106𖾠"    )   )   ;  

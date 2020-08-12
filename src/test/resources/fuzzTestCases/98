@@ -1,1 +1,1 @@
-capability class ຍั { }  capability class ⷚ { method @ ⶦං   ˬ෬⁠ા༘ෳᜳ꘦ ( )  = @ @ ⵯ    ޱ­ৗꠋ = 0b1  , @ [ ]     ;  method @ @ ൖࠝ    ៜ᪶⃡ೊ ( @ ꫨ   ຢ  , @ @ ළ    ங྇  , @ ࡤ٩ऺ༤   ຢ  , @ ఉ   ਖ਼ꯪৈ  )  = 0x3P0D  ;  method mut ⴭ  ႎ ( )  = false  ;  }  capability class ꪼെᨗ { }  main = ""  ;  
+capability class ໆੈۢꤪ implements ຊ , ര , ⷘ  { method @ ⴭধ༷ꪳං   ౙ ( )  = tail ( tail ( 0x8.P8_4F  )   )   ;  }  main = @ [ new સ ( )    ; ""  ]   ;  

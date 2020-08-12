@@ -48,7 +48,6 @@ expr
 	| IntegerLiteral
 	| FloatingPointLiteral
 	| StringLiteral
-	| BooleanLiteral
 	| Identifier
 	;
 

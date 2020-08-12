@@ -1,10 +1,101 @@
-main = @@@@@ꧠ _᪕ = @[41 .@Ⴭ᪴("𛄟", 700.0 , 7 , imm ⷞዞ ꮦᝳ߉ = false ,
-new ס⵿ּ෭()); new ྌ༷፞()].ー(@[], 2.007473871753766E194 ).@ℭ(),
-@[""; tail(tail(this))];
+main = @[];
 
-interface ဿꧥྒྷ extends Λၖ  {
-mut method @@ⶐ꫁ॖ ஒ(@Ὕ ױ);
+class Std  {
+imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+0 ;
 
-capsule method read ˣ꯷ᮢ ই(imm Ｄ ૐᷛ᮷);
+imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+new False();
+}
+
+capability class StdC  {
+mut method imm String print(mut StdC this, imm String msg) =
+msg;
+}
+
+class True implements Bool  {
+imm method imm Bool not(imm True this) =
+new False();
+
+imm method imm Bool or(imm True this, imm Bool b) =
+this;
+
+imm method imm Bool and(imm True this, imm Bool b) =
+b;
+
+imm method imm String toString(imm True this) =
+"true";
+
+imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+f1;
+}
+
+interface String extends Literal  {
+
+}
+
+class False implements Bool  {
+imm method imm Bool not(imm False this) =
+new True();
+
+imm method imm Bool or(imm False this, imm Bool b) =
+b;
+
+imm method imm Bool and(imm False this, imm Bool b) =
+this;
+
+imm method imm String toString(imm False this) =
+"false";
+
+imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+f2;
+}
+
+interface Int extends Number, Literal  {
+
+}
+
+interface Float extends Number, Literal  {
+
+}
+
+interface Number extends Literal  {
+
+}
+
+interface Bool extends Literal  {
+imm method imm Bool not(imm Bool this);
+
+imm method imm Bool or(imm Bool this, imm Bool b);
+
+imm method imm Bool and(imm Bool this, imm Bool b);
+
+imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+}
+
+interface Literal  {
+imm method imm String toString(imm Literal this);
+}
+
+capability class ꪱ༡۸ঢ়ଂ꧗ᬹ implements ˤۡ, ஊ  {
+
+}
+
+interface ꩂ༿᮴ั  {
+mut method @@@@@ኸ ⷜ(mut ꩂ༿᮴ั this, capsule ޱಂೆઁᩜ꠆᳜ றఃࠛ);
+
+imm method imm ປ꯵ꙺ ᚒް(imm ꩂ༿᮴ั this);
+
+capsule method read ম〯ఃॣ࿆ ᤎ឴ᜳั්ꪲ(capsule ꩂ༿᮴ั this);
+}
+
+interface ProducerN  {
+imm method imm Number get(imm ProducerN this);
 }
 

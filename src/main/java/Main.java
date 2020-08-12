@@ -15,36 +15,13 @@ public class Main {
 		try {
 			// Build parse tree
 			var programContext = Parser.fromPath(Path.of(cliArgs[0]));
-
-			// Compute high level program object from the tree (duplicate names need to be removed because we use a Map data structure)
-			new NoDuplicateNames().check(programContext);
-			var program = Program.fromCtx(programContext);
-
-			// Ensure the program is well-formed
-			WellFormednessRule.runAllProgramChecks(
-					RunChecks.makeChecks(program),
-					program
-			).ifPresent(Main::printErrorsAndQuit);
-
-			// Type check the main expression
-			var visitor = new TypeCheckVisitor(program, ProgramNode.Type.ANY);
-			visitor.cap = true;
-			program.main.accept(visitor);
-
-			// Type check CDs
-			program.classDeclarations
-					.values()
-					.forEach(cd -> cd.accept(new TypeCheckVisitor(program, ProgramNode.Type.ANY)));
-
-//			var idk = program.classDeclarations.values().stream().filter(cd -> cd.isInterface).map(typing.Interface::new).map(i -> i.methods(program).collect(java.util.stream.Collectors.toList())).collect(java.util.stream.Collectors.toList());
-
-			System.out.println("Done!");
+			Compiler.compile(programContext);
 		} catch (ParseCancellationException | IOException e) {
 			printErrorsAndQuit(e.getLocalizedMessage());
 		}
 	}
 
-	private static void printErrorsAndQuit(String errors) {
+	public static void printErrorsAndQuit(String errors) {
 		System.err.println(errors);
 		System.exit(1);
 	}

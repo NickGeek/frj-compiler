@@ -1,1 +1,1 @@
-main = false  ;  
+interface ཨ〬 { read method imm ꧏၬ  ၰ ( @ @ ன    ᨆ꯹  )  ; method read ዉ  ↇ᪙ೣᤶ ( capsule ꧽ  ㅑ  , @ @ @ @ ኹ      ۿા  , @ Ⴭૈِ   ࢮᩲ  , imm Ω  ཀ  )  ; mut method imm ꣴ  אַ ( )  ; method @ @ @ ఐ     ೱ ( capsule J  ℇꥈ᱃ࠩ  , @ ఏ꧒်   ਆ߆ܑ  )  ; method read ぐ  ଆ ( )  ; }  class ꫀ﻿ implements ῄﬞාഃ؜ൈޭ  { capsule method capsule ঐ꤂1  ⴵ ( )  = նৢ  ;  }  capability class ꪺ { }  capability class ႎ implements ଢ଼⵿  { }  main = this  ;  

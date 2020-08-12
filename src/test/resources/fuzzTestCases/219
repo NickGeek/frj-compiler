@@ -1,1 +1,1 @@
-interface ꥃࣖ { read method @ ﷻ   מּܑᬹୈ ( )  ; }  interface ͻ extends Ⴭ , ଲ  { }  class ཅ૾ implements ΐ , ª  { imm method @ ൎ   ਲ਼ᮧ ( @ ㆧ   ಅ਼්ાꪰ  )  = ဿ୫  ;  }  interface ףּ { }  capability class ꧡ { capsule method @ Ά   ɧ ( @ @ @ @ Ὲ      Ꚅ  , @ @ @ @ מּ      Ｅ  )  = this  ;  }  interface ᳮ { capsule method @ @ @ ଭ     ꠃో⃡ᝲ ( )  ; mut method @ @ ⴭ    ꢂྑ ( )  ; }  class ⷒౕ꧱ { }  main = head ( ወௗ  )   ;  
+main = this  ;  

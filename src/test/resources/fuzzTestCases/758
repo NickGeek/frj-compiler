@@ -1,1 +1,1 @@
-interface Ῠؑௗ྆ᝒ­ extends ମ , ᏹ , வ , ਤ , ႎ  { method ₛ়  ᭋᩛેੵ ( )  ; mut method ຳ  ೡ݇ౣા ( )  ; }  main = 0xb__B4A8Dp00f  ;  
+capability class ൽ implements ຄిึෲ়꠆፝ , ﷷ⁤ , ªׇൢ￻  { imm method @ @ @ @ ꣵॣᮨ      ὢ ( )  = @ ㅟ   ઇ࠭ = this  , tail ( 24e+0_40  )     ;  capsule method mut ಉ  ℬॅ૩ ( )  = new ﷳ ( )    ;  }  interface ៗ { method ซ  Ꙁꧥ ( )  ; read method ℂ  ℨꪾ᪒౨੦ ( ﶳྭ  ࠨ  , @ ㄱ   ˬ  )  ; method capsule ኳ  ⁿॣ॒ ( )  ; method ᜎ  〵 ( )  ; method ㄫ  ᯝ༷ಁ ( )  ; }  main = @ ರ૬   ℇ = this  , this    ;  

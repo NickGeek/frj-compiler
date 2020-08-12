@@ -1,1 +1,1 @@
-main = true  ;  
+interface ຊ extends ᥝஂႚ , ൾຼ்ୗ , ꝫ  { mut method read ຟූેٰ〯  ˬ ( ၑ๋  ꥧ  , ꠛ᪘ੋ  লୄꢁᤪ  )  ; }  class ૹ { imm હ়  ཇ⃒ ;  ႎ༹  ⷈൌׇᳳ࿆᳒᳐ৗ ;  capsule ¥ॏ  ᢪ ;  method লᮁ  ࡪ ( )  = tail ( this  )   ;  method capsule ዀ২܏ొ  ඇ ( @ @ ಀ    ℳୁ၈༹  )  = tail ( this  )   ;  read method capsule ඔ  ᳶࠢ ( )  = 0l  ;  method imm దඃಁ  ୱ ( )  = tail ( new ງ‪ ( )    )   . ꩆٰ   ;  }  capability class $꘨༷ { method imm ꧻ⁣్  ౡ࿆ ( )  = ˮꤨ᳭ᨗࠗ  ;  method ᎍ᮸ී  ৎ ( )  = @ [ ]   ;  }  interface ಡ { }  main = this  ;  

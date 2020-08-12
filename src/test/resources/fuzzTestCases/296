@@ -1,1 +1,1 @@
-main = head ( @ [ tail ( head ( @ [ ]   )   )   ; ⷆ  ]   )   ;  
+capability class ﶔ፟܏ॕ { mut method സ᭕  ዎ࡛‫ྐཾᬼ೫ꦃׇ ( ࠨૢ  Όׄ  , @ ⸯ   ￡  )  = 0F  ;  method @ ⴿ   ೞ ( @ @ યං    ઌ᭲  , imm ꪺିౄ  ⵇ  , 〨༹２  ཫ  )  = @ [ new ல⁢ ( )    ; @ [ ]   ]   ;  }  capability class Ʝ implements ⴭ , È , ட⃯ః , ߓெ , ॐ , ꘪૌ๕ , ಀ౪ৢ , ஃꨳ꧑३෫ﬞ꫁߃ , ⷊᢩ  { }  interface ױ҄ extends า , ⷙె  { }  main = 0x.5CP+4  ;  

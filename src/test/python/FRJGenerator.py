@@ -3756,7 +3756,7 @@ class FRJGenerator(Generator):
     def expr(self, parent=None):
         current = UnparserRule(name='expr', parent=parent)
         self.enter_rule(current)
-        choice = self.model.choice(current, 0, [0 if [3, 3, 2, 3, 3, 4, 3, 1, 3, 4, 1, 1, 2][i] > self.max_depth else w for i, w in enumerate([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])])
+        choice = self.model.choice(current, 0, [0 if [3, 3, 2, 3, 3, 4, 3, 1, 3, 4, 1, 2][i] > self.max_depth else w for i, w in enumerate([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])])
         if choice == 0:
             self.instantiationExpr(parent=current)
         elif choice == 1:
@@ -3790,8 +3790,6 @@ class FRJGenerator(Generator):
         elif choice == 10:
             self.StringLiteral(parent=current)
         elif choice == 11:
-            self.BooleanLiteral(parent=current)
-        elif choice == 12:
             self.Identifier(parent=current)
         self.exit_rule(current)
         return current

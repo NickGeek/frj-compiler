@@ -1,1 +1,1 @@
-interface ᒪ extends ά꤈ , ௐ , Kೣ  { }  interface ꬕ extends ꙩ , ਏᢆ᳸ୖᤡ  { mut method mut ਐ  Ά ( @ ᜐ   ಹଁ໓ႇ  )  ; }  interface ꬥ extends ອྵ‬ , ۦ᮪ೖ , ჺ , ᎈುঁ , ᮻ۫  { capsule method @ ꬄ   ୠ ( mut ªູ꯹ꚞ  ꠗ  )  ; method ਫ੯  ￋৈ ( @ @ ༀ︎    ‿  )  ; }  capability class ꠃ { method mut ຊૢ  ૐ ( )  = ꩬᤴ  ;  read method imm ૱  ⅎ ( )  = true  ;  }  main = tail ( this  )   ;  
+main = ""  ;  

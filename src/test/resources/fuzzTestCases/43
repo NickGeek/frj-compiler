@@ -1,1 +1,1 @@
-interface ㆮ extends ቋ , Ί꩔ , ﬣោ , ᳮ  { }  main = this  ;  
+interface ၛ { method @ ಎ۬᳴ૻ   ངܑ᳜ࠩ ( read נּꪷ  彩  )  ; read method @ ৰ   એ ( )  ; mut method ﶚࠞ  ೲ ( )  ; method ຽ  றၱܹ ( )  ; }  class ᜧ꧀ { method read ﹩  நਾਁ￹ ( @ @ ॴ    ୠ  )  = ""  ;  imm method @ @ @ @ @ ၡ       ꤟ ( )  = head ( @ [ head ( @ ⅎꩍ   இ্ = @ [ ]   . ຽ᳝ૂٰৈၱ   , head ( Ⳇૉ꣨  )     )   ; @ [ @ [ ]   ; tail ( tail ( @ [ ]   )   )   ]   ]   )   ;  }  main = "\72"  ;  

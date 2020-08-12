@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -55,10 +56,13 @@ public class ParserFuzzTests {
 
 	private final File testCase;
 	private final String expected;
+	private final String standardLib;
 
-	public ParserFuzzTests(File testCase, String expected) {
+	public ParserFuzzTests(File testCase, String expected) throws IOException {
 		this.testCase = testCase;
 		this.expected = expected;
+
+		this.standardLib = Program.fromCtx(Parser.fromPath(Path.of("src", "main", "frj", "std.frj"))).toString();
 	}
 
 	@Test

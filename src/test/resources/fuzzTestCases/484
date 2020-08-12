@@ -1,1 +1,1 @@
-main = @ @ @ ল     ಋ⁩­ୌ = "ஂ"  , head ( false  )     ;  
+main = tail ( @ [ ]   )   ;  

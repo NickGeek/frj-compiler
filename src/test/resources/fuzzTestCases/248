@@ -1,1 +1,1 @@
-main = 0X7  ;  
+interface ꠉൊ়݇ extends ಀ , ต༵ೇ , ꪵ  { method @ ㅢ   ثິ၁ ( )  ; }  interface ಀெ᠌ extends ஔ , ῢ  { imm method imm ႎ꘨  ⶐൢ ( read ପႜ⁦  فꦺ̴  )  ; }  capability class Ꚗ implements ⳁ , ˬ , ಞ  { @ @ ꖺ    ⶹ ;  mut ⶽ  腧 ;  @ @ @ ￜ᱉     枬 ;  @ Ђᜳ   Ｃ ;  @ བྷ۠   Ⴭ ;  mut method @ @ @ Ὕ     ຊ᱆ ( )  = @ [ "\0"  ; this  ]   ;  }  class ই២ { }  main = ೞ  ୱꠂ്ꪰၗഃ = 0Xca  , ꩅ    ;  

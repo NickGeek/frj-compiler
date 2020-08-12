@@ -1,1 +1,1 @@
-capability class ྉؔ implements ῑ್ꪰۧ  { @ ൕ   _ ;  imm method ඔܑ  લީ᳷ ( @ @ @ ﷰꦁ     ֏  )  = @ [ ]   ;  method @ @ @ @ ՙ      Ό ( )  = @ [ ]   ;  method @ ஏ   ᤝ᭬ၤ ( )  = ꭚ  ;  method ၦଂ  ﹍ ( @ @ @ ௹ި     ಜ࠭ꚞ  )  = @ [ ]   ;  imm method read ᏽ  Ⴇ⵿ ( )  = new ꨥ ( )    ;  imm method @ ᜦ   ֏ ( )  = tail ( tail ( this  )   )   ;  }  main = ""  . ଏ᪗   ;  
+main = new ⁿ ( tail ( this  )   . ๆ꩘ൊ = 4000    )    ;  

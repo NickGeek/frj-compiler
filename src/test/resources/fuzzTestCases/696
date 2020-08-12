@@ -1,1 +1,1 @@
-interface ؋ { method ৎெോ  ࠤ ( mut ꥴ  ၺ⵿꣄݃᳒ꪸ  )  ; read method ࢯꯨ  ꩺ ( )  ; }  class ꠸ၟᨙ implements Ό , ৳  { read Ｍ  ꦄ ;  capsule ‿︫᭫  ⅼ ;  }  interface ಐ extends ꄁ᭳ , ەᨙ꛱ೖ଼ᝳే  { }  capability class ᛜ꧕॒ implements ସ , ὐ , ຍ  { imm ਤਁ  ᜅঁ ;  read ⶲ  ˮᝲᰳ ;  method capsule ৡ֦  ௹ ( )  = 0X3_3l  ;  }  class ﵔׁ { imm Ⴭஂ၄  ቑᢩ ;  @ ஐ   ﹱෞٰ ;  }  main = head ( @ [ ]   . ऽ = new এූۙ ( tail ( ਫ਼᪅ꢀ಼༹  )   )      )   ;  
+main = 0b0l  ;  

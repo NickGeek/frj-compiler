@@ -1,42 +1,99 @@
-main = capsule ಏ ᡴ = @ᠦ ߢ = head(""),
-@[head(ₜ); false ],
-@[].ꪱ = tail(@[0 ; ""]);
+main = "\"ꨀඅ🝴".@ӂូ(this);
 
-interface ₻९ extends த, ₜ  {
+class Std  {
+imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+new False();
+}
+
+capability class StdC  {
+mut method imm String print(mut StdC this, imm String msg) =
+msg;
+}
+
+class True implements Bool  {
+imm method imm Bool not(imm True this) =
+new False();
+
+imm method imm Bool or(imm True this, imm Bool b) =
+this;
+
+imm method imm Bool and(imm True this, imm Bool b) =
+b;
+
+imm method imm String toString(imm True this) =
+"true";
+
+imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+f1;
+}
+
+interface String extends Literal  {
 
 }
 
-interface 䝅഼ּꚟ extends ῃౕ  {
-imm method @@ꠉ ⁿ();
+class False implements Bool  {
+imm method imm Bool not(imm False this) =
+new True();
+
+imm method imm Bool or(imm False this, imm Bool b) =
+b;
+
+imm method imm Bool and(imm False this, imm Bool b) =
+this;
+
+imm method imm String toString(imm False this) =
+"false";
+
+imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+f2;
 }
 
-capability class ࠐ꤃  {
-@ꩭ ຍ;
+capability class ๅᝒ  {
+read ᥨൗ ۮ;
+imm ቍ ꧢᷪ;imm method @ℛྶ؀ Ò︤៝(imm ๅᝒ this) =
+tail("");
 }
 
-interface ਢ extends ꛪै, ჱ  {
-imm method imm ˡ ꧤ();
+interface Int extends Number, Literal  {
 
-imm method @ೞ 〸ౄ(@@@@＿ ଊ᪅);
-
-imm method @@@ℤ Ὴ();
-
-imm method @@ແᢩ ശॣ();
-
-imm method @@@ᦫ _(@ꧻ᭕⁤ꢀ­ਃ᠍ ฿ֿઁؘ, @@@@ၛ าඃၪ゚༵ॣޫ࡙꘨);
 }
 
-class ၦ  {
-imm ⳳ Ⴭ꣔ᨙ;
-imm ଐ ℤ;
-read ﵚ ੴ;
-imm ࠚ ꪻꙷ‫༹ꪲ;
-@@ቊ יִ;
-@@@@ꬊ Ὃേꧥྷ;
-@@ℨ ᝂ꣕꯵ৈᭀୋ;
+interface Float extends Number, Literal  {
+
 }
 
-interface ㄼൗ  {
-imm method imm ዐೣૄ ⴔ();
+interface Number extends Literal  {
+
+}
+
+interface Bool extends Literal  {
+imm method imm Bool not(imm Bool this);
+
+imm method imm Bool or(imm Bool this, imm Bool b);
+
+imm method imm Bool and(imm Bool this, imm Bool b);
+
+imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+}
+
+interface Literal  {
+imm method imm String toString(imm Literal this);
+}
+
+interface ProducerN  {
+imm method imm Number get(imm ProducerN this);
+}
+
+interface ၝ  {
+
 }
 

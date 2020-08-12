@@ -1,2 +1,158 @@
-main = tail(ߺ);
+main = 47 ;
+
+class Std  {
+imm method imm Number add(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number sub(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Number mul(imm Std this, imm Number a, imm Number b) =
+0 ;
+
+imm method imm Bool gte(imm Std this, imm Number a, imm Number b) =
+new False();
+}
+
+class ૹົ implements ඡ  {
+@यᳲ ዻ᪄;imm method imm סּۧ ኌ၂⃫ୂ(imm ૹົ this, @@@@ﻦ ৱ๖, @ਪௌۨ ༀ) =
+tail(@ꩂۧ꪿꯸ಎ ﶙ = ﬧ,
+this);
+
+capsule method mut ꬫ അ(capsule ૹົ this) =
+ೡ;
+}
+
+interface த  {
+imm method @ລೣᜲ ำׄ(imm த this, @Ử הּ);
+
+imm method @ၑฺ தྡྷ(imm த this);
+}
+
+interface ລ extends ៗ, ம, મ, ₦  {
+imm method @@@@ᠭ ໟ᯦(imm ລ this, mut ಇ ⅈ, imm ቝ꤃ Ὓ);
+
+imm method @ጜ ºూ(imm ລ this);
+}
+
+interface ۥ  {
+imm method @ꭡു ٯੈ(imm ۥ this, @ⳬ ⅎᨘு, @ຂୄ ᢄ, imm ᛊീ ᳶ꯹, capsule ಥೋ２ ႎ⃜᳸, @ᩆ 㽊, @@ￗ෮ _, imm ﬕ ဿ, @Ⴭ એ);
+}
+
+interface ℂۤ  {
+capsule method imm ୡ ᝮ(capsule ℂۤ this, imm ລ ￛܑஂ);
+}
+
+capability class StdC  {
+mut method imm String print(mut StdC this, imm String msg) =
+msg;
+}
+
+class True implements Bool  {
+imm method imm Bool not(imm True this) =
+new False();
+
+imm method imm Bool or(imm True this, imm Bool b) =
+this;
+
+imm method imm Bool and(imm True this, imm Bool b) =
+b;
+
+imm method imm String toString(imm True this) =
+"true";
+
+imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+f1;
+}
+
+interface String extends Literal  {
+
+}
+
+class False implements Bool  {
+imm method imm Bool not(imm False this) =
+new True();
+
+imm method imm Bool or(imm False this, imm Bool b) =
+b;
+
+imm method imm Bool and(imm False this, imm Bool b) =
+this;
+
+imm method imm String toString(imm False this) =
+"false";
+
+imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+f2;
+}
+
+class Ⳬ implements Ϟ  {
+imm method @ߠ έౣ(imm Ⳬ this, capsule ᦲꫮ ⁱ) =
+imm ꣻ໒ ஓຼೆ = @@ꘝ ﯰ = "",
+head(capsule ᾱො߯ ႎ = ꠃ,
+@ῗ ꘄ = tail(head(new ஈꯣ(tail(@["\3𖩟\""; new ൡ᳹(0.0 , 256.0 ).@Ὲ(this)])))),
+""),
+head(ቘ⃚۟೫.@ﰢ(this));
+
+capsule method imm ᥦ ꠃ(capsule Ⳬ this) =
+new ᡍ();
+
+imm method @@@ꩈۢާ꫁ ꧏৣೌ⃡(imm Ⳬ this, @@@@@@ቛ ᥠ, @ૠ ꞈ, imm ꩬ ꅄ) =
+tail(new ⁔(2.861E11 , tail(0.0 ), imm ᛗ ⶲ = head(ຣ),
+ꣴ));
+
+imm method read ஏ ヽႈ(imm Ⳬ this) =
+2.0E-9 ;
+}
+
+interface Int extends Number, Literal  {
+
+}
+
+class థ॔  {
+imm method @@ℑ ͳ(imm థ॔ this, imm Ὶׅ፞८᩼ୈ ˮꩼ) =
+@@ቋၳ ⳳ = 1.7498005798264095E100 ,
+1 ;
+
+imm method imm ꜙ༙ੈ ड྇(imm థ॔ this) =
+"ਫ਼";
+}
+
+interface Float extends Number, Literal  {
+
+}
+
+interface Number extends Literal  {
+
+}
+
+interface Bool extends Literal  {
+imm method imm Bool not(imm Bool this);
+
+imm method imm Bool or(imm Bool this, imm Bool b);
+
+imm method imm Bool and(imm Bool this, imm Bool b);
+
+imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+}
+
+interface Literal  {
+imm method imm String toString(imm Literal this);
+}
+
+interface ProducerN  {
+imm method imm Number get(imm ProducerN this);
+}
+
+interface p〬  {
+
+}
+
+capability class ঢ় implements ﹏಼  {
+
+}
+
+interface ꣽ extends ಲ, ᛂ, ௹꫁ᳲ, ᬳ︀  {
+imm method @ㅢฺઁ ꩉ(imm ꣽ this, capsule ঐ଼༙꯲ ዂ);
+}
 

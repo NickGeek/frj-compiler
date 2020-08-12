@@ -70,10 +70,10 @@ public interface Expression extends ProgramNode, Visitable {
 			var text = ctx.StringLiteral().getText();
 			return new LiteralExpr<>(new Position(ctx.StringLiteral().getSymbol()), text.substring(1, text.length() - 1), LiteralExpr.LiteralType.STRING);
 		}
-		if (ctx.BooleanLiteral() != null) {
-			var value = ctx.BooleanLiteral().getText().equals("true");
-			return new LiteralExpr<>(new Position(ctx.BooleanLiteral().getSymbol()), value, LiteralExpr.LiteralType.BOOLEAN);
-		}
+//		if (ctx.BooleanLiteral() != null) {
+//			var value = ctx.BooleanLiteral().getText().equals("true");
+//			return new LiteralExpr<>(new Position(ctx.BooleanLiteral().getSymbol()), value, LiteralExpr.LiteralType.BOOLEAN);
+//		}
 		if (ctx.Identifier() != null) {
 			return new IdentifierExpr(new Position(ctx.Identifier().getSymbol()), ctx.Identifier().getText());
 		}

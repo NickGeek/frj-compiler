@@ -1,1 +1,1 @@
-capability class Ὅ௨ { ⶳූᤧ  ⶽܑ ;  method @ @ ᦛࠛ    ೞ ( )  = @ @ @ @ @ @ À        ꭡۧ၄፞ = true  , ኻ    ;  }  interface ᛡാ { method @ @ @ ୠुીັ     ﾾ ( mut ꛜ  Щᬁ  )  ; mut method @ @ Ꞅ꛰߬    ಀႜ ( capsule ಘ੍  Ⴍ︮  )  ; }  interface ⴧ꯲ຼ { imm method @ ናࠧ६   ၚ ( )  ; }  main = tail ( tail ( this  )   )   ;  
+capability class ꠉংꢀ { method @ ཨꨴ   ㆴ ( imm ᣫ  ۿ  )  = "\b"  . ꗩ꙯ ( 0xb5  )    ;  }  main = @ [ ]   ;  
