@@ -6,19 +6,14 @@ class ComfortComputer {
 		std.add(std.add(adjustedTemp, adjustedHum), 46.3);
 }
 
-capability class ACController {
-	Bool isOn;
+class ACController {
+	method Number hysteresis(Bool isOn) =
+		isOn.thenElse(new ACController_hysteresis_t(), new ACController_hysteresis_f()).get();
 
-	read method Number hysteresis() =
-		this.isOn
-			.thenElse(
-				new ACController_hysteresis_t(),
-				new ACController_hysteresis_f()
-			).get();
-
-	mut method Bool powerSwitch(Number discomfortIndex) =
+	method @Bool powerSwitch(@Number discomfortIndex, Bool isOn) =
 		Std std = new Std(),
-		this.isOn = std.gte(discomfortIndex, std.add(75.0, this.hysteresis()));
+		Bool shouldBeOn = std.gte(head(discomfortIndex), std.add(75.0, this.hysteresis(isOn))),
+		@[shouldBeOn; this.powerSwitch(tail(discomfortIndex), shouldBeOn)];
 }
 class ACController_hysteresis_t implements ProducerN {method Number get() = new Std().sub(0, 0.5);}
 class ACController_hysteresis_f implements ProducerN {method Number get() = 0.5;}
@@ -44,8 +39,7 @@ main =
 
 	// Decide power state
 	@Number discomfort = new ComfortComputer().@discomfort(temps, humidities),
-	mut ACController controller = new ACController(new False()),
-	@Bool powerState = controller.@powerSwitch(discomfort),
+	@Bool powerState = new ACController().powerSwitch(discomfort, new False()),
 
 	// Apply power state
 	mut AC ac = new AC(),
