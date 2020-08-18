@@ -1,0 +1,11 @@
+class A {
+	method @Number counter(Number current) = @[current; this.counter(new Std().add(current, 1))];
+}
+
+class Stringify {
+	method String fromNum(Number n) = n.toString();
+}
+
+main =
+	mut Std std = new Std(),
+	std.@print(new Stringify().@fromNum(new A().counter(0)));

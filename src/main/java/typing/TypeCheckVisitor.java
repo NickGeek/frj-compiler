@@ -91,6 +91,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 					.stream()
 					.filter(entry -> entry.getValue().mdf == Modifier.IMM || entry.getValue().mdf == Modifier.CAPSULE)
 					.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+			// TODO: make sure we give a useful error here if we filter out things that are attempted to be used
 
 			if (!(this.expected instanceof LiftedType)) {
 				throw new TypeError(expr.pos(), "Unexpected signal.");
@@ -168,6 +169,15 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		}
 
 		ProgramNode.Method method = methodOpt.get();
+
+		// If we applied the (newImm) rule when we could've done (newMut), change the mdf here
+		if (
+				expr.receiver instanceof Expression.InstantiationExpr
+						&& ((Expression.InstantiationExpr) expr.receiver).args.length == 0
+						&& method.mdf == Modifier.MUT
+		) {
+			receiverType = receiverType.withMdf(Modifier.MUT);
+		}
 
 		if (expr.isLifted) {
 			// validActor(T_0)

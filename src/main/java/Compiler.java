@@ -28,6 +28,6 @@ public class Compiler {
 		visitor.cap = true;
 		program.main.accept(visitor);
 
-		System.out.println("Done!");
+		System.out.println(program);
 	}
 }

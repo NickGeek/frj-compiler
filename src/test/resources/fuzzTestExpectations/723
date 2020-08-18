@@ -17,6 +17,12 @@ capability class Std  {
 read method imm Number add(read Std this, imm Number a, imm Number b) =
 0 ;
 
+mut method imm Float randomFloat(mut Std this, imm Number min, imm Number max) =
+0.0 ;
+
+mut method @Bool sleep(mut Std this, imm Int timeMs) =
+@[];
+
 read method imm Number sub(read Std this, imm Number a, imm Number b) =
 0 ;
 

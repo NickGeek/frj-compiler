@@ -1,0 +1,1 @@
+main = new Std().print("Hello, World!");

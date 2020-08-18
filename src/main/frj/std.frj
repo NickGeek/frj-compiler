@@ -41,11 +41,16 @@ class False implements Bool {
 
 // Stdlib wrappers
 capability class Std {
+	/* Safe/deterministic methods */
 	read method Number add(Number a, Number b) = 0;
 	read method Number sub(Number a, Number b) = 0;
 	read method Number mul(Number a, Number b) = 0;
 	read method Bool gte(Number a, Number b) = new False();
+
+	/* Impure methods that do scary nondeterministic stuff */
 	mut method String print(String msg) = msg;
+	mut method Float randomFloat(Number min, Number max) = 0.0;
+	mut method @Bool sleep(Int timeMs) = @[];
 }
 
 main = 0;
