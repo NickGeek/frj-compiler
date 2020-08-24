@@ -16,7 +16,7 @@ public class Program {
 	interface Command extends Serializable {}
 
 	private abstract static class FRJActor<T extends Command> extends AbstractBehavior<T> {
-		public FRJActor(ActorContext<T> context) {
+		private FRJActor(ActorContext<T> context) {
 			super(context);
 		}
 
@@ -43,34 +43,41 @@ public class Program {
 
 	private static final class SignalActor<T> extends FRJActor<SignalActor.Command> {
 		public interface Command extends Program.Command {}
-		public record ComputeHead<T>(Function<SignalActor<T>, T> head) implements SignalActor.Command {}
-		public record ComputeTail<T>(Function<SignalActor<T>, ActorRef<SignalActor.Command>> tail) implements SignalActor.Command {}
 		public record GetHead<T>(ActorRef<T> replyTo) implements SignalActor.Command {}
 		public record GetTail<T>(ActorRef<T> replyTo) implements SignalActor.Command {}
 
-		public static <T> Behavior<SignalActor.Command> create() {
+		private record ComputeHead<T>(Function<SignalActor<T>, T> head) implements SignalActor.Command {}
+		private record ComputeTail<T>(Function<SignalActor<T>, ActorRef<SignalActor.Command>> tail) implements SignalActor.Command {}
+
+		/**
+		 * Construct an empty signal.
+		 */
+		public static Behavior<SignalActor.Command> empty() {
 			return Behaviors.setup(SignalActor::new);
 		}
 
-		public static <T> Behavior<SignalActor.Command> create(Function<SignalActor<T>, T> headSupplier, Function<SignalActor<T>, ActorRef<SignalActor.Command>> tailSupplier) {
+		/**
+		 * Construct an explicit signal.
+		 */
+		public static <T> Behavior<SignalActor.Command> explicit(Function<SignalActor<T>, T> headSupplier, Function<SignalActor<T>, ActorRef<SignalActor.Command>> tailSupplier) {
 			return Behaviors.setup(ctx -> new SignalActor<>(ctx, headSupplier, tailSupplier));
 		}
 
 		private final CompletableFuture<T> head = new CompletableFuture<>();
 		private final CompletableFuture<ActorRef<SignalActor.Command>> tail = new CompletableFuture<>();
 
-		private SignalActor(ActorContext<SignalActor.Command> context, Function<SignalActor<T>, T> headSupplier, Function<SignalActor<T>, ActorRef<SignalActor.Command>> tailSupplier) {
-			super(context);
-
-			context.getSelf().tell(new ComputeHead<>(headSupplier));
-			context.getSelf().tell(new ComputeTail<>(tailSupplier));
-		}
-
 		private SignalActor(ActorContext<SignalActor.Command> context) {
 			super(context);
 
 			this.head.complete(null);
 			this.tail.complete(context.getSelf());
+		}
+
+		private SignalActor(ActorContext<SignalActor.Command> context, Function<SignalActor<T>, T> headSupplier, Function<SignalActor<T>, ActorRef<SignalActor.Command>> tailSupplier) {
+			super(context);
+
+			context.getSelf().tell(new ComputeHead<>(headSupplier));
+			context.getSelf().tell(new ComputeTail<>(tailSupplier));
 		}
 
 		@Override
@@ -85,7 +92,9 @@ public class Program {
 						return this;
 					})
 					.onMessage(GetHead.class, command -> {
-						command.replyTo().tell(this.head.join());
+						var head = this.head.join();
+
+						command.replyTo().tell(head);
 						return this;
 					})
 					.onMessage(GetTail.class, command -> {
@@ -115,16 +124,16 @@ public class Program {
 			var actorRef = this.spawn(FRJ_Std.create());
 			this.<FRJ_Std.Command, String>dispatch(actorRef, ref -> new FRJ_Std.M_print(ref, "Hello, World!"));
 
-			var explicit = this.spawn(SignalActor.create(
+			var explicit = this.spawn(SignalActor.explicit(
 					sa -> 123,
-					sa -> sa.spawn(SignalActor.create(
+					sa -> sa.spawn(SignalActor.explicit(
 							sa2 -> sa2.<FRJ_Std.Command, Number>dispatch(actorRef, ref3 -> new FRJ_Std.M_add(ref3, 0, 1)),
-							sa2 -> sa2.spawn(SignalActor.create())
+							sa2 -> sa2.spawn(SignalActor.empty())
 					))));
 			var eHead = this.<SignalActor.Command, Number>dispatch(explicit, SignalActor.GetHead::new);
 
 			System.out.println(eHead);
-			var eTail = this.<SignalActor.Command, ActorRef<SignalActor.Command>>dispatch(explicit, ref -> new SignalActor.GetTail<>(ref));
+			var eTail = this.<SignalActor.Command, ActorRef<SignalActor.Command>>dispatch(explicit, SignalActor.GetTail::new);
 			System.out.println(this.<SignalActor.Command, Number>dispatch(eTail, SignalActor.GetHead::new));
 
 			var foo = this.<FRJ_A.Command, ActorRef<SignalActor.Command>>dispatch(this.spawn(FRJ_A.create()), ref -> new FRJ_A.M_counter(ref, 0));
@@ -168,7 +177,7 @@ public class Program {
 		}
 
 		private ActorRef<SignalActor.Command> FRJ_counter(Number current) {
-			return this.spawn(SignalActor.create(
+			return this.spawn(SignalActor.explicit(
 					sA -> current,
 					sA -> sA.<FRJ_A.Command, ActorRef<SignalActor.Command>>dispatch(
 							getContext().getSelf(),

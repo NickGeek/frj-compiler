@@ -1,0 +1,23 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '6.0.0'
+    id 'java'
+}
+
+group 'nz.geek.nick'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java.sourceCompatibility = JavaVersion.VERSION_14
+java.targetCompatibility = JavaVersion.VERSION_14
+
+compileJava {
+    options.compilerArgs += ['--enable-preview']
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'com.typesafe.akka', name: 'akka-actor-typed_2.13', version: '2.6.8'
+}
