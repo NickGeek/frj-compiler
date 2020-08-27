@@ -4,13 +4,14 @@ import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
 import akka.japi.function.Function;
 
-public abstract class MainSupervisor extends FRJActor<FRJActor.Command> {
+public abstract class MainSupervisor extends FRJActor<FRJActor.Command, Void> {
 	public static Behavior<Command> create(final Function<ActorContext<Command>, Behavior<Command>> factory) {
 		return Behaviors.setup(factory);
 	}
 
-	private MainSupervisor(ActorContext<Command> context) {
-		super(context);
+	protected MainSupervisor(ActorContext<Command> context) {
+		super(context, null);
+		mainExpr();
 	}
 
 	protected abstract void mainExpr();

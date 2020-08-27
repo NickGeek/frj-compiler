@@ -1,3 +1,5 @@
+import com.github.jengelman.gradle.plugins.shadow.transformers.AppendingTransformer
+
 plugins {
     id 'com.github.johnrengelman.shadow' version '6.0.0'
     id 'java'
@@ -17,7 +19,17 @@ compileJava {
     options.compilerArgs += ['--enable-preview']
 }
 
+shadowJar {
+    transform(AppendingTransformer) {
+        resource = 'reference.conf'
+    }
+    with jar
+
+    from sourceSets.main.allSource
+}
+
 dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.12'
     implementation group: 'com.typesafe.akka', name: 'akka-actor-typed_2.13', version: '2.6.8'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
 }

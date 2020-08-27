@@ -7,7 +7,7 @@ import akka.actor.typed.javadsl.Receive;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
-public final class SignalActor<T> extends FRJActor<SignalActor.Command> {
+public final class SignalActor<T> extends FRJActor<SignalActor.Command, Void> {
 	/**
 	 * Construct an empty signal.
 	 */
@@ -18,22 +18,22 @@ public final class SignalActor<T> extends FRJActor<SignalActor.Command> {
 	/**
 	 * Construct an explicit signal.
 	 */
-	public static <T> Behavior<SignalActor.Command> explicit(Function<SignalActor<T>, T> headSupplier, Function<SignalActor<T>, ActorRef<SignalActor.Command>> tailSupplier) {
+	public static <T> Behavior<Command> explicit(Function<SignalActor<T>, T> headSupplier, Function<SignalActor<T>, ActorRef<Command>> tailSupplier) {
 		return Behaviors.setup(ctx -> new SignalActor<>(ctx, headSupplier, tailSupplier));
 	}
 
 	private final CompletableFuture<T> head = new CompletableFuture<>();
-	private final CompletableFuture<ActorRef<SignalActor.Command>> tail = new CompletableFuture<>();
+	private final CompletableFuture<ActorRef<Command>> tail = new CompletableFuture<>();
 
 	private SignalActor(ActorContext<Command> context) {
-		super(context);
+		super(context, null);
 
 		this.head.complete(null);
 		this.tail.complete(context.getSelf());
 	}
 
-	private SignalActor(ActorContext<SignalActor.Command> context, Function<SignalActor<T>, T> headSupplier, Function<SignalActor<T>, ActorRef<SignalActor.Command>> tailSupplier) {
-		super(context);
+	private SignalActor(ActorContext<Command> context, Function<SignalActor<T>, T> headSupplier, Function<SignalActor<T>, ActorRef<Command>> tailSupplier) {
+		super(context, null);
 
 		context.getSelf().tell(new ComputeHead<>(headSupplier));
 		context.getSelf().tell(new ComputeTail<>(tailSupplier));
@@ -47,7 +47,7 @@ public final class SignalActor<T> extends FRJActor<SignalActor.Command> {
 					return this;
 				})
 				.onMessage(ComputeTail.class, command -> {
-					this.tail.complete((ActorRef<SignalActor.Command>) command.tail().apply(this));
+					this.tail.complete((ActorRef<Command>) command.tail().apply(this));
 					return this;
 				})
 				.onMessage(GetHead.class, command -> {
@@ -65,10 +65,10 @@ public final class SignalActor<T> extends FRJActor<SignalActor.Command> {
 
 	public interface Command extends FRJActor.Command {}
 	public record GetHead<T>(
-	ActorRef<T> replyTo) implements SignalActor.Command {}
-	public record GetTail<T>(ActorRef<T> replyTo) implements SignalActor.Command {}
+	ActorRef<T> replyTo) implements Command {}
+	public record GetTail<T>(ActorRef<T> replyTo) implements Command {}
 
 	private record ComputeHead<T>(
-	Function<SignalActor<T>, T> head) implements SignalActor.Command {}
-	private record ComputeTail<T>(Function<SignalActor<T>, ActorRef<SignalActor.Command>> tail) implements SignalActor.Command {}
+	Function<SignalActor<T>, T> head) implements Command {}
+	private record ComputeTail<T>(Function<SignalActor<T>, ActorRef<Command>> tail) implements Command {}
 }

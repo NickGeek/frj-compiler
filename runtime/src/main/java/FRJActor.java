@@ -1,5 +1,4 @@
 import akka.actor.typed.ActorRef;
-import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.AbstractBehavior;
 import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.AskPattern;
@@ -11,26 +10,37 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
 
-public abstract class FRJActor<T extends FRJActor.Command> extends AbstractBehavior<T> {
+public abstract class FRJActor<T extends FRJActor.Command, Impl> extends AbstractBehavior<T> {
 	private static final int MAX_DURATION = 21474835;
 	private static final AtomicInteger actorId = new AtomicInteger();
 
-	protected FRJActor(ActorContext<T> context) {
+	protected final Impl impl;
+
+	protected FRJActor(ActorContext<T> context, Impl impl) {
 		super(context);
+		this.impl = impl;
 	}
 
-	public <C extends Command> ActorRef<C> spawn(Behavior<C> actor) {
-		return this.getContext().spawn(actor, Integer.toString(actorId.getAndIncrement()));
+	public <C extends Command, ChildImpl> FRJRef<C, ChildImpl> spawn(FRJBehavior<C, ChildImpl> actor) {
+		final var ref = this.getContext().spawn(actor.getBehavior(), Integer.toString(actorId.getAndIncrement()));
+
+		return new FRJRef<>() {
+			@Override
+			public ChildImpl getImpl() {
+				return actor.getImpl();
+			}
+
+			@Override
+			public ActorRef<C> getActor() {
+				return ref;
+			}
+		};
 	}
 
 	@Override
 	public abstract Receive<T> createReceive();
 
-	protected <Req extends Command, Res> Res dispatch(ActorRef<Req> ref, Function<ActorRef<Res>, Req> getMsg) {
-		return this.dispatchAsync(ref, getMsg).toCompletableFuture().join();
-	}
-
-	protected <Req extends Command, Res> CompletableFuture<Res> dispatchAsync(ActorRef<Req> ref, Function<ActorRef<Res>, Req> getMsg) {
+	protected <Req extends Command, Res> CompletableFuture<Res> dispatch(ActorRef<Req> ref, Function<ActorRef<Res>, Req> getMsg) {
 		return AskPattern.ask(
 				ref,
 				getMsg::apply,
