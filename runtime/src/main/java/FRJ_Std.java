@@ -1,75 +1,58 @@
-import akka.actor.typed.ActorRef;
-import akka.actor.typed.Behavior;
-import akka.actor.typed.javadsl.ActorContext;
-import akka.actor.typed.javadsl.Behaviors;
-import akka.actor.typed.javadsl.Receive;
+import java.util.concurrent.CompletableFuture;
 
-public final class FRJ_Std extends FRJActor<FRJ_Std.Command, FRJ_Std.Impl> {
-	public static void main(String[] args) {
-		FRJ_Std.create(new FRJ_Std.Impl());
+public final class FRJ_Std extends FRJObj {
+	public String print(String msg) {
+		System.out.println(msg);
+		return msg;
 	}
 
-	public static Behavior<Command> create(Impl impl) {
-		return Behaviors.setup(ctx -> new FRJ_Std(ctx, impl));
+	public CompletableFuture<SignalBox<String>> liftedPrint(SignalBox<String> msg) {
+		return CompletableFuture.allOf(msg.getSignal().getMessage())
+				.thenApply(v -> this.dispatch(new Signal<>(
+						() -> this.print(SignalBox.head(msg)),
+						() -> this.liftedPrint(SignalBox.tail(msg)).join()
+				)));
 	}
 
-	protected FRJ_Std(ActorContext<Command> context, Impl impl) {
-		super(context, impl);
+	public Number add(Number a, Number b) {
+		if (a.getClass().equals(Double.TYPE) || b.getClass().equals(Double.TYPE)) {
+			return a.doubleValue() + b.doubleValue();
+		}
+		return a.intValue() + b.intValue();
 	}
 
-	@Override
-	public Receive<Command> createReceive() {
-		return newReceiveBuilder()
-//				.onMessage(M_print.class, command -> {
-//					command.replyTo.tell(this.impl.FRJ_print(command.msg));
-//					return this;
-//				})
-//				.onMessage(M_add.class, command -> {
-//					command.replyTo.tell(this.impl.FRJ_add(command.a(), command.b()));
-//					return this;
-//				})
-//				.onMessage(M_sub.class, command -> {
-//					command.replyTo.tell(this.impl.FRJ_sub(command.a(), command.b()));
-//					return this;
-//				})
-//				.onMessage(M_mul.class, command -> {
-//					command.replyTo.tell(this.impl.FRJ_mul(command.a(), command.b()));
-//					return this;
-//				})
-				.build();
+	public SignalBox<Number> liftedAdd(SignalBox<Number> a, SignalBox<Number> b) {
+		return this.dispatch(new Signal<>(
+				() -> this.add(SignalBox.head(a), SignalBox.head(b)),
+				() -> this.liftedAdd(SignalBox.tail(a), SignalBox.tail(b))
+		));
 	}
 
-	public interface Command extends FRJActor.Command {}
-	public static record M_print(ActorRef<String> replyTo, String msg) implements FRJ_Std.Command {}
-	public static record M_add(ActorRef<Number> replyTo, Number a, Number b) implements FRJ_Std.Command {}
-	public static record M_sub(ActorRef<Number> replyTo, Number a, Number b) implements FRJ_Std.Command {}
-	public static record M_mul(ActorRef<Number> replyTo, Number a, Number b) implements FRJ_Std.Command {}
-
-	public static final class Impl {
-		public String FRJ_print(String msg) {
-			System.out.println(msg);
-			return msg;
+	public Number sub(Number a, Number b) {
+		if (a.getClass().equals(Double.TYPE) || b.getClass().equals(Double.TYPE)) {
+			return a.doubleValue() - b.doubleValue();
 		}
+		return a.intValue() - b.intValue();
+	}
 
-		public Number FRJ_add(Number a, Number b) {
-			if (a.getClass().equals(Double.TYPE) || b.getClass().equals(Double.TYPE)) {
-				return a.doubleValue() + b.doubleValue();
-			}
-			return a.intValue() + b.intValue();
-		}
+	public SignalBox<Number> liftedSub(SignalBox<Number> a, SignalBox<Number> b) {
+		return this.dispatch(new Signal<>(
+				() -> this.sub(SignalBox.head(a), SignalBox.head(b)),
+				() -> this.liftedSub(SignalBox.tail(a), SignalBox.tail(b))
+		));
+	}
 
-		public Number FRJ_sub(Number a, Number b) {
-			if (a.getClass().equals(Double.TYPE) || b.getClass().equals(Double.TYPE)) {
-				return a.doubleValue() - b.doubleValue();
-			}
-			return a.intValue() - b.intValue();
+	public Number mul(Number a, Number b) {
+		if (a.getClass().equals(Double.TYPE) || b.getClass().equals(Double.TYPE)) {
+			return a.doubleValue() * b.doubleValue();
 		}
+		return a.intValue() * b.intValue();
+	}
 
-		public Number FRJ_mul(Number a, Number b) {
-			if (a.getClass().equals(Double.TYPE) || b.getClass().equals(Double.TYPE)) {
-				return a.doubleValue() * b.doubleValue();
-			}
-			return a.intValue() * b.intValue();
-		}
+	public SignalBox<Number> liftedMul(SignalBox<Number> a, SignalBox<Number> b) {
+		return this.dispatch(new Signal<>(
+				() -> this.mul(SignalBox.head(a), SignalBox.head(b)),
+				() -> this.liftedMul(SignalBox.tail(a), SignalBox.tail(b))
+		));
 	}
 }
