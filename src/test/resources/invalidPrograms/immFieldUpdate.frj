@@ -1,0 +1,7 @@
+class A {
+	Int foo;
+
+	method Int illegal(Int newFoo) = this.foo = newFoo;
+}
+
+main = new A(5).illegal(12);

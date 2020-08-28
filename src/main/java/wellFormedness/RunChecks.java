@@ -13,6 +13,7 @@ public class RunChecks {
 		runners.add(p -> new ClassDecExtendImplsCheck().check(p));
 		runners.add(p -> new CheckVarsUsedAreInScope().check(p));
 		runners.add(p -> new EmptySignalCheck().check(p));
+		runners.add(p -> new DefinedTypes().check(p));
 
 		program.classDeclarations
 				.values()

@@ -16,7 +16,7 @@ public class Compiler {
 		WellFormednessRule.runAllProgramChecks(
 				RunChecks.makeChecks(program),
 				program
-		).ifPresent(Main::printErrorsAndQuit);
+		);
 
 		// Type check CDs
 		program.classDeclarations
@@ -28,6 +28,6 @@ public class Compiler {
 		visitor.cap = true;
 		program.main.accept(visitor);
 
-		System.out.println(program);
+//		System.out.println(program);
 	}
 }

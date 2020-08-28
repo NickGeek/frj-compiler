@@ -19,7 +19,7 @@ public class Main {
 		}
 	}
 
-	public static void printErrorsAndQuit(String errors) {
+	private static void printErrorsAndQuit(String errors) {
 		System.err.println(errors);
 		System.exit(1);
 	}

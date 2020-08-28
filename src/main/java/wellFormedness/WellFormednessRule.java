@@ -2,8 +2,8 @@ package wellFormedness;
 
 import parser.Program;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public interface WellFormednessRule<T> {
 	/**
@@ -13,18 +13,18 @@ public interface WellFormednessRule<T> {
 	 */
 	void check(T toCheck) throws MalformedException;
 
-	static Optional<String> runAllProgramChecks(List<WellFormednessRunner> ruleRunners, Program program) {
-		var errors = new StringBuilder();
+	static void runAllProgramChecks(List<WellFormednessRunner> ruleRunners, Program program) {
+		List<MalformedException> errors = new ArrayList<>();
 
 		for (var runner : ruleRunners) {
 			try {
 				runner.accept(program);
 			} catch (MalformedException e) {
-				errors.append(e.getLocalizedMessage()).append("\n");
+				errors.add(e);
 			}
 		}
 
-		return errors.length() > 0 ? Optional.of(errors.toString()) : Optional.empty();
+		if (!errors.isEmpty()) throw new MalformedException(errors);
 	}
 
 	@FunctionalInterface

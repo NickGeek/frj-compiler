@@ -1,0 +1,5 @@
+class A {
+	method Int foo(Bar a) = 0;
+}
+
+main = 0;
