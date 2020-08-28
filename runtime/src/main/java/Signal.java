@@ -4,25 +4,22 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class Signal<T> implements Serializable {
-//	public static <T> SignalBox<T> explicit(Supplier<T> head, Supplier<SignalBox<T>> tail) {
-//		var signal = new Signal<>(head, () -> new FRJObj().dispatch(tail.get().getSignal()));
-//		return new FRJObj().dispatch(signal);
-//	}
-
 	public static <T> SignalBox<T> explicit(Supplier<T> head, Supplier<SignalBox<T>> tail) {
-		var emptyObj = new FRJObj();
-		var signal = new Signal<>(head, () -> emptyObj.dispatch(tail.get().getSignal()));
+		var emptyObj = new ExplicitSignalObj();
+		var signal = new Signal<>(head, tail);
+
 		return emptyObj.dispatch(signal);
 	}
 
 	private final CompletableFuture<Message<T>> message = new CompletableFuture<>();
 
+//	private final WeakReference<Supplier<T>> headSupplier;
+//	private final WeakReference<Supplier<SignalBox<T>>> tailSupplier;
 	private final Supplier<T> headSupplier;
 	private final Supplier<SignalBox<T>> tailSupplier;
 
 	public Signal() {
 		this.headSupplier = null;
-//		this.tailSupplier = new WeakReference<>(Signal::new);
 		this.tailSupplier = () -> new SignalBox<>(new Signal<>(), null);
 	}
 

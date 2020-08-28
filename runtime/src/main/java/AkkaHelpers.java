@@ -13,6 +13,11 @@ public class AkkaHelpers {
 		actorSystem = ActorSystem.create(SpawnProtocol.create(), "frj-runtime");
 	}
 
+	public static ActorSystem<SpawnProtocol.Command> getActorSystem() {
+		start();
+		return actorSystem;
+	}
+
 	public static ActorRef<Signal<?>> spawn(Behavior<Signal<?>> actor) {
 		start();
 
@@ -20,7 +25,7 @@ public class AkkaHelpers {
 			return AskPattern.<SpawnProtocol.Spawn<Signal<?>>, ActorRef<Signal<?>>>ask(
 					actorSystem.narrow(),
 					replyTo -> new SpawnProtocol.Spawn<>(actor, "", Props.empty(), replyTo),
-					Duration.ofSeconds(1),
+					Duration.ofSeconds(MAX_DURATION),
 					actorSystem.scheduler()
 			).toCompletableFuture().get();
 		} catch (ExecutionException | InterruptedException e) {

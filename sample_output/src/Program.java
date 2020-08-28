@@ -7,12 +7,12 @@ public class Program {
 			);
 		}
 
-//		public SignalBox<SignalBox<Number>> liftedCounter(SignalBox<Number> current) {
-//			return this.dispatch(new Signal<SignalBox<Number>>(
-//					() -> this.counter(SignalBox.head(current)),
-//					() -> this.liftedCounter(SignalBox.tail(current))
-//			));
-//		}
+		public SignalBox<SignalBox<Number>> liftedCounter(SignalBox<Number> current) {
+			return this.dispatch(new Signal<SignalBox<Number>>(
+					() -> this.counter(SignalBox.head(current)),
+					() -> this.liftedCounter(SignalBox.tail(current))
+			));
+		}
 	}
 
 	private static class FRJ_Stringify extends FRJObj {

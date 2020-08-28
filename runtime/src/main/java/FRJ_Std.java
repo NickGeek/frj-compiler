@@ -1,4 +1,4 @@
-import java.util.concurrent.CompletableFuture;
+import java.time.Duration;
 
 public final class FRJ_Std extends FRJObj {
 	public String print(String msg) {
@@ -6,12 +6,11 @@ public final class FRJ_Std extends FRJObj {
 		return msg;
 	}
 
-	public CompletableFuture<SignalBox<String>> liftedPrint(SignalBox<String> msg) {
-		return CompletableFuture.allOf(msg.getSignal().getMessage())
-				.thenApply(v -> this.dispatch(new Signal<>(
-						() -> this.print(SignalBox.head(msg)),
-						() -> this.liftedPrint(SignalBox.tail(msg)).join()
-				)));
+	public SignalBox<String> liftedPrint(SignalBox<String> msg) {
+		return this.dispatch(new Signal<>(
+				() -> this.print(SignalBox.head(msg)),
+				() -> this.liftedPrint(SignalBox.tail(msg))
+		));
 	}
 
 	public Number add(Number a, Number b) {
@@ -53,6 +52,23 @@ public final class FRJ_Std extends FRJObj {
 		return this.dispatch(new Signal<>(
 				() -> this.mul(SignalBox.head(a), SignalBox.head(b)),
 				() -> this.liftedMul(SignalBox.tail(a), SignalBox.tail(b))
+		));
+	}
+
+	public SignalBox<Boolean> sleep(int timeMs) {
+		var signal = new Signal<>(() -> true, () -> this.sleep(timeMs));
+
+		AkkaHelpers.getActorSystem()
+				.scheduler()
+				.scheduleOnce(Duration.ofMillis(timeMs), () -> new ExplicitSignalObj().dispatch(signal), AkkaHelpers.getActorSystem().executionContext());
+
+		return new SignalBox<>(signal, this);
+	}
+
+	public SignalBox<SignalBox<Boolean>> liftSleep(SignalBox<Integer> timeMs) {
+		return this.dispatch(new Signal<>(
+				() -> this.sleep(SignalBox.head(timeMs)),
+				() -> this.liftSleep(SignalBox.tail(timeMs))
 		));
 	}
 }

@@ -5,20 +5,13 @@ import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
 
-public class FRJObj {
-	protected ActorRef<Signal<?>> actorRef;
-
+public class ExplicitSignalObj extends FRJObj {
 	public ActorRef<Signal<?>> getActor() {
 		// Flyweight pattern to only spawn the actor if and when it's needed
 		if (this.actorRef != null) return this.actorRef;
 
 		this.actorRef = AkkaHelpers.spawn(Actor.create(this));
 		return this.actorRef;
-	}
-
-	protected <T> SignalBox<T> dispatch(Signal<T> signal) {
-		this.getActor().tell(signal);
-		return new SignalBox<>(signal, this);
 	}
 
 	protected static class Actor<Impl extends FRJObj> extends AbstractBehavior<Signal<?>> {
@@ -42,8 +35,10 @@ public class FRJObj {
 							if (signal.isEmpty()) return this;
 
 							signal.execute();
-							return this;
+							return Behaviors.stopped();
 						} catch (Signal.SignalUseAfterFreeException e) {
+							// I think this is wrong, we don't want to seppuku ourselves, we want
+							// to kill the actor that executed the signal.
 							return Behaviors.stopped();
 						}
 					})
