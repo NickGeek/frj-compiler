@@ -15,10 +15,6 @@ repositories {
 java.sourceCompatibility = JavaVersion.VERSION_14
 java.targetCompatibility = JavaVersion.VERSION_14
 
-compileJava {
-    options.compilerArgs += ['--enable-preview']
-}
-
 shadowJar {
     transform(AppendingTransformer) {
         resource = 'reference.conf'

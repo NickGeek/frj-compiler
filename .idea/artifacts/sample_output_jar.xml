@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sample_output:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sample_output_jar</output-path>
+    <root id="archive" name="sample_output.jar">
+      <element id="module-output" name="sample_output" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/runtime/build/libs/runtime-1.0-SNAPSHOT-all.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
