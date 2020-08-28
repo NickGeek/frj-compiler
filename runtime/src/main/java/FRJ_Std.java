@@ -6,10 +6,10 @@ public final class FRJ_Std extends FRJObj {
 		return msg;
 	}
 
-	public SignalBox<String> liftedPrint(SignalBox<String> msg) {
+	public SignalBox<String> lifted_print(SignalBox<String> msg) {
 		return this.dispatch(new Signal<>(
 				() -> this.print(SignalBox.head(msg)),
-				() -> this.liftedPrint(SignalBox.tail(msg))
+				() -> this.lifted_print(SignalBox.tail(msg))
 		));
 	}
 
@@ -20,10 +20,10 @@ public final class FRJ_Std extends FRJObj {
 		return a.intValue() + b.intValue();
 	}
 
-	public SignalBox<Number> liftedAdd(SignalBox<Number> a, SignalBox<Number> b) {
+	public SignalBox<Number> lifted_add(SignalBox<Number> a, SignalBox<Number> b) {
 		return this.dispatch(new Signal<>(
 				() -> this.add(SignalBox.head(a), SignalBox.head(b)),
-				() -> this.liftedAdd(SignalBox.tail(a), SignalBox.tail(b))
+				() -> this.lifted_add(SignalBox.tail(a), SignalBox.tail(b))
 		));
 	}
 
@@ -34,10 +34,10 @@ public final class FRJ_Std extends FRJObj {
 		return a.intValue() - b.intValue();
 	}
 
-	public SignalBox<Number> liftedSub(SignalBox<Number> a, SignalBox<Number> b) {
+	public SignalBox<Number> lifted_sub(SignalBox<Number> a, SignalBox<Number> b) {
 		return this.dispatch(new Signal<>(
 				() -> this.sub(SignalBox.head(a), SignalBox.head(b)),
-				() -> this.liftedSub(SignalBox.tail(a), SignalBox.tail(b))
+				() -> this.lifted_sub(SignalBox.tail(a), SignalBox.tail(b))
 		));
 	}
 
@@ -48,10 +48,10 @@ public final class FRJ_Std extends FRJObj {
 		return a.intValue() * b.intValue();
 	}
 
-	public SignalBox<Number> liftedMul(SignalBox<Number> a, SignalBox<Number> b) {
+	public SignalBox<Number> lifted_mul(SignalBox<Number> a, SignalBox<Number> b) {
 		return this.dispatch(new Signal<>(
 				() -> this.mul(SignalBox.head(a), SignalBox.head(b)),
-				() -> this.liftedMul(SignalBox.tail(a), SignalBox.tail(b))
+				() -> this.lifted_mul(SignalBox.tail(a), SignalBox.tail(b))
 		));
 	}
 
@@ -65,10 +65,10 @@ public final class FRJ_Std extends FRJObj {
 		return new SignalBox<>(signal, this);
 	}
 
-	public SignalBox<SignalBox<Boolean>> liftSleep(SignalBox<Integer> timeMs) {
+	public SignalBox<SignalBox<Boolean>> lifted_sleep(SignalBox<Integer> timeMs) {
 		return this.dispatch(new Signal<>(
 				() -> this.sleep(SignalBox.head(timeMs)),
-				() -> this.liftSleep(SignalBox.tail(timeMs))
+				() -> this.lifted_sleep(SignalBox.tail(timeMs))
 		));
 	}
 }

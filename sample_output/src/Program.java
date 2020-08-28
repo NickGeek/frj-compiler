@@ -32,7 +32,7 @@ public class Program {
 		switch (1) {
 			default -> {
 				FRJ_Std std = new FRJ_Std();
-				std.liftedPrint(new FRJ_Stringify().liftedFromNum(new FRJ_A().counter(0)));
+				std.lifted_print(new FRJ_Stringify().liftedFromNum(new FRJ_A().counter(0)));
 			}
 		}
 	}
