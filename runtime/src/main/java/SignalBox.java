@@ -20,6 +20,72 @@ public class SignalBox<T> {
 		return lift(receiver, method, input);
 	}
 
+	public static <T> SignalBox<T> lift(Long receiver, String methodName, SignalBox<?>... input) {
+		var method = Arrays.stream(receiver.getClass().getMethods())
+				.filter(meth -> meth.getName().equals(methodName))
+				.findAny()
+				.get();
+
+		return new ExplicitSignalObj().dispatch(new Signal<>(
+				() -> {
+					var heads = Arrays.stream(input).map(SignalBox::head).toArray();
+					try {
+						return (T) method.invoke(receiver, heads);
+					} catch (IllegalAccessException | InvocationTargetException e) {
+						throw new RuntimeException(e);
+					}
+				},
+				() -> {
+					var tails = Arrays.stream(input).map(SignalBox::tail).toArray(SignalBox<?>[]::new);
+					return lift(receiver, methodName, tails);
+				}
+		));
+	}
+
+	public static <T> SignalBox<T> lift(Double receiver, String methodName, SignalBox<?>... input) {
+		var method = Arrays.stream(receiver.getClass().getMethods())
+				.filter(meth -> meth.getName().equals(methodName))
+				.findAny()
+				.get();
+
+		return new ExplicitSignalObj().dispatch(new Signal<>(
+				() -> {
+					var heads = Arrays.stream(input).map(SignalBox::head).toArray();
+					try {
+						return (T) method.invoke(receiver, heads);
+					} catch (IllegalAccessException | InvocationTargetException e) {
+						throw new RuntimeException(e);
+					}
+				},
+				() -> {
+					var tails = Arrays.stream(input).map(SignalBox::tail).toArray(SignalBox<?>[]::new);
+					return lift(receiver, methodName, tails);
+				}
+		));
+	}
+
+	public static <T> SignalBox<T> lift(String receiver, String methodName, SignalBox<?>... input) {
+		var method = Arrays.stream(receiver.getClass().getMethods())
+				.filter(meth -> meth.getName().equals(methodName))
+				.findAny()
+				.get();
+
+		return new ExplicitSignalObj().dispatch(new Signal<>(
+				() -> {
+					var heads = Arrays.stream(input).map(SignalBox::head).toArray();
+					try {
+						return (T) method.invoke(receiver, heads);
+					} catch (IllegalAccessException | InvocationTargetException e) {
+						throw new RuntimeException(e);
+					}
+				},
+				() -> {
+					var tails = Arrays.stream(input).map(SignalBox::tail).toArray(SignalBox<?>[]::new);
+					return lift(receiver, methodName, tails);
+				}
+		));
+	}
+
 	private static <T, R extends FRJObj> SignalBox<T> lift(R receiver, Method method, SignalBox<?>[] input) {
 		return receiver.dispatch(new Signal<>(
 				() -> {
