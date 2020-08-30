@@ -47,6 +47,7 @@ public class Compiler {
 		}
 
 		var javaCode = new JavaCode(name, codegenVisitor.generate());
+		System.out.println(codegenVisitor.generate());
 		javaCode.compile(workingDir);
 
 		// Bundle into a jar file

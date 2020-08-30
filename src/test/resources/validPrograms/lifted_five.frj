@@ -1,0 +1,5 @@
+class A {
+	Int foo;
+}
+
+main = new Std().@print(new A(5).foo.@toString());
