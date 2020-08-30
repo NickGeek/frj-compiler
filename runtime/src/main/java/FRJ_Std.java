@@ -1,74 +1,60 @@
 import java.time.Duration;
+import java.util.Random;
 
-public final class FRJ_Std extends FRJObj {
-	public String print(String msg) {
-		System.out.println(msg);
-		return msg;
-	}
-
-	public SignalBox<String> lifted_print(SignalBox<String> msg) {
-		return this.dispatch(new Signal<>(
-				() -> this.print(SignalBox.head(msg)),
-				() -> this.lifted_print(SignalBox.tail(msg))
-		));
-	}
-
-	public Number add(Number a, Number b) {
-		if (a.getClass().equals(Double.TYPE) || b.getClass().equals(Double.TYPE)) {
-			return a.doubleValue() + b.doubleValue();
+public class FRJ_Std extends FRJObj {
+	public Number FRJ_add(Number FRJ_a,Number FRJ_b) {
+		if ((FRJ_a.getClass().equals(Double.TYPE) || FRJ_a instanceof Double) || (FRJ_b.getClass().equals(Double.TYPE) || FRJ_b instanceof Double)) {
+			return FRJ_a.doubleValue() + FRJ_b.doubleValue();
 		}
-		return a.intValue() + b.intValue();
+		return FRJ_a.intValue() + FRJ_b.intValue();
 	}
-
-	public SignalBox<Number> lifted_add(SignalBox<Number> a, SignalBox<Number> b) {
-		return this.dispatch(new Signal<>(
-				() -> this.add(SignalBox.head(a), SignalBox.head(b)),
-				() -> this.lifted_add(SignalBox.tail(a), SignalBox.tail(b))
-		));
+	public Double FRJ_randomFloat(Number FRJ_min,Number FRJ_max) {
+		return FRJ_min.doubleValue() + new Random().nextDouble() * (FRJ_max.doubleValue() - FRJ_min.doubleValue());
 	}
-
-	public Number sub(Number a, Number b) {
-		if (a.getClass().equals(Double.TYPE) || b.getClass().equals(Double.TYPE)) {
-			return a.doubleValue() - b.doubleValue();
-		}
-		return a.intValue() - b.intValue();
-	}
-
-	public SignalBox<Number> lifted_sub(SignalBox<Number> a, SignalBox<Number> b) {
-		return this.dispatch(new Signal<>(
-				() -> this.sub(SignalBox.head(a), SignalBox.head(b)),
-				() -> this.lifted_sub(SignalBox.tail(a), SignalBox.tail(b))
-		));
-	}
-
-	public Number mul(Number a, Number b) {
-		if (a.getClass().equals(Double.TYPE) || b.getClass().equals(Double.TYPE)) {
-			return a.doubleValue() * b.doubleValue();
-		}
-		return a.intValue() * b.intValue();
-	}
-
-	public SignalBox<Number> lifted_mul(SignalBox<Number> a, SignalBox<Number> b) {
-		return this.dispatch(new Signal<>(
-				() -> this.mul(SignalBox.head(a), SignalBox.head(b)),
-				() -> this.lifted_mul(SignalBox.tail(a), SignalBox.tail(b))
-		));
-	}
-
-	public SignalBox<Boolean> sleep(int timeMs) {
-		var signal = new Signal<>(() -> true, () -> this.sleep(timeMs));
+	public SignalBox<FRJ_Bool> FRJ_sleep(Long FRJ_timeMs) {
+		var signal = new Signal<>(FRJ_True::new, () -> this.FRJ_sleep(FRJ_timeMs));
 
 		AkkaHelpers.getActorSystem()
 				.scheduler()
-				.scheduleOnce(Duration.ofMillis(timeMs), () -> new ExplicitSignalObj().dispatch(signal), AkkaHelpers.getActorSystem().executionContext());
+				.scheduleOnce(Duration.ofMillis(FRJ_timeMs), () -> new ExplicitSignalObj().dispatch(signal), AkkaHelpers.getActorSystem().executionContext());
 
 		return new SignalBox<>(signal, this);
 	}
-
-	public SignalBox<SignalBox<Boolean>> lifted_sleep(SignalBox<Integer> timeMs) {
-		return this.dispatch(new Signal<>(
-				() -> this.sleep(SignalBox.head(timeMs)),
-				() -> this.lifted_sleep(SignalBox.tail(timeMs))
-		));
+	public Number FRJ_sub(Number FRJ_a,Number FRJ_b) {
+		if ((FRJ_a.getClass().equals(Double.TYPE) || FRJ_a instanceof Double) || (FRJ_b.getClass().equals(Double.TYPE) || FRJ_b instanceof Double)) {
+			return FRJ_a.doubleValue() - FRJ_b.doubleValue();
+		}
+		return FRJ_a.intValue() - FRJ_b.intValue();
 	}
+	public String FRJ_print(String FRJ_msg) {
+		System.out.println(FRJ_msg);
+		return FRJ_msg;
+	}
+	public Number FRJ_mul(Number FRJ_a,Number FRJ_b) {
+		if ((FRJ_a.getClass().equals(Double.TYPE) || FRJ_a instanceof Double) || (FRJ_b.getClass().equals(Double.TYPE) || FRJ_b instanceof Double)) {
+			return FRJ_a.doubleValue() * FRJ_b.doubleValue();
+		}
+		return FRJ_a.intValue() * FRJ_b.intValue();
+	}
+	public FRJ_Bool FRJ_gte(Number FRJ_a,Number FRJ_b) {
+		if ((FRJ_a.getClass().equals(Double.TYPE) || FRJ_a instanceof Double) || (FRJ_b.getClass().equals(Double.TYPE) || FRJ_b instanceof Double)) {
+			return FRJ_a.doubleValue() >= FRJ_b.doubleValue() ? new FRJ_True() : new FRJ_False();
+		}
+		return FRJ_a.intValue() >= FRJ_b.intValue() ? new FRJ_True() : new FRJ_False();
+	}
+}
+
+interface FRJ_Bool extends FRJ_Literal {
+	FRJ_Bool FRJ_not();
+	FRJ_Bool FRJ_or(FRJ_Bool FRJ_b);
+	FRJ_Bool FRJ_and(FRJ_Bool FRJ_b);
+	FRJ_ProducerN FRJ_thenElse(FRJ_ProducerN FRJ_f1,FRJ_ProducerN FRJ_f2);
+}
+
+interface FRJ_Literal {
+	String toString();
+}
+
+interface FRJ_ProducerN {
+	Number FRJ_get();
 }

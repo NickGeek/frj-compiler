@@ -16,7 +16,7 @@ public class FRJObj {
 		return this.actorRef;
 	}
 
-	protected <T> SignalBox<T> dispatch(Signal<T> signal) {
+	public <T> SignalBox<T> dispatch(Signal<T> signal) {
 		this.getActor().tell(signal);
 		return new SignalBox<>(signal, this);
 	}

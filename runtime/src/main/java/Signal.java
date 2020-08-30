@@ -1,17 +1,12 @@
 import java.io.Serializable;
 import java.lang.ref.WeakReference;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class Signal<T> implements Serializable {
-	public static <T> SignalBox<T> explicit(Supplier<T> head, Supplier<SignalBox<T>> tail) {
-		var emptyObj = new ExplicitSignalObj();
-		var signal = new Signal<>(head, tail);
-
-		return emptyObj.dispatch(signal);
-	}
-
-	private final CompletableFuture<Message<T>> message = new CompletableFuture<>();
+		private final CompletableFuture<Message<T>> message = new CompletableFuture<>();
 
 //	private final WeakReference<Supplier<T>> headSupplier;
 //	private final WeakReference<Supplier<SignalBox<T>>> tailSupplier;

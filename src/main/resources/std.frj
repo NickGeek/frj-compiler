@@ -1,0 +1,56 @@
+// Literals
+interface Literal {
+	method String toString();
+}
+interface Number extends Literal {}
+interface Int extends Number, Literal {}
+interface Float extends Number, Literal {}
+interface String extends Literal {}
+
+/*
+ * Booleans are a little special because we actually implement them in FRJ natively.
+ * Because this proof-of-concept lacks generics, booleans only work with number producers, which is
+ * what was the most useful for an example.
+ */
+interface Bool extends Literal {
+	method Bool not();
+	method Bool and(Bool b);
+	method Bool or(Bool b);
+	method ProducerN thenElse(ProducerN f1, ProducerN f2);
+}
+
+interface ProducerN {
+	method Number get();
+}
+
+class True implements Bool {
+	method Bool not() = new False();
+	method Bool and(Bool b) = b;
+	method Bool or(Bool b) = this;
+	method ProducerN thenElse(ProducerN f1, ProducerN f2) = f1;
+	method String toString() = "true";
+}
+
+class False implements Bool {
+	method Bool not() = new True();
+	method Bool and(Bool b) = this;
+	method Bool or(Bool b) = b;
+	method ProducerN thenElse(ProducerN f1, ProducerN f2) = f2;
+	method String toString() = "false";
+}
+
+// Stdlib wrappers
+capability class Std {
+	/* Safe/deterministic methods */
+	read method Number add(Number a, Number b) = 0;
+	read method Number sub(Number a, Number b) = 0;
+	read method Number mul(Number a, Number b) = 0;
+	read method Bool gte(Number a, Number b) = new False();
+
+	/* Impure methods that do scary nondeterministic stuff */
+	mut method String print(String msg) = msg;
+	mut method Float randomFloat(Number min, Number max) = 0.0;
+	mut method @Bool sleep(Int timeMs) = @[];
+}
+
+main = 0;

@@ -9,4 +9,5 @@ main =
 	mut Person mP = new Person("Bob", 24),
 	imm Person iP = new Person("Bob", mP.age),
 	read Person rP = mP,
-	mP.setAge(25);
+	Int age = mP.setAge(25),
+	new Std().print(mP.age.toString());

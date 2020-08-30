@@ -1,2 +1,3 @@
 rootProject.name = 'compiler'
-
+include ":runtime"
+project(":runtime").projectDir = file("runtime")

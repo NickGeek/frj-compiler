@@ -14,8 +14,10 @@ public class Main {
 			// Build parse tree
 			var programContext = Parser.fromPath(Path.of(cliArgs[0]));
 			Compiler.compile(programContext);
-		} catch (ParseCancellationException | IOException e) {
+		} catch (ParseCancellationException e) {
 			printErrorsAndQuit(e.getLocalizedMessage());
+		} catch (IOException e) {
+			printErrorsAndQuit("Couldn't read file: " + e.getLocalizedMessage());
 		}
 	}
 

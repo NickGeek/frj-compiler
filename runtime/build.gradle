@@ -5,6 +5,7 @@ plugins {
     id 'java'
 }
 
+
 group 'nz.geek.nick'
 version '1.0-SNAPSHOT'
 
@@ -21,7 +22,7 @@ shadowJar {
     }
     with jar
 
-    from sourceSets.main.allSource
+    archiveFileName = "runtime.jar"
 }
 
 dependencies {

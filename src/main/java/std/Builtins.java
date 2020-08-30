@@ -9,9 +9,11 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Builtins {
+	private Builtins() {}
+
 	public static Map<String, ProgramNode.ClassDeclaration> parseBuiltIns() {
 		try {
-			return Parser.fromPath(Path.of("src/main/frj/std.frj"))
+			return Parser.fromInputStream(Builtins.class.getResourceAsStream("/std.frj"))
 					.classDeclaration()
 					.stream()
 					.map(ProgramNode.ClassDeclaration::ctxToClassDeclaration)

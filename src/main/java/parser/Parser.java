@@ -8,6 +8,7 @@ import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Path;
 
 public class Parser {
@@ -24,6 +25,11 @@ public class Parser {
 
 	public static FRJSimpleParser.ProgramContext fromPath(Path source) throws ParseCancellationException, IOException {
 		var lexer = new FRJLexer(CharStreams.fromPath(source));
+		return makeParser(lexer);
+	}
+
+	public static FRJSimpleParser.ProgramContext fromInputStream(InputStream stream) throws ParseCancellationException, IOException {
+		var lexer = new FRJLexer(CharStreams.fromStream(stream));
 		return makeParser(lexer);
 	}
 

@@ -1,10 +1,10 @@
 plugins {
-    id 'java'
+    id 'application'
     id 'antlr'
 }
 
 group 'nz.geek.nick'
-version '0.1'
+version '0.1.0'
 
 repositories {
     mavenCentral()
@@ -12,6 +12,18 @@ repositories {
 
 java.sourceCompatibility = JavaVersion.VERSION_14
 java.targetCompatibility = JavaVersion.VERSION_14
+
+task copyJar(type: Copy) {
+    from 'runtime/build/libs/runtime.jar'
+    into 'src/main/resources/'
+    dependsOn(':runtime:shadowJar')
+}
+
+processResources.dependsOn(copyJar)
+
+application {
+    mainClass = 'Main'
+}
 
 dependencies {
     implementation 'org.antlr:antlr4:4.8-1'
