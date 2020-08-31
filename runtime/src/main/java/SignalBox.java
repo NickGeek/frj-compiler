@@ -20,9 +20,14 @@ public class SignalBox<T> {
 		return lift(receiver, method, input);
 	}
 
-	public static <T> SignalBox<T> lift(Long receiver, String methodName, SignalBox<?>... input) {
+	/**
+	 * Lifts a method call on a primitive data-type (FRJ prim, so Long/Double/String).
+	 */
+	public static <T, R> SignalBox<T> lift(R receiver, String methodName, int argc, SignalBox<?>... input) {
+		/* It's fairly tricky to get the correct types to do a normal .getMethod(), so we're using argc
+			because that should cover the exposed primitive methods. */
 		var method = Arrays.stream(receiver.getClass().getMethods())
-				.filter(meth -> meth.getName().equals(methodName))
+				.filter(meth -> meth.getName().equals(methodName) && meth.getParameterCount() == argc)
 				.findAny()
 				.get();
 
@@ -37,51 +42,7 @@ public class SignalBox<T> {
 				},
 				() -> {
 					var tails = Arrays.stream(input).map(SignalBox::tail).toArray(SignalBox<?>[]::new);
-					return lift(receiver, methodName, tails);
-				}
-		));
-	}
-
-	public static <T> SignalBox<T> lift(Double receiver, String methodName, SignalBox<?>... input) {
-		var method = Arrays.stream(receiver.getClass().getMethods())
-				.filter(meth -> meth.getName().equals(methodName))
-				.findAny()
-				.get();
-
-		return new ExplicitSignalObj().dispatch(new Signal<>(
-				() -> {
-					var heads = Arrays.stream(input).map(SignalBox::head).toArray();
-					try {
-						return (T) method.invoke(receiver, heads);
-					} catch (IllegalAccessException | InvocationTargetException e) {
-						throw new RuntimeException(e);
-					}
-				},
-				() -> {
-					var tails = Arrays.stream(input).map(SignalBox::tail).toArray(SignalBox<?>[]::new);
-					return lift(receiver, methodName, tails);
-				}
-		));
-	}
-
-	public static <T> SignalBox<T> lift(String receiver, String methodName, SignalBox<?>... input) {
-		var method = Arrays.stream(receiver.getClass().getMethods())
-				.filter(meth -> meth.getName().equals(methodName))
-				.findAny()
-				.get();
-
-		return new ExplicitSignalObj().dispatch(new Signal<>(
-				() -> {
-					var heads = Arrays.stream(input).map(SignalBox::head).toArray();
-					try {
-						return (T) method.invoke(receiver, heads);
-					} catch (IllegalAccessException | InvocationTargetException e) {
-						throw new RuntimeException(e);
-					}
-				},
-				() -> {
-					var tails = Arrays.stream(input).map(SignalBox::tail).toArray(SignalBox<?>[]::new);
-					return lift(receiver, methodName, tails);
+					return lift(receiver, methodName, argc, tails);
 				}
 		));
 	}

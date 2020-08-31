@@ -4,6 +4,7 @@ import parser.DotExpression;
 import parser.Expression;
 import parser.Program;
 import parser.ProgramNode;
+import typing.TypeCheckVisitor;
 import visitors.CollectorVisitor;
 import visitors.Visitable;
 
@@ -177,7 +178,9 @@ public class CodegenVisitor extends CollectorVisitor {
 		this.output
 				.append(", \"")
 				.append(mangle(expr.methodName))
-				.append("\"");
+				.append("\", ")
+				.append(expr.args.length - 1);
+
 		if (args.length() > 0) this.output.append(',').append(args);
 		this.output.append(')');
 	}

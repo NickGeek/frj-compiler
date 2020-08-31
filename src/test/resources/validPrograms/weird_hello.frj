@@ -1,0 +1,7 @@
+class A {
+    method Int hello(Int a, mut Std std) = String s = std.print("Hello"), a;
+}
+
+main =
+	mut Std s = new Std(),
+	new A().hello(4, s);
