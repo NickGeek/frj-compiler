@@ -170,6 +170,13 @@ public class TypeCheckVisitor extends CollectorVisitor {
 
 		ProgramNode.Method method = methodOpt.get();
 
+		if (expr.args.length != method.args.length) {
+			throw new TypeError(
+					expr.pos(),
+					String.format("Expected %d arguments for '%s', got %d", method.args.length - 1, expr.methodName, expr.args.length - 1)
+			);
+		}
+
 		// If we applied the (newImm) rule when we could've done (newMut), change the mdf here
 		if (
 				expr.receiver instanceof Expression.InstantiationExpr
@@ -203,9 +210,9 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		}
 
 		ProgramNode.Method selectedMethod;
-		if (Modifier.canInto(receiverType.mdf, Modifier.IMM)) {
+		if (Modifier.canInto(receiverType.mdf, Modifier.IMM) && this.canIntoMdfs(expr.args, methTypes.imm.args)) {
 			selectedMethod = methTypes.imm;
-		} else if (Modifier.canInto(receiverType.mdf, Modifier.CAPSULE)) {
+		} else if (Modifier.canInto(receiverType.mdf, Modifier.CAPSULE) && this.canIntoMdfs(expr.args, methTypes.capsule.args)) {
 			selectedMethod = methTypes.capsule;
 		} else {
 			selectedMethod = methTypes.original;
@@ -394,5 +401,25 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		var oldGamma = new HashMap<>(this.gamma);
 		scoped.run();
 		this.gamma = oldGamma;
+	}
+
+	private boolean canIntoMdfs(Expression[] args, ProgramNode.BindingDeclaration[] targets) {
+		if (args.length != targets.length) return false;
+
+		// Start at 1 because the receiver has already been checked
+		for (int i = 1; i < args.length; ++i) {
+			var arg = args[i];
+			var targetType = targets[i].type;
+
+			var oldExpected = this.expected;
+			try {
+				this.visitExpecting(arg, targetType);
+			} catch (TypeError e) {
+				this.expected = oldExpected;
+				return false;
+			}
+		}
+
+		return true;
 	}
 }
