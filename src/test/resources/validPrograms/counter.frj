@@ -3,7 +3,7 @@ class A {
 }
 
 class Stringify {
-	method String fromNum(Number n) = n.toString();
+	method String fromNum(Number n) = new Std().concat(n.toString(), "\n");
 }
 
 main =
