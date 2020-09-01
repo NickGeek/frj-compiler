@@ -1,0 +1,11 @@
+class Person {
+	method Int age() = 24;
+	method String name() = "Bob";
+	method String format(String name, Int age) = new Std().concat(new Std().concat(name, new Std().concat(":", age.toString())), "\n");
+}
+
+main =
+	Person p = new Person(),
+	@Int ages = @[p.age(); @[]],
+	@String stats = p.@format(@[p.name(); @[]], ages),
+	new Std().@print(stats);
