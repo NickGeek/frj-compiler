@@ -1,0 +1,20 @@
+class X {method Number foo(Number a) = new Std().add(a, a);}
+class Y {method Number foo(Number a) = new Std().mul(a, 2);}
+class Z {method Pair foo(Number x, Number y) = new Pair(x, y);}
+
+main =
+	@Number a = @[1; @[2; @[3; @[]]]],
+	@Number x = new X().@foo(a), // 2, 4, 6
+	@Number y = new Y().@foo(a), // 2, 4, 6
+	@Pair z = new Z().@foo(x, y), // (2, 2), (4, 4), (6, 6)
+	new Printer().@outputPair(z);
+
+class Pair {
+	Number first;
+	Number second;
+}
+
+capability class Printer {
+	mut method mut Std outputPair(Pair p) =
+		new Std().print("X: ").print(p.first.toString()).print(" Y: ").print(p.second.toString()).print("\n");
+}

@@ -1,5 +1,6 @@
 package typing;
 
+import com.google.common.collect.Streams;
 import lombok.AllArgsConstructor;
 import lombok.Value;
 import parser.Modifier;
@@ -153,7 +154,14 @@ public class Aux {
 		var alternateMethod = cP.methods.get(method.name);
 		if (alternateMethod == null) return parentsOk;
 
-		return alternateMethod.equals(method) && parentsOk;
+		boolean isOk = Modifier.canInto(alternateMethod.mdf, method.mdf)
+				&& method.returnType.okayWithSub(this.program, alternateMethod.returnType)
+				&& Streams.zip(
+						Arrays.stream(method.args).skip(1),
+						Arrays.stream(alternateMethod.args).skip(1),
+						(parentArg, childArg) -> parentArg.type.okayWithSub(this.program, childArg.type)).allMatch(argOk -> argOk);
+
+		return isOk && parentsOk;
 	}
 
 	private Stream<String> getAllMethodNames(ProgramNode.ClassDeclaration interfaceDec, Set<String> visited) {

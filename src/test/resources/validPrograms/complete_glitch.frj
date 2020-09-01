@@ -1,0 +1,22 @@
+class X {method Pair foo(Number x, Number y) = new Pair(x, y);}
+class B {
+	method @Number slowlyGetNum(capsule Std std, Number n) = @[Bool wait = head(std.sleep(3000)), n; @[]];
+}
+
+main =
+	@Number a = @[1; @[2; @[]]],
+	@Number b = @[1; new B().slowlyGetNum(new Std(), 4)],
+
+	// This should  be: (1, 1), (2, 4).
+	@Pair x = new X().@foo(a, b),
+	new Printer().@outputPair(x);
+
+class Pair {
+	Number first;
+	Number second;
+}
+
+capability class Printer {
+	mut method mut Std outputPair(Pair p) =
+		new Std().print("X: ").print(p.first.toString()).print(" Y: ").print(p.second.toString()).print("\n");
+}

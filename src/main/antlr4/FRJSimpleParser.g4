@@ -4,7 +4,7 @@ options {
 	tokenVocab = FRJLexer;
 }
 
-program : classDeclaration* main;
+program : classDeclaration* main classDeclaration*;
 
 main : MAIN ASSIGN expr SEMI;
 

@@ -1,0 +1,80 @@
+class ComfortComputer {
+	method Number discomfort(Float temp, Float hum) =
+		Std std = new Std(),
+		Number adjustedTemp = std.mul(0.81, temp),
+		Number adjustedHum = std.mul(std.mul(0.01, hum), std.sub(std.mul(0.99, temp), 14.3)),
+		std.add(std.add(adjustedTemp, adjustedHum), 46.3);
+}
+
+class ACController implements NumberBoolFolder {
+	method @Bool powerSwitch(@Number discomfortIndex) = new Util().foldPNumberBool(this, new False(), discomfortIndex);
+
+	method Number hysteresis(Bool isOn) =
+		isOn.thenElse(new ACController_hysteresis_t(), new ACController_hysteresis_f()).get();
+
+	method Bool apply(Number discomfort, Bool isOn) =
+		new Std().gte(discomfort, new Std().add(75.0, this.hysteresis(isOn)));
+}
+class ACController_hysteresis_t implements ProducerN {method Number get() = new Std().sub(0, 0.5);}
+class ACController_hysteresis_f implements ProducerN {method Number get() = 0.5;}
+
+class Util {
+	method @Bool foldPNumberBool(NumberBoolFolder f, Bool initial, @Number signal) =
+		Bool nextState = f.apply(head(signal), initial),
+		@[nextState; this.foldPNumberBool(f, nextState, tail(signal))];
+}
+
+interface NumberBoolFolder {
+	method Bool apply(Number input, Bool state);
+}
+
+class Logger {
+	Std s;
+
+	method String logEntry(Float temp, Float humidity) =
+		this.s.concat(this.newLine(this.tempMsg(temp)), this.newLine(this.humidityMsg(humidity)));
+
+	method String tempMsg(Float temp) = this.s.concat("Temp: ", temp.toString());
+	method String humidityMsg(Float humidity) = this.s.concat("Humidity: ", humidity.toString());
+	method String newLine(String line) = this.s.concat(line, "\n");
+}
+
+capability class Sensors {
+	mut method @Bool clock() = new Std().sleep(1000);
+	mut method Float temp(Bool tick) = new Std().randomFloat(5, 34);
+	mut method Float humidity(Bool tick) = new Std().randomFloat(0, 100);
+}
+
+capability class AC {
+	Bool powerState;
+
+	mut method Bool setPower(Bool powerState) = this.powerState = powerState;
+}
+
+
+capability class Printer {
+	mut method Bool outputMessages(String sensorInfo, Bool acOutput) =
+		mut Std s = new Std().print("Is on? ")
+			.print(acOutput.toString())
+			.print("\n")
+			.print(sensorInfo),
+		new True();
+}
+
+main =
+	mut Sensors s = new Sensors(),
+	@Bool tick = s.clock(),
+	@Float temps = s.@temp(tick),
+	@Float humidities = s.@humidity(tick),
+
+	// Create logger for the current sensor readings
+	@String logEntries = new Logger(new Std()).@logEntry(temps, humidities),
+
+	// Decide power state
+	@Number discomfort = new ComfortComputer().@discomfort(temps, humidities),
+	@Bool powerState = new ACController().powerSwitch(discomfort),
+
+	// Apply power state
+	mut AC ac = new AC(new False()),
+	@Bool acOutput = ac.@setPower(powerState),
+	new Printer().@outputMessages(logEntries, acOutput);

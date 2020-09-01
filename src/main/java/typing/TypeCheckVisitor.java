@@ -49,7 +49,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 				.collect(Collectors.toSet());
 
 		// T1 f1 . . . Tn fn = fields(imm C<T>) and cap; Σ; Γ |- ei: Ti[mdf = imm]
-		if (this.expected.mdf != Modifier.MUT && argMdfs.stream().allMatch(mdf -> Modifier.canInto(mdf, Modifier.IMM))) {
+		if (this.expected.mdf != Modifier.MUT && this.expected.mdf != Modifier.CAPSULE && argMdfs.stream().allMatch(mdf -> Modifier.canInto(mdf, Modifier.IMM))) {
 			Streams.forEachPair(
 					classDef.fields.values().stream(),
 					Arrays.stream(expr.args),
@@ -74,8 +74,9 @@ public class TypeCheckVisitor extends CollectorVisitor {
 				(fieldDec, argExpr) -> this.visitExpecting(argExpr, fieldDec.type)
 		);
 
-//		boolean canPromote = !argMdfs.contains(Modifier.MUT) && !argMdfs.contains(Modifier.READ);
-		boolean canPromote = false; // Constructor promotion works, but it isn't in the formalism yet, so disabling for now.
+		// Constructor promotion works, but it isn't in the formalism yet, so disabling for now.
+		// TODO talk to Marco about this
+		boolean canPromote = !argMdfs.contains(Modifier.MUT) && !argMdfs.contains(Modifier.READ);
 
 		Modifier mdf = canPromote ? Modifier.CAPSULE : Modifier.MUT;
 
@@ -161,6 +162,10 @@ public class TypeCheckVisitor extends CollectorVisitor {
 	public void visitCall(DotExpression.CallExpr expr) {
 		this.visitExpecting(expr.receiver, Type.ANY.withMdf(this.expected.mdf));
 		var receiverType = this.computed;
+
+		if (receiverType instanceof LiftedType) {
+			throw new TypeError(expr.pos(), "Cannot call methods on a signal.");
+		}
 
 		var receiverClassDec = this.aux.classOf(receiverType);
 		Optional<ProgramNode.Method> methodOpt = receiverClassDec.isInterface
@@ -259,6 +264,11 @@ public class TypeCheckVisitor extends CollectorVisitor {
 	public void visitFieldAccess(DotExpression.FieldAccessExpr expr) {
 		this.visitExpecting(expr.receiver, Type.ANY);
 		var receiverType = this.computed;
+
+		if (receiverType instanceof LiftedType) {
+			throw new TypeError(expr.pos(), "Cannot access fields on a signal.");
+		}
+
 		var field = this.aux.fields(receiverType).get(expr.fieldName);
 		if (field == null) {
 			throw new TypeError(
@@ -275,6 +285,11 @@ public class TypeCheckVisitor extends CollectorVisitor {
 	public void visitFieldUpdate(DotExpression.FieldUpdateExpr expr) {
 		this.visitExpecting(expr.receiver, Type.ANY);
 		var receiverType = this.computed;
+
+		if (receiverType instanceof LiftedType) {
+			throw new TypeError(expr.pos(), "Cannot update fields on a signal.");
+		}
+
 		if (receiverType.mdf != Modifier.MUT) {
 			throw new TypeError(expr.pos(), "Only mut objects may have their fields updated.");
 		}
