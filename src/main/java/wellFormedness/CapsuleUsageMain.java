@@ -6,6 +6,9 @@ import parser.Modifier;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * Capsules passed in by argument must be used 0 or one times in a method body.
+ */
 public class CapsuleUsageMain implements WellFormednessRule<Expression> {
 	@Override
 	public void check(Expression expr) throws MalformedException {

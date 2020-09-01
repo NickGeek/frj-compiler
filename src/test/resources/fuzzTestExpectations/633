@@ -19,14 +19,17 @@ mut method @Bool sleep(mut Std this, imm Int timeMs) =
 read method imm Number sub(read Std this, imm Number a, imm Number b) =
 0 ;
 
-mut method imm String print(mut Std this, imm String msg) =
-msg;
+mut method mut Std print(mut Std this, imm String msg) =
+this;
 
 read method imm Number mul(read Std this, imm Number a, imm Number b) =
 0 ;
 
 read method imm Bool gte(read Std this, imm Number a, imm Number b) =
 new False();
+
+read method imm String concat(read Std this, imm String a, imm String b) =
+a;
 }
 
 interface ℂ extends ໆ  {

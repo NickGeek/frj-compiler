@@ -1,5 +1,5 @@
 class Message {
-	method String getMsg() = "Hi :-)";
+	method String getMsg() = "Hi :-)\n";
 }
 
 main = new Std().@print(new Message().@getMsg());

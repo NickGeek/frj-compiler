@@ -91,7 +91,6 @@ public class TypeCheckVisitor extends CollectorVisitor {
 					.stream()
 					.filter(entry -> entry.getValue().mdf == Modifier.IMM || entry.getValue().mdf == Modifier.CAPSULE)
 					.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-			// TODO: make sure we give a useful error here if we filter out things that are attempted to be used
 
 			if (!(this.expected instanceof LiftedType)) {
 				throw new TypeError(expr.pos(), "Unexpected signal.");
@@ -136,7 +135,14 @@ public class TypeCheckVisitor extends CollectorVisitor {
 
 	@Override
 	public void visitIdentifier(Expression.IdentifierExpr expr) {
-		this.expect(expr, Objects.requireNonNull(this.gamma.get(expr.name)));
+		if (this.gamma.get(expr.name) == null) {
+			throw new TypeError(
+					expr.pos(),
+					String.format("'%s' is not in scope or cannot safely be brought into scope.", expr.name)
+			);
+		}
+
+		this.expect(expr, this.gamma.get(expr.name));
 	}
 
 	@Override
@@ -363,11 +369,6 @@ public class TypeCheckVisitor extends CollectorVisitor {
 
 	@Override
 	public void visitMethod(ProgramNode.Method method) {
-		var _this = method.args[0].type;
-		if (_this.mdf != method.mdf) {
-			System.out.println("hi");
-		}
-
 		boolean oldCap = this.cap;
 		this.cap = this.cap && method.mdf == Modifier.MUT;
 		this.scopeGamma(() -> {

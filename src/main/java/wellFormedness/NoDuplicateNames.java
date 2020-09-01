@@ -6,6 +6,11 @@ import antlrGenerated.FRJSimpleParserBaseVisitor;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * All classes and interfaces are uniquely named.
+ * All methods in a given class are uniquely named.
+ * All fields in a given class are uniquely named.
+ */
 public class NoDuplicateNames extends FRJSimpleParserBaseVisitor<Void> implements WellFormednessRule<FRJSimpleParser.ProgramContext> {
 	private final Set<String> classAndInterfaceNames = new HashSet<>();
 

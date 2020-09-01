@@ -5,7 +5,8 @@ import parser.ProgramNode;
 import java.util.HashSet;
 
 /**
- * TODO: Get description from the report
+ * All parameters in a given method are uniquely named and are not called
+ * 'this'.
  */
 public class MethodArgumentNaming implements WellFormednessRule<ProgramNode.BindingDeclaration[]> {
 	@Override

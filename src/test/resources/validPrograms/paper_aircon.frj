@@ -1,0 +1,50 @@
+class ComfortComputer {
+	method Number discomfort(Float temp, Float hum) =
+		Std std = new Std(),
+		Number adjustedTemp = std.mul(0.81, temp),
+		Number adjustedHum = std.mul(std.mul(0.01, hum), std.sub(std.mul(0.99, temp), 14.3)),
+		std.add(std.add(adjustedTemp, adjustedHum), 46.3);
+}
+
+capability class ACController {
+	Bool isOn;
+
+	read method Number hysteresis() =
+		this.isOn
+			.thenElse(
+				new ACController_hysteresis_t(),
+				new ACController_hysteresis_f()
+			).get();
+
+	mut method Bool powerSwitch(Number discomfortIndex) =
+		Std std = new Std(),
+		this.isOn = std.gte(discomfortIndex, std.add(75.0, this.hysteresis()));
+}
+class ACController_hysteresis_t implements ProducerN {method Number get() = new Std().sub(0, 0.5);}
+class ACController_hysteresis_f implements ProducerN {method Number get() = 0.5;}
+
+capability class Sensors {
+	mut method @Bool clock() = new Std().sleep(1000);
+	mut method Float temp(Bool tick) = new Std().randomFloat(5, 34);
+	mut method Float humidity(Bool tick) = new Std().randomFloat(0, 100);
+}
+
+capability class AC {
+	mut method Bool setPower(Bool powerState) =
+		mut Std ignored = new Std().print(powerState.toString()).print("\n"),
+		powerState;
+}
+
+main =
+	mut Sensors s = new Sensors(),
+	@Bool tick = s.clock(),
+	@Float temps = s.@temp(tick),
+	@Float humidities = s.@humidity(tick),
+
+	// Decide power state
+	@Number discomfort = new ComfortComputer().@discomfort(temps, humidities),
+	mut ACController controller = new ACController(new False()),
+	@Bool powerState = controller.@powerSwitch(discomfort),
+
+	// Apply power state
+    new AC().@setPower(powerState);

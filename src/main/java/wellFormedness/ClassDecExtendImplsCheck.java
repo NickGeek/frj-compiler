@@ -5,6 +5,10 @@ import parser.Program;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+/**
+ * Classes can only implement interfaces.
+ * Interfaces can only extend other interfaces.
+ */
 public class ClassDecExtendImplsCheck implements WellFormednessRule<Program> {
 	@Override
 	public void check(Program program) throws MalformedException {

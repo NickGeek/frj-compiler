@@ -60,7 +60,7 @@ public class ParserFuzzTests {
 		this.testCase = testCase;
 		this.expected = expected;
 
-		this.standardLib = Program.fromCtx(Parser.fromPath(Path.of("src", "main", "frj", "std.frj"))).toString();
+		this.standardLib = Program.fromCtx(Parser.fromPath(Path.of("src", "main", "resources", "std.frj"))).toString();
 	}
 
 	@Test

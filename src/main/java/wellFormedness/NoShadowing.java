@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * TODO: Get description from the report
+ * Identifiers may only be bound to one value in their scope.
  */
 public class NoShadowing implements WellFormednessRule<Program> {
 	@Override

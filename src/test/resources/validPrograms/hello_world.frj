@@ -1,1 +1,1 @@
-main = new Std().print("Hello, World!");
+main = new Std().print("Hello, World!\n");

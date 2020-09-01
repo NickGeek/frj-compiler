@@ -46,9 +46,10 @@ capability class Std {
 	read method Number sub(Number a, Number b) = 0;
 	read method Number mul(Number a, Number b) = 0;
 	read method Bool gte(Number a, Number b) = new False();
+	read method String concat(String a, String b) = a;
 
 	/* Impure methods that do scary nondeterministic stuff */
-	mut method String print(String msg) = msg;
+	mut method mut Std print(String msg) = this;
 	mut method Float randomFloat(Number min, Number max) = 0.0;
 	mut method @Bool sleep(Int timeMs) = @[];
 }

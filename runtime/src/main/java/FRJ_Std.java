@@ -8,9 +8,15 @@ public class FRJ_Std extends FRJObj {
 		}
 		return FRJ_a.intValue() + FRJ_b.intValue();
 	}
+
 	public Double FRJ_randomFloat(Number FRJ_min,Number FRJ_max) {
 		return FRJ_min.doubleValue() + new Random().nextDouble() * (FRJ_max.doubleValue() - FRJ_min.doubleValue());
 	}
+
+	public String FRJ_concat(String FRJ_a,String FRJ_b) {
+		return FRJ_a + FRJ_b;
+	}
+
 	public SignalBox<FRJ_Bool> FRJ_sleep(Long FRJ_timeMs) {
 		var signal = new Signal<>(FRJ_True::new, () -> this.FRJ_sleep(FRJ_timeMs));
 
@@ -20,22 +26,26 @@ public class FRJ_Std extends FRJObj {
 
 		return new SignalBox<>(signal, this);
 	}
+
 	public Number FRJ_sub(Number FRJ_a,Number FRJ_b) {
 		if ((FRJ_a.getClass().equals(Double.TYPE) || FRJ_a instanceof Double) || (FRJ_b.getClass().equals(Double.TYPE) || FRJ_b instanceof Double)) {
 			return FRJ_a.doubleValue() - FRJ_b.doubleValue();
 		}
 		return FRJ_a.intValue() - FRJ_b.intValue();
 	}
-	public String FRJ_print(String FRJ_msg) {
-		System.out.println(FRJ_msg);
-		return FRJ_msg;
+
+	public FRJ_Std FRJ_print(String FRJ_msg) {
+		System.out.print(FRJ_msg);
+		return this;
 	}
+
 	public Number FRJ_mul(Number FRJ_a,Number FRJ_b) {
 		if ((FRJ_a.getClass().equals(Double.TYPE) || FRJ_a instanceof Double) || (FRJ_b.getClass().equals(Double.TYPE) || FRJ_b instanceof Double)) {
 			return FRJ_a.doubleValue() * FRJ_b.doubleValue();
 		}
 		return FRJ_a.intValue() * FRJ_b.intValue();
 	}
+
 	public FRJ_Bool FRJ_gte(Number FRJ_a,Number FRJ_b) {
 		if ((FRJ_a.getClass().equals(Double.TYPE) || FRJ_a instanceof Double) || (FRJ_b.getClass().equals(Double.TYPE) || FRJ_b instanceof Double)) {
 			return FRJ_a.doubleValue() >= FRJ_b.doubleValue() ? new FRJ_True() : new FRJ_False();

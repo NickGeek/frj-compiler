@@ -11,19 +11,10 @@ public class SignalBox<T> {
 		return emptyObj.dispatch(signal);
 	}
 
-	public static <T, R extends FRJObj> SignalBox<T> lift(R receiver, String methodName, SignalBox<?>... input) {
-		var method = Arrays.stream(receiver.getClass().getMethods())
-				.filter(meth -> meth.getName().equals(methodName))
-				.findAny()
-				.get();
-
-		return lift(receiver, method, input);
-	}
-
 	/**
 	 * Lifts a method call on a primitive data-type (FRJ prim, so Long/Double/String).
 	 */
-	public static <T, R> SignalBox<T> lift(R receiver, String methodName, int argc, SignalBox<?>... input) {
+	public static <T> SignalBox<T> lift(Object receiver, String methodName, int argc, SignalBox<?>... input) {
 		/* It's fairly tricky to get the correct types to do a normal .getMethod(), so we're using argc
 			because that should cover the exposed primitive methods. */
 		var method = Arrays.stream(receiver.getClass().getMethods())
@@ -31,7 +22,9 @@ public class SignalBox<T> {
 				.findAny()
 				.get();
 
-		return new ExplicitSignalObj().dispatch(new Signal<>(
+		var actor = receiver.getClass().getSuperclass().equals(FRJObj.class) ? (FRJObj) receiver : new ExplicitSignalObj();
+
+		return actor.dispatch(new Signal<>(
 				() -> {
 					var heads = Arrays.stream(input).map(SignalBox::head).toArray();
 					try {

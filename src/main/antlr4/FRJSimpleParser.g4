@@ -16,8 +16,6 @@ classDeclaration
 implementsDeclaration : IMPLEMENTS Identifier (COMMA Identifier)*;
 extendsDeclaration : EXTENDS Identifier (COMMA Identifier)*;
 
-//constructor : Identifier LPAREN (methodArgument)* RPAREN LBRACE ; // TODO: I don't think we need a constructor if it's the same every time
-
 fieldDeclaration : typeName Identifier SEMI;
 
 typeName

@@ -1,5 +1,7 @@
 class A {
-    method Int hello(Int a, mut Std std) = String s = std.print("Hello"), a;
+	method Int hello(Int a, mut Std std) =
+		mut Std s = std.print("Hello"),
+		a;
 }
 
 main =
