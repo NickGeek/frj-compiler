@@ -30,7 +30,7 @@ class Logger {
 }
 
 capability class Sensors {
-	mut method @Bool clock() = new Std().sleep(1000);
+	mut method @Bool clock() = new Std().clock(1000);
 	mut method Float temp(Bool tick) = new Std().randomFloat(5, 34);
 	mut method Float humidity(Bool tick) = new Std().randomFloat(0, 100);
 }

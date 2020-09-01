@@ -272,8 +272,9 @@ public interface ProgramNode extends Walkable, Visitable {
 			source.append('(');
 			source.append(
 					Arrays.stream(this.args)
-					.map(Object::toString)
-					.collect(Collectors.joining(", "))
+							.skip(1)
+							.map(Object::toString)
+							.collect(Collectors.joining(", "))
 			);
 			this.expression()
 					.map(expression -> source.append(") =\n").append(this.expression.toString()))

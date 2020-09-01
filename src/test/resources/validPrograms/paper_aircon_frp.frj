@@ -19,7 +19,7 @@ class ACController_hysteresis_t implements ProducerN {method Number get() = new 
 class ACController_hysteresis_f implements ProducerN {method Number get() = 0.5;}
 
 capability class Sensors {
-	mut method @Bool clock() = new Std().sleep(1000);
+	mut method @Bool clock() = new Std().clock(1000);
 	mut method Float temp(Bool tick) = new Std().randomFloat(5, 34);
 	mut method Float humidity(Bool tick) = new Std().randomFloat(0, 100);
 }

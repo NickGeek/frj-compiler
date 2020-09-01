@@ -1,34 +1,34 @@
 main = head("\n");
 
 class ⷀׅ implements ၕ  {
-capsule method read ﶪ⃔ۙ Ｃొ(capsule ⷀׅ this) =
+capsule method read ﶪ⃔ۙ Ｃొ() =
 @[];
 }
 
 capability class Std  {
-read method imm Number add(read Std this, imm Number a, imm Number b) =
+read method imm Number add(imm Number a, imm Number b) =
 0 ;
 
-mut method imm Float randomFloat(mut Std this, imm Number min, imm Number max) =
+mut method imm Float randomFloat(imm Number min, imm Number max) =
 0.0 ;
 
-mut method @Bool sleep(mut Std this, imm Int timeMs) =
-@[];
-
-read method imm Number sub(read Std this, imm Number a, imm Number b) =
+read method imm Number sub(imm Number a, imm Number b) =
 0 ;
 
-mut method mut Std print(mut Std this, imm String msg) =
+mut method mut Std print(imm String msg) =
 this;
 
-read method imm Number mul(read Std this, imm Number a, imm Number b) =
+read method imm Number mul(imm Number a, imm Number b) =
 0 ;
 
-read method imm Bool gte(read Std this, imm Number a, imm Number b) =
+read method imm Bool gte(imm Number a, imm Number b) =
 new False();
 
-read method imm String concat(read Std this, imm String a, imm String b) =
+read method imm String concat(imm String a, imm String b) =
 a;
+
+read method @Bool clock(imm Int timeMs) =
+@[];
 }
 
 capability class ℇ  {
@@ -36,15 +36,15 @@ capability class ℇ  {
 }
 
 interface ⸯ଼ extends ᛳ, ⴧꠋ, ₷  {
-read method mut ゟ꤬ୁ࠘ᬁ꤄ ꫂ(read ⸯ଼ this, @இ ୟ);
+read method mut ゟ꤬ୁ࠘ᬁ꤄ ꫂ(@இ ୟ);
 
-imm method imm ၐ ະ᳒ޮ(imm ⸯ଼ this, @@@〨᮶ ງ, @ℝ ᏻ);
+imm method imm ၐ ະ᳒ޮ(@@@〨᮶ ງ, @ℝ ᏻ);
 
-imm method @ষ ꠊ(imm ⸯ଼ this, @ၡ ﹍);
+imm method @ষ ꠊ(@ၡ ﹍);
 
-imm method @@ହੂ ಀ꧕੍(imm ⸯ଼ this, @ࠨ ꪵ, @ഐꙻᬄ꤭ Ὓૌ༷ౣஂ, imm ఽ ༀ, @@ಏ ⶮ, @ꟻࣞ ஃ, @ꥠଂ Ꞵⶦ꣄ֿۙ꯲, @ਫ਼྆ ⁿ꣮);
+imm method @@ହੂ ಀ꧕੍(@ࠨ ꪵ, @ഐꙻᬄ꤭ Ὓૌ༷ౣஂ, imm ఽ ༀ, @@ಏ ⶮ, @ꟻࣞ ஃ, @ꥠଂ Ꞵⶦ꣄ֿۙ꯲, @ਫ਼྆ ⁿ꣮);
 
-read method imm Ἢ לּ(read ⸯ଼ this);
+read method imm Ἢ לּ();
 }
 
 capability class ꤣ⵿ implements ࢦ  {
@@ -53,19 +53,19 @@ capability class ꤣ⵿ implements ࢦ  {
 }
 
 class True implements Bool  {
-imm method imm Bool not(imm True this) =
+imm method imm Bool not() =
 new False();
 
-imm method imm Bool or(imm True this, imm Bool b) =
+imm method imm Bool or(imm Bool b) =
 this;
 
-imm method imm Bool and(imm True this, imm Bool b) =
+imm method imm Bool and(imm Bool b) =
 b;
 
-imm method imm String toString(imm True this) =
+imm method imm String toString() =
 "true";
 
-imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+imm method imm ProducerN thenElse(imm ProducerN f1, imm ProducerN f2) =
 f1;
 }
 
@@ -82,19 +82,19 @@ interface String extends Literal  {
 }
 
 class False implements Bool  {
-imm method imm Bool not(imm False this) =
+imm method imm Bool not() =
 new True();
 
-imm method imm Bool or(imm False this, imm Bool b) =
+imm method imm Bool or(imm Bool b) =
 b;
 
-imm method imm Bool and(imm False this, imm Bool b) =
+imm method imm Bool and(imm Bool b) =
 this;
 
-imm method imm String toString(imm False this) =
+imm method imm String toString() =
 "false";
 
-imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+imm method imm ProducerN thenElse(imm ProducerN f1, imm ProducerN f2) =
 f2;
 }
 
@@ -130,26 +130,26 @@ interface Number extends Literal  {
 }
 
 class ˮꩃ  {
-imm method imm 㳉ৣ Ɫ(imm ˮꩃ this, imm ଡ ײ) =
+imm method imm 㳉ৣ Ɫ(imm ଡ ײ) =
 @[@[51.5 ; 0.6 ]; @[]];
 }
 
 interface Bool extends Literal  {
-imm method imm Bool not(imm Bool this);
+imm method imm Bool not();
 
-imm method imm Bool or(imm Bool this, imm Bool b);
+imm method imm Bool or(imm Bool b);
 
-imm method imm Bool and(imm Bool this, imm Bool b);
+imm method imm Bool and(imm Bool b);
 
-imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+imm method imm ProducerN thenElse(imm ProducerN f1, imm ProducerN f2);
 }
 
 interface Literal  {
-imm method imm String toString(imm Literal this);
+imm method imm String toString();
 }
 
 interface ProducerN  {
-imm method imm Number get(imm ProducerN this);
+imm method imm Number get();
 }
 
 interface ٯৌ extends 嗃  {
@@ -157,10 +157,10 @@ interface ٯৌ extends 嗃  {
 }
 
 class מּ  {
-imm method mut Άั꩒ֿ า(imm מּ this) =
+imm method mut Άั꩒ֿ า() =
 new ಠ᧘꣕ௗ();
 
-mut method imm ࠚ ྋ(mut מּ this) =
+mut method imm ࠚ ྋ() =
 this;
 }
 

@@ -2,45 +2,45 @@ main = imm ፕ ‿ = tail(0 ),
 0.028 ;
 
 capability class Std  {
-read method imm Number add(read Std this, imm Number a, imm Number b) =
+read method imm Number add(imm Number a, imm Number b) =
 0 ;
 
-mut method imm Float randomFloat(mut Std this, imm Number min, imm Number max) =
+mut method imm Float randomFloat(imm Number min, imm Number max) =
 0.0 ;
 
-mut method @Bool sleep(mut Std this, imm Int timeMs) =
-@[];
-
-read method imm Number sub(read Std this, imm Number a, imm Number b) =
+read method imm Number sub(imm Number a, imm Number b) =
 0 ;
 
-mut method mut Std print(mut Std this, imm String msg) =
+mut method mut Std print(imm String msg) =
 this;
 
-read method imm Number mul(read Std this, imm Number a, imm Number b) =
+read method imm Number mul(imm Number a, imm Number b) =
 0 ;
 
-read method imm Bool gte(read Std this, imm Number a, imm Number b) =
+read method imm Bool gte(imm Number a, imm Number b) =
 new False();
 
-read method imm String concat(read Std this, imm String a, imm String b) =
+read method imm String concat(imm String a, imm String b) =
 a;
+
+read method @Bool clock(imm Int timeMs) =
+@[];
 }
 
 class True implements Bool  {
-imm method imm Bool not(imm True this) =
+imm method imm Bool not() =
 new False();
 
-imm method imm Bool or(imm True this, imm Bool b) =
+imm method imm Bool or(imm Bool b) =
 this;
 
-imm method imm Bool and(imm True this, imm Bool b) =
+imm method imm Bool and(imm Bool b) =
 b;
 
-imm method imm String toString(imm True this) =
+imm method imm String toString() =
 "true";
 
-imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+imm method imm ProducerN thenElse(imm ProducerN f1, imm ProducerN f2) =
 f1;
 }
 
@@ -49,19 +49,19 @@ interface String extends Literal  {
 }
 
 class False implements Bool  {
-imm method imm Bool not(imm False this) =
+imm method imm Bool not() =
 new True();
 
-imm method imm Bool or(imm False this, imm Bool b) =
+imm method imm Bool or(imm Bool b) =
 b;
 
-imm method imm Bool and(imm False this, imm Bool b) =
+imm method imm Bool and(imm Bool b) =
 this;
 
-imm method imm String toString(imm False this) =
+imm method imm String toString() =
 "false";
 
-imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+imm method imm ProducerN thenElse(imm ProducerN f1, imm ProducerN f2) =
 f2;
 }
 
@@ -78,25 +78,25 @@ interface Number extends Literal  {
 }
 
 capability class ﷴ  {
-@ꋅིৗꧥ ᚦ;mut method capsule ೲྔࠥျో౩܏ᩝ ૱(mut ﷴ this, imm 杖 ꪱೄઁ꤃᜴, imm ꡜ ᯆ, imm ꉘ౩ ー, imm ទ ⶅ) =
+@ꋅིৗꧥ ᚦ;mut method capsule ೲྔࠥျో౩܏ᩝ ૱(imm 杖 ꪱೄઁ꤃᜴, imm ꡜ ᯆ, imm ꉘ౩ ー, imm ទ ⶅ) =
 "";
 
-read method capsule ヾ ї(read ﷴ this, read ၥᳲ ᱟ) =
+read method capsule ヾ ї(read ၥᳲ ᱟ) =
 new ኍൢࣙ࠘(1 );
 }
 
 interface Bool extends Literal  {
-imm method imm Bool not(imm Bool this);
+imm method imm Bool not();
 
-imm method imm Bool or(imm Bool this, imm Bool b);
+imm method imm Bool or(imm Bool b);
 
-imm method imm Bool and(imm Bool this, imm Bool b);
+imm method imm Bool and(imm Bool b);
 
-imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+imm method imm ProducerN thenElse(imm ProducerN f1, imm ProducerN f2);
 }
 
 interface Literal  {
-imm method imm String toString(imm Literal this);
+imm method imm String toString();
 }
 
 class ݷ implements ੴ  {
@@ -104,24 +104,24 @@ class ݷ implements ੴ  {
 }
 
 interface ⱙ  {
-imm method mut ໆॏ ݴ༨(imm ⱙ this);
+imm method mut ໆॏ ݴ༨();
 
-imm method capsule ﶠᰨၴ ꩅ(imm ⱙ this);
+imm method capsule ﶠᰨၴ ꩅ();
 
-imm method imm ᢪౖ ກ꧹ౖ(imm ⱙ this, @ࠚ Ὂ);
+imm method imm ᢪౖ ກ꧹ౖ(@ࠚ Ὂ);
 
-mut method imm ঽೖ⵿ꪰ꘢ࠜ ꩺೕ܏(mut ⱙ this);
+mut method imm ঽೖ⵿ꪰ꘢ࠜ ꩺೕ܏();
 
-imm method @@@@⁀ ៗ(imm ⱙ this, read ପ੍ ㇳ);
+imm method @@@@⁀ ៗ(read ପ੍ ㇳ);
 
-imm method mut ⷓை ᩊൗ਼(imm ⱙ this, imm ଣ ￋ꯰);
+imm method mut ⷓை ᩊൗ਼(imm ଣ ￋ꯰);
 
-imm method @சꤪ ࢼ(imm ⱙ this, imm P ᲀ);
+imm method @சꤪ ࢼ(imm P ᲀ);
 
-mut method @ஃׇ Ⳟ਼ୖ٘(mut ⱙ this);
+mut method @ஃׇ Ⳟ਼ୖ٘();
 }
 
 interface ProducerN  {
-imm method imm Number get(imm ProducerN this);
+imm method imm Number get();
 }
 

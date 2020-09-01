@@ -1,29 +1,29 @@
 main = 6616.0 ;
 
 capability class Std  {
-read method imm Number add(read Std this, imm Number a, imm Number b) =
+read method imm Number add(imm Number a, imm Number b) =
 0 ;
 
-mut method imm Float randomFloat(mut Std this, imm Number min, imm Number max) =
+mut method imm Float randomFloat(imm Number min, imm Number max) =
 0.0 ;
 
-mut method @Bool sleep(mut Std this, imm Int timeMs) =
-@[];
-
-read method imm Number sub(read Std this, imm Number a, imm Number b) =
+read method imm Number sub(imm Number a, imm Number b) =
 0 ;
 
-mut method mut Std print(mut Std this, imm String msg) =
+mut method mut Std print(imm String msg) =
 this;
 
-read method imm Number mul(read Std this, imm Number a, imm Number b) =
+read method imm Number mul(imm Number a, imm Number b) =
 0 ;
 
-read method imm Bool gte(read Std this, imm Number a, imm Number b) =
+read method imm Bool gte(imm Number a, imm Number b) =
 new False();
 
-read method imm String concat(read Std this, imm String a, imm String b) =
+read method imm String concat(imm String a, imm String b) =
 a;
+
+read method @Bool clock(imm Int timeMs) =
+@[];
 }
 
 interface ℂ extends 쐙  {
@@ -31,19 +31,19 @@ interface ℂ extends 쐙  {
 }
 
 class True implements Bool  {
-imm method imm Bool not(imm True this) =
+imm method imm Bool not() =
 new False();
 
-imm method imm Bool or(imm True this, imm Bool b) =
+imm method imm Bool or(imm Bool b) =
 this;
 
-imm method imm Bool and(imm True this, imm Bool b) =
+imm method imm Bool and(imm Bool b) =
 b;
 
-imm method imm String toString(imm True this) =
+imm method imm String toString() =
 "true";
 
-imm method imm ProducerN thenElse(imm True this, imm ProducerN f1, imm ProducerN f2) =
+imm method imm ProducerN thenElse(imm ProducerN f1, imm ProducerN f2) =
 f1;
 }
 
@@ -52,19 +52,19 @@ interface String extends Literal  {
 }
 
 class False implements Bool  {
-imm method imm Bool not(imm False this) =
+imm method imm Bool not() =
 new True();
 
-imm method imm Bool or(imm False this, imm Bool b) =
+imm method imm Bool or(imm Bool b) =
 b;
 
-imm method imm Bool and(imm False this, imm Bool b) =
+imm method imm Bool and(imm Bool b) =
 this;
 
-imm method imm String toString(imm False this) =
+imm method imm String toString() =
 "false";
 
-imm method imm ProducerN thenElse(imm False this, imm ProducerN f1, imm ProducerN f2) =
+imm method imm ProducerN thenElse(imm ProducerN f1, imm ProducerN f2) =
 f2;
 }
 
@@ -81,52 +81,52 @@ interface Number extends Literal  {
 }
 
 class ำૈ  {
-read method @ວ໓ ꧏᬄ(read ำૈ this, mut ネ ユ్ੋ࡙ꩃꢁ্ۗ᳹ޭ) =
+read method @ວ໓ ꧏᬄ(mut ネ ユ్ੋ࡙ꩃꢁ্ۗ᳹ޭ) =
 37 ;
 
-imm method mut ѡ 荒(imm ำૈ this) =
+imm method mut ѡ 荒() =
 this;
 
-mut method imm ꣷೢ ਫ਼؜ృᬀ(mut ำૈ this) =
+mut method imm ꣷೢ ਫ਼؜ృᬀ() =
 head(@[@[6.0E73 ; 2 .@ഽ(this)]; ܐ୫]);
 
-read method imm ꧬ௩ ኵ(read ำૈ this, imm ₺ ဿ߳, @@ゝׂ ጭ) =
+read method imm ꧬ௩ ኵ(imm ₺ ဿ߳, @@ゝׂ ጭ) =
 new ఌ(@[]).ℇ(this);
 
-imm method capsule Ᾰ༵ ഊ઼ޯ꯰ꦵ໊࣢ၢၠ(imm ำૈ this, @ס ﬃ) =
+imm method capsule Ᾰ༵ ഊ઼ޯ꯰ꦵ໊࣢ၢၠ(@ס ﬃ) =
 4 ;
 
-mut method @@தಂͩؔ ꪻ(mut ำૈ this, imm ஜൗ סּെ, imm ᳶꨬ꧹ೖ๖ ꧏ੍ⷾꪸྐ, mut ອ９ 〡, @ࢣ ᵣ, mut ℂ יִ, imm Õ ૡ၄ꙵ, imm ῄ᥏ૌౢ ч) =
+mut method @@தಂͩؔ ꪻ(imm ஜൗ סּെ, imm ᳶꨬ꧹ೖ๖ ꧏ੍ⷾꪸྐ, mut ອ９ 〡, @ࢣ ᵣ, mut ℂ יִ, imm Õ ૡ၄ꙵ, imm ῄ᥏ૌౢ ч) =
 0.79 ;
 
-mut method @@ଳ⳰ೋꤦू ഉஆ(mut ำૈ this, @@@@ￆ ⱃࠥ­ਾ, @@@@@@ఏ ⶣ᱒্, @ש়ׁ ඳ, imm ℤ猪 Ў) =
+mut method @@ଳ⳰ೋꤦू ഉஆ(@@@@ￆ ⱃࠥ­ਾ, @@@@@@ఏ ⶣ᱒্, @ש়ׁ ඳ, imm ℤ猪 Ў) =
 imm µဵ Ὓ = head(this),
 3 .ጓ = new ῶ();
 }
 
 interface Bool extends Literal  {
-imm method imm Bool not(imm Bool this);
+imm method imm Bool not();
 
-imm method imm Bool or(imm Bool this, imm Bool b);
+imm method imm Bool or(imm Bool b);
 
-imm method imm Bool and(imm Bool this, imm Bool b);
+imm method imm Bool and(imm Bool b);
 
-imm method imm ProducerN thenElse(imm Bool this, imm ProducerN f1, imm ProducerN f2);
+imm method imm ProducerN thenElse(imm ProducerN f1, imm ProducerN f2);
 }
 
 interface Literal  {
-imm method imm String toString(imm Literal this);
+imm method imm String toString();
 }
 
 capability class ࠚ  {
-imm method imm ﬨఀ ꪺ︎(imm ࠚ this) =
+imm method imm ﬨఀ ꪺ︎() =
 @[0.0 .@ጔ(this); ℤັ᳭᱀].ࢻ = tail(9 );
 
-imm method imm ೲ ߵ(imm ࠚ this, @@@ଶ ኊꩃో) =
+imm method imm ೲ ߵ(@@@ଶ ኊꩃో) =
 @[tail(ຣ); head(1.5558907762169838E-7 )];
 }
 
 interface ProducerN  {
-imm method imm Number get(imm ProducerN this);
+imm method imm Number get();
 }
 

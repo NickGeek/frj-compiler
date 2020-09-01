@@ -17,8 +17,8 @@ public class FRJ_Std extends FRJObj {
 		return FRJ_a + FRJ_b;
 	}
 
-	public SignalBox<FRJ_Bool> FRJ_sleep(Long FRJ_timeMs) {
-		var signal = new Signal<>(FRJ_True::new, () -> this.FRJ_sleep(FRJ_timeMs));
+	public SignalBox<FRJ_Bool> FRJ_clock(Long FRJ_timeMs) {
+		var signal = new Signal<>(FRJ_True::new, () -> this.FRJ_clock(FRJ_timeMs));
 
 		AkkaHelpers.getActorSystem()
 				.scheduler()

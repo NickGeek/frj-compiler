@@ -1,6 +1,6 @@
 class X {method Pair foo(Number x, Number y) = new Pair(x, y);}
 class B {
-	method @Number slowlyGetNum(capsule Std std, Number n) = @[Bool wait = head(std.sleep(3000)), n; @[]];
+	method @Number slowlyGetNum(capsule Std std, Number n) = @[Bool wait = head(std.clock(3000)), n; @[]];
 }
 
 main =
