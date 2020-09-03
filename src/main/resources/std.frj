@@ -51,6 +51,7 @@ capability class Std {
 
 	/* Impure methods that do scary nondeterministic stuff */
 	mut method mut Std print(String msg) = this;
+	mut method mut Std println(String msg) = this;
 	mut method Float randomFloat(Number min, Number max) = 0.0;
 }
 

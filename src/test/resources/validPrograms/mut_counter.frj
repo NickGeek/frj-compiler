@@ -1,0 +1,15 @@
+capability class A {
+	Number current;
+	mut method Number count() =
+		this.current=new Std().add(this.current,1);//return the updated value
+
+	mut method @Number counter() = this.@count();
+}
+
+class Stringify {
+	method String fromNum(Number n) = new Std().concat(n.toString(), "\n");
+}
+
+main =
+	mut Std std = new Std(),
+	std.@print(new Stringify().@fromNum(new A(100000).counter()));

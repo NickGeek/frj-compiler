@@ -49,7 +49,7 @@ public class TypeCheckVisitor extends CollectorVisitor {
 				.collect(Collectors.toSet());
 
 		// T1 f1 . . . Tn fn = fields(imm C<T>) and cap; Σ; Γ |- ei: Ti[mdf = imm]
-		if (this.expected.mdf != Modifier.MUT && this.expected.mdf != Modifier.CAPSULE && argMdfs.stream().allMatch(mdf -> Modifier.canInto(mdf, Modifier.IMM))) {
+		if (this.expected.mdf != Modifier.MUT && this.expected.mdf != Modifier.CAPSULE && argMdfs.stream().allMatch(mdf -> mdf == Modifier.IMM)) {
 			Streams.forEachPair(
 					classDef.fields.values().stream(),
 					Arrays.stream(expr.args),
@@ -74,8 +74,6 @@ public class TypeCheckVisitor extends CollectorVisitor {
 				(fieldDec, argExpr) -> this.visitExpecting(argExpr, fieldDec.type)
 		);
 
-		// Constructor promotion works, but it isn't in the formalism yet, so disabling for now.
-		// TODO talk to Marco about this
 		boolean canPromote = !argMdfs.contains(Modifier.MUT) && !argMdfs.contains(Modifier.READ);
 
 		Modifier mdf = canPromote ? Modifier.CAPSULE : Modifier.MUT;
