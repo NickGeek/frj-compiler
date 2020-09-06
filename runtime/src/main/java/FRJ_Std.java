@@ -40,7 +40,7 @@ public class FRJ_Std extends FRJObj {
 	}
 
 	public FRJ_Std FRJ_println(String FRJ_msg) {
-		System.out.print(FRJ_msg);
+		System.out.println(FRJ_msg);
 		return this;
 	}
 
