@@ -1,0 +1,96 @@
+class Butter {}
+class Flour {}
+class Waffle {
+	method String getMsg() = "YAY THANKS WAFFLE DEBT -1";
+}
+class Gift {
+	method String getMsg() = "YAY THANKS WAFFLE DEBT -1";
+}
+
+class Ingredients {
+	method Butter meltButter() =
+		Bool ignored = head(new Std().clock(1000)),
+		new Butter();
+
+	method Flour siftFlour() =
+		Bool ignored = head(new Std().clock(1500)),
+		new Flour();
+}
+
+class Alice {
+	method Butter produce() = new Ingredients().meltButter();
+}
+
+class Bob {
+	method Flour produce() = new Ingredients().siftFlour();
+}
+
+class Charles {
+	method Waffle produce(Butter b, Flour f) = new Waffle();
+}
+
+class Tim {
+	method Gift produce(Number count, @Waffle w) =
+		Std s = new Std(),
+		s.gte(0, count).thenElseW(
+			new Tim_produce_t(),
+			new Tim_produce_f(w, this, count)
+		);
+}
+class Tim_produce_t implements ProducerG {method Gift get() = new Gift();}
+class Tim_produce_f implements ProducerG {
+	@Waffle waffles;
+	Tim tim;
+	Number count;
+
+	method WBool consume(Waffle w) = new WTrue();
+
+	method Gift get() =
+		WBool ignored = this.consume(head(this.waffles)),
+		this.tim.produce(new Std().sub(this.count, 1), tail(this.waffles));
+}
+
+
+capability class Printer {
+	method String W2S(Waffle w) = w.getMsg();
+
+	mut method @Std idk(@Waffle waffles) = new Std().@println(new Printer().@W2S(waffles));
+
+	method @Waffle liftMe() = new Charles().@produce(new Alice().@produce(), new Bob().@produce());
+}
+
+main =
+	@@Waffle waffles = new Printer().@liftMe(),
+	new Printer().@idk(waffles);
+	/*Gift gift = new Tim().produce(100, waffles),
+	new Std().println(gift.getMsg());*/
+
+/* UTIL */
+interface WBool extends Bool {
+	method WBool not();
+	method WBool and(WBool b);
+	method WBool or(WBool b);
+	method ProducerG thenElseW(ProducerG f1, ProducerG f2);
+}
+
+interface ProducerG {
+	method Gift get();
+}
+
+class WTrue implements WBool {
+	method WBool not() = new WFalse();
+	method WBool and(WBool b) = b;
+	method WBool or(WBool b) = this;
+	method ProducerN thenElse(ProducerN f1, ProducerN f2) = f1;
+	method ProducerG thenElseW(ProducerG f1, ProducerG f2) = f1;
+	method String toString() = "true";
+}
+
+class WFalse implements WBool {
+	method WBool not() = new WTrue();
+	method WBool and(WBool b) = this;
+	method WBool or(WBool b) = b;
+	method ProducerN thenElse(ProducerN f1, ProducerN f2) = f2;
+	method ProducerG thenElseW(ProducerG f1, ProducerG f2) = f2;
+	method String toString() = "false";
+}
