@@ -53,6 +53,7 @@ capability class Std {
 	mut method mut Std print(String msg) = this;
 	mut method mut Std println(String msg) = this;
 	mut method Float randomFloat(Number min, Number max) = 0.0;
+	mut method Int exit(Int code) = code;
 }
 
 main = 0;

@@ -11,6 +11,9 @@ mut method imm Float randomFloat(imm Number min, imm Number max) =
 read method imm Number sub(imm Number a, imm Number b) =
 0 ;
 
+mut method imm Int exit(imm Int code) =
+code;
+
 mut method mut Std print(imm String msg) =
 this;
 

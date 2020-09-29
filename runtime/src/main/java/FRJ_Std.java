@@ -44,6 +44,11 @@ public class FRJ_Std extends FRJObj {
 		return this;
 	}
 
+	public long FRJ_exit(long FRJ_code) {
+		System.exit((int) FRJ_code);
+		return FRJ_code;
+	}
+
 	public Number FRJ_mul(Number FRJ_a,Number FRJ_b) {
 		if ((FRJ_a.getClass().equals(Double.TYPE) || FRJ_a instanceof Double) || (FRJ_b.getClass().equals(Double.TYPE) || FRJ_b instanceof Double)) {
 			return FRJ_a.doubleValue() * FRJ_b.doubleValue();
