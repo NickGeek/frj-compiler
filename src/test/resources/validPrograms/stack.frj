@@ -1,0 +1,44 @@
+interface Stack {
+	method Number match(OnEmpty a, OnElem b);
+	method Stack push(Number e);
+	method Bool isEmpty();
+	method Number top(OnEmpty a);
+	method Stack pop(OnEmptyPop a);
+}
+
+class EmptyS implements Stack {
+	method Number match(OnEmpty a, OnElem b) = a.of();
+	method Stack push(Number e) = new FullS(this, e);
+	method Bool isEmpty() = new True();
+	method Number top(OnEmpty a) = a.of();
+	method Stack pop(OnEmptyPop a) = a.of();
+}
+
+class FullS implements Stack {
+	Stack parent;
+	Number elem;
+
+	method Number match(OnEmpty a, OnElem b) = b.of(this.elem, this.parent);
+	method Stack push(Number e) = new FullS(this, e);
+	method Bool isEmpty() = new False();
+	method Number top(OnEmpty a) = this.elem;
+	method Stack pop(OnEmptyPop a) = this.parent;
+}
+
+interface OnEmpty { method Number of(); }
+interface OnEmptyPop { method Stack of(); }
+interface OnElem { method Number of(Number top, Stack next); }
+
+class NegOnEmpty implements OnEmpty { method Number of() = new Std().sub(0, 1); }
+class EmptyOnEmpty implements OnEmptyPop { method Stack of() = new EmptyS(); }
+
+main =
+	String n = new EmptyS()
+		.push(5)
+		.push(1)
+		.push(2)
+		.push(3)
+		.pop(new EmptyOnEmpty())
+		.top(new NegOnEmpty())
+		.toString(),
+	new Std().println(n);
