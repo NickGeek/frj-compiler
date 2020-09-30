@@ -4,7 +4,6 @@ import parser.DotExpression;
 import parser.Expression;
 import parser.Program;
 import parser.ProgramNode;
-import typing.TypeCheckVisitor;
 import visitors.CollectorVisitor;
 import visitors.Visitable;
 
@@ -26,7 +25,8 @@ public class CodegenVisitor extends CollectorVisitor {
 			"Float",
 			"String"
 	);
-	private static final Map<String, String> REPLACEMENT_TYPES = Map.of(
+	private static final Map<String, String> REPLACEMENT_IDENTS = Map.of(
+			"Literal", "Object",
 			"Int", "Long",
 			"Float", "Double",
 			"Number", "Number",
@@ -36,7 +36,7 @@ public class CodegenVisitor extends CollectorVisitor {
 	);
 
 	private static String mangle(String name) {
-		if (REPLACEMENT_TYPES.containsKey(name)) return REPLACEMENT_TYPES.get(name);
+		if (REPLACEMENT_IDENTS.containsKey(name)) return REPLACEMENT_IDENTS.get(name);
 
 		return "FRJ_" + name;
 	}
