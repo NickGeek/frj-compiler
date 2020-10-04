@@ -276,6 +276,13 @@ public class TypeCheckVisitor extends CollectorVisitor {
 		}
 
 		var computed = field.type.compose(receiverType.mdf);
+		if (receiverType.mdf == Modifier.IMM && field.type.mdf == Modifier.MUT) {
+			throw new TypeError(
+					expr.pos(),
+					String.format("Field '%s' cannot be composed into an '%s'", field.type, computed.toString())
+			);
+		}
+
 		this.expect(expr, computed);
 	}
 

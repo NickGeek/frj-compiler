@@ -1,0 +1,15 @@
+class Box {
+	mut F f;
+	method read F f() = this.f; // this.f isn't available on an imm scope
+}
+
+class MakeBox { method mut Box of(mut F f) = new Box(f); }
+
+class F { method mut F get() = new F(); }
+
+main =
+	capsule F f = new F().get(),
+	capsule Box b = new MakeBox().of(f),
+	imm Box immB = b,
+	imm F immF = immB.f(),
+	0;
