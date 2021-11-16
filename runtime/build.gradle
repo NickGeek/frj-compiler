@@ -1,7 +1,7 @@
 import com.github.jengelman.gradle.plugins.shadow.transformers.AppendingTransformer
 
 plugins {
-    id 'com.github.johnrengelman.shadow' version '6.0.0'
+    id 'com.github.johnrengelman.shadow' version '7.1.0'
     id 'java'
 }
 
@@ -13,8 +13,8 @@ repositories {
     mavenCentral()
 }
 
-java.sourceCompatibility = JavaVersion.VERSION_14
-java.targetCompatibility = JavaVersion.VERSION_14
+java.sourceCompatibility = JavaVersion.VERSION_17
+java.targetCompatibility = JavaVersion.VERSION_17
 
 shadowJar {
     transform(AppendingTransformer) {
