@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 
 public class Compiler {
-	public static void compile(FRJSimpleParser.ProgramContext programContext) {
+	public static void compile(FRJSimpleParser.ProgramContext programContext, boolean isDebugMode) {
 		// Compute high level program object from the tree (duplicate names need to be removed because we use a Map data structure)
 		new NoDuplicateNames().check(programContext);
 		var program = Program.fromCtx(programContext);
@@ -47,6 +47,10 @@ public class Compiler {
 		}
 
 		var javaCode = new JavaCode(name, codegenVisitor.generate());
+        if (isDebugMode) {
+            System.out.println(javaCode.getCharContent(true));
+        }
+
 		javaCode.compile(workingDir);
 
 		// Bundle into a jar file

@@ -10,10 +10,12 @@ public class Main {
 			printErrorsAndQuit("Please provide a FRJ file to compile.");
 		}
 
+        final var isDebugMode = cliArgs.length >= 2 && cliArgs[1].equals("--debug");
+
 		try {
 			// Build parse tree
 			var programContext = Parser.fromPath(Path.of(cliArgs[0]));
-			Compiler.compile(programContext);
+			Compiler.compile(programContext, isDebugMode);
 		} catch (ParseCancellationException e) {
 			printErrorsAndQuit(e.getLocalizedMessage());
 		} catch (IOException e) {

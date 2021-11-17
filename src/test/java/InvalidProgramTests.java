@@ -32,7 +32,7 @@ public class InvalidProgramTests {
 	@Test
 	public void isInvalid() throws Exception {
 		try {
-			Compiler.compile(Parser.fromPath(this.source));
+			Compiler.compile(Parser.fromPath(this.source), false);
 			fail();
 		} catch (ParseCancellationException e) {
 			e.printStackTrace();

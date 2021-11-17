@@ -29,6 +29,6 @@ public class ValidProgramTests {
 
 	@Test
 	public void isValid() throws Exception {
-		Compiler.compile(Parser.fromPath(this.source));
+		Compiler.compile(Parser.fromPath(this.source), false);
 	}
 }
